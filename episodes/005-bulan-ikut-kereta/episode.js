@@ -530,6 +530,7 @@ function frame(t) {
   if (world.split) {
     renderSplit();
   } else {
+    if (world === road) road.clearAround(cam.position);
     if (world.sky) {
       world.sky.position.copy(cam.position);
       world.stars.position.copy(cam.position);

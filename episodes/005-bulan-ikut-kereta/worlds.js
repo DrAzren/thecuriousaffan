@@ -64,6 +64,7 @@ export function buildRoadWorld() {
   const lamp = (x, z, dir) => {
     const l = makeLamp({ armDir: dir });
     l.position.set(x, 0, z);
+    l.userData.prop = true;
     scene.add(l);
     lampHeads.push(new THREE.Vector3(x, 4.75, z + 1.2 * dir));
   };
@@ -75,11 +76,13 @@ export function buildRoadWorld() {
     for (let x = a; x < b; x += 5 + R() * 5) {
       const tr = makeTree(R, { scale: 1 + R() * 0.4 });
       tr.position.set(x, 0, 7.3 + R() * 3);
+      tr.userData.prop = true;
       scene.add(tr);
     }
     for (let x = a; x < b; x += 7 + R() * 7) {
       const tr = makeTree(R, { scale: 1 + R() * 0.3 });
       tr.position.set(x, 0, -7.3 - R() * 3);
+      tr.userData.prop = true;
       scene.add(tr);
     }
     for (let x = a; x < b; x += 12 + R() * 7) {
@@ -102,7 +105,12 @@ export function buildRoadWorld() {
     const x = -760 + i * 30 + R() * 20;
     add(scene, new THREE.SphereGeometry(30 + R() * 30, 20, 12), new THREE.MeshStandardMaterial({ color: 0x1b2d3a, roughness: 1 }), [x, -12, 120 + R() * 60], [0, 0, 0], [1.6, 0.6, 1], false);
   }
-  return { scene, sky, stars, moon, moonLight, car, aff, fill, lampLight, lampHeads };
+  const props = scene.children.filter((o) => o.userData.prop);
+  // Hide props that would sit right in front of (or around) the camera lens.
+  const clearAround = (p, r = 3) => {
+    for (const o of props) o.visible = Math.hypot(o.position.x - p.x, o.position.z - p.z) > r;
+  };
+  return { scene, sky, stars, moon, moonLight, car, aff, fill, lampLight, lampHeads, clearAround };
 }
 
 // ------------------------------------------------------------------- toy
@@ -215,8 +223,11 @@ export function buildToyWorld() {
     if (k === 0) o = makeTree(R, { scale: 0.27, leaf: leafSets[Math.floor(R() * 4)], trunk: 0x9a6a45, toy: true });
     else if (k === 1) o = makeLamp({ scale: 0.17, pole: poles[Math.floor(R() * 4)], lamp: 0xfff0a0, armDir: 1, pool: false, light: 0.7 });
     else o = makeHouse(R, { scale: 0.19, walls: [0xffd6e0, 0xfff1b8, 0xc9f0ff, 0xd9ffd0], roofs: [0xff6b6b, 0x4f8cff, 0xffa53b, 0x9b6bff], toy: true });
-    o.position.set(x, 0, -1.05 - (k === 2 ? 0.45 : R() * 0.25));
-    if (k === 2) o.rotation.y = Math.PI;
+    o.position.set(x, 0, -1.05 - (k === 2 ? 0 : R() * 0.25));
+    if (k === 2) {
+      o.rotation.y = Math.PI;
+      o.scale.setScalar(0.6);
+    }
     scene.add(o);
     near.push(o);
   }
