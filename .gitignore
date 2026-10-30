@@ -1,0 +1,6 @@
+node_modules/
+**/stills/
+episodes/*/output/stems/
+episodes/*/output/video_silent.mp4
+episodes/*/output/mix.wav
+__pycache__/

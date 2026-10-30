@@ -1,0 +1,29 @@
+<!doctype html><html><head><meta charset="utf-8">
+<style>html,body{margin:0;background:#3b8de8;overflow:hidden}canvas{display:block}</style>
+<script type="importmap">{"imports":{"three":"/node_modules/three/build/three.module.js","three/addons/":"/node_modules/three/examples/jsm/"}}</script>
+</head><body><canvas id="c"></canvas>
+<script type="module">
+import * as THREE from 'three';
+import { makeRenderer } from '/shared/core.js';
+import { makeAffan, POSES } from '/shared/affan.js';
+const r = makeRenderer(document.getElementById('c'));
+const scene = new THREE.Scene(); scene.background = new THREE.Color(0x4a9cf0);
+scene.add(new THREE.HemisphereLight(0xdfefff, 0x6a5a80, 1.4));
+const key = new THREE.DirectionalLight(0xffffff, 2.2); key.position.set(3,6,8); key.castShadow=true; key.shadow.bias=-0.0004; key.shadow.normalBias=0.03; key.shadow.mapSize.set(2048,2048); scene.add(key);
+const rim = new THREE.DirectionalLight(0xbfd8ff, 1.5); rim.position.set(-6,4,-6); scene.add(rim);
+const A = makeAffan(); scene.add(A.root);
+const cam = new THREE.PerspectiveCamera(30, 1080/1920, 0.05, 100);
+const views = [
+ () => { A.pose({}); cam.position.set(0,3.0,7); cam.lookAt(0,2.9,0); },
+ () => { A.pose({ yaw: 0.6, talk: 0.7, smile:1 }); cam.position.set(0,3.0,7); cam.lookAt(0,2.9,0); },
+ () => { A.pose({ yaw: 1.5, }); cam.position.set(0,3.0,7); cam.lookAt(0,2.9,0); },
+ () => { A.pose({ ...POSES.thinkR, headRoll: -0.1, lookX: 0.3, lookY:0.3 }); cam.position.set(0,2.4,11); cam.lookAt(0,2.0,0); },
+ () => { A.pose({ ...POSES.thumbsUpR, smile: 1 }); cam.position.set(0,2.4,11); cam.lookAt(0,2.0,0); },
+ () => { A.pose({ armL: { reach: [0.9, 1.55, 0.65], pole:[1,-1,-0.5], point: 1 }, wow: 0.9, brow: 1, headYaw: 0.4 }); cam.position.set(0,2.4,11); cam.lookAt(0,2.0,0); },
+ () => { A.pose({ yaw: Math.PI }); cam.position.set(0,3.0,7); cam.lookAt(0,2.9,0); },
+ () => { A.pose({ ...POSES.thumbsUpR, armR:{...POSES.thumbsUpR.armR, wx: 0, wy: -1.2}, smile:1 }); cam.position.set(0,2.4,6); cam.lookAt(0,2.2,0); },
+ () => { A.pose({ ...POSES.thumbsUpR, armR:{...POSES.thumbsUpR.armR, wy: 1.2}, smile:1 }); cam.position.set(0,2.4,6); cam.lookAt(0,2.2,0); },
+ () => { A.pose({ ...POSES.thumbsUpR, armR:{...POSES.thumbsUpR.armR, wz: 1.4}, smile:1 }); cam.position.set(0,2.4,6); cam.lookAt(0,2.2,0); },
+];
+window.EP = { fps: 30, duration: 7, ready: Promise.resolve(), frame(t){ views[Math.round(t)%views.length](); r.render(scene, cam); } };
+</script></body></html>

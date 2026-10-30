@@ -1,0 +1,15 @@
+{
+  "name": "thecuriousaffan",
+  "version": "1.0.0",
+  "private": true,
+  "description": "The Curious Affan: code-driven 3D animated educational shorts (Bahasa Melayu)",
+  "license": "UNLICENSED",
+  "scripts": {
+    "render": "node tools/render.js"
+  },
+  "dependencies": {
+    "three": "0.170.0",
+    "@fontsource/fredoka": "5.1.0",
+    "@fontsource/baloo-2": "5.1.1"
+  }
+}
