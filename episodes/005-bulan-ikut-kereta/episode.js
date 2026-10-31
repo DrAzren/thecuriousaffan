@@ -3,10 +3,11 @@
 import * as THREE from 'three';
 import { makeRenderer, loadEnvelope, toScreen, clamp, lerp, inv, smooth, easeOut, easeInOut, backOut, keys, wobble, rng, W, H } from '../../shared/core.js';
 import { POSES, blinkAt } from '../../shared/affan.js';
-import { Overlay, pop, ICONS, bubbleSVG } from '../../shared/overlay.js';
+import { Overlay, pop, ICONS } from '../../shared/overlay.js';
 import { makeTree } from '../../shared/props.js';
 import { CAPTIONS, KEYWORDS } from './captions.js';
-import { buildRoadWorld, buildToyWorld, buildOutro, carX, CAR_SPEED, TOY_SPEED } from './worlds.js';
+import { buildRoadWorld, buildToyWorld, carX, CAR_SPEED, TOY_SPEED } from './worlds.js';
+import { buildOutro, outroShot } from '../../shared/outro.js';
 
 const FPS = 30;
 const DURATION = 58.5;
@@ -454,41 +455,7 @@ const SHOTS = [
     return road;
   }],
   // Outro — The Curious Affan logo
-  [55.3, DURATION, (t) => {
-    const k = easeOut(inv(55.3, 56.0, t));
-    outro.aff.root.position.set(0, 0, 0);
-    const th2 = POSES.thinkR.armR;
-    outro.aff.pose({ ...POSES.thinkR, armR: { ...th2 }, smile: 1, blink: blinkAt(t, 9), headRoll: -0.08, lookX: 0.25, lookY: 0.15, headYaw: 0.08 });
-    lookCam(cam, V(0, 2.6, lerp(7.5, 5.4, k)), V(0, 2.3, 0), 40);
-    const hc = scr(V(0, 2.95, 0));
-    ov.flash((1 - inv(55.3, 55.65, t)) * 1.0);
-    // golden ring + sparkles
-    const g = ov.g;
-    const ra = inv(55.4, 56.0, t);
-    g.save();
-    g.globalAlpha = ra;
-    g.strokeStyle = '#ffe58a';
-    g.shadowColor = '#fff3b0';
-    g.shadowBlur = 40;
-    g.lineWidth = 14;
-    g.beginPath();
-    g.arc(W / 2, hc.y, 420 * (0.85 + 0.15 * easeOut(ra)), 0, Math.PI * 2);
-    g.stroke();
-    g.restore();
-    ov.sparkles(t, { n: 30, seed: 41, y: 260, h: 1150, a: ra });
-    const ic = pop(t, 55.9, 99);
-    ov.html('oBulb', ICONS.bulb(), { x: 175, y: 470 + Math.sin(t * 2) * 8, o: ic.o, s: ic.s * 0.55, r: -10 });
-    ov.html('oQ1', ICONS.qmark('#ffcf33'), { x: 880, y: 420 + Math.sin(t * 2 + 1) * 8, o: ic.o, s: ic.s * 0.9, r: 12 });
-    ov.html('oQ2', ICONS.qmark('#2f6fff'), { x: 220, y: 720 + Math.sin(t * 2 + 2) * 8, o: ic.o, s: ic.s * 0.6, r: -12 });
-    const l1 = pop(t, 55.6, 99), l2 = pop(t, 55.8, 99), l3 = pop(t, 56.0, 99);
-    ov.html('lThe', bubbleSVG('The', { size: 120, top: '#ffffff', bot: '#e8eefc' }), { x: W / 2 + 10, y: 1110, o: l1.o, s: l1.s });
-    ov.html('lCur', bubbleSVG('Curious', { size: 200, top: '#9fe8ff', bot: '#1d9bf0' }), { x: W / 2 + 40, y: 1270, o: l2.o, s: l2.s });
-    ov.html('lMag', `<svg width="190" height="190" viewBox="0 0 190 190"><line x1="60" y1="130" x2="20" y2="172" stroke="#17256b" stroke-width="40" stroke-linecap="round"/><line x1="60" y1="130" x2="20" y2="172" stroke="#ffc928" stroke-width="22" stroke-linecap="round"/><circle cx="110" cy="80" r="62" fill="#8fdcff" stroke="#17256b" stroke-width="34"/><circle cx="110" cy="80" r="62" fill="none" stroke="#ffc928" stroke-width="16"/><ellipse cx="92" cy="62" rx="16" ry="22" fill="#fff" opacity="0.85"/></svg>`, { x: 165, y: 1300, o: l2.o, s: l2.s * 0.9, r: -8 });
-    ov.html('lAff', bubbleSVG('Affan', { size: 220, top: '#ffe45c', bot: '#ff9f1c' }), { x: W / 2, y: 1450, o: l3.o, s: l3.s });
-    const st = pop(t, 56.2, 99);
-    ov.star(612, 1150, 34 * st.s, st.o, '#ffd84a', 0.3);
-    return outro;
-  }],
+  [55.3, DURATION, (t) => outroShot(t, 55.3, { ov, cam, outro, lookCam })],
 ];
 
 function renderSplit() {

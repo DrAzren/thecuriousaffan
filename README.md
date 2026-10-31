@@ -13,6 +13,7 @@ time and can be re-timed to new narration.
 
 | # | Title | Folder | Final video |
 |---|---|---|---|
+| 003 | Kenapa Kapal Besar Tak Tenggelam? | [`episodes/003-kapal-tak-tenggelam`](episodes/003-kapal-tak-tenggelam) | `output/TheCuriousAffan_E003_Kenapa_Kapal_Besar_Tak_Tenggelam.mp4` |
 | 005 | Kenapa Bulan Macam Ikut Kereta Kita? | [`episodes/005-bulan-ikut-kereta`](episodes/005-bulan-ikut-kereta) | `output/TheCuriousAffan_E005_Kenapa_Bulan_Macam_Ikut_Kereta_Kita.mp4` |
 
 ## Build
@@ -23,6 +24,10 @@ Chromium (`npm i -g playwright && npx playwright install chromium`, or set
 
 ```bash
 npm install
+```
+
+```bash
+episodes/003-kapal-tak-tenggelam/make.sh
 ```
 
 ```bash
@@ -57,10 +62,12 @@ shared/
   affan.js     Affan character: model sheet, pose rig, 2-bone arm IK, lip-sync mouth, blinks
   props.js     sky, stars, moon, road, car (+ interior), trees, lamp posts, houses
   overlay.js   captions, bubble titles, DEKAT/JAUH tags, arrows, icons, sparkles, flashes
+  outro.js     branded outro (Affan, golden ring, logo), shared by all episodes
   core.js      easing, keyframes, seeded RNG, narration envelope (lip sync), projection
 tools/render.js  deterministic frame renderer (Playwright -> ffmpeg)
 episodes/<nnn>/  index.html, episode.js (shots), worlds.js (sets), captions.js,
                  build_audio.py (music + SFX + mix), audio/narration.mp3, make.sh
+                 (E003 adds ship.js, the container ship, and water.js, the sea and tank shaders)
 lab/model-sheet  Affan turnaround and pose test page
 ```
 
@@ -93,3 +100,31 @@ episode stays consistent.
   - label pops and discovery chimes.
 
   The mix is normalised to −14 LUFS with a −1.5 dBTP ceiling.
+
+## Episode 003 at a glance
+
+- **Science.** A ship floats because of buoyancy (*daya apungan*). Its hull
+  shape pushes a lot of water aside, and the water pushes back up on the hull.
+  When that upward push is strong enough to hold up the ship's weight, the
+  ship floats. A small stone pushes aside very little water, so it sinks.
+- **Shots.**
+  1. A sunny harbour with a giant container ship.
+  2. Affan drops a stone off the pier; the splash lands on "plop!".
+  3. Underwater, the stone sinks to the sea bed.
+  4. Split screen: the ship floats above, the stone lies on the bottom below.
+  5. The science world: a cut-away model of the same ship in a water tank.
+     It shows the hull shape (BENTUK KAPAL), the water pushed aside as the
+     level rises (TOLAK AIR), and the upward pushes merging into one arrow
+     (DAYA APUNGAN). Then equal arrows, BERAT ↓ = DAYA APUNGAN ↑, so it
+     floats (TERAPUNG).
+  6. Back at the harbour: "Waaah!", a thumbs-up, "what next?", then the logo.
+- **Narration.** The supplied voice recording (44.1 s) sets the timing.
+  Captions use the words as spoken in the recording and are timed word by word.
+- **Audio.** An original synthesised bed and effects:
+  - harbour water and gulls, and a ship horn;
+  - the stone splash, bubbles and an underwater bed;
+  - magic whooshes, discovery chimes and arrow tones.
+
+  The music sits about 15 dB under the voice. The mix is normalised to
+  −14 LUFS with a −1.5 dBTP ceiling.
+

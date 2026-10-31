@@ -4,7 +4,7 @@ import * as THREE from 'three';
 import { RoundedBoxGeometry } from 'three/addons/geometries/RoundedBoxGeometry.js';
 import { rng } from '../../shared/core.js';
 import { makeAffan } from '../../shared/affan.js';
-import { add, makeSky, makeStars, makeMoon, makeGround, makeRoad, makeCar, makeTree, makeLamp, makeHouse, makeBush, glow } from '../../shared/props.js';
+import { add, makeSky, makeStars, makeMoon, makeGround, makeRoad, makeCar, makeTree, makeLamp, makeHouse, makeBush } from '../../shared/props.js';
 
 export const CAR_SPEED = 12; // road world, units/s
 export const carX = (t) => 200 - CAR_SPEED * t;
@@ -253,39 +253,6 @@ export function buildToyWorld() {
   const sparkles = sparkleField(500, 4, [-90, 30, 0.3, 9, -4, 14]);
   scene.add(sparkles);
   return { scene, sky, stars, moon, moonLight, car, aff, sparkles, near };
-}
-
-// ----------------------------------------------------------------- outro
-export function buildOutro() {
-  const scene = new THREE.Scene();
-  const c = document.createElement('canvas');
-  c.width = 540;
-  c.height = 960;
-  const g = c.getContext('2d');
-  const gr = g.createRadialGradient(270, 380, 40, 270, 420, 700);
-  gr.addColorStop(0, '#8fd0ff');
-  gr.addColorStop(0.45, '#3f9cf2');
-  gr.addColorStop(1, '#1a5fcf');
-  g.fillStyle = gr;
-  g.fillRect(0, 0, 540, 960);
-  const bg = new THREE.CanvasTexture(c);
-  bg.colorSpace = THREE.SRGBColorSpace;
-  scene.background = bg;
-  scene.add(new THREE.HemisphereLight(0xeaf4ff, 0x6a7ab8, 1.5));
-  const key = new THREE.DirectionalLight(0xfff2e0, 2.4);
-  key.position.set(3, 6, 8);
-  shadowCfg(key, 5);
-  key.shadow.normalBias = 0.03;
-  scene.add(key);
-  const rim = new THREE.DirectionalLight(0xbfe0ff, 2.0);
-  rim.position.set(-6, 5, -6);
-  scene.add(rim);
-  const aff = makeAffan();
-  scene.add(aff.root);
-  const halo = glow(0xfff2b0, 9, 0.35);
-  halo.position.set(0, 2.9, -2);
-  scene.add(halo);
-  return { scene, aff };
 }
 
 export { RoundedBoxGeometry };
