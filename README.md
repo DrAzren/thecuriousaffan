@@ -118,6 +118,15 @@ episode stays consistent.
      (DAYA APUNGAN). Then equal arrows, BERAT ↓ = DAYA APUNGAN ↑, so it
      floats (TERAPUNG).
   6. Back at the harbour: "Waaah!", a thumbs-up, "what next?", then the logo.
+- **Publishing.** `output/` also holds the 9:16 cover
+  (`TheCuriousAffan_E003_thumbnail.png` / `.jpg`) and ready-to-paste captions
+  for TikTok, Reels and YouTube Shorts (`description.md`). The cover is
+  rendered from the episode sets:
+
+  ```bash
+  node tools/render.js episodes/003-kapal-tak-tenggelam/thumbnail --stills 0 --out /tmp/thumb
+  ```
+
 - **Narration.** The supplied voice recording (44.1 s) sets the timing.
   Captions use the words as spoken in the recording and are timed word by word.
 - **Audio.** An original synthesised bed and effects:
