@@ -14,6 +14,7 @@ time and can be re-timed to new narration.
 | # | Title | Folder | Final video |
 |---|---|---|---|
 | 005 | Kenapa Bulan Macam Ikut Kereta Kita? | [`episodes/005-bulan-ikut-kereta`](episodes/005-bulan-ikut-kereta) | `output/TheCuriousAffan_E005_Kenapa_Bulan_Macam_Ikut_Kereta_Kita.mp4` |
+| 007 | Kenapa Kita Kena Mandi? | [`episodes/007-kenapa-kena-mandi`](episodes/007-kenapa-kena-mandi) | `output/TheCuriousAffan_E007_Kenapa_Kita_Kena_Mandi.mp4` |
 
 ## Build
 
@@ -111,5 +112,29 @@ episode stays consistent.
   - whooshes;
   - a sparkle as the imagination world opens;
   - label pops and discovery chimes.
+
+  The mix is normalised to −14 LUFS with a −1.5 dBTP ceiling.
+
+## Episode 007 at a glance
+
+- **Story.** Affan finishes football in a sunny park, feels sweaty and sniffs
+  his shirt. His magnifying glass shrinks him into a microscopic "skin world".
+  He sees sweat, skin oil, dirt and friendly skin bacteria. Soap molecules
+  (water-loving head, oil-loving tail) wrap oil, dirt and some germs, and a
+  wave of water rinses them away. Then it's back to a bright bathroom (props
+  only) and the living room, fresh and clean.
+- **Science and safety.**
+  - Only *certain* bacteria plus sweat make body odour.
+  - Soap helps remove *some* germs; it does not kill everything.
+  - Not all bacteria are bad; the friendly colony stays after washing.
+  - Affan stays fully dressed. Washing is gentle, with no harsh chemicals.
+- **Timing.** The video runs about 45.5 s: 42.4 s of narration (used as
+  recorded, nothing cut) plus a 3 s logo outro with "Little Questions. Big
+  Discoveries!"
+- **Audio.** Everything is synthesised (no samples):
+  - an original score, ducked under the voice;
+  - park and microscopic ambiences, and shower water;
+  - ball bounces, a sniff, the magic shrink, bubbles, rinsing water, chimes
+    and an outro jingle.
 
   The mix is normalised to −14 LUFS with a −1.5 dBTP ceiling.
