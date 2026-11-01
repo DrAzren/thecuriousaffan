@@ -665,10 +665,47 @@ function frame(t) {
   ov.end();
 }
 
+// ---------------------------------------------------------------- thumbnail
+// 9:16 cover: low angle on a surprised Affan holding his tummy, the giant
+// stomach rumbling behind him, an imagined monster asking "?".
+// Render: node tools/render.js episodes/004-perut-berbunyi --stills 0 --eval "EP.frame = EP.thumb" --out <dir>
+let thumbLight = null;
+function thumb() {
+  const n = 14.3;
+  if (!thumbLight) {
+    // soft front key so Affan's face reads at thumbnail size
+    thumbLight = new THREE.SpotLight(0xfff1e2, 45, 30, 0.5, 0.6, 1.6);
+    thumbLight.position.set(-7.4, 4.5, 23.5);
+    thumbLight.target.position.set(-6.2, 1.6, 17);
+    gut.scene.add(thumbLight, thumbLight.target);
+  }
+  ov.begin();
+  cam.aspect = W / H;
+  const w = gutScene(n, 0.7, 0.35);
+  gutAffPose(n, {
+    yaw: -0.2, blink: 0, talk: 0, wow: 1, brow: 1, headPitch: 0.05, headYaw: -0.05, headRoll: 0.06, lookX: 0, lookY: 0.05,
+    armL: ARM.tummyL, armR: ARM.tummyR,
+  });
+  lookCam(V(-8.2, 1.4, 24.5), V(-3.8, 6.1, 8), 60);
+  renderer.render(w.scene, cam);
+  ov.vignette(0.3);
+  const st = scr(stomachPt());
+  soundRings(st.x, st.y, 0.12, { a: 1, rmax: 360, r0: 150, speed: 1.8, w: 14 });
+  soundRings(st.x, st.y, 0.42, { a: 0.8, rmax: 360, r0: 150, speed: 1.8, w: 14 });
+  ov.tag('thEp', 'EPISOD 4', { x: W / 2, y: 255 }, { bg: C.navy, small: true });
+  ov.bubble('thT', 'KENAPA PERUT\nBERBUNYI?', { x: W / 2, y: 470, r: -2 }, { size: 128, top: '#9ff0ff', bot: C.cyan });
+  ov.bubble('thK', 'KRUUUKKK!', { x: W / 2 - 40, y: 860, r: -7 }, { size: 160, top: '#fff27a', bot: '#ffa51f' });
+  ov.html('thMon', MONSTER(), { x: 860, y: 1080, s: 0.6, r: 8 });
+  ov.html('thQ', ICONS.qmark(C.yellow), { x: 975, y: 930, s: 0.7, r: 14 });
+  ov.html('thLogo', `<div style="display:flex;align-items:center;gap:10px;padding:10px 30px 14px;border-radius:999px;background:#fff;box-shadow:0 8px 0 rgba(0,0,0,0.25);font-family:'Baloo 2';font-weight:800;font-size:46px;line-height:1;color:${C.navy}">THE <span style="color:#1d9bf0">CURIOUS</span> <span style="color:#ff9f1c">AFFAN</span></div>`, { x: W / 2, y: 1625 });
+  ov.end();
+}
+
 window.EP = {
   fps: FPS,
   duration: DURATION,
   frame,
+  thumb,
   ready: (async () => {
     const e = await loadEnvelope('./audio/narration.mp3', FPS);
     env = { at: (n) => (n < 0 ? 0 : e.at(n)) };
