@@ -11,6 +11,9 @@ recording `Beza Bipolar 1 dan 2.mp4` (Google Drive, 149 s). It has:
 
 Final video: `output/Beza_Bipolar_Type1_vs_Type2_TikTok.mp4`
 
+TikTok cover: `output/Beza_Bipolar_Type1_vs_Type2_Thumbnail.png` (and `.jpg`),
+1080×1920.
+
 ## What was done
 
 ### Edit
@@ -123,6 +126,17 @@ samples:
 There is also an original A-minor music bed at 100 bpm, ducked under the
 voice. The voice gets a high-pass filter, denoising, EQ and compression. The
 mix is normalised to −14 LUFS with a −1.5 dBTP ceiling.
+
+## Thumbnail
+
+`thumbnail/thumbnail.html` is the TikTok cover. It shows Dr. Azren cut out
+from the raw footage at 1:15, cleaned with a local `rembg` model at no credit
+cost, over a red (Type 1) / teal (Type 2) split. The headline reads
+"APA BEZANYA? BIPOLAR 1 VS 2", with MANIA / HIPOMANIA tags and mood-wave lines.
+
+The headline and face sit inside the centre 3:4 area (y 240–1680) that TikTok
+shows in the profile grid. To re-export it, render the page at 1080×1920 with
+headless Chrome, for example Playwright `page.screenshot`.
 
 ## Rebuild
 

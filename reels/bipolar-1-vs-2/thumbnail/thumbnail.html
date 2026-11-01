@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="ms">
+<head>
+<meta charset="UTF-8" />
+<title>Thumbnail: Beza Bipolar 1 vs 2</title>
+<style>
+@font-face { font-family: "Anton"; src: url("../project/assets/fonts/anton-latin-400-normal.woff2") format("woff2"); }
+@font-face { font-family: "Montserrat"; src: url("../project/assets/fonts/montserrat-latin-900-normal.woff2") format("woff2"); font-weight: 900; }
+@font-face { font-family: "Montserrat"; src: url("../project/assets/fonts/montserrat-latin-800-normal.woff2") format("woff2"); font-weight: 800; }
+:root { --red: #ff3b5c; --teal: #19e3c8; --yellow: #ffd84d; --navy: #0b0f1e; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { width: 1080px; height: 1920px; overflow: hidden; background: var(--navy); }
+#c { position: relative; width: 1080px; height: 1920px; overflow: hidden; font-family: "Montserrat", sans-serif; color: #fff; }
+
+/* split background: Type 1 (red, left) vs Type 2 (teal, right) */
+.half { position: absolute; top: 0; height: 1920px; width: 1300px; }
+.h1 { left: -560px; background: linear-gradient(160deg, #ff6b81 0%, #e0123d 60%, #8f0a26 100%); transform: skewX(-12deg); }
+.h2 { left: 560px; background: linear-gradient(200deg, #4ff5df 0%, #0fb39d 55%, #06574d 100%); transform: skewX(-12deg); }
+.seam { position: absolute; left: 520px; top: -100px; width: 26px; height: 2200px; background: var(--yellow); transform: skewX(-12deg); box-shadow: 0 0 60px rgba(255,216,77,.8); }
+.halftone { position: absolute; inset: 0; background-image: radial-gradient(rgba(0,0,0,.18) 3px, transparent 3.5px); background-size: 22px 22px;
+  -webkit-mask-image: linear-gradient(to bottom, #000 0%, transparent 55%); mask-image: linear-gradient(to bottom, #000 0%, transparent 55%); }
+.glow { position: absolute; left: 140px; top: 700px; width: 800px; height: 800px; border-radius: 50%; background: radial-gradient(circle, rgba(255,255,255,.55), rgba(255,255,255,0) 65%); }
+
+/* mood waves behind the speaker */
+svg.wave { position: absolute; left: 0; top: 830px; }
+
+/* speaker */
+#azren { position: absolute; left: 0; top: 400px; width: 1080px;
+  filter: drop-shadow(0 0 0 #fff) drop-shadow(10px 0 0 #fff) drop-shadow(-10px 0 0 #fff) drop-shadow(0 -10px 0 #fff) drop-shadow(0 30px 50px rgba(0,0,0,.55)); }
+.shade { position: absolute; left: 0; bottom: 0; width: 1080px; height: 360px; background: linear-gradient(to top, rgba(11,15,30,.9), rgba(11,15,30,0)); }
+
+/* headline */
+.top { position: absolute; left: 0; top: 245px; width: 1080px; text-align: center; }
+.kicker { display: inline-block; font-weight: 900; font-size: 54px; letter-spacing: 6px; color: var(--navy); background: var(--yellow);
+  padding: 8px 30px; border-radius: 12px; transform: rotate(-2deg); box-shadow: 0 10px 0 rgba(0,0,0,.35); }
+.title { font-family: "Anton", sans-serif; font-size: 230px; line-height: .95; margin-top: 18px; color: #fff;
+  -webkit-text-stroke: 22px var(--navy); paint-order: stroke fill; text-shadow: 0 18px 0 rgba(0,0,0,.35); letter-spacing: 2px; }
+.vsrow { display: flex; justify-content: center; align-items: flex-start; gap: 30px; margin-top: 0; }
+.col { display: flex; flex-direction: column; align-items: center; gap: 22px; }
+.num { font-family: "Anton", sans-serif; font-size: 190px; line-height: 1; width: 220px; height: 230px; border-radius: 40px; display: flex; align-items: center; justify-content: center;
+  border: 14px solid #fff; box-shadow: 0 20px 0 rgba(0,0,0,.35); }
+.n1 { background: var(--red); transform: rotate(-6deg); }
+.n2 { background: #0fb39d; transform: rotate(6deg); }
+.vs { margin-top: 30px; font-family: "Anton", sans-serif; font-size: 100px; width: 170px; height: 170px; line-height: 150px; border-radius: 50%; background: var(--navy); color: var(--yellow);
+  border: 10px solid var(--yellow); z-index: 2; }
+
+/* labels */
+.lab { font-family: "Anton", sans-serif; font-size: 52px; line-height: 1.15; padding: 6px 28px; border-radius: 16px; border: 6px solid #fff; box-shadow: 0 12px 0 rgba(0,0,0,.35); }
+.l1 { background: var(--red); transform: rotate(-4deg); }
+.l2 { background: #0fb39d; transform: rotate(4deg); }
+.q { position: absolute; font-family: "Anton", sans-serif; color: var(--yellow); -webkit-text-stroke: 12px var(--navy); paint-order: stroke fill; }
+.q1 { left: 40px; top: 1030px; font-size: 200px; transform: rotate(-14deg); }
+.q2 { right: 30px; top: 1000px; font-size: 230px; transform: rotate(12deg); }
+
+/* bottom strip */
+.bottom { position: absolute; left: 0; top: 1720px; width: 1080px; text-align: center; }
+.bottom span { display: inline-block; font-weight: 900; font-size: 60px; background: #fff; color: var(--navy); padding: 16px 40px; border-radius: 60px;
+  box-shadow: 0 14px 0 rgba(0,0,0,.4); }
+.bottom span b { color: var(--red); }
+</style>
+</head>
+<body>
+<div id="c">
+  <div class="half h1"></div>
+  <div class="half h2"></div>
+  <div class="seam"></div>
+  <div class="halftone"></div>
+  <div class="glow"></div>
+  <svg class="wave" width="1080" height="560" viewBox="0 0 1080 560">
+    <!-- Type 1: one big mania spike; Type 2: small bumps + deep dips -->
+    <polyline points="0,300 140,300 210,60 290,50 350,300 470,300" fill="none" stroke="#fff" stroke-opacity=".55" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+    <polyline points="610,300 670,230 720,300 790,470 860,490 910,300 960,240 1010,300 1080,470" fill="none" stroke="#fff" stroke-opacity=".55" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+  <div class="q q1">?</div>
+  <div class="q q2">?</div>
+  <img id="azren" src="azren_cut.png" alt="" />
+  <div class="shade"></div>
+  <div class="top">
+    <div class="kicker">APA BEZANYA?</div>
+    <div class="title">BIPOLAR</div>
+    <div class="vsrow"><div class="col"><div class="num n1">1</div><div class="lab l1">MANIA</div></div><div class="vs">VS</div><div class="col"><div class="num n2">2</div><div class="lab l2">HIPOMANIA</div></div></div>
+  </div>
+  <div class="bottom"><span>Doktor <b>psikiatri</b> terangkan</span></div>
+</div>
+</body>
+</html>
