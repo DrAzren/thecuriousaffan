@@ -15,6 +15,15 @@ time and can be re-timed to new narration.
 |---|---|---|---|
 | 005 | Kenapa Bulan Macam Ikut Kereta Kita? | [`episodes/005-bulan-ikut-kereta`](episodes/005-bulan-ikut-kereta) | `output/TheCuriousAffan_E005_Kenapa_Bulan_Macam_Ikut_Kereta_Kita.mp4` |
 
+## Reels
+
+| Title | Folder | Final video |
+|---|---|---|
+| Beza Bipolar Type 1 vs Type 2 (Dr. Azren) | [`reels/bipolar-1-vs-2`](reels/bipolar-1-vs-2) | `output/Beza_Bipolar_Type1_vs_Type2_TikTok.mp4` |
+
+Talking-head reels edited from raw footage: filler and pause removal,
+HyperFrames motion graphics, Higgsfield AI B-roll and synthesised SFX.
+
 ## Build
 
 Requirements: Node 18+, Python 3 with `numpy`, `ffmpeg`, and Playwright with

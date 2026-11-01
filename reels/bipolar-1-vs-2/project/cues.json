@@ -1,0 +1,496 @@
+{
+ "total": 101.73,
+ "speech_end": 98.13,
+ "sfx": [
+  {
+   "t": 0.0,
+   "name": "riser_short",
+   "gain": 0.6
+  },
+  {
+   "t": 0.05,
+   "name": "impact",
+   "gain": 0.9
+  },
+  {
+   "t": 0.25,
+   "name": "whoosh",
+   "gain": 0.6
+  },
+  {
+   "t": 0.45,
+   "name": "whoosh",
+   "gain": 0.6
+  },
+  {
+   "t": 0.75,
+   "name": "boom",
+   "gain": 0.8
+  },
+  {
+   "t": 0.8,
+   "name": "tick",
+   "gain": 0.4
+  },
+  {
+   "t": 1.1,
+   "name": "pop",
+   "gain": 0.5
+  },
+  {
+   "t": 2.95,
+   "name": "swoosh",
+   "gain": 0.5
+  },
+  {
+   "t": 3.07,
+   "name": "swoosh",
+   "gain": 0.6
+  },
+  {
+   "t": 3.38,
+   "name": "bubble",
+   "gain": 0.7
+  },
+  {
+   "t": 4.4,
+   "name": "whoosh",
+   "gain": 0.55
+  },
+  {
+   "t": 8.53,
+   "name": "whoosh",
+   "gain": 0.6
+  },
+  {
+   "t": 9.21,
+   "name": "whoosh",
+   "gain": 0.6
+  },
+  {
+   "t": 9.56,
+   "name": "boing",
+   "gain": 0.5
+  },
+  {
+   "t": 12.67,
+   "name": "pop",
+   "gain": 0.45
+  },
+  {
+   "t": 13.55,
+   "name": "pop",
+   "gain": 0.45
+  },
+  {
+   "t": 13.6,
+   "name": "riser",
+   "gain": 0.6
+  },
+  {
+   "t": 14.15,
+   "name": "impact",
+   "gain": 1.0
+  },
+  {
+   "t": 14.97,
+   "name": "tick",
+   "gain": 0.5
+  },
+  {
+   "t": 15.0,
+   "name": "whoosh",
+   "gain": 0.6
+  },
+  {
+   "t": 19.48,
+   "name": "impact",
+   "gain": 0.9
+  },
+  {
+   "t": 20.6,
+   "name": "whip",
+   "gain": 0.7
+  },
+  {
+   "t": 20.87,
+   "name": "pop",
+   "gain": 0.5
+  },
+  {
+   "t": 23.13,
+   "name": "swoosh",
+   "gain": 0.5
+  },
+  {
+   "t": 25.11,
+   "name": "ding",
+   "gain": 0.55
+  },
+  {
+   "t": 26.45,
+   "name": "pop",
+   "gain": 0.55
+  },
+  {
+   "t": 29.09,
+   "name": "whoosh",
+   "gain": 0.55
+  },
+  {
+   "t": 31.19,
+   "name": "ding",
+   "gain": 0.55
+  },
+  {
+   "t": 38.68,
+   "name": "pop",
+   "gain": 0.55
+  },
+  {
+   "t": 39.14,
+   "name": "swoosh",
+   "gain": 0.6
+  },
+  {
+   "t": 39.84,
+   "name": "ding",
+   "gain": 0.55
+  },
+  {
+   "t": 41.3,
+   "name": "glitch",
+   "gain": 0.8
+  },
+  {
+   "t": 41.46,
+   "name": "pop",
+   "gain": 0.55
+  },
+  {
+   "t": 42.89,
+   "name": "alarm",
+   "gain": 0.6
+  },
+  {
+   "t": 43.62,
+   "name": "whip",
+   "gain": 0.7
+  },
+  {
+   "t": 43.84,
+   "name": "siren",
+   "gain": 0.45
+  },
+  {
+   "t": 45.79,
+   "name": "swoosh",
+   "gain": 0.55
+  },
+  {
+   "t": 46.09,
+   "name": "draw",
+   "gain": 0.5
+  },
+  {
+   "t": 48.84,
+   "name": "tick",
+   "gain": 0.6
+  },
+  {
+   "t": 51.08,
+   "name": "whoosh",
+   "gain": 0.55
+  },
+  {
+   "t": 51.69,
+   "name": "coin",
+   "gain": 0.45
+  },
+  {
+   "t": 51.875,
+   "name": "coin",
+   "gain": 0.45
+  },
+  {
+   "t": 52.06,
+   "name": "coin",
+   "gain": 0.45
+  },
+  {
+   "t": 52.21,
+   "name": "chaching",
+   "gain": 0.8
+  },
+  {
+   "t": 52.245,
+   "name": "coin",
+   "gain": 0.45
+  },
+  {
+   "t": 52.43,
+   "name": "coin",
+   "gain": 0.45
+  },
+  {
+   "t": 52.615,
+   "name": "coin",
+   "gain": 0.45
+  },
+  {
+   "t": 53.3,
+   "name": "clock",
+   "gain": 0.5
+  },
+  {
+   "t": 53.5,
+   "name": "clock",
+   "gain": 0.5
+  },
+  {
+   "t": 53.7,
+   "name": "clock",
+   "gain": 0.5
+  },
+  {
+   "t": 53.9,
+   "name": "clock",
+   "gain": 0.5
+  },
+  {
+   "t": 54.1,
+   "name": "clock",
+   "gain": 0.5
+  },
+  {
+   "t": 54.3,
+   "name": "clock",
+   "gain": 0.5
+  },
+  {
+   "t": 54.5,
+   "name": "clock",
+   "gain": 0.5
+  },
+  {
+   "t": 54.5,
+   "name": "pop",
+   "gain": 0.6
+  },
+  {
+   "t": 56.88,
+   "name": "whip",
+   "gain": 0.7
+  },
+  {
+   "t": 57.6,
+   "name": "fanfare",
+   "gain": 0.6
+  },
+  {
+   "t": 57.8,
+   "name": "cheer",
+   "gain": 0.5
+  },
+  {
+   "t": 59.36,
+   "name": "stamp",
+   "gain": 0.9
+  },
+  {
+   "t": 59.91,
+   "name": "riser",
+   "gain": 0.6
+  },
+  {
+   "t": 60.46,
+   "name": "impact",
+   "gain": 1.0
+  },
+  {
+   "t": 61.28,
+   "name": "tick",
+   "gain": 0.5
+  },
+  {
+   "t": 61.31,
+   "name": "whoosh",
+   "gain": 0.6
+  },
+  {
+   "t": 63.46,
+   "name": "impact",
+   "gain": 0.9
+  },
+  {
+   "t": 64.61,
+   "name": "swoosh",
+   "gain": 0.5
+  },
+  {
+   "t": 65.82,
+   "name": "rise_small",
+   "gain": 0.6
+  },
+  {
+   "t": 66.66,
+   "name": "rise_big",
+   "gain": 0.7
+  },
+  {
+   "t": 68.66,
+   "name": "bubble",
+   "gain": 0.55
+  },
+  {
+   "t": 71.13,
+   "name": "bubble",
+   "gain": 0.55
+  },
+  {
+   "t": 71.93,
+   "name": "bubble",
+   "gain": 0.55
+  },
+  {
+   "t": 72.61,
+   "name": "bubble",
+   "gain": 0.55
+  },
+  {
+   "t": 72.98,
+   "name": "swoosh",
+   "gain": 0.55
+  },
+  {
+   "t": 73.28,
+   "name": "draw",
+   "gain": 0.5
+  },
+  {
+   "t": 76.27,
+   "name": "boom",
+   "gain": 0.9
+  },
+  {
+   "t": 77.01,
+   "name": "swoosh",
+   "gain": 0.6
+  },
+  {
+   "t": 77.21,
+   "name": "heartbeat",
+   "gain": 0.6
+  },
+  {
+   "t": 78.37,
+   "name": "boom",
+   "gain": 0.6
+  },
+  {
+   "t": 79.42,
+   "name": "boom",
+   "gain": 0.6
+  },
+  {
+   "t": 80.41,
+   "name": "tick",
+   "gain": 0.6
+  },
+  {
+   "t": 81.22,
+   "name": "swoosh",
+   "gain": 0.6
+  },
+  {
+   "t": 81.52,
+   "name": "pop",
+   "gain": 0.5
+  },
+  {
+   "t": 83.72,
+   "name": "whoosh",
+   "gain": 0.55
+  },
+  {
+   "t": 84.51,
+   "name": "rise_small",
+   "gain": 0.6
+  },
+  {
+   "t": 86.22,
+   "name": "down",
+   "gain": 0.8
+  },
+  {
+   "t": 86.54,
+   "name": "whoosh",
+   "gain": 0.55
+  },
+  {
+   "t": 88.25,
+   "name": "pop",
+   "gain": 0.5
+  },
+  {
+   "t": 89.59,
+   "name": "tick",
+   "gain": 0.5
+  },
+  {
+   "t": 89.67,
+   "name": "whip",
+   "gain": 0.7
+  },
+  {
+   "t": 91.35,
+   "name": "chime",
+   "gain": 0.8
+  },
+  {
+   "t": 93.51,
+   "name": "buzz",
+   "gain": 0.9
+  },
+  {
+   "t": 95.55,
+   "name": "boom",
+   "gain": 0.7
+  },
+  {
+   "t": 96.23,
+   "name": "bubble",
+   "gain": 0.8
+  },
+  {
+   "t": 97.88,
+   "name": "whoosh_big",
+   "gain": 0.8
+  },
+  {
+   "t": 98.63,
+   "name": "tick",
+   "gain": 0.5
+  },
+  {
+   "t": 98.91,
+   "name": "tick",
+   "gain": 0.5
+  },
+  {
+   "t": 99.19,
+   "name": "tick",
+   "gain": 0.5
+  },
+  {
+   "t": 99.47,
+   "name": "tick",
+   "gain": 0.5
+  },
+  {
+   "t": 99.88,
+   "name": "chime",
+   "gain": 0.6
+  }
+ ]
+}
