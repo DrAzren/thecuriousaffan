@@ -9,6 +9,10 @@
 //   node tools/render.js episodes/005-bulan-ikut-kereta --stills 1,5.5   # PNG stills
 //   node tools/render.js <ep> --from 10 --to 20 --out part.mp4           # a section
 //   node tools/render.js <ep> --stills 1 --eval "window.foo = 1"        # run JS first (for tuning)
+//   node tools/render.js <ep> --package                                 # only thumbnail + description
+//
+// A full render (no --from/--to) also writes output/thumbnail.jpg (when the
+// page exposes EP.thumbnail()) and output/description.txt (from meta.json).
 //
 // Set CHROMIUM_PATH to use a specific Chrome/Chromium binary.
 const http = require('http');
@@ -16,6 +20,7 @@ const fs = require('fs');
 const path = require('path');
 const { spawn } = require('child_process');
 const { chromium } = require('playwright');
+const { writeDescription } = require('./package.js');
 
 const ROOT = path.resolve(__dirname, '..');
 const args = process.argv.slice(2);
@@ -64,6 +69,32 @@ function serve() {
   const info = await page.evaluate(() => ({ fps: window.EP.fps, duration: window.EP.duration }));
   const fps = Number(opt('fps', info.fps));
 
+  const epDir = path.join(ROOT, ep);
+  // Cover image + short description that go with every finished render.
+  async function packageEpisode() {
+    const outDir = path.join(epDir, 'output');
+    fs.mkdirSync(outDir, { recursive: true });
+    if (await page.evaluate(() => typeof window.EP.thumbnail === 'function')) {
+      await page.evaluate(() => window.EP.thumbnail());
+      const png = await page.screenshot({ type: 'png' });
+      const jpg = path.join(outDir, 'thumbnail.jpg');
+      await new Promise((res, rej) => {
+        const ff = spawn('ffmpeg', ['-y', '-v', 'error', '-i', '-', '-q:v', '2', jpg], { stdio: ['pipe', 'inherit', 'inherit'] });
+        ff.on('close', (c) => (c ? rej(new Error('ffmpeg thumbnail failed')) : res()));
+        ff.stdin.end(png);
+      });
+      console.log('wrote', jpg);
+    }
+    if (fs.existsSync(path.join(epDir, 'meta.json'))) console.log('wrote', writeDescription(epDir));
+  }
+
+  if (args.includes('--package')) {
+    await packageEpisode();
+    await browser.close();
+    srv.close();
+    return;
+  }
+
   const pre = opt('eval');
   if (pre) await page.evaluate(pre);
   const stills = opt('stills');
@@ -102,9 +133,10 @@ function serve() {
   }
   ff.stdin.end();
   await new Promise((r) => ff.on('close', r));
+  console.log('wrote', out);
+  if (opt('from') === undefined && opt('to') === undefined) await packageEpisode();
   await browser.close();
   srv.close();
-  console.log('wrote', out);
 })().catch((e) => {
   console.error(e);
   process.exit(1);

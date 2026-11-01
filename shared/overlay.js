@@ -290,6 +290,20 @@ export class Overlay {
   }
 }
 
+const MAGNIFIER = `<svg width="190" height="190" viewBox="0 0 190 190"><line x1="60" y1="130" x2="20" y2="172" stroke="#17256b" stroke-width="40" stroke-linecap="round"/><line x1="60" y1="130" x2="20" y2="172" stroke="#ffc928" stroke-width="22" stroke-linecap="round"/><circle cx="110" cy="80" r="62" fill="#8fdcff" stroke="#17256b" stroke-width="34"/><circle cx="110" cy="80" r="62" fill="none" stroke="#ffc928" stroke-width="16"/><ellipse cx="92" cy="62" rx="16" ry="22" fill="#fff" opacity="0.85"/></svg>`;
+
+// "The Curious Affan" series logo. (cx, y) is the centre of "The"; k holds the
+// {o, s} pop state of the three words so the logo can animate in.
+export function drawLogo(ov, { cx = W / 2, y = 1110, scale = 1, k = [{ o: 1, s: 1 }, { o: 1, s: 1 }, { o: 1, s: 1 }], star = { o: 1, s: 1 } } = {}) {
+  const at = (dx, dy) => ({ x: cx + dx * scale, y: y + dy * scale });
+  ov.html('lThe', bubbleSVG('The', { size: 120, top: '#ffffff', bot: '#e8eefc' }), { ...at(10, 0), o: k[0].o, s: k[0].s * scale });
+  ov.html('lCur', bubbleSVG('Curious', { size: 200, top: '#9fe8ff', bot: '#1d9bf0' }), { ...at(40, 160), o: k[1].o, s: k[1].s * scale });
+  ov.html('lMag', MAGNIFIER, { ...at(-375, 190), o: k[1].o, s: k[1].s * 0.9 * scale, r: -8 });
+  ov.html('lAff', bubbleSVG('Affan', { size: 220, top: '#ffe45c', bot: '#ff9f1c' }), { ...at(0, 340), o: k[2].o, s: k[2].s * scale });
+  const st = at(72, 40);
+  ov.star(st.x, st.y, 34 * star.s * scale, star.o, '#ffd84a', 0.3);
+}
+
 // Pop-in / pop-out helper for overlay elements: returns {o, s} for time t.
 export function pop(t, a, b = Infinity, { fin = 0.35, fout = 0.2, from = 0.3 } = {}) {
   if (t < a || t > b) return { o: 0, s: from };

@@ -3,7 +3,7 @@
 import * as THREE from 'three';
 import { makeRenderer, loadEnvelope, toScreen, clamp, lerp, inv, smooth, easeOut, easeInOut, backOut, keys, wobble, rng, W, H } from '../../shared/core.js';
 import { POSES, blinkAt } from '../../shared/affan.js';
-import { Overlay, pop, ICONS, bubbleSVG } from '../../shared/overlay.js';
+import { Overlay, pop, ICONS, bubbleSVG, drawLogo } from '../../shared/overlay.js';
 import { makeTree } from '../../shared/props.js';
 import { CAPTIONS, KEYWORDS } from './captions.js';
 import { buildRoadWorld, buildToyWorld, buildOutro, carX, CAR_SPEED, TOY_SPEED } from './worlds.js';
@@ -481,12 +481,7 @@ const SHOTS = [
     ov.html('oQ1', ICONS.qmark('#ffcf33'), { x: 880, y: 420 + Math.sin(t * 2 + 1) * 8, o: ic.o, s: ic.s * 0.9, r: 12 });
     ov.html('oQ2', ICONS.qmark('#2f6fff'), { x: 220, y: 720 + Math.sin(t * 2 + 2) * 8, o: ic.o, s: ic.s * 0.6, r: -12 });
     const l1 = pop(t, 55.6, 99), l2 = pop(t, 55.8, 99), l3 = pop(t, 56.0, 99);
-    ov.html('lThe', bubbleSVG('The', { size: 120, top: '#ffffff', bot: '#e8eefc' }), { x: W / 2 + 10, y: 1110, o: l1.o, s: l1.s });
-    ov.html('lCur', bubbleSVG('Curious', { size: 200, top: '#9fe8ff', bot: '#1d9bf0' }), { x: W / 2 + 40, y: 1270, o: l2.o, s: l2.s });
-    ov.html('lMag', `<svg width="190" height="190" viewBox="0 0 190 190"><line x1="60" y1="130" x2="20" y2="172" stroke="#17256b" stroke-width="40" stroke-linecap="round"/><line x1="60" y1="130" x2="20" y2="172" stroke="#ffc928" stroke-width="22" stroke-linecap="round"/><circle cx="110" cy="80" r="62" fill="#8fdcff" stroke="#17256b" stroke-width="34"/><circle cx="110" cy="80" r="62" fill="none" stroke="#ffc928" stroke-width="16"/><ellipse cx="92" cy="62" rx="16" ry="22" fill="#fff" opacity="0.85"/></svg>`, { x: 165, y: 1300, o: l2.o, s: l2.s * 0.9, r: -8 });
-    ov.html('lAff', bubbleSVG('Affan', { size: 220, top: '#ffe45c', bot: '#ff9f1c' }), { x: W / 2, y: 1450, o: l3.o, s: l3.s });
-    const st = pop(t, 56.2, 99);
-    ov.star(612, 1150, 34 * st.s, st.o, '#ffd84a', 0.3);
+    drawLogo(ov, { k: [l1, l2, l3], star: pop(t, 56.2, 99) });
     return outro;
   }],
 ];
@@ -542,10 +537,59 @@ function frame(t) {
   ov.end();
 }
 
+// Cover / thumbnail (9:16): Affan amazed, pointing at the moon from the car,
+// with a big title, episode badge and the series logo. No captions. Key
+// elements stay inside the centre 3:4 area (y 240-1680) that profile grids show.
+const THUMB = { moon: [-0.35, 0.2, -0.97], cam: [-0.2, 1.5, 0.72], look: [-0.95, 1.62, -0.5], fov: 50 };
+window.setThumb = (o) => Object.assign(THUMB, o);
+function thumbnail() {
+  ov.begin();
+  cam.aspect = W / H;
+  cam.updateProjectionMatrix();
+  const t = 3.6;
+  road.stars.userData.update(t);
+  roadMoon(0, THUMB.moon);
+  roadCar(t);
+  interior(true);
+  carAffan(t, {
+    headYaw: -0.7, headPitch: -0.05, blink: 0, talk: 0, wow: 0.85, brow: 1, lookX: -0.1, lookY: 0.1,
+    armL: { reach: [0.95, 1.3, 0.55], point: 1, pole: [1, -1, -0.8] },
+  });
+  lookCam(cam, carLocal(...THUMB.cam), carLocal(...THUMB.look), THUMB.fov);
+  const key = new THREE.PointLight(0xffe2c4, 1.6, 3, 2);
+  key.position.copy(carLocal(-0.4, 1.75, 0.25));
+  road.scene.add(key);
+  road.clearAround(cam.position);
+  road.sky.position.copy(cam.position);
+  road.stars.position.copy(cam.position);
+  renderer.render(road.scene, cam);
+  road.scene.remove(key);
+  const g = ov.g;
+  const top = g.createLinearGradient(0, 0, 0, 760);
+  top.addColorStop(0, 'rgba(8,12,44,0.85)');
+  top.addColorStop(1, 'rgba(8,12,44,0)');
+  g.fillStyle = top;
+  g.fillRect(0, 0, W, 760);
+  const bot = g.createLinearGradient(0, H - 900, 0, H);
+  bot.addColorStop(0, 'rgba(8,12,44,0)');
+  bot.addColorStop(1, 'rgba(8,12,44,0.8)');
+  g.fillStyle = bot;
+  g.fillRect(0, H - 900, W, 900);
+  ov.vignette(0.3);
+  const m = scr(road.moon.position);
+  if (m.visible) ov.sparkles(1.3, { n: 14, seed: 17, x: m.x - 200, y: m.y - 200, w: 400, h: 400, size: 26 });
+  ov.tag('thBadge', 'EPISOD 5', { x: W / 2, y: 300 }, { bg: '#2f7bff', small: true });
+  ov.bubble('thTitle', 'KENAPA BULAN\nIKUT KITA?', { x: W / 2, y: 475, r: -2 }, { size: 118 });
+  ov.html('thQ', ICONS.qmark('#ffcf33'), { x: 120, y: 760, r: -14, s: 0.9 });
+  drawLogo(ov, { y: 1425, scale: 0.58 });
+  ov.end();
+}
+
 window.EP = {
   fps: FPS,
   duration: DURATION,
   frame,
+  thumbnail,
   ready: (async () => {
     env = await loadEnvelope('./audio/narration.mp3', FPS);
     await Promise.all(['800 60px "Baloo 2"', '700 60px "Baloo 2"', '700 60px Fredoka', '600 60px Fredoka'].map((f) => document.fonts.load(f)));

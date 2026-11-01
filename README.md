@@ -33,6 +33,24 @@ episodes/005-bulan-ikut-kereta/make.sh
 soundtrack (`build_audio.py`), then muxes the final MP4 (H.264 High, AAC
 256 kb/s, faststart).
 
+Every full render also writes, next to the video:
+
+- `output/thumbnail.jpg`: a 1080×1920 cover drawn by the episode's
+  `EP.thumbnail()` (Affan, big title, episode badge, logo). Key elements stay
+  inside the centre 3:4 area that TikTok and Reels profile grids show.
+- `output/description.txt`: a short post description (title, one-line teaser,
+  hashtags) built from the episode's `meta.json` and the series hashtags in
+  `series.json`.
+
+To regenerate only these two files, without re-rendering the video:
+
+```bash
+node tools/render.js episodes/005-bulan-ikut-kereta --package
+```
+
+For a new episode, add a `meta.json` (`episode`, `title`, `teaser`,
+`hashtags`) and an `EP.thumbnail()` function.
+
 Useful while editing:
 
 ```bash
@@ -58,8 +76,10 @@ shared/
   props.js     sky, stars, moon, road, car (+ interior), trees, lamp posts, houses
   overlay.js   captions, bubble titles, DEKAT/JAUH tags, arrows, icons, sparkles, flashes
   core.js      easing, keyframes, seeded RNG, narration envelope (lip sync), projection
-tools/render.js  deterministic frame renderer (Playwright -> ffmpeg)
-episodes/<nnn>/  index.html, episode.js (shots), worlds.js (sets), captions.js,
+tools/render.js  deterministic frame renderer (Playwright -> ffmpeg) + thumbnail/description
+tools/package.js short description from meta.json + series.json
+series.json      series name and hashtags
+episodes/<nnn>/  index.html, episode.js (shots + thumbnail), worlds.js (sets), captions.js, meta.json,
                  build_audio.py (music + SFX + mix), audio/narration.mp3, make.sh
 lab/model-sheet  Affan turnaround and pose test page
 ```
