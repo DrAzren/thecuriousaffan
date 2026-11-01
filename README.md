@@ -13,6 +13,7 @@ time and can be re-timed to new narration.
 
 | # | Title | Folder | Final video |
 |---|---|---|---|
+| 004 | Kenapa Perut Kita Berbunyi Bila Lapar? | [`episodes/004-perut-berbunyi`](episodes/004-perut-berbunyi) | `output/TheCuriousAffan_E004_Kenapa_Perut_Kita_Berbunyi_Bila_Lapar.mp4` |
 | 005 | Kenapa Bulan Macam Ikut Kereta Kita? | [`episodes/005-bulan-ikut-kereta`](episodes/005-bulan-ikut-kereta) | `output/TheCuriousAffan_E005_Kenapa_Bulan_Macam_Ikut_Kereta_Kita.mp4` |
 
 ## Build
@@ -75,6 +76,23 @@ He matches the approved avatar reference:
 
 Colours live in `AFFAN` in `shared/affan.js`. Change them there and every
 episode stays consistent.
+
+## Episode 004 at a glance
+
+Build it with `episodes/004-perut-berbunyi/make.sh`. Storyboard, science
+notes, sound design and QC are in
+[`episodes/004-perut-berbunyi/PRODUCTION.md`](episodes/004-perut-berbunyi/PRODUCTION.md).
+
+- **Science.** The muscles of the stomach and intestines squeeze in a
+  travelling wave (peristalsis). That moves gas and liquid along, and the
+  gurgling is the rumble we hear. It can happen when hungry or after eating.
+  The imaginary monster is shown only in Affan's thought bubble and is
+  debunked on screen.
+- **Sets.** Affan's living room, a learning world with a giant friendly
+  digestive model seen from an observation platform, and a cut-away
+  intestine close-up whose muscle rings animate as a wave.
+- **Captions.** Spoken words only, timed to word-level alignment of the
+  narration.
 
 ## Episode 005 at a glance
 
