@@ -14,6 +14,7 @@ time and can be re-timed to new narration.
 | # | Title | Folder | Final video |
 |---|---|---|---|
 | 005 | Kenapa Bulan Macam Ikut Kereta Kita? | [`episodes/005-bulan-ikut-kereta`](episodes/005-bulan-ikut-kereta) | `output/TheCuriousAffan_E005_Kenapa_Bulan_Macam_Ikut_Kereta_Kita.mp4` |
+| 006 | Kenapa Air Laut Masin? | [`episodes/006-air-laut-masin`](episodes/006-air-laut-masin) | `output/TheCuriousAffan_E006_Kenapa_Air_Laut_Masin.mp4` |
 
 ## Build
 
@@ -26,7 +27,7 @@ npm install
 ```
 
 ```bash
-episodes/005-bulan-ikut-kereta/make.sh
+episodes/006-air-laut-masin/make.sh
 ```
 
 `make.sh` renders the picture (`tools/render.js`), synthesises and mixes the
@@ -56,6 +57,7 @@ node tools/render.js lab/model-sheet --stills 0,1,2,3,4,5,6
 shared/
   affan.js     Affan character: model sheet, pose rig, 2-bone arm IK, lip-sync mouth, blinks
   props.js     sky, stars, moon, road, car (+ interior), trees, lamp posts, houses
+  tropical.js  animated sea, sun glints, palms, clouds, crab sidekick, magic mini submarine
   overlay.js   captions, bubble titles, DEKAT/JAUH tags, arrows, icons, sparkles, flashes
   core.js      easing, keyframes, seeded RNG, narration envelope (lip sync), projection
 tools/render.js  deterministic frame renderer (Playwright -> ffmpeg)
@@ -93,3 +95,23 @@ episode stays consistent.
   - label pops and discovery chimes.
 
   The mix is normalised to −14 LUFS with a −1.5 dBTP ceiling.
+
+## Episode 006 at a glance
+
+- **Science.** Rain falls on mountains and rocks and dissolves tiny amounts of
+  minerals. Rivers carry these dissolved minerals to the sea, where salts build
+  up over a very long time. When sea water evaporates, only the water rises as
+  vapour; the salt stays behind, so the sea stays salty. The cross-section
+  diagram shows vapour rising to a cloud while salt crystals try to follow and
+  fall back.
+- **Shots** (timed to the 42.8 s narration; 47.5 s with the logo outro):
+  beach hook (Affan tastes the sea) → salt-shaker gag and the crab → magic mini
+  submarine → rain on the mountain → minerals leave the rocks → river ride →
+  map view with an arrow from mountain to sea → underwater, salt dissolving
+  and building up → surface question → evaporation diagram (AIR NAIK ↑,
+  GARAM TINGGAL ↓) → recap → beach thumbs-up → logo.
+- **Audio.** An original tropical music bed (marimba, steel-pan bells, bass,
+  shaker), ducked under the voice. Ambience layers: beach waves, rain, river and
+  underwater. Effects: splashes, magic whooshes and sparkles, bubbles, label pops
+  and discovery chimes. The mix is normalised to −14 LUFS with a −1.5 dBTP
+  ceiling.
