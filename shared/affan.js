@@ -309,6 +309,11 @@ export function makeAffan() {
   // round "O" mouth for wow moments
   const oMouth = mesh(new THREE.SphereGeometry(0.08, 20, 14), M.mouth, mouth, [0, -0.03, 0.0], [1, 1.25, 0.4]);
   oMouth.castShadow = false;
+  // upper teeth row, shown inside the open mouth for grins and brushing (pose.teeth)
+  const teeth = new THREE.Group();
+  mouth.add(teeth);
+  mesh(new THREE.CapsuleGeometry(0.032, 0.15, 4, 12), M.teeth, teeth, [0, -0.028, 0.045], [1, 1, 0.55], [0, 0, Math.PI / 2]).castShadow = false;
+  teeth.visible = false;
 
   // cheek blush
   for (const side of [-1, 1]) {
@@ -318,7 +323,7 @@ export function makeAffan() {
     head.add(b);
   }
 
-  const parts = { root, body, torso, neck, head, legs, arms, eyes, brows, mouth, smile, open, oMouth, glasses };
+  const parts = { root, body, torso, neck, head, legs, arms, eyes, brows, mouth, smile, open, oMouth, teeth, glasses };
 
   // ---------- pose ----------
   // All values optional. Arms: {x, y, z} shoulder rotation, el = elbow bend,
@@ -327,7 +332,7 @@ export function makeAffan() {
     yaw: 0, lean: 0, tilt: 0, bob: 0,
     headYaw: 0, headPitch: 0, headRoll: 0,
     lookX: 0, lookY: 0, blink: 0,
-    talk: 0, smile: 0.6, wow: 0, brow: 0,
+    talk: 0, smile: 0.6, wow: 0, brow: 0, teeth: 0, grin: 0,
     armL: { x: 0, y: 0, z: 0.12, el: -0.15, point: 0, thumb: 0 },
     armR: { x: 0, y: 0, z: -0.12, el: -0.15, point: 0, thumb: 0 },
     legL: { x: 0, knee: 0 }, legR: { x: 0, knee: 0 },
@@ -394,10 +399,13 @@ export function makeAffan() {
       b.position.y = 0.27 + 0.07 * q.brow + 0.05 * q.wow;
       b.rotation.z = (i === 0 ? -1 : 1) * 0.12 * q.brow;
     });
-    const talk = clamp(q.talk);
+    const grin = clamp(q.grin);
+    const talk = Math.max(clamp(q.talk), 0.55 * grin);
     const wow = clamp(q.wow);
-    open.scale.set(lerp(0.95, 1.1, talk) * (1 - wow), lerp(0.08, 0.95, talk) * (1 - wow) + 0.001, 1);
+    open.scale.set(lerp(0.95, 1.1, talk) * (1 - wow) * (1 + 0.45 * grin), lerp(0.08, 0.95, talk) * (1 - wow) + 0.001, 1);
     open.visible = talk > 0.04 && wow < 0.95;
+    teeth.visible = open.visible && q.teeth > 0.01;
+    teeth.scale.set((1 + 0.45 * grin) * lerp(0.9, 1.05, talk), 1, 1);
     smile.visible = talk < 0.25 && wow < 0.3;
     smile.scale.set(lerp(0.6, 1.1, q.smile), lerp(0.25, 0.9, q.smile), 1);
     oMouth.visible = wow > 0.05;

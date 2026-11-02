@@ -14,6 +14,7 @@ time and can be re-timed to new narration.
 | # | Title | Folder | Final video |
 |---|---|---|---|
 | 005 | Kenapa Bulan Macam Ikut Kereta Kita? | [`episodes/005-bulan-ikut-kereta`](episodes/005-bulan-ikut-kereta) | `output/TheCuriousAffan_E005_Kenapa_Bulan_Macam_Ikut_Kereta_Kita.mp4` |
+| 010 | Kenapa Kita Kena Gosok Gigi? | [`episodes/010-gosok-gigi`](episodes/010-gosok-gigi) | `output/TheCuriousAffan_E010_Kenapa_Kita_Kena_Gosok_Gigi.mp4` |
 
 ## Build
 
@@ -49,7 +50,8 @@ node tools/render.js episodes/005-bulan-ikut-kereta --package
 ```
 
 For a new episode, add a `meta.json` (`episode`, `title`, `teaser`,
-`hashtags`) and an `EP.thumbnail()` function.
+`hashtags`, and optionally `body`: extra lines such as key learning points)
+and an `EP.thumbnail()` function.
 
 Useful while editing:
 
@@ -72,7 +74,8 @@ node tools/render.js lab/model-sheet --stills 0,1,2,3,4,5,6
 
 ```
 shared/
-  affan.js     Affan character: model sheet, pose rig, 2-bone arm IK, lip-sync mouth, blinks
+  affan.js     Affan character: model sheet, pose rig, 2-bone arm IK, lip-sync mouth, blinks, teeth/grin
+  family.js    Ibu (cyan tudung, baju kurung) and Ayah (navy polo): supporting parents, same style
   props.js     sky, stars, moon, road, car (+ interior), trees, lamp posts, houses
   overlay.js   captions, bubble titles, DEKAT/JAUH tags, arrows, icons, sparkles, flashes
   core.js      easing, keyframes, seeded RNG, narration envelope (lip sync), projection
@@ -113,3 +116,26 @@ episode stays consistent.
   - label pops and discovery chimes.
 
   The mix is normalised to −14 LUFS with a −1.5 dBTP ceiling.
+
+## Episode 010 at a glance
+
+- **Science.** Teeth can look clean while plaque (a sticky film of bacteria)
+  sits on them. When some bacteria get sugar they make acid, and repeated acid
+  attacks take minerals out of the enamel: a white spot first, a cavity over
+  time. Brushing physically removes and breaks up plaque. It never removes
+  every bacterium, so a few stay floating in Tooth City. Fluoride toothpaste
+  helps minerals go back into enamel. The lens diagram shows enamel crystals
+  leaving with acid and returning with cyan edges with fluoride, and the white
+  spot fades only partly; the episode never shows a cavity being repaired.
+- **Habits shown.**
+  - Gentle small circles with a soft brush.
+  - 2-minute timer.
+  - Twice a day (sun and moon), especially before bed.
+  - A pea-sized amount of fluoride toothpaste for ages 3–6, squeezed by Ibu.
+  - Parents help and supervise.
+  - Spit, don't rinse.
+- **Narration.** `audio/narration.mp3` is the supplied final recording, used
+  unedited (no pauses longer than 0.4 s, no speed change). Captions follow the
+  script spelling, without emotion tags, timed from word-level speech
+  recognition.
+- **Length.** 50.4 s: 45.7 s of narration plus a 4.5 s logo outro.

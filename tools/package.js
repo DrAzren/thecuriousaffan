@@ -13,7 +13,9 @@ function description(epDir) {
   const meta = JSON.parse(fs.readFileSync(path.join(epDir, 'meta.json'), 'utf8'));
   const series = JSON.parse(fs.readFileSync(path.join(ROOT, 'series.json'), 'utf8'));
   const tags = [...new Set([...series.hashtags.slice(0, 1), ...meta.hashtags, ...series.hashtags.slice(1)])];
-  return [meta.title, meta.teaser, '', tags.join(' ')].join('\n') + '\n';
+  // optional longer body (key learning points etc.) between the teaser and the hashtags
+  const body = Array.isArray(meta.body) && meta.body.length ? ['', ...meta.body] : [];
+  return [meta.title, meta.teaser, ...body, '', tags.join(' ')].join('\n') + '\n';
 }
 
 function writeDescription(epDir) {
