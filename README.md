@@ -14,6 +14,7 @@ time and can be re-timed to new narration.
 | # | Title | Folder | Final video |
 |---|---|---|---|
 | 005 | Kenapa Bulan Macam Ikut Kereta Kita? | [`episodes/005-bulan-ikut-kereta`](episodes/005-bulan-ikut-kereta) | `output/TheCuriousAffan_E005_Kenapa_Bulan_Macam_Ikut_Kereta_Kita.mp4` |
+| 009 | Kenapa Langit Berwarna Biru? | [`episodes/009-langit-biru`](episodes/009-langit-biru) | `output/TheCuriousAffan_E009_Kenapa_Langit_Berwarna_Biru.mp4` |
 
 ## Build
 
@@ -29,6 +30,10 @@ npm install
 episodes/005-bulan-ikut-kereta/make.sh
 ```
 
+```bash
+episodes/009-langit-biru/make.sh
+```
+
 `make.sh` renders the picture (`tools/render.js`), synthesises and mixes the
 soundtrack (`build_audio.py`), then muxes the final MP4 (H.264 High, AAC
 256 kb/s, faststart).
@@ -38,9 +43,12 @@ Every full render also writes, next to the video:
 - `output/thumbnail.jpg`: a 1080×1920 cover drawn by the episode's
   `EP.thumbnail()` (Affan, big title, episode badge, logo). Key elements stay
   inside the centre 3:4 area that TikTok and Reels profile grids show.
-- `output/description.txt`: a short post description (title, one-line teaser,
-  hashtags) built from the episode's `meta.json` and the series hashtags in
-  `series.json`.
+- `output/description.txt`: a post description (title, one-line teaser,
+  optional `body` lines, hashtags) built from the episode's `meta.json` and the
+  series hashtags in `series.json`.
+
+Episode 009's `make.sh` also writes `output/subtitles.srt` (`tools/srt.js`), a
+caption file with the same timing as the burned-in captions.
 
 To regenerate only these two files, without re-rendering the video:
 
@@ -49,7 +57,7 @@ node tools/render.js episodes/005-bulan-ikut-kereta --package
 ```
 
 For a new episode, add a `meta.json` (`episode`, `title`, `teaser`,
-`hashtags`) and an `EP.thumbnail()` function.
+`hashtags`, optionally `body`) and an `EP.thumbnail()` function.
 
 Useful while editing:
 
@@ -77,7 +85,8 @@ shared/
   overlay.js   captions, bubble titles, DEKAT/JAUH tags, arrows, icons, sparkles, flashes
   core.js      easing, keyframes, seeded RNG, narration envelope (lip sync), projection
 tools/render.js  deterministic frame renderer (Playwright -> ffmpeg) + thumbnail/description
-tools/package.js short description from meta.json + series.json
+tools/package.js post description from meta.json + series.json
+tools/srt.js     subtitles.srt from an episode's captions.js
 series.json      series name and hashtags
 episodes/<nnn>/  index.html, episode.js (shots + thumbnail), worlds.js (sets), captions.js, meta.json,
                  build_audio.py (music + SFX + mix), audio/narration.mp3, make.sh
@@ -113,3 +122,31 @@ episode stays consistent.
   - label pops and discovery chimes.
 
   The mix is normalised to −14 LUFS with a −1.5 dBTP ceiling.
+
+## Episode 009 at a glance
+
+- **Science.** Sunlight contains many colours (shown with Affan's prism
+  gadget, never as the atmosphere being a prism). Air molecules (about four
+  N₂ for every O₂) are far smaller than a light wave. Blue light is scattered
+  much more than red (Rayleigh scattering, about 1/wavelength⁴): in the
+  side-by-side lanes, blue and red travel at the same speed, blue has the
+  shorter wavelength, and the red wavelets are drawn about 1/6 as strong as
+  the blue ones. Scattered blue light reaches us from every part of the sky,
+  so the sky looks blue. At sunset the Earth/atmosphere cutaway (space stays
+  black) shows sunlight crossing far more air. Blue scatters out along the way,
+  and the beam colour is computed from that loss, so it turns orange near
+  Affan.
+- **Safety.** Affan never looks at the Sun. The rocket ride is clearly
+  imaginary, and the transitions are soft fades and an iris wipe, with no
+  strobing.
+- **Captions.** They use the script's spelling (emotion tags are not shown)
+  and are timed word by word to the narration.
+- **Audio.** The supplied narration runs unedited. Under it there is:
+  - original music, ducked with look-ahead;
+  - park birdsong and breeze;
+  - a gentle rocket launch and wind;
+  - micro-world particles;
+  - shimmering pings on every blue scattering wavelet (red ones much fainter);
+  - discovery chimes and an outro jingle.
+
+  The mix is −14 LUFS with a −1.5 dBTP ceiling.

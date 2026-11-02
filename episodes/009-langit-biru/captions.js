@@ -1,0 +1,50 @@
+// Caption chunks for Episode 009, written with the script's spelling and timed
+// to the narration (word start times measured from audio/narration.mp3).
+// Each chunk: [endTime, [word, start], ...]. Emotion tags are never shown.
+export const CAPTIONS = [
+  [0.98, ['Eh,', 0.0], ['korang!', 0.4]],
+  [2.8, ['Kenapa', 1.3], ['langit', 1.62], ['warna', 1.94], ['biru?', 2.22]],
+  [4.3, ['Kenapa', 3.0], ['bukan', 3.34], ['hijau?', 3.62]],
+  [5.38, ['Jom', 4.46], ['ikut', 4.78], ['Affan', 5.04]],
+  [6.62, ['terbang', 5.4], ['ke', 5.92], ['langit!', 6.12]],
+  [7.85, ['Waaaah!', 6.76]],
+  [9.42, ['Cahaya', 8.04], ['matahari', 8.34], ['sebenarnya', 8.86]],
+  [10.98, ['ada', 9.44], ['banyak', 9.7], ['warna!', 10.24]],
+  [13.2, ['Bila', 11.14], ['cahaya', 11.48], ['masuk', 11.9], ['ke', 12.2], ['udara,', 12.42]],
+  [14.38, ['ia', 13.4], ['bertemu', 13.54], ['molekul', 13.94]],
+  [15.85, ['yang', 14.4], ['sangat', 14.64], ['kecil.', 15.14]],
+  [17.46, ['Cahaya', 15.98], ['biru', 16.38], ['lebih', 16.82], ['banyak', 17.06]],
+  [19.16, ['tersebar', 17.48], ['ke', 18.1], ['semua', 18.26], ['arah', 18.7]],
+  [20.46, ['berbanding', 19.18], ['cahaya', 19.64], ['merah.', 19.98]],
+  [22.1, ['Sebab', 20.5], ['itulah', 20.94], ['kita', 21.54], ['nampak', 21.74]],
+  [23.45, ['langit', 22.12], ['berwarna', 22.42], ['biru!', 22.8]],
+  [25.18, ['Tapi...', 23.54], ['kenapa', 24.16]],
+  [26.9, ['waktu', 25.2], ['senja', 25.44], ['jadi', 25.92], ['oren?', 26.2]],
+  [28.6, ['Bila', 26.96], ['matahari', 27.36], ['rendah,', 27.86]],
+  [29.66, ['cahaya', 28.78], ['melalui', 29.18]],
+  [31.05, ['lebih', 29.68], ['banyak', 29.98], ['udara.', 30.36]],
+  [32.98, ['Banyak', 31.16], ['cahaya', 31.74], ['biru', 32.14], ['terserak,', 32.46]],
+  [34.56, ['jadi', 33.0], ['oren', 33.46], ['dan', 34.0], ['merah', 34.16]],
+  [35.72, ['lebih', 34.58], ['menonjol!', 34.8]],
+  [37.0, ['Ooooh!', 35.84]],
+  [38.78, ['Rupanya', 37.12], ['udara', 37.78], ['yang', 38.42], ['buat', 38.62]],
+  [40.4, ['langit', 38.8], ['nampak', 39.14], ['berwarna!', 39.46]],
+  [41.05, ['Haa,', 40.44]],
+  [42.42, ['sekarang', 41.1], ['korang', 41.45], ['dah', 41.72], ['tahu!', 41.86]],
+  [43.54, ['Misteri', 42.46], ['apa', 42.96], ['pula', 43.18]],
+  [44.75, ['Affan', 43.56], ['nak', 43.9], ['siasat?', 43.96]],
+];
+
+// Words (lower-case, punctuation stripped) that get a keyword colour.
+export const KEYWORDS = {
+  biru: '#5ec8ff',
+  tersebar: '#5ec8ff',
+  terserak: '#5ec8ff',
+  hijau: '#6be38a',
+  merah: '#ff6b6b',
+  oren: '#ffa149',
+  senja: '#ffa149',
+  molekul: '#ffc4a3',
+  udara: '#9fe8ff',
+  warna: '#ffd84a',
+};
