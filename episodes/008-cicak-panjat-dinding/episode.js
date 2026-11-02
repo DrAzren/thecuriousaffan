@@ -728,7 +728,7 @@ function frame(t) {
 // Cover / thumbnail (9:16): Affan amazed under the ceiling gecko, with a big
 // title, the episode badge and the series logo. No captions. Key elements stay
 // inside the centre 3:4 area (y 240-1680) that profile grids show.
-const THUMB = { cam: [2.0, 3.6, 7.5], look: [2.0, 4.4, 0], fov: 46 };
+const THUMB = { cam: [2.0, 3.6, 7.5], look: [2.0, 3.65, 0], fov: 46 };
 window.setThumb = (o) => Object.assign(THUMB, o);
 function thumbnail() {
   ov.begin();
@@ -768,8 +768,8 @@ function thumbnail() {
   ov.tag('thBadge', 'EPISOD 8', { x: W / 2, y: 290 }, { bg: '#2f7bff', small: true });
   ov.bubble('thTitle', 'KENAPA CICAK\nTAK JATUH?', { x: W / 2, y: 470, r: -2 }, { size: 120 });
   ov.html('thQ', ICONS.qmark('#ffcf33'), { x: 130, y: 790, r: -14, s: 0.85 });
-  ov.html('thGlue', SVG.glue(), { x: 150, y: 1180, r: -10, s: 0.75 });
-  ov.html('thX', ICONS.cross(), { x: 200, y: 1250, s: 0.45 });
+  ov.html('thGlue', SVG.glue(), { x: 900, y: 1220, r: 10, s: 0.7 });
+  ov.html('thX', ICONS.cross(), { x: 950, y: 1285, s: 0.42 });
   drawLogo(ov, { y: 1440, scale: 0.58 });
   ov.end();
 }
