@@ -14,6 +14,7 @@ time and can be re-timed to new narration.
 | # | Title | Folder | Final video |
 |---|---|---|---|
 | 005 | Kenapa Bulan Macam Ikut Kereta Kita? | [`episodes/005-bulan-ikut-kereta`](episodes/005-bulan-ikut-kereta) | `output/TheCuriousAffan_E005_Kenapa_Bulan_Macam_Ikut_Kereta_Kita.mp4` |
+| 011 | Kenapa Nyamuk Gigit Kita? | [`episodes/011-nyamuk-gigit`](episodes/011-nyamuk-gigit) | `output/TheCuriousAffan_E011_Kenapa_Nyamuk_Gigit_Kita.mp4` |
 
 ## Build
 
@@ -113,3 +114,26 @@ episode stays consistent.
   - label pops and discovery chimes.
 
   The mix is normalised to −14 LUFS with a −1.5 dBTP ceiling.
+
+## Episode 011 at a glance
+
+- **Narration.** Affan's cloned voice ("Affan Clone") on ElevenLabs `eleven_v4`,
+  driven by the emotion-tagged script in
+  [`episodes/011-nyamuk-gigit/script.txt`](episodes/011-nyamuk-gigit/script.txt).
+  The tags in square brackets (`[frustrated]`, `[whispers]`, `[amazed]`, …) set
+  the delivery and are not spoken. Captions are timed from a Scribe alignment.
+- **Science.**
+  - Only female mosquitoes bite. They need blood to make eggs; males drink
+    flower nectar.
+  - Mosquitoes find us by our breath, body heat and the smell of our sweat.
+  - They don't really bite: a thin proboscis pokes into the skin and sips blood
+    like a straw.
+  - Mosquito saliva goes into the skin, the body reacts, and an itchy bump
+    (bentol) rises.
+  - Tips: don't scratch, and tip out standing water so mosquitoes can't lay eggs.
+- **Sets.** Affan's bedroom at night, a "shrunk down" garden with giant flowers
+  and cartoon Aedes-style mosquitoes (the male has feathery antennae), and a skin
+  cross-section with a blood vessel, saliva and defender cells.
+- **Audio.** Original music bed, night crickets, a mosquito whine that swoops
+  with the mosquito, scratching, a splash, pops and chimes. The mix is
+  normalised to −14 LUFS with a −1.5 dBTP ceiling.
