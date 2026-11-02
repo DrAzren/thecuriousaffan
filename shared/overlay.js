@@ -69,7 +69,9 @@ export class Overlay {
     this.fx.height = H;
     this.fx.style.cssText = `position:absolute;left:0;top:0;width:${W}px;height:${H}px`;
     root.insertBefore(this.fx, this.ui);
-    this.g = this.fx.getContext('2d');
+    // CPU-backed canvas: its pixels are committed synchronously, so a screenshot
+    // taken right after frame(t) never shows the previous frame's overlay.
+    this.g = this.fx.getContext('2d', { willReadFrequently: true });
     this.pool = new Map();
     this.used = new Set();
   }

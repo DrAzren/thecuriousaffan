@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ms">
+<head>
+<meta charset="utf-8">
+<title>The Curious Affan — gecko model sheet</title>
+<script type="importmap">{"imports":{"three":"/node_modules/three/build/three.module.js","three/addons/":"/node_modules/three/examples/jsm/"}}</script>
+<style>html,body{margin:0;width:1080px;height:1920px;overflow:hidden;background:#20304a}</style>
+</head>
+<body>
+<div id="stage"></div>
+<script type="module">
+// Gecko turnaround for checking anatomy: stills 0..5 = top, side, 3/4, underside (toe pads), walk cycle, toe close-up.
+import * as THREE from 'three';
+import { makeRenderer, W, H } from '/shared/core.js';
+import { makeGecko } from '/shared/gecko.js';
+const canvas = document.createElement('canvas');
+document.getElementById('stage').appendChild(canvas);
+const r = makeRenderer(canvas);
+const scene = new THREE.Scene();
+scene.background = new THREE.Color(0x2a3a58);
+scene.add(new THREE.HemisphereLight(0xffffff, 0x445566, 1.6));
+const key = new THREE.DirectionalLight(0xfff0dd, 2.2);
+key.position.set(2, 4, 3);
+scene.add(key);
+const floor = new THREE.Mesh(new THREE.PlaneGeometry(10, 10), new THREE.MeshStandardMaterial({ color: 0xf2efe9, transparent: true, opacity: 0.35 }));
+floor.rotation.x = -Math.PI / 2;
+scene.add(floor);
+const g = makeGecko();
+scene.add(g.root);
+const cam = new THREE.PerspectiveCamera(30, W / H, 0.01, 100);
+const VIEWS = [
+  [[0.0, 2.2, 0.001], [-0.15, 0, 0], 0],
+  [[0.0, 0.12, 1.6], [-0.15, 0.05, 0], 0],
+  [[0.75, 0.6, 0.9], [-0.05, 0.03, 0], 0],
+  [[0.1, -1.2, 0.3], [-0.05, 0, 0], 0],
+  [[0.6, 0.9, 1.1], [-0.05, 0.02, 0], 1],
+  [[0.32, 0.18, 0.3], [0.13, 0.0, 0.1], 0],
+  [[0.42, 0.12, 0.2], [0.2, 0.04, 0.0], 0],
+];
+window.EP = {
+  fps: 30, duration: 7,
+  frame(t) {
+    const v = VIEWS[Math.min(VIEWS.length - 1, Math.floor(t))];
+    floor.visible = Math.floor(t) !== 3;
+    g.update({ D: v[2] ? (t % 1) * 0.3 : 0.06, headYaw: 0.2, headPitch: 0.1 });
+    cam.position.set(...v[0]);
+    cam.lookAt(new THREE.Vector3(...v[1]));
+    r.render(scene, cam);
+  },
+  ready: Promise.resolve(true),
+};
+</script>
+</body>
+</html>

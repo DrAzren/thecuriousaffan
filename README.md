@@ -14,6 +14,7 @@ time and can be re-timed to new narration.
 | # | Title | Folder | Final video |
 |---|---|---|---|
 | 005 | Kenapa Bulan Macam Ikut Kereta Kita? | [`episodes/005-bulan-ikut-kereta`](episodes/005-bulan-ikut-kereta) | `output/TheCuriousAffan_E005_Kenapa_Bulan_Macam_Ikut_Kereta_Kita.mp4` |
+| 008 | Kenapa Cicak Boleh Panjat Dinding Tanpa Jatuh? | [`episodes/008-cicak-panjat-dinding`](episodes/008-cicak-panjat-dinding) | `output/TheCuriousAffan_E008_Kenapa_Cicak_Boleh_Panjat_Dinding_Tanpa_Jatuh.mp4` |
 
 ## Build
 
@@ -29,6 +30,10 @@ npm install
 episodes/005-bulan-ikut-kereta/make.sh
 ```
 
+```bash
+episodes/008-cicak-panjat-dinding/make.sh
+```
+
 `make.sh` renders the picture (`tools/render.js`), synthesises and mixes the
 soundtrack (`build_audio.py`), then muxes the final MP4 (H.264 High, AAC
 256 kb/s, faststart).
@@ -39,8 +44,8 @@ Every full render also writes, next to the video:
   `EP.thumbnail()` (Affan, big title, episode badge, logo). Key elements stay
   inside the centre 3:4 area that TikTok and Reels profile grids show.
 - `output/description.txt`: a short post description (title, one-line teaser,
-  hashtags) built from the episode's `meta.json` and the series hashtags in
-  `series.json`.
+  an optional one-paragraph `summary`, hashtags) built from the episode's
+  `meta.json` and the series hashtags in `series.json`.
 
 To regenerate only these two files, without re-rendering the video:
 
@@ -49,7 +54,7 @@ node tools/render.js episodes/005-bulan-ikut-kereta --package
 ```
 
 For a new episode, add a `meta.json` (`episode`, `title`, `teaser`,
-`hashtags`) and an `EP.thumbnail()` function.
+`hashtags`, optional `summary`) and an `EP.thumbnail()` function.
 
 Useful while editing:
 
@@ -73,6 +78,7 @@ node tools/render.js lab/model-sheet --stills 0,1,2,3,4,5,6
 ```
 shared/
   affan.js     Affan character: model sheet, pose rig, 2-bone arm IK, lip-sync mouth, blinks
+  gecko.js     house gecko (cicak): lofted body, toe pads with lamellae, distance-driven gait, toe peel
   props.js     sky, stars, moon, road, car (+ interior), trees, lamp posts, houses
   overlay.js   captions, bubble titles, DEKAT/JAUH tags, arrows, icons, sparkles, flashes
   core.js      easing, keyframes, seeded RNG, narration envelope (lip sync), projection
@@ -82,6 +88,7 @@ series.json      series name and hashtags
 episodes/<nnn>/  index.html, episode.js (shots + thumbnail), worlds.js (sets), captions.js, meta.json,
                  build_audio.py (music + SFX + mix), audio/narration.mp3, make.sh
 lab/model-sheet  Affan turnaround and pose test page
+lab/gecko-sheet  gecko turnaround (top, side, underside, walk cycle, toe and eye close-ups)
 ```
 
 ## Affan model sheet
@@ -113,3 +120,32 @@ episode stays consistent.
   - label pops and discovery chimes.
 
   The mix is normalised to −14 LUFS with a −1.5 dBTP ceiling.
+
+## Episode 008 at a glance
+
+- **Science (dry adhesion).** A gecko's toe pads carry lamellae covered in
+  setae, hair-like stalks that branch at the top into tiny flat spatulae.
+  When the spatulae touch a surface very closely, weak attractions between
+  molecules (van der Waals forces) pull a little at each tip. Millions of
+  tips together give a strong grip. To let go, the gecko curls its toes up
+  from the tips, so the setae peel off at an angle, like peeling a sticker.
+  There is no glue, no suction and no magnetism. The molecular inset shows
+  soft pulses between neighbouring molecules, not sparks or electricity.
+- **Narration.** The supplied recording is the master timeline. Nothing is
+  cut. `prep_narration.py` adds a 0.2 s lead-in and four short beats of
+  silence, each inside an existing pause between sentences, to make room for
+  the shrink, the spatula reveal, the strong-grip moment and the return to
+  normal size. It writes `audio/narration.flac`.
+- **Captions.** They use the script's spelling with the emotion tags removed.
+  Word times were measured on the source recording (Whisper word timestamps
+  plus silence detection) and mapped onto the final timeline.
+- **Sets.** The living room at night (ceiling gecko near the lamp, wall gecko
+  at the end), the microscopic toe-pad world (setae field, a hero seta with
+  12 spatulae, the ceiling slab that comes down onto the tips, contact
+  glows that spread as a wave), and a giant toe lying on a wall that peels up
+  from the tip in slow motion.
+- **Audio.** Original music: a music box in the room, a marimba band in the
+  micro world, a half-time section for the slow-motion peel and an outro
+  jingle. Effects: surprise boing, tiny footsteps, shrinking whoosh,
+  discovery chimes, contact shimmer, gentle peel, release pops, "not glue /
+  not magnet" buzzers. Mixed to −14 LUFS with a −1.5 dBTP ceiling.
