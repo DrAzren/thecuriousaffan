@@ -14,6 +14,7 @@ time and can be re-timed to new narration.
 | # | Title | Folder | Final video |
 |---|---|---|---|
 | 005 | Kenapa Bulan Macam Ikut Kereta Kita? | [`episodes/005-bulan-ikut-kereta`](episodes/005-bulan-ikut-kereta) | `output/TheCuriousAffan_E005_Kenapa_Bulan_Macam_Ikut_Kereta_Kita.mp4` |
+| 014 | Apa Jadi Kalau Hujan Tanpa Henti di Malaysia? | [`episodes/014-hujan-tanpa-henti`](episodes/014-hujan-tanpa-henti) | `output/TheCuriousAffan_E014_Apa_Jadi_Kalau_Hujan_Tanpa_Henti.mp4` |
 
 ## Build
 
@@ -113,3 +114,25 @@ episode stays consistent.
   - label pops and discovery chimes.
 
   The mix is normalised to −14 LUFS with a −1.5 dBTP ceiling.
+
+## Episode 014 at a glance
+
+- **Question.** What would happen if it rained non-stop in Malaysia? The
+  episode follows one kampung on day 1, 3, 5 and 10, with a calendar card and a
+  water-level gauge (PARAS AIR) for each step.
+- **Science.**
+  - Day 1: drains fill, water pools on roads and there are flash floods.
+  - Day 3: the soil is full of water, like a soaked sponge, so rain runs off,
+    rivers overflow and schools close.
+  - Day 5: the flood gets deeper, soggy hillsides can slide, and people move to
+    an evacuation centre on high ground.
+  - Day 10: the kampung looks like a sea, the sun stays hidden and mosquitoes
+    multiply in the still water.
+  - In real life the clouds move away and the rain stops. Safety message: do
+    not play in flood water, and listen to adults.
+- **Narration.** Affan's voice, from `audio/narration.mp3`. Word times for the
+  captions come from a forced alignment, kept in `audio/words.json`.
+- **Audio.** The same mix rules as Episode 005, plus rain that follows the
+  storm, soft thunder, a landslide rumble, mosquito buzz and birdsong when the
+  sun comes back.
+
