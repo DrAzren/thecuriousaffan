@@ -160,7 +160,7 @@ const SHOTS = [
     if (c.o > 0) {
       ov.bubble('mtr', `${m} m`, { x: W / 2, y: 420, o: c.o, s: c.s }, { size: 190, top: '#bfe8ff', bot: '#3fa2ff' });
     }
-    tape('tp', -50 + 26, -10, TOWER_H, t, inv(9.3, 9.8, t) * (1 - inv(13.9, 14.4, t)), { step: 100, top: t > 11.85 ? '452 m' : null });
+    tape('tp', -50 + 26, -10, TOWER_H, t, inv(9.3, 9.8, t) * (1 - inv(13.9, 14.4, t)), { step: 100 });
     const f = pop(t, 12.24, 14.35);
     ov.tag('lvl', '88 TINGKAT', { x: W / 2, y: 610, o: f.o, s: f.s }, { bg: ORANGE });
     if (t > 11.8) ov.sparkles(t, { n: 14, seed: 4, x: 200, y: 260, w: 680, h: 420, a: inv(11.8, 12.2, t) * (1 - inv(13.9, 14.4, t)) });
