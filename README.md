@@ -14,6 +14,7 @@ time and can be re-timed to new narration.
 | # | Title | Folder | Final video |
 |---|---|---|---|
 | 005 | Kenapa Bulan Macam Ikut Kereta Kita? | [`episodes/005-bulan-ikut-kereta`](episodes/005-bulan-ikut-kereta) | `output/TheCuriousAffan_E005_Kenapa_Bulan_Macam_Ikut_Kereta_Kita.mp4` |
+| 015 | Berapa Kali Kertas Boleh Dilipat Dua? | [`episodes/015-lipat-kertas`](episodes/015-lipat-kertas) | `output/TheCuriousAffan_E015_Berapa_Kali_Kertas_Boleh_Dilipat_Dua.mp4` |
 
 ## Build
 
@@ -113,3 +114,21 @@ episode stays consistent.
   - label pops and discovery chimes.
 
   The mix is normalised to −14 LUFS with a −1.5 dBTP ceiling.
+
+## Episode 015 at a glance
+
+- **Science.** Every fold doubles the layers (1, 2, 4, 8 … 128) and halves the
+  page, so after about 7 folds an ordinary page is a small, thick, stiff block
+  and will not fold again. With a very, very long strip of paper the record is
+  13 folds. A 0.1 mm sheet folded 42 times would be about 440,000 km thick,
+  further than the Moon (about 384,400 km).
+- **Sets.** Affan's sunny bedroom desk, where a real fold rig flips each half
+  of the paper over and the hands follow the flap (`makePaper` in
+  `worlds.js`); a grass field with a 1.4 km strip for the record; a little
+  Earth with a paper tower that grows with 2^n up to the Moon.
+- **Narration.** `audio/narration.mp3` is generated with the series' Affan
+  voice; `audio/words.json` is its word-level transcript, used to time the
+  captions and the folds.
+- **Audio.** Original marimba band, a "wonder" pad in space, paper fold swishes
+  and crinkles, a rising tick for the 8 → 42 fold counter, pops and chimes. The
+  mix is normalised to −14 LUFS with a −1.5 dBTP ceiling.

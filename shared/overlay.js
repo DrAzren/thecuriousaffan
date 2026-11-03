@@ -147,7 +147,7 @@ export class Overlay {
       const next = i + 1 < words.length ? words[i + 1][1] : end;
       const active = t >= ws - 0.04 && t < next;
       const said = t >= ws - 0.04;
-      const kw = keywords[w.toLowerCase().replace(/[^a-z-]/g, '')];
+      const kw = keywords[w.toLowerCase().replace(/[^a-z0-9-]/g, '')];
       const pop = clamp((t - ws + 0.04) / 0.16);
       const sp = spans[i];
       sp.style.color = active ? kw || '#ffd84a' : said ? kw || '#ffffff' : 'rgba(255,255,255,0.55)';
