@@ -14,6 +14,7 @@ time and can be re-timed to new narration.
 | # | Title | Folder | Final video |
 |---|---|---|---|
 | 005 | Kenapa Bulan Macam Ikut Kereta Kita? | [`episodes/005-bulan-ikut-kereta`](episodes/005-bulan-ikut-kereta) | `output/TheCuriousAffan_E005_Kenapa_Bulan_Macam_Ikut_Kereta_Kita.mp4` |
+| 013 | Berapakah Tinggi KLCC? | [`episodes/013-tinggi-klcc`](episodes/013-tinggi-klcc) | `output/TheCuriousAffan_E013_Berapakah_Tinggi_KLCC.mp4` |
 
 ## Build
 
@@ -49,7 +50,8 @@ node tools/render.js episodes/005-bulan-ikut-kereta --package
 ```
 
 For a new episode, add a `meta.json` (`episode`, `title`, `teaser`,
-`hashtags`) and an `EP.thumbnail()` function.
+`hashtags`; optionally `body` lines and a `tagline` for a longer post) and an
+`EP.thumbnail()` function.
 
 Useful while editing:
 
@@ -113,3 +115,19 @@ episode stays consistent.
   - label pops and discovery chimes.
 
   The mix is normalised to −14 LUFS with a −1.5 dBTP ceiling.
+
+## Episode 013 at a glance
+
+- **Question.** Berapakah tinggi KLCC? The Petronas Twin Towers are 452 m tall
+  (451.9 m) with 88 floors, and were the tallest buildings in the world from
+  1998 to 2004.
+- **Comparisons, all modelled to scale (1 unit = 1 m).**
+  - A single-storey house is about 5 m tall, so about 90 houses stacked up
+    reach the top.
+  - An adult is about 1.7 m tall, so it takes 266 adults standing head to toe.
+  - Affan (5 years old) is about 1.1 m tall, so it takes 411 Affans.
+- **Sets.** The towers are a stylised procedural model: an eight-point star
+  plan, setbacks, a pinnacle, and the skybridge with its legs. The stacks are
+  instanced meshes, so hundreds of figures render quickly.
+- **Narration.** The narration uses the Affan voice. Captions are timed word by
+  word from a transcript of `audio/narration.mp3`.

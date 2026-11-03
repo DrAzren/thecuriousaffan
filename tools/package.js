@@ -13,7 +13,11 @@ function description(epDir) {
   const meta = JSON.parse(fs.readFileSync(path.join(epDir, 'meta.json'), 'utf8'));
   const series = JSON.parse(fs.readFileSync(path.join(ROOT, 'series.json'), 'utf8'));
   const tags = [...new Set([...series.hashtags.slice(0, 1), ...meta.hashtags, ...series.hashtags.slice(1)])];
-  return [meta.title, meta.teaser, '', tags.join(' ')].join('\n') + '\n';
+  const lines = [meta.title, meta.teaser];
+  // optional longer body (e.g. "what Affan learns" bullets) and series tagline
+  if (meta.body && meta.body.length) lines.push('', ...meta.body);
+  if (meta.tagline) lines.push('', meta.tagline);
+  return [...lines, '', tags.join(' ')].join('\n') + '\n';
 }
 
 function writeDescription(epDir) {
