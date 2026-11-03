@@ -14,6 +14,7 @@ time and can be re-timed to new narration.
 | # | Title | Folder | Final video |
 |---|---|---|---|
 | 005 | Kenapa Bulan Macam Ikut Kereta Kita? | [`episodes/005-bulan-ikut-kereta`](episodes/005-bulan-ikut-kereta) | `output/TheCuriousAffan_E005_Kenapa_Bulan_Macam_Ikut_Kereta_Kita.mp4` |
+| 012 | Betul Ke Dinosaur Wujud? | [`episodes/012-dinosaur-wujud`](episodes/012-dinosaur-wujud) | `output/TheCuriousAffan_E012_Betul_Ke_Dinosaur_Wujud.mp4` |
 
 ## Build
 
@@ -113,3 +114,29 @@ episode stays consistent.
   - label pops and discovery chimes.
 
   The mix is normalised to −14 LUFS with a −1.5 dBTP ceiling.
+
+## Episode 012 at a glance
+
+- **Narration.** Affan's cloned voice ("Affan Clone") on ElevenLabs `eleven_v4`,
+  driven by the emotion-tagged script in
+  [`episodes/012-dinosaur-wujud/script.txt`](episodes/012-dinosaur-wujud/script.txt).
+  Captions are timed from a Scribe alignment.
+- **Science.**
+  - Dinosaurs really existed, millions of years before people.
+  - We know because scientists find fossils: bones, teeth and footprints that
+    slowly turned to stone.
+  - Scientists dig slowly and piece the bones together like a puzzle.
+  - Some dinosaurs were bigger than a bus; some were as small as a chicken.
+  - Dinosaur teeth have been found in Malaysia too (Pahang).
+  - About 66 million years ago a huge space rock hit Earth and most dinosaurs
+    died out.
+  - Birds are descendants of dinosaurs, so even chickens are their
+    great-great-grandchildren.
+- **Sets.** Affan's sunny bedroom with a toy dinosaur, a prehistoric valley
+  (long-neck, baby long-neck, two feathery runners, volcano, the space rock),
+  and a fossil dig site where the skeleton flies together piece by piece. All
+  dinosaurs, the chicken, the bird and the bus are original procedural models
+  in `worlds.js`.
+- **Audio.** Original music bed, jungle birds and insects, dinosaur footsteps
+  and hums, brushing, bone clicks, a soft distant boom, a chicken cluck, pops
+  and chimes. The mix is normalised to −14 LUFS with a −1.5 dBTP ceiling.
