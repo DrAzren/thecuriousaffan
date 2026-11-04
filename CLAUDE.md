@@ -6,7 +6,10 @@
   "Little Questions. Big Discoveries!", then hashtags. That is exactly what
   `tools/package.js` writes to `output/description.txt`; post that file as
   the text. Do **not** retell the episode's story, list what Affan learns,
-  or add fact/tip bullets. (Owner's instruction, Episode 016 onward.)
+  or add fact/tip bullets, a call to action, or any other extra line.
+  (Owner's instruction, Episode 016 onward; reconfirmed at Episode 017 for
+  every video posted from now on.) The same short text goes to every
+  network.
 - Networks: Facebook Reel, Instagram Reel, TikTok, YouTube Short.
 - Titles (Facebook / YouTube): `<TAJUK DALAM HURUF BESAR> | THE CURIOUS AFFAN`.
   TikTok title: the short question with one or two emoji.

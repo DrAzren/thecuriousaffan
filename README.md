@@ -15,6 +15,7 @@ time and can be re-timed to new narration.
 |---|---|---|---|
 | 005 | Kenapa Bulan Macam Ikut Kereta Kita? | [`episodes/005-bulan-ikut-kereta`](episodes/005-bulan-ikut-kereta) | `output/TheCuriousAffan_E005_Kenapa_Bulan_Macam_Ikut_Kereta_Kita.mp4` |
 | 016 | Kenapa Semakin Tinggi Semakin Sejuk? | [`episodes/016-tinggi-sejuk`](episodes/016-tinggi-sejuk) | `output/TheCuriousAffan_E016_Kenapa_Semakin_Tinggi_Semakin_Sejuk.mp4` |
+| 017 | Kesan Kalau Tak Makan Sayur | [`episodes/017-tak-makan-sayur`](episodes/017-tak-makan-sayur) | `output/TheCuriousAffan_E017_Kesan_Kalau_Tak_Makan_Sayur.mp4` |
 
 ## Build
 
@@ -134,3 +135,36 @@ episode stays consistent.
   pad at the summit, breeze and birds down low, cold wind up high, burner
   roars, pops, shiver rattles and chimes. The mix is normalised to −14 LUFS
   with a −1.5 dBTP ceiling.
+
+## Episode 017 at a glance
+
+- **Science.** Vegetables give fibre, vitamins and minerals:
+  - Fibre works like a broom in the gut and moves food waste along. With too
+    little of it, poo is hard to pass (sembelit): the tummy aches and feels
+    bloated.
+  - Vitamin C (red capsicum, broccoli, tomatoes) helps the body's defences
+    ("askar badan") fight germs. With too few vitamins they work less well,
+    and we fall ill more easily.
+  - Carrots give vitamin A, which the eyes need to see in dim light.
+  - Spinach has iron. Without enough iron the body tires quickly.
+- **Sets.**
+  - Affan's dining table at home, where he pushes his broccoli away and
+    later eats it.
+  - A sunny garden of giant vegetables, with one stop each for broccoli,
+    red capsicum and tomatoes, carrots and spinach.
+  - The branded outro.
+- **Motion graphics.**
+  - A gut diagram with a broom sweeping food along; when it gets blocked, the
+    gut swells.
+  - Shielded "askar badan" soldiers popping germs, then weak soldiers
+    outnumbered.
+  - A night-vision eye.
+  - A draining battery.
+- **Narration.** Same Affan voice and `eleven_v4` emotion tags as E016;
+  captions timed from `audio/words.json`.
+- **Audio.**
+  - Music: a bouncy music-box hook, an original marimba band, a comic minor
+    shuffle for the blocked tummy, and night and "tired" pads.
+  - Sound effects: broom swishes, tummy rumbles, germ pops, battery ticks,
+    crunchy bites and chimes.
+  - The mix is normalised to −14 LUFS with a −1.5 dBTP ceiling.
