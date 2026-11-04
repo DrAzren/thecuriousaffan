@@ -731,7 +731,7 @@ function frame(t) {
 // Cover / thumbnail (9:16): Affan shivering in his balloon by the frosty
 // summit, a big title, a cold thermometer, episode badge and the series logo.
 // No captions. Key elements stay inside the centre 3:4 area (y 240-1680).
-const THUMB = { x: -4, y: 3.2, z: 17, ly: 6.0, fov: 50 };
+const THUMB = { x: -4, y: 2.6, z: 16, ly: 3.4, fov: 50 };
 window.setThumb = (o) => Object.assign(THUMB, o);
 function thumbnail() {
   ov.begin();
@@ -762,7 +762,7 @@ function thumbnail() {
   ov.html('thTh', THERM(tFill(0), ICE), { x: 930, y: 980, r: 8, s: 0.9 });
   ov.bubble('th0', '0°C', { x: 900, y: 1190, r: 6 }, { size: 110, top: '#e6f7ff', bot: '#3fa2ff' });
   ov.html('thUp', UP_ARROW(ORANGE), { x: 130, y: 1020, s: 0.85 });
-  drawLogo(ov, { y: 1430, scale: 0.58 });
+  drawLogo(ov, { y: 1470, scale: 0.55 });
   ov.end();
 }
 
