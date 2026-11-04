@@ -14,6 +14,7 @@ time and can be re-timed to new narration.
 | # | Title | Folder | Final video |
 |---|---|---|---|
 | 005 | Kenapa Bulan Macam Ikut Kereta Kita? | [`episodes/005-bulan-ikut-kereta`](episodes/005-bulan-ikut-kereta) | `output/TheCuriousAffan_E005_Kenapa_Bulan_Macam_Ikut_Kereta_Kita.mp4` |
+| 016 | Kenapa Semakin Tinggi Semakin Sejuk? | [`episodes/016-tinggi-sejuk`](episodes/016-tinggi-sejuk) | `output/TheCuriousAffan_E016_Kenapa_Semakin_Tinggi_Semakin_Sejuk.mp4` |
 
 ## Build
 
@@ -39,8 +40,8 @@ Every full render also writes, next to the video:
   `EP.thumbnail()` (Affan, big title, episode badge, logo). Key elements stay
   inside the centre 3:4 area that TikTok and Reels profile grids show.
 - `output/description.txt`: a short post description (title, one-line teaser,
-  hashtags) built from the episode's `meta.json` and the series hashtags in
-  `series.json`.
+  the series tagline, hashtags) built from the episode's `meta.json` and
+  `series.json`. Keep it short: it never retells the episode or lists facts.
 
 To regenerate only these two files, without re-rendering the video:
 
@@ -113,3 +114,23 @@ episode stays consistent.
   - label pops and discovery chimes.
 
   The mix is normalised to −14 LUFS with a −1.5 dBTP ceiling.
+
+## Episode 016 at a glance
+
+- **Science.** Being on a mountain hardly brings us closer to the Sun (about
+  150 million km away). Sunlight warms the ground first, and the warm ground
+  warms the air above it (like a stove warming a pot), so the warmest air is
+  near the ground. Rising air expands, and expanding air cools: on average
+  about 6 °C cooler for every 1 km up. Kuala Lumpur ~32 °C, Cameron Highlands
+  (~1,500 m) ~20 °C, the summit of Gunung Kinabalu (4,095 m) can be near 0 °C.
+- **Sets.** A misty Cameron Highlands tea estate with contour rows of tea
+  bushes; a big mountain above a lowland town, coloured by height (rainforest,
+  tea terraces, granite, frost), with Affan's hot-air balloon flying up its
+  flank; the branded outro.
+- **Narration.** `audio/narration.mp3` uses the series' Affan voice on
+  ElevenLabs `eleven_v4` with emotion tags; `audio/words.json` is its
+  word-level transcript, used to time the captions.
+- **Audio.** Music-box hook, original marimba band for the flight, a wonder
+  pad at the summit, breeze and birds down low, cold wind up high, burner
+  roars, pops, shiver rattles and chimes. The mix is normalised to −14 LUFS
+  with a −1.5 dBTP ceiling.
