@@ -16,6 +16,7 @@ time and can be re-timed to new narration.
 | 005 | Kenapa Bulan Macam Ikut Kereta Kita? | [`episodes/005-bulan-ikut-kereta`](episodes/005-bulan-ikut-kereta) | `output/TheCuriousAffan_E005_Kenapa_Bulan_Macam_Ikut_Kereta_Kita.mp4` |
 | 016 | Kenapa Semakin Tinggi Semakin Sejuk? | [`episodes/016-tinggi-sejuk`](episodes/016-tinggi-sejuk) | `output/TheCuriousAffan_E016_Kenapa_Semakin_Tinggi_Semakin_Sejuk.mp4` |
 | 017 | Kesan Kalau Tak Makan Sayur | [`episodes/017-tak-makan-sayur`](episodes/017-tak-makan-sayur) | `output/TheCuriousAffan_E017_Kesan_Kalau_Tak_Makan_Sayur.mp4` |
+| 018 | Kenapa Rambut Kita Makin Tumbuh Panjang? | [`episodes/018-rambut-panjang`](episodes/018-rambut-panjang) | `output/TheCuriousAffan_E018_Kenapa_Rambut_Kita_Makin_Tumbuh_Panjang.mp4` |
 
 ## Build
 
@@ -167,4 +168,37 @@ episode stays consistent.
     shuffle for the blocked tummy, and night and "tired" pads.
   - Sound effects: broom swishes, tummy rumbles, germ pops, battery ticks,
     crunchy bites and chimes.
+  - The mix is normalised to −14 LUFS with a −1.5 dBTP ceiling.
+
+## Episode 018 at a glance
+
+- **Science.**
+  - Each hair grows out of a tiny pocket in the skin, the hair follicle.
+  - At the bottom of the follicle, the hair bulb (the "kilang kecil") makes
+    new cells every day. New cells push the older ones up, and the older
+    cells harden into the hair shaft, so the hair gets longer.
+  - Blood vessels bring food to the bulb so it keeps working.
+  - The hair we can see is no longer alive, so a haircut does not hurt.
+  - Scalp hair grows about 1 cm a month.
+  - After a few years an old hair falls out and a new one grows from the same
+    follicle. Losing some hairs every day is normal.
+  - Eggs, fish and vegetables help keep hair healthy.
+- **Sets.**
+  - Affan's bedroom, where his long fringe pokes his eyes (and is neat again
+    at the end).
+  - A giant scalp: a "hair forest" on the skin, cut open like a slice of cake
+    to show the skin layers, the follicles, the glowing bulb with new cells
+    rising up the shaft, and a blood vessel bringing food.
+  - The branded outro.
+- **Motion graphics.** Calendar and scissors, a little factory with turning
+  gears, "push up" arrows, a snip that does not hurt, a 1 cm ruler, a falling
+  old hair and a new one growing in.
+- **Narration.** Same Affan voice and `eleven_v4` emotion tags as E017;
+  captions timed from `audio/words.json`.
+- **Audio.**
+  - Music: a music-box hook, an original marimba band (faster for the busy
+    factory), a soft pad for the ruler and a wistful minor pad for the
+    falling hair.
+  - Sound effects: gear ticks, bubbly cell blips, a heartbeat, a scissors
+    snip, a falling swish and thud, a rising "grow" bloop and chimes.
   - The mix is normalised to −14 LUFS with a −1.5 dBTP ceiling.
