@@ -88,6 +88,8 @@ function serve() {
     if (fs.existsSync(path.join(epDir, 'meta.json'))) console.log('wrote', writeDescription(epDir));
   }
 
+  const pre = opt('eval');
+  if (pre) await page.evaluate(pre);
   if (args.includes('--package')) {
     await packageEpisode();
     await browser.close();
@@ -95,8 +97,6 @@ function serve() {
     return;
   }
 
-  const pre = opt('eval');
-  if (pre) await page.evaluate(pre);
   const stills = opt('stills');
   if (stills) {
     const dir = opt('out', path.join(ROOT, ep, 'stills'));

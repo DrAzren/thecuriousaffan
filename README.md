@@ -14,6 +14,7 @@ time and can be re-timed to new narration.
 | # | Title | Folder | Final video |
 |---|---|---|---|
 | 005 | Kenapa Bulan Macam Ikut Kereta Kita? | [`episodes/005-bulan-ikut-kereta`](episodes/005-bulan-ikut-kereta) | `output/TheCuriousAffan_E005_Kenapa_Bulan_Macam_Ikut_Kereta_Kita.mp4` |
+| 019 | Macam Mana Ular Boleh Bergerak Walaupun Tak Ada Kaki? | [`episodes/019-ular-tanpa-kaki`](episodes/019-ular-tanpa-kaki) | `output/TheCuriousAffan_E019_Macam_Mana_Ular_Bergerak_Tanpa_Kaki.mp4` |
 
 ## Build
 
@@ -39,8 +40,8 @@ Every full render also writes, next to the video:
   `EP.thumbnail()` (Affan, big title, episode badge, logo). Key elements stay
   inside the centre 3:4 area that TikTok and Reels profile grids show.
 - `output/description.txt`: a short post description (title, one-line teaser,
-  hashtags) built from the episode's `meta.json` and the series hashtags in
-  `series.json`.
+  series tagline, hashtags) built from the episode's `meta.json` and the
+  tagline and hashtags in `series.json`.
 
 To regenerate only these two files, without re-rendering the video:
 
@@ -77,6 +78,7 @@ shared/
   overlay.js   captions, bubble titles, DEKAT/JAUH tags, arrows, icons, sparkles, flashes
   core.js      easing, keyframes, seeded RNG, narration envelope (lip sync), projection
 tools/render.js  deterministic frame renderer (Playwright -> ffmpeg) + thumbnail/description
+                 (--eval runs JS first, also with --package, e.g. to try thumbnail framings)
 tools/package.js short description from meta.json + series.json
 series.json      series name and hashtags
 episodes/<nnn>/  index.html, episode.js (shots + thumbnail), worlds.js (sets), captions.js, meta.json,
@@ -113,3 +115,23 @@ episode stays consistent.
   - label pops and discovery chimes.
 
   The mix is normalised to −14 LUFS with a −1.5 dBTP ceiling.
+
+## Episode 019 at a glance
+
+- **Science.** A snake has no legs but moves with its whole body:
+  - hundreds of backbones (vertebrae) with ribs and strong muscles make the
+    body very bendy (x-ray shot with the skeleton appearing head to tail);
+  - wide belly scales grip the ground so the body does not slip backwards
+    (magnified belly close-up);
+  - in an S-shape (lateral undulation) the bends push back against rocks and
+    grass, and the body slides forward (top-down shot with push arrows);
+  - in a narrow gap it bunches up like a spring and then stretches forward
+    (concertina: head anchored while gathering, tail anchored while
+    stretching).
+- **Safety.** If you see a snake: keep away, don't touch, tell a grown-up.
+- **The snake** (`snake.js`) is one tube rebuilt every frame from a centre
+  line, so the same model can follow an S path, coil up, fold in a channel or
+  go x-ray. `Path` gives arc-length sampling; `concertinaPath` solves the fold
+  height so the body keeps its true length.
+- **Narration** is `audio/narration.mp3` (the Affan voice), with word timings
+  in `audio/words.json` used for the captions.
