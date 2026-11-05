@@ -78,7 +78,6 @@ function arrowAt(id, x, y, ang, { color = ORANGE, s = 0.7, o = 1 } = {}) {
   ov.html(id, ICONS.arrow(color), { x, y, o, s, r: deg(ang) });
 }
 const SPRING = `<svg width="300" height="90" viewBox="0 0 300 90"><path d="M10 45 L40 10 L70 80 L100 10 L130 80 L160 10 L190 80 L220 10 L250 80 L290 45" fill="none" stroke="#17256b" stroke-width="22" stroke-linejoin="round" stroke-linecap="round"/><path d="M10 45 L40 10 L70 80 L100 10 L130 80 L160 10 L190 80 L220 10 L250 80 L290 45" fill="none" stroke="#ffd84a" stroke-width="11" stroke-linejoin="round" stroke-linecap="round"/></svg>`;
-const SCALES = `<svg width="260" height="110" viewBox="0 0 260 110">${[0, 1, 2, 3].map((i) => `<path d="M${20 + i * 55} 20 h70 l-18 70 h-70 z" fill="#ffe28e" stroke="#17256b" stroke-width="9" stroke-linejoin="round"/>`).join('')}</svg>`;
 const BONE = `<svg width="200" height="90" viewBox="0 0 200 90"><g fill="#ffffff" stroke="#17256b" stroke-width="9"><circle cx="30" cy="28" r="20"/><circle cx="30" cy="62" r="20"/><circle cx="170" cy="28" r="20"/><circle cx="170" cy="62" r="20"/><rect x="30" y="30" width="140" height="30" rx="12"/></g><rect x="26" y="34" width="148" height="22" fill="#ffffff"/></svg>`;
 const HAND = `<svg width="170" height="200" viewBox="0 0 170 200"><path d="M45 190 C30 160 20 120 20 95 C20 80 40 78 45 95 L48 112 L48 35 C48 20 68 20 68 35 L68 95 L72 20 C72 5 92 5 92 20 L92 95 L98 28 C98 13 118 13 118 28 L116 100 L124 55 C126 40 146 42 144 58 L136 130 C132 165 115 190 100 190 Z" fill="#ffd2b0" stroke="#17256b" stroke-width="9" stroke-linejoin="round"/></svg>`;
 
@@ -206,7 +205,7 @@ const SHOTS = [
     lookCam(cam, pos, look, 50);
     ov.flash(1 - inv(7.6, 8.0, t));
     const r1 = pop(t, 7.68, 10.0);
-    ov.bubble('r1', 'RAHSIA 1', { x: W / 2, y: 360, o: r1.o, s: r1.s, r: -3 }, { size: 120 });
+    ov.bubble('r1', 'RAHSIA 1', { x: W / 2, y: 480, o: r1.o, s: r1.s, r: -3 }, { size: 120 });
     const tg = pop(t, 9.04, 18.1);
     ov.tag('tulang', 'TULANG', { x: W / 2, y: 300, o: tg.o * (t > 10 ? 1 : 1), s: tg.s }, { bg: '#1f6fd6' });
     if (tg.o > 0) ov.html('bone', BONE, { x: W / 2 - 250, y: 300, o: tg.o, s: tg.s * 0.6, r: -12 });
@@ -250,11 +249,10 @@ const SHOTS = [
     lookCam(cam, V(cx + lerp(-0.6, 0.2, k), lerp(0.62, 0.55, k), 30 + lerp(6.4, 5.4, k)), V(cx, 0.72, 30), 50);
     ov.flash((1 - inv(18.15, 18.45, t)) * 0.9, '160,230,255');
     const r2 = pop(t, 18.24, 20.6);
-    ov.bubble('r2', 'RAHSIA 2', { x: W / 2, y: 360, o: r2.o, s: r2.s, r: 3 }, { size: 120 });
+    ov.bubble('r2', 'RAHSIA 2', { x: W / 2, y: 480, o: r2.o, s: r2.s, r: 3 }, { size: 120 });
     const sp = pop(t, 19.44, 25.35);
     const pl = scr(lab.plates[5].getWorldPosition(V(0, 0, 0)));
     ov.tag('sisik', 'SISIK PERUT', { x: W / 2, y: pl.y - 190, o: sp.o, s: sp.s }, { bg: '#e0941c', pointer: 'down' });
-    if (sp.o > 0) ov.html('scales', SCALES, { x: W / 2, y: 470, o: sp.o * (t > 20.7 ? 1 - inv(20.7, 21.0, t) : 1), s: sp.s * 0.9 });
     const plate = scr(lab.plates[6].getWorldPosition(V(0, 0, 0)).add(V(0, -0.2, 0)));
     const cg = pop(t, 21.52, 25.35);
     ov.tag('cengkam', 'CENGKAM!', { x: clamp(plate.x, 220, 860), y: clamp(plate.y + 190, 900, 1360), o: cg.o, s: cg.s }, { bg: ORANGE, pointer: 'up' });
