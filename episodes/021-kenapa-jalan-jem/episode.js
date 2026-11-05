@@ -8,9 +8,24 @@ import { Overlay, pop, ICONS, drawLogo } from '../../shared/overlay.js';
 import { CAPTIONS, KEYWORDS } from './captions.js';
 import { buildCityWorld, buildToyWorld, buildOutro, TOY, ZONES, AFF_SPOTS, neckLaneZ } from './worlds.js';
 import { brakeWave, crowding, bottleneck } from './sim.js';
+import TIMING from './timing.json' with { type: 'json' };
+
+// Shots are written on the fixed "story" timeline (the first narration take).
+// timing.json maps story time to the current narration (see retime.py), so the
+// picture follows the voice: frame(t) draws story time storyAt(t).
+const A = TIMING.anchors;
+function storyAt(t) {
+  for (let i = 1; i < A.length; i++) {
+    const [s0, n0] = A[i - 1], [s1, n1] = A[i];
+    if (t <= n1) return s0 + ((s1 - s0) * (t - n0)) / Math.max(1e-6, n1 - n0);
+  }
+  return A[A.length - 1][0] + (t - A[A.length - 1][1]);
+}
+let REAL_T = 0; // narration time of the frame being drawn (lip sync uses it)
 
 const FPS = 30;
-const DURATION = 72.5;
+const DURATION = TIMING.duration;
+const STORY_END = 72.5;
 
 const stage = document.getElementById('stage');
 const canvas = document.createElement('canvas');
@@ -28,7 +43,7 @@ const WAVE = brakeWave();
 const NECK = bottleneck();
 
 const V = (x, y, z) => new THREE.Vector3(x, y, z);
-const talk = (t) => clamp(env.at(t) * 1.2);
+const talk = () => clamp(env.at(REAL_T) * 1.2);
 const scr = (p, c = cam) => toScreen(p, c);
 const ORANGE = '#ff8a3d', BLUE = '#2f9bff', RED = '#ff4d4d', GREEN = '#35b85a';
 
@@ -456,7 +471,7 @@ const SHOTS = [
     return city;
   }],
   // Outro — The Curious Affan logo
-  [69.5, DURATION, (t) => {
+  [69.5, STORY_END, (t) => {
     const k = easeOut(inv(69.5, 70.2, t));
     outro.aff.root.position.set(0, 0, 0);
     outro.aff.pose({ ...POSES.thinkR, armR: { ...POSES.thinkR.armR }, smile: 1, blink: blinkAt(t, 9), headRoll: -0.08, lookX: 0.25, lookY: 0.15, headYaw: 0.08 });
@@ -496,9 +511,11 @@ function frame(t) {
   ov.begin();
   cam.aspect = W / H;
   cam.updateProjectionMatrix();
-  const shot = SHOTS.find(([a, b]) => t >= a && t < b) || SHOTS[SHOTS.length - 1];
+  REAL_T = t;
+  const u = storyAt(t);
+  const shot = SHOTS.find(([a, b]) => u >= a && u < b) || SHOTS[SHOTS.length - 1];
   toy.bus.visible = false;
-  const world = shot[2](t);
+  const world = shot[2](u);
   renderWorld(world);
   if (world !== outro) ov.vignette(0.28);
   ov.captions(t, CAPTIONS, KEYWORDS);

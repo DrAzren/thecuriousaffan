@@ -16,10 +16,28 @@ import os
 import subprocess
 import sys
 
+import json
+
 import numpy as np
 
 SR = 44100
-DUR = 72.5
+HERE_ = os.path.dirname(os.path.abspath(__file__))
+# Cues below are written on the fixed "story" timeline; timing.json (from
+# retime.py) maps story time to the current narration take.
+_TIMING = json.load(open(os.path.join(HERE_, "timing.json")))
+_A = _TIMING["anchors"]
+
+
+def W(t):
+    """story time -> narration time (piecewise linear)."""
+    for (s0, n0), (s1, n1) in zip(_A, _A[1:]):
+        if t <= s1:
+            return n0 + (n1 - n0) * (t - s0) / max(1e-6, s1 - s0)
+    return _A[-1][1] + (t - _A[-1][0])
+
+
+WARP = [True]  # place() maps cue times through W() unless the music is being laid out
+DUR = _TIMING["duration"]
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(HERE, "output")
 N = int(SR * DUR)
@@ -31,6 +49,8 @@ def T(sec):
 
 
 def place(buf, sig, at, gain=1.0, pan=0.0):
+    if WARP[0]:
+        at = W(at)
     i = int(at * SR)
     if i >= len(buf):
         return
@@ -211,13 +231,14 @@ def thump(dur=0.3):
 
 
 # ------------------------------------------------------------------ layers
-CAR_A = (0.0, 12.6)  # in the car, start
-TOYW = (12.6, 63.6)  # imagination world
-CAR_B = (63.6, 69.5)  # in the car, end
-OUTRO = 69.5
+CAR_A = (0.0, W(12.6))  # in the car, start (narration time)
+TOYW = (W(12.6), W(63.6))  # imagination world
+CAR_B = (W(63.6), W(69.5))  # in the car, end
+OUTRO = W(69.5)
 
 
 def music():
+    WARP[0] = False  # the music keeps a steady tempo; only its sections follow the voice
     buf = np.zeros((N, 2))
     bpm = 104
     beat = 60 / bpm
@@ -238,7 +259,7 @@ def music():
     t0, i = TOYW[0], 0
     while t0 < TOYW[1]:
         root, ch = chords[i % 4]
-        calm = 34.5 <= t0 < 47.6
+        calm = W(34.5) <= t0 < W(47.6)
         place(buf, pad([midi(n) for n in ch], bar + 0.6) * 0.11, t0)
         for k in range(8):
             if calm and k % 2:
@@ -268,6 +289,7 @@ def music():
     place(buf, bass(midi(41), 2.0) * 0.3, OUTRO)
     fade = int(1.2 * SR)
     buf[-fade:] *= np.linspace(1, 0, fade)[:, None]
+    WARP[0] = True
     return buf
 
 
@@ -283,7 +305,7 @@ def ambience():
     car = rumble * 0.5 + idle * 0.22
     lvl = np.zeros(N)
     for a, b, g in [(0, 7.4, 0.5), (7.4, 10.45, 0.9), (10.45, 12.6, 0.5), (63.6, 69.5, 0.45)]:
-        lvl[int(a * SR) : int(b * SR)] = g
+        lvl[int(W(a) * SR) : int(W(b) * SR)] = g
     lvl = onepole(lvl, 3)
     buf[:, 0] = car * lvl
     buf[:, 1] = np.roll(car, 37) * lvl
@@ -334,7 +356,7 @@ def sfx():
     place(buf, sparkle(0.8, 16, False, 6) * 0.25, 56.2)
     place(buf, chime((86, 91)) * 0.28, 64.5)
     place(buf, sparkle(0.6, 14, False, 7) * 0.22, 64.55)
-    place(buf, sparkle(1.0, 24, False, 8) * 0.3, OUTRO)
+    place(buf, sparkle(1.0, 24, False, 8) * 0.3, 69.5)
     return buf
 
 

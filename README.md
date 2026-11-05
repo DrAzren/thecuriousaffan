@@ -132,8 +132,16 @@ episode stays consistent.
   - One bus (or the LRT) carries many people, so fewer cars are on the road.
 - **Models.** `sim.js` precomputes every demo at a fixed time step, so each
   frame is still a pure function of time.
-- **Narration.** Affan's cloned voice (ElevenLabs). Word timings come from
-  a transcript of `audio/narration.mp3`.
+- **Narration.** Affan's cloned voice on ElevenLabs `eleven_v4`, with inline
+  emotion tags such as `[tired]`, `[frustrated]`, `[whispers]`, `[shouting]`,
+  `[gasps]` and `[laughs]`. Word timings come from a transcript of
+  `audio/narration.mp3`.
+- **Re-timing.** Shots and sound cues are written on a fixed story timeline
+  (`story_words.json`). After a new narration take, run
+  `python3 retime.py words.json` with the take's Scribe transcript. It writes
+  `timing.json`, which maps story time onto the new voice; `episode.js` and
+  `build_audio.py` both read it. It also rewrites `captions.js`. The music
+  keeps a steady tempo, and only its sections move.
 - **Audio.** It uses the same original synthesised music bed as E005, plus:
   - jam ambience: an idling engine and far-off horns;
   - brake squeaks that get stronger car by car;
