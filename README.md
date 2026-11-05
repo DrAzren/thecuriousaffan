@@ -14,6 +14,7 @@ time and can be re-timed to new narration.
 | # | Title | Folder | Final video |
 |---|---|---|---|
 | 005 | Kenapa Bulan Macam Ikut Kereta Kita? | [`episodes/005-bulan-ikut-kereta`](episodes/005-bulan-ikut-kereta) | `output/TheCuriousAffan_E005_Kenapa_Bulan_Macam_Ikut_Kereta_Kita.mp4` |
+| 020 | Macam Mana Nak Cari Emas? Kenapa Emas Mahal? | [`episodes/020-cari-emas`](episodes/020-cari-emas) | `output/TheCuriousAffan_E020_Macam_Mana_Nak_Cari_Emas.mp4` |
 
 ## Build
 
@@ -77,6 +78,7 @@ shared/
   overlay.js   captions, bubble titles, DEKAT/JAUH tags, arrows, icons, sparkles, flashes
   core.js      easing, keyframes, seeded RNG, narration envelope (lip sync), projection
 tools/render.js  deterministic frame renderer (Playwright -> ffmpeg) + thumbnail/description
+                 (--eval runs JS first, also with --package, e.g. to try thumbnail framings)
 tools/package.js short description from meta.json + series.json
 series.json      series name and hashtags
 episodes/<nnn>/  index.html, episode.js (shots + thumbnail), worlds.js (sets), captions.js, meta.json,
@@ -113,3 +115,28 @@ episode stays consistent.
   - label pops and discovery chimes.
 
   The mix is normalised to −14 LUFS with a −1.5 dBTP ceiling.
+
+## Episode 020 at a glance
+
+- **Science.** Gold hides in rock, deep underground (cut-away of the earth
+  with glowing nuggets in a quartz vein). Two ways to find it:
+  - *Mendulang* (panning) in a river. Gold is about 19 times denser than
+    water, so it sinks to the bottom of the dulang while light sand is washed
+    over the rim. This is shown in a magnified pan.
+  - *Lombong* (mining). Miners dig a deep terraced pit and crush lots of rock.
+    A balance shows a rock as heavy as a car. It crumbles to leave gold the
+    size of a mung bean (typical ore holds about 1–5 g per tonne).
+- **Why gold is expensive.**
+  - It is rare. All the gold ever mined (about 210,000 t) would fit in about
+    four Olympic pools, which fill up with gold bars on screen.
+  - It never rusts. An iron nail rusts over a 1,000-year counter while a gold
+    coin stays shiny.
+  - Many people want it, but there is only a little. A crowd gathers round a
+    small nugget and the price goes up.
+- **Safety.** Don't play in fast rivers or go into mines. Always go with an
+  adult.
+- **Narration** is `audio/narration.mp3` (the Affan voice; script in
+  `script.md`). Word timings in `audio/words.json` drive the captions.
+- **Gold look.** Gold materials share a PMREM `RoomEnvironment` map (see
+  `goldMat` and `setGoldEnv` in `worlds.js`), so the metal reflects like real
+  gold.
