@@ -14,6 +14,7 @@ time and can be re-timed to new narration.
 | # | Title | Folder | Final video |
 |---|---|---|---|
 | 005 | Kenapa Bulan Macam Ikut Kereta Kita? | [`episodes/005-bulan-ikut-kereta`](episodes/005-bulan-ikut-kereta) | `output/TheCuriousAffan_E005_Kenapa_Bulan_Macam_Ikut_Kereta_Kita.mp4` |
+| 021 | Kenapa Jalan Jem? | [`episodes/021-kenapa-jalan-jem`](episodes/021-kenapa-jalan-jem) | `output/TheCuriousAffan_E021_Kenapa_Jalan_Jem.mp4` |
 
 ## Build
 
@@ -81,6 +82,7 @@ tools/package.js short description from meta.json + series.json
 series.json      series name and hashtags
 episodes/<nnn>/  index.html, episode.js (shots + thumbnail), worlds.js (sets), captions.js, meta.json,
                  build_audio.py (music + SFX + mix), audio/narration.mp3, make.sh
+                 (E021 also has sim.js: the traffic models behind the toy-car demos)
 lab/model-sheet  Affan turnaround and pose test page
 ```
 
@@ -111,5 +113,30 @@ episode stays consistent.
   - whooshes;
   - a sparkle as the imagination world opens;
   - label pops and discovery chimes.
+
+  The mix is normalised to −14 LUFS with a −1.5 dBTP ceiling.
+
+## Episode 021 at a glance
+
+- **Science.** Why roads jam, in three reasons kids can see:
+  - *Too many cars.* Every car needs a safe gap, and a faster car needs a
+    bigger gap (gap = 3 m + 1.6 s × speed). When more cars squeeze onto the
+    same road, the gaps shrink, so everybody has to slow down. A speed gauge
+    shows it.
+  - *A narrow road.* Three lanes squeeze into one (a bottleneck), so cars
+    take turns, one by one, and queues build up behind the neck.
+  - *Sudden braking.* One car brakes. The car behind reacts a moment later and
+    brakes harder, and the third car stops. The braking wave travels
+    backwards along the line of cars even after the first car drives off.
+    The brake lights come straight from the model's deceleration.
+  - One bus (or the LRT) carries many people, so fewer cars are on the road.
+- **Models.** `sim.js` precomputes every demo at a fixed time step, so each
+  frame is still a pure function of time.
+- **Narration.** Affan's cloned voice (ElevenLabs). Word timings come from
+  a transcript of `audio/narration.mp3`.
+- **Audio.** It uses the same original synthesised music bed as E005, plus:
+  - jam ambience: an idling engine and far-off horns;
+  - brake squeaks that get stronger car by car;
+  - a toy horn, a bus hiss and an LRT glide.
 
   The mix is normalised to −14 LUFS with a −1.5 dBTP ceiling.
