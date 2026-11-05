@@ -6,13 +6,35 @@ import { makeRenderer, loadEnvelope, toScreen, clamp, lerp, inv, smooth, easeOut
 import { POSES, blinkAt } from '../../shared/affan.js';
 import { Overlay, pop, ICONS, drawLogo } from '../../shared/overlay.js';
 import { CAPTIONS, KEYWORDS } from './captions.js';
+import { ANCHORS, DURATION } from './timing.js';
 import {
   buildHome, buildUnderground, buildRiver, buildMine, buildPools, buildStudio, buildOutro, setGoldEnv, goldMat,
   RING_POS, PAN0, PAN_R, PAN_D, CRUSH, BAL, POOL, poolZ, STUDIO, PIT_D,
 } from './worlds.js';
 
 const FPS = 30;
-const DURATION = 75.5;
+const SHOT_END = 75.5; // end of the authored shot timeline (see timing.js)
+
+// Narration time -> shot time: monotone cubic (Fritsch-Carlson) through the
+// anchors, so the pace eases between chunks instead of jumping.
+const shotTime = (() => {
+  const xs = ANCHORS.map((a) => a[1]), ys = ANCHORS.map((a) => a[0]);
+  const n = xs.length, d = [], m = new Array(n).fill(0);
+  for (let i = 0; i < n - 1; i++) d.push((ys[i + 1] - ys[i]) / (xs[i + 1] - xs[i]));
+  m[0] = d[0];
+  m[n - 1] = d[n - 2];
+  for (let i = 1; i < n - 1; i++) m[i] = d[i - 1] * d[i] <= 0 ? 0 : (2 * d[i - 1] * d[i]) / (d[i - 1] + d[i]);
+  return (x) => {
+    if (x <= xs[0]) return ys[0] + (x - xs[0]) * m[0];
+    if (x >= xs[n - 1]) return ys[n - 1] + (x - xs[n - 1]) * m[n - 1];
+    let i = 0;
+    while (x > xs[i + 1]) i++;
+    const h = xs[i + 1] - xs[i], s = (x - xs[i]) / h;
+    const h00 = 2 * s ** 3 - 3 * s ** 2 + 1, h10 = s ** 3 - 2 * s ** 2 + s, h01 = -2 * s ** 3 + 3 * s ** 2, h11 = s ** 3 - s ** 2;
+    return h00 * ys[i] + h10 * h * m[i] + h01 * ys[i + 1] + h11 * h * m[i + 1];
+  };
+})();
+let T_NEW = 0; // current narration time (lip sync follows the real voice)
 
 const stage = document.getElementById('stage');
 const canvas = document.createElement('canvas');
@@ -34,7 +56,7 @@ const cam = new THREE.PerspectiveCamera(50, W / H, 0.05, 3000);
 let env = { at: () => 0 };
 
 const V = (x, y, z) => new THREE.Vector3(x, y, z);
-const talk = (t) => clamp(env.at(t) * 1.2);
+const talk = () => clamp(env.at(T_NEW) * 1.2);
 const scr = (p, c = cam) => toScreen(p, c);
 const deg = (r) => (r * 180) / Math.PI;
 const dummy = new THREE.Object3D();
@@ -744,7 +766,7 @@ const SHOTS = [
     return home;
   }],
   // Outro — The Curious Affan logo on a golden stage
-  [72.0, DURATION, (t) => {
+  [72.0, SHOT_END, (t) => {
     const k = easeOut(inv(72.0, 72.7, t));
     outro.aff.root.position.set(0, 0, 0);
     const th2 = POSES.thinkR.armR;
@@ -774,7 +796,9 @@ const SHOTS = [
   }],
 ];
 
-function frame(t) {
+function frame(tn) {
+  T_NEW = tn;
+  const t = Math.min(shotTime(tn), SHOT_END - 1e-3);
   ov.begin();
   cam.aspect = W / H;
   cam.updateProjectionMatrix();
@@ -784,7 +808,7 @@ function frame(t) {
   if (world.sky) world.sky.position.copy(cam.position);
   renderer.render(world.scene, cam);
   if (world !== outro) ov.vignette(0.22);
-  ov.captions(t, CAPTIONS, KEYWORDS);
+  ov.captions(tn, CAPTIONS, KEYWORDS);
   ov.end();
 }
 

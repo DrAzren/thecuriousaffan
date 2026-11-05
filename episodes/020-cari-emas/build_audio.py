@@ -19,7 +19,19 @@ import sys
 import numpy as np
 
 SR = 44100
-DUR = 75.5
+import json as _json
+
+# Cue times below are written on the shot timeline; timing.json maps them onto
+# the current narration so every sound stays on its word.
+_TM = _json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'audio', 'timing.json')))
+_AX = np.array([a[0] for a in _TM['anchors']]); _AY = np.array([a[1] for a in _TM['anchors']])
+
+
+def W(t):
+    return float(np.interp(t, _AX, _AY))
+
+
+DUR = _TM['duration']
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(HERE, "output")
 N = int(SR * DUR)
@@ -31,7 +43,7 @@ def T(sec):
 
 
 def place(buf, sig, at, gain=1.0, pan=0.0):
-    i = int(at * SR)
+    i = int(W(at) * SR)
     if i >= len(buf):
         return
     sig = sig[: len(buf) - i]
@@ -235,7 +247,7 @@ def chirp(f0=3200, f1=4600, dur=0.09):
 def level(spans, rate=3):
     lvl = np.zeros(N)
     for a, b in spans:
-        lvl[int(a * SR) : int(b * SR)] = 1.0
+        lvl[int(W(a) * SR) : int(W(b) * SR)] = 1.0
     return onepole(lvl, rate)
 
 
@@ -324,8 +336,8 @@ def sfx():
     place(buf, chime((79, 84, 88, 91)) * 0.33, 10.0)  # gold veins glow
     place(buf, sparkle(1.0, 20, False, 3) * 0.25, 10.1)
     # panning: water sloshes in the dulang
-    place(buf, slosh(2.6) * 0.12, 11.9, pan=-0.1)
-    place(buf, slosh(7.4) * 0.16, 17.8, pan=0.1)
+    place(buf, slosh(W(14.5) - W(11.9)) * 0.12, 11.9, pan=-0.1)
+    place(buf, slosh(W(25.2) - W(17.8)) * 0.16, 17.8, pan=0.1)
     place(buf, sparkle(0.8, 14, False, 4) * 0.18, 16.0)
     for k in range(5):
         place(buf, bloop(520 - k * 30, 170, 0.28) * 0.18, 19.6 + k * 0.22, pan=float(rs.uniform(-0.3, 0.3)))
@@ -351,7 +363,7 @@ def sfx():
     place(buf, chime((79, 83, 86)) * 0.25, 37.16)
     place(buf, chime((76, 79, 84)) * 0.28, 42.6)  # jarang!
     # pools filling with gold: rising sparkle + coin clinks
-    place(buf, sparkle(4.8, 60, True, 6) * 0.22, 44.8)
+    place(buf, sparkle(W(49.6) - W(44.8), 60, True, 6) * 0.22, 44.8)
     r = np.random.default_rng(9)
     tt = 44.8
     while tt < 49.7:

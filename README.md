@@ -135,8 +135,14 @@ episode stays consistent.
     small nugget and the price goes up.
 - **Safety.** Don't play in fast rivers or go into mines. Always go with an
   adult.
-- **Narration** is `audio/narration.mp3` (the Affan voice; script in
-  `script.md`). Word timings in `audio/words.json` drive the captions.
+- **Narration** is `audio/narration.mp3`: the Affan voice on ElevenLabs
+  eleven_v4, with an emotion tag on each line (script in `script.md`). Word
+  timings in `audio/words.json` drive the captions.
+- **Re-timing.** `timing.js` (and `audio/timing.json`) maps the authored shot
+  timeline onto the narration at every caption chunk. `episode.js` eases
+  between the anchors with a monotone cubic, and `build_audio.py` shifts its
+  cues the same way. A new narration take only needs new anchors, not new
+  shot code.
 - **Gold look.** Gold materials share a PMREM `RoomEnvironment` map (see
   `goldMat` and `setGoldEnv` in `worlds.js`), so the metal reflects like real
   gold.

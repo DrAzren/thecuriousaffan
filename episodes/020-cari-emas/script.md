@@ -1,26 +1,27 @@
 # Episode 020 — Macam Mana Nak Cari Emas? Kenapa Emas Mahal?
 
-Narration (Affan voice, Bahasa Melayu). Audio tags in [brackets] direct the delivery.
+Narration: Affan voice ("Affan Clone"), ElevenLabs eleven_v4, Bahasa Melayu.
+Audio tags in [brackets] set the emotion of each line.
 
-[excited] Papa! Tengok cincin mama, berkilat! Emas ni datang dari mana? Kenapa mahal sangat?
-Jom ikut Affan siasat!
+[excited] Papa! Tengok cincin mama, berkilat! [curious] Emas ni datang dari mana? Kenapa mahal sangat?
+[excited] Jom ikut Affan siasat!
 
-Emas tersorok dalam batu, jauh di dalam tanah.
+[mysterious] Emas tersorok dalam batu, jauh di dalam tanah.
 
-Cara pertama, mendulang di sungai. Air sungai bawa serbuk emas yang halus.
-Emas sangat berat, jadi dia tenggelam ke dasar dulang. Pasir yang ringan pula hanyut dibawa air.
+[cheerful] Cara pertama, mendulang di sungai. Air sungai bawa serbuk emas yang halus.
+[explaining] Emas sangat berat, jadi dia tenggelam ke dasar dulang. Pasir yang ringan pula hanyut dibawa air.
 
-Cara kedua, lombong. Pelombong gali dalam-dalam, dan hancurkan banyak batu.
-Batu seberat sebuah kereta, mungkin cuma ada emas sebesar sebiji kacang hijau!
+[excited] Cara kedua, lombong! Pelombong gali dalam-dalam, dan hancurkan banyak batu.
+[amazed] Batu seberat sebuah kereta, mungkin cuma ada emas sebesar sebiji kacang hijau!
 
-Jadi, kenapa emas mahal? Sebab emas sangat jarang.
-Kalau kita kumpul semua emas yang pernah dijumpa di dunia, muat dalam empat kolam renang je!
-Emas juga tak berkarat. Kekal berkilat sampai beribu-ribu tahun.
-Ramai orang nak emas, tapi emas sikit. Sebab tu harganya mahal!
+[curious] Jadi, kenapa emas mahal? Sebab emas sangat jarang.
+[amazed] Kalau kita kumpul semua emas yang pernah dijumpa di dunia, muat dalam empat kolam renang je!
+[happy] Emas juga tak berkarat. Kekal berkilat sampai beribu-ribu tahun.
+[explaining] Ramai orang nak emas, tapi emas sikit. [excited] Sebab tu harganya mahal!
 
-Ingat! Jangan main di sungai deras atau masuk lombong. Mesti dengan orang dewasa!
+[serious] Ingat! Jangan main di sungai deras atau masuk lombong. Mesti dengan orang dewasa!
 
-Apa lagi kita nak belajar lepas ni?
+[curious] Apa lagi kita nak belajar lepas ni?
 
 ## Fact check
 
