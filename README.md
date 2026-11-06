@@ -14,6 +14,7 @@ time and can be re-timed to new narration.
 | # | Title | Folder | Final video |
 |---|---|---|---|
 | 005 | Kenapa Bulan Macam Ikut Kereta Kita? | [`episodes/005-bulan-ikut-kereta`](episodes/005-bulan-ikut-kereta) | `output/TheCuriousAffan_E005_Kenapa_Bulan_Macam_Ikut_Kereta_Kita.mp4` |
+| 022 | Macam Mana Duit Kertas Terhasil? | [`episodes/022-duit-kertas`](episodes/022-duit-kertas) | In pre-production: narration (`audio/narration.mp3`), script, `output/thumbnail.jpg`, `output/description.txt` |
 
 ## Build
 
