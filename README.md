@@ -14,6 +14,7 @@ time and can be re-timed to new narration.
 | # | Title | Folder | Final video |
 |---|---|---|---|
 | 005 | Kenapa Bulan Macam Ikut Kereta Kita? | [`episodes/005-bulan-ikut-kereta`](episodes/005-bulan-ikut-kereta) | `output/TheCuriousAffan_E005_Kenapa_Bulan_Macam_Ikut_Kereta_Kita.mp4` |
+| 022 | Apa Jadi di Malaysia Jika Tiada Hujan Langsung? | [`episodes/022-tiada-hujan`](episodes/022-tiada-hujan) | `output/TheCuriousAffan_E022_Apa_Jadi_Jika_Tiada_Hujan_Langsung.mp4` |
 
 ## Build
 
@@ -39,8 +40,8 @@ Every full render also writes, next to the video:
   `EP.thumbnail()` (Affan, big title, episode badge, logo). Key elements stay
   inside the centre 3:4 area that TikTok and Reels profile grids show.
 - `output/description.txt`: a short post description (title, one-line teaser,
-  hashtags) built from the episode's `meta.json` and the series hashtags in
-  `series.json`.
+  series tagline, hashtags) built from the episode's `meta.json` and the
+  series tagline and hashtags in `series.json`.
 
 To regenerate only these two files, without re-rendering the video:
 
@@ -113,3 +114,19 @@ episode stays consistent.
   - label pops and discovery chimes.
 
   The mix is normalised to −14 LUFS with a −1.5 dBTP ceiling.
+
+## Episode 022 at a glance
+
+- **Science.** Day by day without rain: day one is sunny fun; after a week the
+  grass yellows, the bunga raya wilt and the soil cracks; after a month rivers
+  get shallow and dam levels fall. Most tap water in Malaysia comes from rivers
+  and dams, so taps can run dry; padi fields dry out (and our rice comes from
+  padi); dry forests catch fire easily and bring haze. Then the rain returns
+  and the water cycle shows why: the sun heats the sea, vapour rises, clouds
+  form and rain falls. Tip: close the tap while brushing your teeth.
+- **Narration.** Affan's cloned voice on ElevenLabs Eleven v4 with emotion
+  tags (`audio/narration.mp3`); word timings for captions in
+  `audio/narration_words.json`.
+- **Sets.** One `dry` value recolours the whole kampung (grass, soil, leaves,
+  flowers, padi) so the drought builds continuously; separate dam, water-cycle
+  and bathroom sets.
