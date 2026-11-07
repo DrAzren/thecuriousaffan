@@ -14,7 +14,7 @@ time and can be re-timed to new narration.
 | # | Title | Folder | Final video |
 |---|---|---|---|
 | 005 | Kenapa Bulan Macam Ikut Kereta Kita? | [`episodes/005-bulan-ikut-kereta`](episodes/005-bulan-ikut-kereta) | `output/TheCuriousAffan_E005_Kenapa_Bulan_Macam_Ikut_Kereta_Kita.mp4` |
-| 022 | Macam Mana Duit Kertas Terhasil? | [`episodes/022-duit-kertas`](episodes/022-duit-kertas) | In pre-production: narration (`audio/narration.mp3`), script, `output/thumbnail.jpg`, `output/description.txt` |
+| 022 | Macam Mana Duit Kertas Terhasil? | [`episodes/022-duit-kertas`](episodes/022-duit-kertas) | `output/TheCuriousAffan_E022_Macam_Mana_Duit_Kertas_Terhasil.mp4` |
 
 ## Build
 
@@ -114,3 +114,22 @@ episode stays consistent.
   - label pops and discovery chimes.
 
   The mix is normalised to −14 LUFS with a −1.5 dBTP ceiling.
+
+## Episode 022 at a glance
+
+- **Narration.** Affan's own voice (ElevenLabs, `eleven_v4` with emotion
+  tags), script and timings in `episodes/022-duit-kertas/script.md`.
+- **Shots.** 16 shots across five procedural sets:
+  - a banknote studio (hook, polymer RM1/RM5, recap, piggy bank, outro);
+  - a cotton field;
+  - Affan's desk room (ordinary paper, raised ink, and at night the
+    watermark and security thread lit from behind);
+  - a factory (paper mill, three-station printing press adding a layer per
+    station, numbering stamp, guillotine and scanner);
+  - a toy town (Bank Negara Malaysia, the van, the neighbourhood bank).
+- **Notes.** All banknotes are made-up cartoon designs (`notes.js`), built up
+  stage by stage: cotton paper, colour, line-work, picture and numerals,
+  serial number.
+- **Audio.** `build_audio.py` synthesises an upbeat 124 bpm groove, a quiet
+  mysterious break for the night scene, and SFX matched to the pictures. The
+  music is ducked under the voice, and the mix is normalised to −14 LUFS.
