@@ -1,11 +1,12 @@
 // THE CURIOUS AFFAN — Episode 022: "Macam Mana Duit Kertas Terhasil?"
-// Pre-production stage: narration (audio/narration.mp3, Affan's voice) and the
-// cover. The animated shots are not built yet, so frame(t) draws the cover
-// set with a light idle so stills and test renders work.
+// Preview cut: narration (audio/narration.mp3, Affan's voice), the cover set
+// with Affan lip-synced and acting each beat's emotion, word-timed captions
+// (audio/narration_words.json) and a step label per beat. The full animated
+// shots (cotton, printing press, cutting, bank) are not built yet.
 import * as THREE from 'three';
-import { makeRenderer, loadEnvelope, toScreen, clamp, wobble, rng, W, H } from '../../shared/core.js';
+import { makeRenderer, loadEnvelope, toScreen, clamp, lerp, inv, keys, wobble, W, H } from '../../shared/core.js';
 import { makeAffan, blinkAt } from '../../shared/affan.js';
-import { Overlay, ICONS, drawLogo } from '../../shared/overlay.js';
+import { Overlay, ICONS, drawLogo, pop } from '../../shared/overlay.js';
 import { glow } from '../../shared/props.js';
 
 const FPS = 30;
@@ -217,13 +218,15 @@ scene.add(ground);
 
 // ------------------------------------------------------------------ pose
 const _h = new THREE.Vector3();
-function poseCover(t) {
+const COVER_POSE = {
+  yaw: 0.12, headYaw: -0.32, headPitch: 0.08, headRoll: 0.06, lookX: -0.55, lookY: 0.25, wow: 0.9, brow: 1,
+  armL: { reach: [0.62, 0.95, 0.5], pole: [1, -0.8, -0.3], thumb: 1, wy: 1.2, wx: 0.15 },
+};
+function poseCover(t, p = COVER_POSE, camK = 0) {
   aff.root.position.set(0, 0, 0);
   aff.pose({
-    yaw: 0.12, headYaw: -0.32, headPitch: 0.08, headRoll: 0.06, lookX: -0.55, lookY: 0.25,
-    wow: 0.9, brow: 1, blink: blinkAt(t, 22), bob: 0.02 * wobble(t, 2),
+    blink: blinkAt(t, 22), bob: 0.02 * wobble(t, 2), ...p,
     armR: { reach: [-0.95, 1.3, 0.38], pole: [-1, -0.9, 0.1], wx: -0.2 },
-    armL: { reach: [0.62, 0.95, 0.5], pole: [1, -0.8, -0.3], thumb: 1, wy: 1.2, wx: 0.15 },
   });
   aff.root.updateMatrixWorld(true);
   aff.parts.arms.R.hand.getWorldPosition(_h);
@@ -234,15 +237,92 @@ function poseCover(t) {
     n.position.set(x, y + 0.06 * Math.sin(t * 1.4 + i), z);
     n.rotation.set(rx + 0.08 * Math.sin(t * 1.1 + i * 2), ry, rz + 0.06 * Math.sin(t * 0.9 + i));
   }
-  cam.position.set(0, 2.6, 12);
-  cam.lookAt(0, 2.9, 0);
+  cam.position.set(0.25 * Math.sin(t * 0.21), 2.6, lerp(12, 10.2, camK));
+  cam.lookAt(0, lerp(2.9, 2.75, camK), 0);
   cam.updateMatrixWorld(true);
 }
 
+// ------------------------------------------------------------ preview cut
+// Beats from script.md (take 1 timings): [start, step label, emotion pose]
+const MOOD = {
+  curious: { smile: 0.4, brow: 0.6, headRoll: 0.14, lookX: -0.4, lookY: 0.3, headYaw: -0.25 },
+  excited: { smile: 1, brow: 1, headRoll: -0.05, lookX: 0, lookY: 0, headYaw: 0.05, armL: { reach: [0.62, 0.95, 0.5], pole: [1, -0.8, -0.3], thumb: 1, wy: 1.2, wx: 0.15 } },
+  surprised: { wow: 0.9, brow: 1, lookX: -0.55, lookY: 0.25, headYaw: -0.32 },
+  happy: { smile: 1, brow: 0.5, headRoll: 0.06, lookX: 0, headYaw: 0 },
+  whisper: { smile: 0.5, brow: -0.2, headPitch: 0.15, headYaw: 0.15, lookX: 0.2, armL: { reach: [0.12, 1.42, 0.62], pole: [1, -1, 0.1], point: 1, wx: -0.4 } },
+  warm: { smile: 1, brow: 0.3, headRoll: -0.1, headYaw: 0 },
+};
+const BEATS = [
+  [0.0, null, 'curious'], [4.1, null, 'excited'],
+  [7.7, '1  BUKAN KERTAS BIASA', 'curious'], [12.6, '1  DIBUAT DARIPADA KAPAS', 'surprised'],
+  [16.0, '2  KERTAS KHAS YANG KUAT', 'happy'], [21.4, 'RM1 & RM5: PLASTIK KHAS', 'excited'],
+  [25.7, '3  GAMBAR TERSEMBUNYI', 'whisper'], [30.0, '3  BENANG KESELAMATAN', 'excited'],
+  [31.7, '4  CETAK LAPIS DEMI LAPIS', 'excited'], [38.3, '4  DAKWAT TIMBUL', 'surprised'],
+  [43.6, '5  NOMBOR SIRI', 'curious'], [47.6, '6  POTONG & PERIKSA', 'excited'],
+  [53.9, '7  BANK NEGARA → BANK → KITA', 'happy'], [59.6, null, 'surprised'], [63.5, null, 'warm'], [66.7, null, 'excited'],
+];
+const KEYWORDS = { kapas: '#7cf0b0', plastik: '#8fd8ff', rahsia: '#ffb3d1', tersembunyi: '#ffb3d1', keselamatan: '#ffb3d1', timbul: '#ffa149', siri: '#ffd84a', 'kertas': '#ffffff', duit: '#9df2c0', bank: '#8fd8ff' };
+let CAPTIONS = [];
+let SPEECH_END = 69;
+function buildCaptions(words) {
+  const w = words.filter((x) => !/^\[.*\]$/.test(x.text));
+  const out = [];
+  let cur = [];
+  const flush = (end) => {
+    if (cur.length) out.push([end, ...cur]);
+    cur = [];
+  };
+  w.forEach((x, i) => {
+    cur.push([x.text.replace(/…/g, '').replace(/,$/, ','), x.start]);
+    const next = w[i + 1];
+    const brk = /[.!?…]$/.test(x.text) || (/,$/.test(x.text) && cur.length >= 2) || cur.length >= 3 || !next || next.start - x.end > 0.45;
+    if (brk) flush(next ? Math.min(next.start - 0.02, x.end + 0.6) : x.end + 0.6);
+  });
+  return out;
+}
+function poseFor(t) {
+  let i = 0;
+  while (i + 1 < BEATS.length && t >= BEATS[i + 1][0]) i++;
+  const a = { ...COVER_POSE, ...MOOD[BEATS[i][2]] };
+  if (i === 0 || t - BEATS[i][0] > 0.35) return { p: a, i };
+  // short blend from the previous beat's mood
+  const b = { ...COVER_POSE, ...MOOD[BEATS[i - 1][2]] };
+  const k = inv(BEATS[i][0], BEATS[i][0] + 0.35, t);
+  const mix = {};
+  for (const key of new Set([...Object.keys(a), ...Object.keys(b)])) {
+    const va = a[key] ?? 0, vb = b[key] ?? 0;
+    mix[key] = typeof va === 'number' && typeof vb === 'number' ? lerp(vb, va, k) : k < 0.5 ? b[key] : a[key];
+  }
+  return { p: mix, i };
+}
 function frame(t) {
   ov.begin();
-  poseCover(t);
+  const { p, i } = poseFor(t);
+  const talk = clamp(env.at(t) * 1.2);
+  const wow = (p.wow || 0) * (1 - clamp(talk * 2.5));
+  poseCover(t, { ...p, talk, wow }, keys(t, [[0, 0], [8, 1], [SPEECH_END, 1], [SPEECH_END + 1.5, 0.3]]));
   renderer.render(scene, cam);
+  // intro title over the hook
+  const ti = pop(t, 0.15, 7.4);
+  if (ti.o > 0) {
+    ov.tag('inBadge', 'EPISOD 22', { x: W / 2, y: 300, o: ti.o, s: ti.s }, { bg: '#2f7bff', small: true });
+    ov.bubble('inTitle', 'MACAM MANA\nDUIT KERTAS\nTERHASIL?', { x: W / 2, y: 540, r: -2, o: ti.o, s: ti.s }, { size: 112 });
+  }
+  // step label for the current beat
+  const label = BEATS[i][1];
+  if (label) {
+    const st = pop(t, BEATS[i][0], (BEATS[i + 1] || [SPEECH_END])[0]);
+    ov.tag('step' + i, label, { x: W / 2, y: 360, o: st.o, s: st.s, r: -2 }, { bg: ['#2fae6b', '#ff8a3d', '#9a5fd8', '#2f7bff'][i % 4] });
+  }
+  if (BEATS[i][2] === 'surprised' || (t > 12.6 && t < 15.7)) {
+    const n = toScreen(hero.position, cam);
+    ov.sparkles(t, { n: 14, seed: 22 + i, x: n.x - 220, y: n.y - 200, w: 440, h: 400, size: 24 });
+  }
+  ov.captions(t, CAPTIONS, KEYWORDS);
+  // outro: logo
+  const lo = pop(t, SPEECH_END + 0.3);
+  if (lo.o > 0) drawLogo(ov, { y: 400, scale: 0.72, k: [lo, lo, lo], star: lo });
+  ov.flash(clamp(1 - t / 0.35) * 0.8);
   ov.end();
 }
 
@@ -284,7 +364,9 @@ window.EP = {
   ready: (async () => {
     try {
       env = await loadEnvelope('./audio/narration.mp3', FPS);
-      DURATION = Math.ceil(env.duration + 2.5);
+      DURATION = Math.ceil(env.duration + 3);
+      SPEECH_END = env.duration;
+      CAPTIONS = buildCaptions((await (await fetch('./audio/narration_words.json')).json()).words);
     } catch (e) {
       console.warn('no narration yet');
     }
