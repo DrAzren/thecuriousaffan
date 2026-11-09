@@ -14,6 +14,7 @@ time and can be re-timed to new narration.
 | # | Title | Folder | Final video |
 |---|---|---|---|
 | 005 | Kenapa Bulan Macam Ikut Kereta Kita? | [`episodes/005-bulan-ikut-kereta`](episodes/005-bulan-ikut-kereta) | `output/TheCuriousAffan_E005_Kenapa_Bulan_Macam_Ikut_Kereta_Kita.mp4` |
+| 025 | Kenapa Badan Kita Panas Kalau Demam? | [`episodes/025-badan-panas-demam`](episodes/025-badan-panas-demam) | `output/TheCuriousAffan_E025_Kenapa_Badan_Kita_Panas_Kalau_Demam.mp4` |
 
 ## Build
 
@@ -113,3 +114,23 @@ episode stays consistent.
   - label pops and discovery chimes.
 
   The mix is normalised to −14 LUFS with a −1.5 dBTP ceiling.
+
+## Episode 025 at a glance
+
+- **Science.** When germs get into the body, the brain gets the signal and
+  turns the body's "thermostat" up, like turning a heater knob. Normal body
+  temperature is about 37 °C; with a fever it can reach 38 °C or more. We
+  shiver because our muscles move to make heat. The warmer body helps the
+  white blood cells (the body's soldiers) fight germs, and germs don't like
+  the heat, so a fever is a sign the body is fighting. The episode ends with
+  what to do: tell Mama and Papa, drink plenty of water and rest.
+- **Sets.** Affan's bedroom (real world) and an "inside the body" imagination
+  world: a blood vessel, the brain's control room with the heater dial and
+  alarm, a giant thermometer, and white blood cells in helmets against germs.
+- **Narration.** ElevenLabs `eleven_v4` in Affan's cloned voice with emotion
+  tags (script in `script.md`). Caption word timings were measured from the
+  narration with a local speech-recognition pass, then spelt as in the script.
+- **Audio.** An original music bed, room tone in the bedroom, a soft heartbeat
+  and blood flow inside the body, plus an alarm siren, heater-knob clicks, a
+  rising thermometer tone, battle boings and checklist chimes. The mix is
+  normalised to −14 LUFS with a −1.5 dBTP ceiling.
