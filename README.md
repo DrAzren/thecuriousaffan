@@ -14,6 +14,7 @@ time and can be re-timed to new narration.
 | # | Title | Folder | Final video |
 |---|---|---|---|
 | 005 | Kenapa Bulan Macam Ikut Kereta Kita? | [`episodes/005-bulan-ikut-kereta`](episodes/005-bulan-ikut-kereta) | `output/TheCuriousAffan_E005_Kenapa_Bulan_Macam_Ikut_Kereta_Kita.mp4` |
+| 024 | Berapa Ekor Kucing di Dunia Ini? | [`episodes/024-berapa-ekor-kucing`](episodes/024-berapa-ekor-kucing) | `output/TheCuriousAffan_E024_Berapa_Ekor_Kucing_Di_Dunia_Ini.mp4` |
 
 ## Build
 
@@ -68,11 +69,17 @@ node tools/render.js episodes/005-bulan-ikut-kereta --from 20 --to 30 --out part
 node tools/render.js lab/model-sheet --stills 0,1,2,3,4,5,6
 ```
 
+```bash
+# cat breed sheet (all breeds, turnaround, walking, meow, close-ups)
+node tools/render.js lab/cat-sheet --stills 0,1,2,3,4,5,6,7,8,9,10,11
+```
+
 ## Layout
 
 ```
 shared/
   affan.js     Affan character: model sheet, pose rig, 2-bone arm IK, lip-sync mouth, blinks
+  cat.js       procedural cartoon cats: one rig (sit/walk, tail, blink, meow), breed presets, cat-face icon
   props.js     sky, stars, moon, road, car (+ interior), trees, lamp posts, houses
   overlay.js   captions, bubble titles, DEKAT/JAUH tags, arrows, icons, sparkles, flashes
   core.js      easing, keyframes, seeded RNG, narration envelope (lip sync), projection
@@ -82,6 +89,7 @@ series.json      series name and hashtags
 episodes/<nnn>/  index.html, episode.js (shots + thumbnail), worlds.js (sets), captions.js, meta.json,
                  build_audio.py (music + SFX + mix), audio/narration.mp3, make.sh
 lab/model-sheet  Affan turnaround and pose test page
+lab/cat-sheet    cat breeds test page
 ```
 
 ## Affan model sheet
@@ -113,3 +121,30 @@ episode stays consistent.
   - label pops and discovery chimes.
 
   The mix is normalised to −14 LUFS with a −1.5 dBTP ceiling.
+
+## Episode 024 at a glance
+
+- **Narration.** Affan's own voice (the "Affan Clone" voice on ElevenLabs,
+  model `eleven_v4`), generated once from the script in
+  `audio/script.txt`. Word timings for the captions were measured locally
+  with Whisper, so no extra credits were used.
+- **Science.** Scientists estimate there are about 600 million cats in the
+  world. Some live at home with their owners and some live free outside.
+  There are more than 70 recognised breeds. The episode shows seven:
+  - kucing kampung, from Malaysia;
+  - Parsi, with long, fluffy fur;
+  - Siam, with blue eyes, which likes to meow;
+  - Maine Coon, one of the biggest house cats;
+  - Sphynx, with almost no fur;
+  - Scottish Fold, with folded ears;
+  - Singapura, one of the smallest breeds.
+- **Picture.** All cats come from `shared/cat.js`:
+  - a living room with Affan's own kampung cat;
+  - a sunny street wall;
+  - an imagination globe covered in cat faces, with a counter up to 600 juta;
+  - a crowd stand of cats;
+  - a spotlight carousel that turns to present each breed.
+- **Audio.** The soundtrack is original and synthesised, with a cosy home theme
+  and a playful marimba band. It adds birdsong, carousel whooshes, counter
+  ticks, pops, chimes and a soft cartoon meow. The mix is normalised to
+  −14 LUFS with a −1.5 dBTP ceiling.
