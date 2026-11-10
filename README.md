@@ -14,6 +14,7 @@ time and can be re-timed to new narration.
 | # | Title | Folder | Final video |
 |---|---|---|---|
 | 005 | Kenapa Bulan Macam Ikut Kereta Kita? | [`episodes/005-bulan-ikut-kereta`](episodes/005-bulan-ikut-kereta) | `output/TheCuriousAffan_E005_Kenapa_Bulan_Macam_Ikut_Kereta_Kita.mp4` |
+| 026 | Organ Apa Paling Keras Dalam Badan Kita? | [`episodes/026-organ-paling-keras`](episodes/026-organ-paling-keras) | `output/TheCuriousAffan_E026_Organ_Apa_Paling_Keras_Dalam_Badan_Kita.mp4` |
 
 ## Build
 
@@ -113,3 +114,22 @@ episode stays consistent.
   - label pops and discovery chimes.
 
   The mix is normalised to −14 LUFS with a −1.5 dBTP ceiling.
+
+## Episode 026 at a glance
+
+- **Format.** A hook story leads into a TOP 3 countdown and then the reveal:
+  - **Hook:** Affan falls off his bike, but his bones don't break.
+  - **No. 3:** the thigh bone (femur).
+  - **No. 2:** the temporal bone, which guards the inner ear.
+  - **No. 1:** **teeth**, because enamel is harder than bone.
+- **Science.**
+  - Enamel is almost all mineral (calcium crystals) packed tightly together, shown as hexagonal crystals snapping into place.
+  - Enamel can't grow back once damaged, which leads into "gosok gigi pagi dan malam".
+- **Narration.** One take in Affan's cloned voice (ElevenLabs `eleven_v4`).
+- **Captions.** Word timings were measured locally with a speech recogniser, then snapped to the speech onsets. No transcription credits were used.
+- **Sets.** All procedural:
+  - a sunny park with a bicycle;
+  - a game-show studio with three podiums;
+  - the femur, an x-ray head and a cute tooth with a cut-away (enamel, dentin, pulp);
+  - an enamel crystal world.
+- **Audio.** An original soundtrack and effects, mixed to −14 LUFS: park tune, game-show band, drum roll and fanfare, crystal clinks, a crack, and tooth brushing.

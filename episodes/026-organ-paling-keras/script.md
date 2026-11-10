@@ -2,6 +2,8 @@
 
 Suara: **Affan Clone** (ElevenLabs, model `eleven_v4`), 1 take.
 Narasi: `audio/narration.mp3` (80.9 s)
+Video: `output/TheCuriousAffan_E026_Organ_Apa_Paling_Keras_Dalam_Badan_Kita.mp4` (84.3 s, 1080×1920)
+Bina semula: `episodes/026-organ-paling-keras/make.sh`
 
 Struktur: hook cerita → top 3 (no. 3, no. 2) → reveal no. 1 dan kenapa.
 
