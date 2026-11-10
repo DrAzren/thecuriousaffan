@@ -14,7 +14,7 @@ time and can be re-timed to new narration.
 | # | Title | Folder | Final video |
 |---|---|---|---|
 | 005 | Kenapa Bulan Macam Ikut Kereta Kita? | [`episodes/005-bulan-ikut-kereta`](episodes/005-bulan-ikut-kereta) | `output/TheCuriousAffan_E005_Kenapa_Bulan_Macam_Ikut_Kereta_Kita.mp4` |
-| 027 | Kenapa Kita Menguap? | [`episodes/027-kenapa-kita-menguap`](episodes/027-kenapa-kita-menguap) | Narration, thumbnail and description ready; video not yet rendered |
+| 027 | Kenapa Kita Menguap? | [`episodes/027-kenapa-kita-menguap`](episodes/027-kenapa-kita-menguap) | `output/TheCuriousAffan_E027_Kenapa_Kita_Menguap.mp4` |
 
 ## Build
 
@@ -84,6 +84,20 @@ episodes/<nnn>/  index.html, episode.js (shots + thumbnail), worlds.js (sets), c
                  build_audio.py (music + SFX + mix), audio/narration.mp3, make.sh
 lab/model-sheet  Affan turnaround and pose test page
 ```
+
+## Episode 027 at a glance
+
+- **Science.** How a yawn happens (mouth opens wide, jaw stretches, a long deep
+  breath in, then a slow breath out) and why. Scientists are still studying it;
+  the episode gives brain cooling as one popular idea, not settled fact.
+  Contagious yawning is real: seeing, hearing or even reading about a yawn can
+  set one off, it spreads more easily between family and close friends, and
+  dogs can catch their owner's yawn.
+- **Voice.** One ElevenLabs `eleven_v4` take in the Affan Clone voice
+  (`audio/narration.mp3`, script and delivery tags in `script.txt`). Caption
+  word times come from a local speech-to-text pass aligned to the script.
+- **Sets.** Affan's bedroom at night (with his puppy), a bright science stage
+  for the explanation, and the branded outro.
 
 ## Affan model sheet
 
