@@ -14,6 +14,7 @@ time and can be re-timed to new narration.
 | # | Title | Folder | Final video |
 |---|---|---|---|
 | 005 | Kenapa Bulan Macam Ikut Kereta Kita? | [`episodes/005-bulan-ikut-kereta`](episodes/005-bulan-ikut-kereta) | `output/TheCuriousAffan_E005_Kenapa_Bulan_Macam_Ikut_Kereta_Kita.mp4` |
+| 027 | Kenapa Kita Menguap? | [`episodes/027-kenapa-kita-menguap`](episodes/027-kenapa-kita-menguap) | Narration, thumbnail and description ready; video not yet rendered |
 
 ## Build
 
