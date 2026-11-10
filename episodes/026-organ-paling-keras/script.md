@@ -1,4 +1,4 @@
-# Episode 025 — Organ Apa Paling Keras Dalam Badan Kita?
+# Episode 026 — Organ Apa Paling Keras Dalam Badan Kita?
 
 Suara: **Affan Clone** (ElevenLabs, model `eleven_v4`), 1 take.
 Narasi: `audio/narration.mp3` (80.9 s)
