@@ -14,6 +14,7 @@ time and can be re-timed to new narration.
 | # | Title | Folder | Final video |
 |---|---|---|---|
 | 005 | Kenapa Bulan Macam Ikut Kereta Kita? | [`episodes/005-bulan-ikut-kereta`](episodes/005-bulan-ikut-kereta) | `output/TheCuriousAffan_E005_Kenapa_Bulan_Macam_Ikut_Kereta_Kita.mp4` |
+| 028 | Kenapa Kilat Sampai Dulu, Guruh Lambat? | [`episodes/028-kilat-guruh`](episodes/028-kilat-guruh) | `output/TheCuriousAffan_E028_Kenapa_Kilat_Sampai_Dulu_Guruh_Lambat.mp4` |
 
 ## Build
 
@@ -113,3 +114,24 @@ episode stays consistent.
   - label pops and discovery chimes.
 
   The mix is normalised to −14 LUFS with a −1.5 dBTP ceiling.
+
+## Episode 028 at a glance
+
+- **Science.** Lightning and thunder happen at the same moment. Lightning is
+  light and thunder is sound. Light arrives almost instantly, but sound is much
+  slower, so the thunder comes later. Counting the seconds between the flash
+  and the thunder tells you roughly how far away the lightning was: about three
+  seconds for every kilometre. The episode also reminds children to stay
+  indoors when there is lightning.
+- **Picture.** It reuses the Episode 005 sets, dressed for a storm: rain, storm
+  clouds and lightning bolts on the night road. In the imagination world, a
+  "race" on the toy road shows the light (a glowing ball) arriving at once,
+  while the sound (three rolling arches) arrives late. A ruler marks the
+  three-seconds-per-kilometre rule.
+- **Audio.** The narration is in Affan's voice, made with ElevenLabs. Every
+  thunderclap lands where the picture puts it: late after a far flash, together
+  with the strike at its source, and on "tiga" in the count. The soundtrack
+  reuses the Episode 005 instruments and adds rain, thunder, crackles and the
+  racers' sounds. Thunder is kept gentle, below the voice. The mix is normalised
+  to −14 LUFS with a peak limiter at −1.5 dB.
+
