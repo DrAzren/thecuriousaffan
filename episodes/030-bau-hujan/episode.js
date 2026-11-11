@@ -466,7 +466,7 @@ function frame(t) {
 // Cover / thumbnail (9:16): Affan sniffing happily in the rain-soaked car,
 // with a big title, episode badge and the series logo. Key elements stay
 // inside the centre 3:4 area (y 240-1680) that profile grids show.
-const THUMB = { cam: [-0.2, 1.52, 0.7], look: [-0.92, 1.58, -0.45], fov: 48 };
+const THUMB = { cam: [-0.2, 1.52, 0.7], look: [-0.92, 1.58, -0.45], fov: 48, nose: [870, 1072] };
 window.setThumb = (o) => Object.assign(THUMB, o);
 function thumbnail() {
   ov.begin();
@@ -504,13 +504,13 @@ function thumbnail() {
   g.lineCap = 'round';
   g.shadowColor = '#d9ffc8';
   g.shadowBlur = 18;
-  [[960, 780, 0], [1000, 900, 1], [930, 1010, 2]].forEach(([x0, y0, i]) => {
+  [[1062, 700, 0], [1068, 840, 1], [1060, 975, 2]].forEach(([x0, y0, i]) => {
     g.strokeStyle = ['#b8f59a', '#9be07a', '#d9ffc8'][i];
     g.lineWidth = 12;
     g.beginPath();
     for (let s = 0; s <= 30; s++) {
       const k = s / 30;
-      g.lineTo(lerp(x0, 640, k), lerp(y0, 980, k) + Math.sin(k * 12 + i) * 26);
+      g.lineTo(lerp(x0, THUMB.nose[0], k), lerp(y0, THUMB.nose[1], k) + Math.sin(k * 9 + i) * 34 * (1 - k * 0.7));
     }
     g.stroke();
   });
