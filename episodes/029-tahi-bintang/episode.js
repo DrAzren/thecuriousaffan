@@ -553,6 +553,23 @@ function thumbnail() {
   g.fillStyle = bot;
   g.fillRect(0, H - 900, W, 900);
   ov.vignette(0.3);
+  // a bright shooting star across the window sky
+  const sx0 = 1060, sy0 = 600, sx1 = 700, sy1 = 690;
+  const sg = g.createLinearGradient(sx0, sy0, sx1, sy1);
+  sg.addColorStop(0, 'rgba(255,248,215,0)');
+  sg.addColorStop(1, 'rgba(255,248,215,1)');
+  g.save();
+  g.strokeStyle = sg;
+  g.lineCap = 'round';
+  g.lineWidth = 14;
+  g.shadowColor = '#ffe9a8';
+  g.shadowBlur = 30;
+  g.beginPath();
+  g.moveTo(sx0, sy0);
+  g.lineTo(sx1, sy1);
+  g.stroke();
+  g.restore();
+  ov.star(sx1, sy1, 34, 1, '#fff6c8', 0.3);
   ov.tag('thBadge', 'EPISOD 29', { x: W / 2, y: 300 }, { bg: '#2f7bff', small: true });
   ov.bubble('thTitle', 'BINTANG\nJATUH?', { x: W / 2, y: 475, r: -2 }, { size: 128 });
   ov.html('thQ', ICONS.qmark('#ffcf33'), { x: 120, y: 760, r: -14, s: 0.9 });
