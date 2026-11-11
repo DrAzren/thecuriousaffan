@@ -16,6 +16,7 @@ time and can be re-timed to new narration.
 | 005 | Kenapa Bulan Macam Ikut Kereta Kita? | [`episodes/005-bulan-ikut-kereta`](episodes/005-bulan-ikut-kereta) | `output/TheCuriousAffan_E005_Kenapa_Bulan_Macam_Ikut_Kereta_Kita.mp4` |
 | 028 | Kenapa Kilat Sampai Dulu, Guruh Lambat? | [`episodes/028-kilat-guruh`](episodes/028-kilat-guruh) | `output/TheCuriousAffan_E028_Kenapa_Kilat_Sampai_Dulu_Guruh_Lambat.mp4` |
 | 029 | Tahi Bintang Tu Bintang Jatuh Ke? | [`episodes/029-tahi-bintang`](episodes/029-tahi-bintang) | `output/TheCuriousAffan_E029_Tahi_Bintang_Tu_Bintang_Jatuh_Ke.mp4` |
+| 030 | Kenapa Hujan Ada Bau? | [`episodes/030-bau-hujan`](episodes/030-bau-hujan) | `output/TheCuriousAffan_E030_Kenapa_Hujan_Ada_Bau.mp4` |
 
 ## Build
 
@@ -159,4 +160,24 @@ episode stays consistent.
   - the grain's sizzle and burn-out.
 
   The mix is normalised to −14 LUFS with a peak limiter at −1.5 dB.
+
+## Episode 030 at a glance
+
+- **Science.** Water itself has no smell. Tiny bacteria in the soil make a
+  smelly substance called geosmin. A raindrop landing on soil traps air in the
+  soil. Little air bubbles then rise through the drop and burst, throwing the
+  soil smell into the air, and the wind carries it to our nose. Our noses are
+  so sensitive to geosmin that even a tiny amount is enough to smell it.
+- **Picture.** The rainy night road from Episode 028, with no lightning. A new
+  imagination world, the "soil lab", shows:
+  - a big cut-away block of soil with cute bacteria living inside;
+  - smell ribbons (geosmin) rising from the bacteria;
+  - a giant raindrop that splashes and becomes a dome over the soil;
+  - bubbles that rise and pop on the narrator's "pop, pop, pop";
+  - a puff of smell droplets that the wind carries to Affan's nose.
+- **Audio.** The narration is in Affan's voice, made with ElevenLabs. The
+  soundtrack reuses the Episode 005 instruments and the Episode 028 rain layer,
+  and adds sniffs, bacteria "boops", a falling raindrop and splash, bubbling
+  "blubs", pops and a breeze. The mix is normalised to −14 LUFS with a peak
+  limiter at −1.5 dB.
 
