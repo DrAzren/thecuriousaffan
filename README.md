@@ -15,6 +15,7 @@ time and can be re-timed to new narration.
 |---|---|---|---|
 | 005 | Kenapa Bulan Macam Ikut Kereta Kita? | [`episodes/005-bulan-ikut-kereta`](episodes/005-bulan-ikut-kereta) | `output/TheCuriousAffan_E005_Kenapa_Bulan_Macam_Ikut_Kereta_Kita.mp4` |
 | 028 | Kenapa Kilat Sampai Dulu, Guruh Lambat? | [`episodes/028-kilat-guruh`](episodes/028-kilat-guruh) | `output/TheCuriousAffan_E028_Kenapa_Kilat_Sampai_Dulu_Guruh_Lambat.mp4` |
+| 029 | Tahi Bintang Tu Bintang Jatuh Ke? | [`episodes/029-tahi-bintang`](episodes/029-tahi-bintang) | `output/TheCuriousAffan_E029_Tahi_Bintang_Tu_Bintang_Jatuh_Ke.mp4` |
 
 ## Build
 
@@ -134,4 +135,28 @@ episode stays consistent.
   reuses the Episode 005 instruments and adds rain, thunder, crackles and the
   racers' sounds. Thunder is kept gentle, below the voice. The mix is normalised
   to −14 LUFS with a peak limiter at −1.5 dB.
+
+## Episode 029 at a glance
+
+- **Science.** A shooting star is not a star. Stars are huge and very far
+  away. What we see is a speck of space dust, about the size of a grain of
+  sand, left behind by a comet that passed near the Sun. When the Earth passes
+  through that dust, the specks rush into the air very fast, get hot and burn
+  up. That line of light is a shooting star, or meteor. The episode ends by
+  inviting children to watch the meteor shower on 17 November (the Leonids).
+- **Picture.** The night road from Episode 005 gets shooting stars and a meteor
+  shower. A new imagination world is a storybook solar system:
+  - the Sun;
+  - a comet whose tail points away from the Sun, laying a sparkling dust trail
+    along its orbit;
+  - the Earth crossing that trail;
+  - a close-up of a big curved Earth, where one grain of dust heats from grey
+    to orange and burns into a streak of light.
+- **Audio.** The narration is in Affan's voice, made with ElevenLabs. The
+  soundtrack reuses the Episode 005 instruments and adds:
+  - a soft "fssh" for each shooting star on screen;
+  - a comet shimmer;
+  - the grain's sizzle and burn-out.
+
+  The mix is normalised to −14 LUFS with a peak limiter at −1.5 dB.
 
