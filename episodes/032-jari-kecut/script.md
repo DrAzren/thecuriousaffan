@@ -1,7 +1,10 @@
 # Episode 032: Kenapa Jari Jadi Kecut Bila Lama Main Air?
 
 Suara: **Affan Clone** (ElevenLabs, model `eleven_v4`), 1 take.
-Narasi: `audio/narration.mp3` (belum dijana)
+Narasi: `audio/narration.mp3` (67.4 s)
+Masa perkataan: `audio/narration_words.json` (faster-whisper, tempatan, tanpa kredit)
+Video: `output/TheCuriousAffan_E032_Kenapa_Jari_Jadi_Kecut_Bila_Lama_Main_Air.mp4` (70.6 s, 1080×1920)
+Bina semula: `episodes/032-jari-kecut/make.sh`
 
 Struktur: hook cerita → salah faham ("kulit minum air") → saraf & salur darah → kenapa (cengkaman, bunga tayar) → demo guli → jari licin balik.
 
@@ -58,4 +61,4 @@ Struktur: hook cerita → salah faham ("kulit minum air") → saraf & salur dara
 
 ## Kredit ElevenLabs
 - Anggaran sebelum jana: 1,104.89 kredit (~USD 0.20), 1 generation
-- Dicaj: (belum dijana)
+- Dicaj: **1,105 kredit**, 1 generation

@@ -15,6 +15,7 @@ time and can be re-timed to new narration.
 |---|---|---|---|
 | 005 | Kenapa Bulan Macam Ikut Kereta Kita? | [`episodes/005-bulan-ikut-kereta`](episodes/005-bulan-ikut-kereta) | `output/TheCuriousAffan_E005_Kenapa_Bulan_Macam_Ikut_Kereta_Kita.mp4` |
 | 031 | Kenapa Kita Tak Boleh Geletek Diri Sendiri? | [`episodes/031-geletek-diri-sendiri`](episodes/031-geletek-diri-sendiri) | `output/TheCuriousAffan_E031_Kenapa_Kita_Tak_Boleh_Geletek_Diri_Sendiri.mp4` |
+| 032 | Kenapa Jari Jadi Kecut Bila Lama Main Air? | [`episodes/032-jari-kecut`](episodes/032-jari-kecut) | `output/TheCuriousAffan_E032_Kenapa_Jari_Jadi_Kecut_Bila_Lama_Main_Air.mp4` |
 
 ## Build
 
@@ -141,4 +142,33 @@ episode stays consistent.
   plucks, "tiki-tiki" tickle trills, a dull self-tickle, a rising zap for the
   brain's order, a chime for the copy, a board flip, a confused wobble and a
   cartoon alarm. The mix is normalised to −14 LUFS with a peak limiter at
+  −1.5 dB.
+
+## Episode 032 at a glance
+
+- **Science.** Fingers wrinkle after a long time in water, but not because the
+  skin "drinks" water. The nerves do it: when the fingers stay in water, the
+  nerves tell the tiny blood vessels under the fingertip skin to narrow. The
+  layer under the skin shrinks a little, so the skin on top wrinkles. Fingers
+  with damaged nerves don't wrinkle at all. Scientists think the wrinkles may
+  help us grip wet things, like the tread on a tyre. That idea is still being
+  tested, so the script says "mungkin" (maybe). Once the fingers dry, they go
+  smooth again.
+- **Picture.** Two sets:
+  - a sunny backyard with a round paddling pool and a rubber duck, plus a
+    giant close-up hand whose fingertips crinkle like the raisin beside it;
+  - a new imagination world, the "skin lab": a big cut-away block of fingertip
+    skin with the outer skin on top, red blood vessels and a glowing yellow
+    nerve. Water drips on, sparks run along the nerve, the vessels squeeze,
+    the layer below sinks and the top skin wrinkles. A broken (grey) nerve
+    shows that no wrinkles appear without it. A wet road strip has a bald tyre
+    that slips and a treaded tyre that grips.
+  - Back at the pool, smooth fingers drop a wet marble ("plip!") and wrinkly
+    fingers hold it.
+- **Audio.** The narration is in Affan's voice, made with ElevenLabs
+  (`eleven_v4`, one take). Captions use word timings measured locally with
+  faster-whisper (`audio/narration_words.json`). The soundtrack reuses the
+  Episode 005 instruments and adds splashes, drips, a nerve buzz, a squeeze
+  and a crinkle, a tyre hum and skid, and the marble's tink, slip, plip and
+  grip squeak. The mix is normalised to −14 LUFS with a peak limiter at
   −1.5 dB.
