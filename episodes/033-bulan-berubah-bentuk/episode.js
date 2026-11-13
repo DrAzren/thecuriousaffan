@@ -486,20 +486,20 @@ function frame(t) {
   ov.end();
 }
 
-// Cover / thumbnail (9:16): Affan at the car window, a big half moon with a
-// "bite", a title, episode badge and the series logo.
-const THUMB = { cam: [-0.3, 1.55, 0.62], look: [-0.92, 1.62, -0.45], fov: 50, dl: [-0.55, 0.32, -0.8] };
-window.setThumb = (o) => Object.assign(THUMB, o);
+// Cover / thumbnail (9:16): the car on the night road under a big half moon,
+// a title, episode badge and the series logo.
 function thumbnail() {
   ov.begin();
   cam.aspect = W / H;
   cam.updateProjectionMatrix();
-  const t = 1.0;
-  roadMoon(t, THUMB.dl, 260);
+  const t = 6.0;
+  roadMoon(5.5, [-0.05, 0.37, -1.0], 300);
+  road.moon.position.x = carX(5.5) - 1;
   roadCar(t);
-  interior(true);
-  carAffan(t, { headYaw: 0.75, headPitch: -0.25, lookY: 0.6, lookX: 0.6, wow: 0.8, brow: 0.8, talk: 0 });
-  lookCam(carLocal(...THUMB.cam), carLocal(...THUMB.look), THUMB.fov);
+  interior(false);
+  carAffan(t, { headYaw: 1.2, headPitch: -0.3, lookY: 0.4, talk: 0 });
+  const cx = carX(t);
+  lookCam(V(cx + 0.9, 1.5, -9.5), V(cx - 0.2, 4.6, 0), 48);
   roadPhase(Math.PI / 2);
   road.sky.position.copy(cam.position);
   road.stars.position.copy(cam.position);
