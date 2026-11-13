@@ -1,0 +1,770 @@
+{
+"source": "faster-whisper (medium) word timestamps of audio/narration.mp3, starts snapped to voice onsets; text matches the script; hyphenated words merged and a few starts hand-checked against voice onsets",
+"words": [
+{
+"text": "Affan",
+"start": 0.05,
+"end": 0.56
+},
+{
+"text": "selalu",
+"start": 0.56,
+"end": 1.1
+},
+{
+"text": "tanya",
+"start": 1.1,
+"end": 1.4
+},
+{
+"text": "papa.",
+"start": 1.4,
+"end": 1.9
+},
+{
+"text": "Papa,",
+"start": 2.22,
+"end": 2.54
+},
+{
+"text": "semalam",
+"start": 2.98,
+"end": 3.44
+},
+{
+"text": "bulan",
+"start": 3.44,
+"end": 3.74
+},
+{
+"text": "bulat.",
+"start": 3.74,
+"end": 4.32
+},
+{
+"text": "Malam",
+"start": 4.62,
+"end": 4.92
+},
+{
+"text": "ni",
+"start": 4.92,
+"end": 5.3
+},
+{
+"text": "tinggal",
+"start": 5.33,
+"end": 5.64
+},
+{
+"text": "separuh.",
+"start": 5.64,
+"end": 6.36
+},
+{
+"text": "Siapa",
+"start": 6.76,
+"end": 7.16
+},
+{
+"text": "makan",
+"start": 7.16,
+"end": 7.52
+},
+{
+"text": "bulan?",
+"start": 7.54,
+"end": 8.08
+},
+{
+"text": "Jom",
+"start": 8.42,
+"end": 8.7
+},
+{
+"text": "ikut",
+"start": 8.7,
+"end": 8.9
+},
+{
+"text": "Affan",
+"start": 8.9,
+"end": 9.18
+},
+{
+"text": "cari",
+"start": 9.18,
+"end": 9.42
+},
+{
+"text": "jawapan.",
+"start": 9.42,
+"end": 9.92
+},
+{
+"text": "Sebenarnya,",
+"start": 10.54,
+"end": 11.34
+},
+{
+"text": "bulan",
+"start": 11.72,
+"end": 11.98
+},
+{
+"text": "tak",
+"start": 11.98,
+"end": 12.2
+},
+{
+"text": "ada",
+"start": 12.2,
+"end": 12.34
+},
+{
+"text": "cahaya",
+"start": 12.34,
+"end": 12.68
+},
+{
+"text": "sendiri.",
+"start": 12.68,
+"end": 13.34
+},
+{
+"text": "Bulan",
+"start": 13.88,
+"end": 14.22
+},
+{
+"text": "bersinar",
+"start": 14.22,
+"end": 14.9
+},
+{
+"text": "sebab",
+"start": 14.9,
+"end": 15.34
+},
+{
+"text": "cahaya",
+"start": 15.34,
+"end": 15.78
+},
+{
+"text": "matahari",
+"start": 15.78,
+"end": 16.42
+},
+{
+"text": "kena",
+"start": 16.44,
+"end": 16.9
+},
+{
+"text": "pada",
+"start": 16.9,
+"end": 17.14
+},
+{
+"text": "dia.",
+"start": 17.14,
+"end": 17.44
+},
+{
+"text": "Matahari",
+"start": 18.14,
+"end": 18.74
+},
+{
+"text": "sentiasa",
+"start": 18.74,
+"end": 19.54
+},
+{
+"text": "terangi",
+"start": 19.54,
+"end": 19.92
+},
+{
+"text": "separuh",
+"start": 19.92,
+"end": 20.42
+},
+{
+"text": "bulan.",
+"start": 20.42,
+"end": 21.18
+},
+{
+"text": "Bulan",
+"start": 21.4,
+"end": 21.76
+},
+{
+"text": "pula",
+"start": 21.76,
+"end": 22.28
+},
+{
+"text": "bergerak",
+"start": 22.28,
+"end": 22.9
+},
+{
+"text": "mengelilingi",
+"start": 22.9,
+"end": 23.6
+},
+{
+"text": "bumi.",
+"start": 23.6,
+"end": 24.38
+},
+{
+"text": "Bila",
+"start": 24.58,
+"end": 24.88
+},
+{
+"text": "bulan",
+"start": 24.88,
+"end": 25.18
+},
+{
+"text": "bergerak,",
+"start": 25.18,
+"end": 25.88
+},
+{
+"text": "kita",
+"start": 25.96,
+"end": 26.26
+},
+{
+"text": "nampak",
+"start": 26.26,
+"end": 26.76
+},
+{
+"text": "bahagian",
+"start": 26.76,
+"end": 27.24
+},
+{
+"text": "terang",
+"start": 27.24,
+"end": 27.56
+},
+{
+"text": "yang",
+"start": 27.56,
+"end": 27.78
+},
+{
+"text": "berbeza.",
+"start": 27.78,
+"end": 28.34
+},
+{
+"text": "Mula-mula",
+"start": 28.73,
+"end": 29.78
+},
+{
+"text": "bahagian",
+"start": 29.81,
+"end": 30.36
+},
+{
+"text": "terang",
+"start": 30.36,
+"end": 30.68
+},
+{
+"text": "tu",
+"start": 30.7,
+"end": 30.94
+},
+{
+"text": "menghadap",
+"start": 30.94,
+"end": 31.46
+},
+{
+"text": "jauh",
+"start": 31.46,
+"end": 31.94
+},
+{
+"text": "dari",
+"start": 31.94,
+"end": 32.18
+},
+{
+"text": "kita.",
+"start": 32.18,
+"end": 32.92
+},
+{
+"text": "Bulan",
+"start": 33.24,
+"end": 33.5
+},
+{
+"text": "nampak",
+"start": 33.5,
+"end": 33.86
+},
+{
+"text": "gelap.",
+"start": 33.86,
+"end": 34.48
+},
+{
+"text": "Lepas",
+"start": 34.7,
+"end": 35.0
+},
+{
+"text": "tu",
+"start": 35.0,
+"end": 35.42
+},
+{
+"text": "muncul",
+"start": 35.45,
+"end": 36.04
+},
+{
+"text": "sabit",
+"start": 36.04,
+"end": 36.38
+},
+{
+"text": "yang",
+"start": 36.38,
+"end": 36.56
+},
+{
+"text": "nipis.",
+"start": 36.56,
+"end": 37.32
+},
+{
+"text": "Makin",
+"start": 37.6,
+"end": 37.8
+},
+{
+"text": "hari,",
+"start": 37.8,
+"end": 38.28
+},
+{
+"text": "makin",
+"start": 38.62,
+"end": 38.84
+},
+{
+"text": "besar.",
+"start": 38.84,
+"end": 39.48
+},
+{
+"text": "Separuh",
+"start": 39.86,
+"end": 40.62
+},
+{
+"text": "dan",
+"start": 40.62,
+"end": 41.0
+},
+{
+"text": "akhirnya",
+"start": 41.0,
+"end": 41.86
+},
+{
+"text": "bulat",
+"start": 41.86,
+"end": 42.32
+},
+{
+"text": "penuh.",
+"start": 42.32,
+"end": 42.9
+},
+{
+"text": "Ini",
+"start": 43.32,
+"end": 43.58
+},
+{
+"text": "bulan",
+"start": 43.58,
+"end": 43.9
+},
+{
+"text": "purnama.",
+"start": 43.9,
+"end": 44.6
+},
+{
+"text": "Lepas",
+"start": 44.88,
+"end": 45.4
+},
+{
+"text": "tu",
+"start": 45.4,
+"end": 45.78
+},
+{
+"text": "bahagian",
+"start": 45.78,
+"end": 46.34
+},
+{
+"text": "terang",
+"start": 46.34,
+"end": 46.64
+},
+{
+"text": "makin",
+"start": 46.64,
+"end": 47.04
+},
+{
+"text": "kecil",
+"start": 47.04,
+"end": 47.5
+},
+{
+"text": "semula.",
+"start": 47.5,
+"end": 48.4
+},
+{
+"text": "Satu",
+"start": 48.58,
+"end": 48.96
+},
+{
+"text": "pusingan",
+"start": 48.96,
+"end": 49.6
+},
+{
+"text": "ambil",
+"start": 49.6,
+"end": 49.94
+},
+{
+"text": "masa",
+"start": 49.94,
+"end": 50.28
+},
+{
+"text": "lebih",
+"start": 50.28,
+"end": 50.64
+},
+{
+"text": "kurang",
+"start": 50.64,
+"end": 51.06
+},
+{
+"text": "29",
+"start": 51.06,
+"end": 51.78
+},
+{
+"text": "hari",
+"start": 51.78,
+"end": 52.26
+},
+{
+"text": "setengah.",
+"start": 52.27,
+"end": 52.86
+},
+{
+"text": "Ramai",
+"start": 53.08,
+"end": 53.5
+},
+{
+"text": "orang",
+"start": 53.5,
+"end": 53.7
+},
+{
+"text": "ingat",
+"start": 53.7,
+"end": 54.3
+},
+{
+"text": "bayang-bayang",
+"start": 54.3,
+"end": 55.02
+},
+{
+"text": "bumi",
+"start": 55.02,
+"end": 55.46
+},
+{
+"text": "yang",
+"start": 55.46,
+"end": 55.66
+},
+{
+"text": "tutup",
+"start": 55.7,
+"end": 55.88
+},
+{
+"text": "bulan.",
+"start": 55.88,
+"end": 56.64
+},
+{
+"text": "Bukan.",
+"start": 56.79,
+"end": 57.66
+},
+{
+"text": "Itu",
+"start": 58.1,
+"end": 58.34
+},
+{
+"text": "cuma",
+"start": 58.34,
+"end": 58.62
+},
+{
+"text": "berlaku",
+"start": 58.62,
+"end": 59.14
+},
+{
+"text": "masa",
+"start": 59.14,
+"end": 59.44
+},
+{
+"text": "gerhana",
+"start": 59.44,
+"end": 59.86
+},
+{
+"text": "bulan.",
+"start": 59.86,
+"end": 60.5
+},
+{
+"text": "Jarang-jarang",
+"start": 60.72,
+"end": 61.46
+},
+{
+"text": "je.",
+"start": 61.46,
+"end": 61.8
+},
+{
+"text": "Cuba",
+"start": 62.16,
+"end": 62.42
+},
+{
+"text": "buat",
+"start": 62.42,
+"end": 62.66
+},
+{
+"text": "kat",
+"start": 62.66,
+"end": 62.82
+},
+{
+"text": "rumah.",
+"start": 62.82,
+"end": 63.22
+},
+{
+"text": "Pegang",
+"start": 63.64,
+"end": 63.88
+},
+{
+"text": "bola",
+"start": 63.88,
+"end": 64.14
+},
+{
+"text": "depan",
+"start": 64.14,
+"end": 64.5
+},
+{
+"text": "muka,",
+"start": 64.5,
+"end": 64.98
+},
+{
+"text": "berdiri",
+"start": 65.34,
+"end": 65.72
+},
+{
+"text": "depan",
+"start": 65.72,
+"end": 66.04
+},
+{
+"text": "lampu",
+"start": 66.04,
+"end": 66.44
+},
+{
+"text": "dalam",
+"start": 66.44,
+"end": 66.66
+},
+{
+"text": "bilik",
+"start": 66.66,
+"end": 66.96
+},
+{
+"text": "gelap",
+"start": 66.96,
+"end": 67.42
+},
+{
+"text": "dan",
+"start": 67.42,
+"end": 67.82
+},
+{
+"text": "pusing",
+"start": 67.82,
+"end": 68.52
+},
+{
+"text": "perlahan-lahan.",
+"start": 68.52,
+"end": 69.48
+},
+{
+"text": "Tengok.",
+"start": 69.76,
+"end": 70.26
+},
+{
+"text": "Bola",
+"start": 70.44,
+"end": 70.68
+},
+{
+"text": "tu",
+"start": 70.69,
+"end": 70.92
+},
+{
+"text": "berubah",
+"start": 70.92,
+"end": 71.26
+},
+{
+"text": "bentuk",
+"start": 71.26,
+"end": 71.64
+},
+{
+"text": "macam",
+"start": 71.64,
+"end": 71.9
+},
+{
+"text": "bulan.",
+"start": 71.9,
+"end": 72.62
+},
+{
+"text": "Wah!",
+"start": 72.88,
+"end": 73.74
+},
+{
+"text": "Rupanya",
+"start": 74.0,
+"end": 74.4
+},
+{
+"text": "tak",
+"start": 74.4,
+"end": 74.58
+},
+{
+"text": "ada",
+"start": 74.58,
+"end": 74.76
+},
+{
+"text": "siapa",
+"start": 74.76,
+"end": 75.26
+},
+{
+"text": "makan",
+"start": 75.26,
+"end": 75.6
+},
+{
+"text": "bulan.",
+"start": 75.6,
+"end": 76.16
+},
+{
+"text": "Apa",
+"start": 76.67,
+"end": 76.82
+},
+{
+"text": "lagi",
+"start": 76.82,
+"end": 77.14
+},
+{
+"text": "kita",
+"start": 77.14,
+"end": 77.38
+},
+{
+"text": "nak",
+"start": 77.38,
+"end": 77.52
+},
+{
+"text": "belajar",
+"start": 77.52,
+"end": 77.84
+},
+{
+"text": "lepas",
+"start": 77.84,
+"end": 78.22
+},
+{
+"text": "ni?",
+"start": 78.22,
+"end": 78.42
+}
+]
+}

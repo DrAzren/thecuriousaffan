@@ -16,6 +16,7 @@ time and can be re-timed to new narration.
 | 005 | Kenapa Bulan Macam Ikut Kereta Kita? | [`episodes/005-bulan-ikut-kereta`](episodes/005-bulan-ikut-kereta) | `output/TheCuriousAffan_E005_Kenapa_Bulan_Macam_Ikut_Kereta_Kita.mp4` |
 | 031 | Kenapa Kita Tak Boleh Geletek Diri Sendiri? | [`episodes/031-geletek-diri-sendiri`](episodes/031-geletek-diri-sendiri) | `output/TheCuriousAffan_E031_Kenapa_Kita_Tak_Boleh_Geletek_Diri_Sendiri.mp4` |
 | 032 | Kenapa Jari Jadi Kecut Bila Lama Main Air? | [`episodes/032-jari-kecut`](episodes/032-jari-kecut) | `output/TheCuriousAffan_E032_Kenapa_Jari_Jadi_Kecut_Bila_Lama_Main_Air.mp4` |
+| 033 | Kenapa Bulan Berubah Bentuk? | [`episodes/033-bulan-berubah-bentuk`](episodes/033-bulan-berubah-bentuk) | `output/TheCuriousAffan_E033_Kenapa_Bulan_Berubah_Bentuk.mp4` |
 
 ## Build
 
@@ -172,3 +173,29 @@ episode stays consistent.
   and a crinkle, a tyre hum and skid, and the marble's tink, slip, plip and
   grip squeak. The mix is normalised to −14 LUFS with a peak limiter at
   −1.5 dB.
+
+## Episode 033 at a glance
+
+- **Science.** The Moon has no light of its own; it shines because sunlight
+  falls on it, and the Sun always lights one half of it. As the Moon travels
+  around the Earth, we see different amounts of that lit half: dark (new
+  moon), a thin crescent, a half, then a full moon, and then it shrinks again.
+  One cycle takes about 29 and a half days. It is not Earth's shadow; that only
+  happens during a lunar eclipse, which is rare.
+- **Picture.** It follows on from Episode 005:
+  - the night road and car from Episode 005, where the moon shader can show any
+    phase ("yesterday round, tonight half: who ate the moon?");
+  - a new "toy space" imagination world: a smiling Sun, the Earth with a tiny
+    Affan on top, and the Moon on a dashed orbit, lit by real directional
+    sunlight. A round "DARI BUMI" window, rendered by a second camera standing
+    on the Earth, shows the phase Affan would see, with a day counter.
+    Earth's shadow cone appears only for the eclipse, when the Moon turns red;
+  - the Episode 031 living room with the lights off and a floor lamp, where
+    Affan turns slowly holding a ball, with a "DARI MATA AFFAN" window.
+- **Audio.** The narration is in Affan's voice, made with ElevenLabs
+  (`eleven_v4`, one take). Captions use word timings measured locally with
+  faster-whisper (`audio/narration_words.json`). The soundtrack reuses the
+  Episode 005 instruments and adds the car hum, a cartoon bite, light-switch
+  clicks, a sun swell and shimmering rays, an orbit whirr, day-counter ticks
+  and an eclipse drone. The mix is normalised to −14 LUFS with a peak limiter
+  at −1.5 dB.

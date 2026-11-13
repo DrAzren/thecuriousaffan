@@ -1,7 +1,10 @@
 # Episode 033: Kenapa Bulan Berubah Bentuk?
 
 Suara: **Affan Clone** (ElevenLabs, model `eleven_v4`), 1 take.
-Narasi: `audio/narration.mp3` (belum dijana)
+Narasi: `audio/narration.mp3` (78.7 s)
+Masa perkataan: `audio/narration_words.json` (faster-whisper, tempatan, tanpa kredit)
+Video: `output/TheCuriousAffan_E033_Kenapa_Bulan_Berubah_Bentuk.mp4` (81.9 s, 1080×1920)
+Bina semula: `episodes/033-bulan-berubah-bentuk/make.sh`
 
 Struktur: hook (sambungan E005, malam dalam kereta) → bulan tak bercahaya sendiri → bulan
 mengelilingi bumi → fasa: gelap → sabit → separuh → purnama → kecil semula (~29.5 hari) →
@@ -58,4 +61,4 @@ salah faham bayang-bayang bumi → cuba di rumah (bola + lampu).
 
 ## Kredit ElevenLabs
 - Anggaran sebelum jana: 1,157.88 kredit (~USD 0.21), 1 generation
-- Dicaj: (belum dijana)
+- Dicaj: **1,158 kredit**, 1 generation
