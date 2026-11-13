@@ -2,6 +2,9 @@
 
 Suara: **Affan Clone** (ElevenLabs, model `eleven_v4`), 1 take.
 Narasi: `audio/narration.mp3` (72.7 s)
+Masa perkataan: `audio/narration_words.json` (faster-whisper, tempatan, tanpa kredit)
+Video: `output/TheCuriousAffan_E031_Kenapa_Kita_Tak_Boleh_Geletek_Diri_Sendiri.mp4` (76.0 s, 1080×1920)
+Bina semula: `episodes/031-geletek-diri-sendiri/make.sh`
 
 Struktur: hook cerita → soalan → otak & serebelum meneka → kakak geletek (kejutan) → cuba di rumah.
 

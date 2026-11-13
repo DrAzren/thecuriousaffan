@@ -14,6 +14,7 @@ time and can be re-timed to new narration.
 | # | Title | Folder | Final video |
 |---|---|---|---|
 | 005 | Kenapa Bulan Macam Ikut Kereta Kita? | [`episodes/005-bulan-ikut-kereta`](episodes/005-bulan-ikut-kereta) | `output/TheCuriousAffan_E005_Kenapa_Bulan_Macam_Ikut_Kereta_Kita.mp4` |
+| 031 | Kenapa Kita Tak Boleh Geletek Diri Sendiri? | [`episodes/031-geletek-diri-sendiri`](episodes/031-geletek-diri-sendiri) | `output/TheCuriousAffan_E031_Kenapa_Kita_Tak_Boleh_Geletek_Diri_Sendiri.mp4` |
 
 ## Build
 
@@ -113,3 +114,31 @@ episode stays consistent.
   - label pops and discovery chimes.
 
   The mix is normalised to −14 LUFS with a −1.5 dBTP ceiling.
+
+## Episode 031 at a glance
+
+- **Science.** We can't tickle ourselves because the brain already knows
+  where our own hand is going. When the brain sends an order to move the hand,
+  the cerebellum (serebelum), a small part at the back of the brain, gets a
+  copy and predicts the touch. A touch that was predicted is no surprise, so
+  it hardly tickles. When someone else tickles us, the brain can't guess where
+  the fingers will land, so the touch is a surprise and it tickles. This
+  follows Blakemore, Wolpert and Frith (1998, 2000).
+- **Picture.** Two sets:
+  - a sunny living room, where Kakak (Affan's big sister, built from the same
+    rig with new colours, a ponytail and no glasses) sneaks up and tickles
+    Affan, and then Affan tries to tickle himself;
+  - a new imagination world "dalam kepala": a big friendly brain floating above
+    Affan, a glowing striped cerebellum, and its little guard with a sign
+    board. Yellow dots carry the order to the hand and teal dots carry the copy
+    to the cerebellum. The board reads "JARI ➜ KETIAK" for Affan's own hand,
+    and "? ? ?" while Kakak's fingers dart between armpit, tummy and feet,
+    until "KEJUTAN!" sets off a gentle alarm.
+- **Audio.** The narration is in Affan's voice, made with ElevenLabs
+  (`eleven_v4`, one take). Captions use word timings measured locally with
+  faster-whisper (`audio/narration_words.json`), so no extra credits were
+  spent. The soundtrack reuses the Episode 005 instruments and adds tiptoe
+  plucks, "tiki-tiki" tickle trills, a dull self-tickle, a rising zap for the
+  brain's order, a chime for the copy, a board flip, a confused wobble and a
+  cartoon alarm. The mix is normalised to −14 LUFS with a peak limiter at
+  −1.5 dB.
