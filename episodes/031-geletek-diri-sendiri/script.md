@@ -1,7 +1,7 @@
 # Episode 031: Kenapa Kita Tak Boleh Geletek Diri Sendiri?
 
 Suara: **Affan Clone** (ElevenLabs, model `eleven_v4`), 1 take.
-Narasi: `audio/narration.mp3` (belum dijana)
+Narasi: `audio/narration.mp3` (72.7 s)
 
 Struktur: hook cerita → soalan → otak & serebelum meneka → kakak geletek (kejutan) → cuba di rumah.
 
@@ -52,4 +52,4 @@ Struktur: hook cerita → soalan → otak & serebelum meneka → kakak geletek (
 
 ## Kredit ElevenLabs
 - Anggaran sebelum jana: 1,108.89 kredit (~USD 0.20), 1 generation
-- Dicaj: (belum dijana)
+- Dicaj: **1,109 kredit**, 1 generation
