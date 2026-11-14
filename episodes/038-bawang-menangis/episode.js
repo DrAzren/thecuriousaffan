@@ -100,9 +100,16 @@ function affSet(t, p = {}) {
   a.root.updateMatrixWorld(true);
 }
 const mamaHead = () => kit.mama.parts.head.getWorldPosition(V());
+// a camera spot in front of Affan's face (he faces Mama), a little to his side
+const AFF_FWD = V(Math.sin(AFF_YAW), 0, Math.cos(AFF_YAW));
+const AFF_SIDE = V(AFF_FWD.z, 0, -AFF_FWD.x);
+const affFront = (d, side) => affHead().add(V(0.35 + side * 0.2, 0.1, d));
+// Affan turns to face "Papa" (the camera) for his questions
+const YAW_CAM = Math.atan2(0.4, 1);
 const affHead = () => kit.aff.parts.head.getWorldPosition(V());
 function kitReset() {
   kit.door.rotation.y = 0;
+  kit.coldOnion.visible = false;
 }
 
 // --------------------------------------------------------- inside the onion
@@ -228,11 +235,11 @@ const SHOTS = [
   [11.84, 14.3, (t) => {
     kitReset();
     mamaSet(t, { chop: 0, cry: 0.5, smile: 1, show: 1 });
-    affSet(t, { ...POSES.thinkR, brow: -0.3, smile: 0.5 });
+    affSet(t, { yaw: YAW_CAM, ...POSES.thinkR, brow: -0.3, smile: 0.5 });
     const ah = affHead();
-    lookCam(ah.clone().add(V(0.9, 0.1, 2.3)), ah.clone().add(V(-0.1, -0.15, 0)), 46);
+    lookCam(affFront(2.3, 0.6), ah.clone().add(V(0, -0.15, 0)), 46);
     const hd = scr(ah.clone().add(V(0, 0.45, 0)));
-    qmarks(t, hd, 11.84, 14.25, [[11.9, -260, 0, '#ffcf33', -12], [12.3, 250, -60, '#3fa2ff', 10], [12.7, 280, 140, '#ffcf33', 14]]);
+    qmarks(t, hd, 11.84, 14.25, [[11.9, -260, 120, '#ffcf33', -12], [12.3, 250, 80, '#3fa2ff', 10], [12.7, 280, 260, '#ffcf33', 14]]);
     bubble('kenapa', 'KENAPA MENANGIS?', t, 12.22, 14.25, 430, 104, { top: '#fff6d0', bot: '#ffb21f' });
     return kit;
   }],
@@ -241,10 +248,10 @@ const SHOTS = [
     kitReset();
     mamaSet(t, { chop: 0, cry: 0.4, smile: 1, show: 1 });
     const up = keys(t, [[14.32, 0], [14.55, 1], [15.8, 1], [16.1, 0.6]], easeOut);
-    affSet(t, { smile: 1, brow: 0.6, armR: { reach: [lerp(-0.6, -0.55, up), lerp(0.25, 1.95 + 0.06 * Math.sin(t * 14), up), lerp(0.2, 0.35, up)], pole: [-1, -0.3, -0.5] } });
+    affSet(t, { yaw: YAW_CAM, smile: 1, brow: 0.6, armR: { reach: [lerp(-0.6, -0.55, up), lerp(0.25, 1.95 + 0.06 * Math.sin(t * 14), up), lerp(0.2, 0.35, up)], pole: [-1, -0.3, -0.5] } });
     const on = kit.onion.position.clone();
     const k = easeIn(inv(14.8, 16.26, t));
-    lookCam(affHead().add(V(0.9, 0.1, 2.3)).lerp(on.clone().add(V(0.1, 0.05, 0.35)), k), affHead().add(V(-0.1, -0.15, 0)).lerp(on, k), 46);
+    lookCam(affFront(2.3, 0.6).lerp(on.clone().add(V(0.1, 0.05, 0.35)), k), affHead().add(V(0, -0.15, 0)).lerp(on, k), 46);
     ov.swirl(t, W / 2, 820, inv(14.5, 16.2, t));
     ov.flash(inv(15.85, 16.26, t) ** 2);
     return kit;
@@ -312,10 +319,11 @@ const SHOTS = [
   // S10 — tips: cold onion from the fridge, a sharp knife; knives are for grown-ups
   [48.58, 60.12, (t) => {
     const open = easeInOut(inv(49.9, 50.6, t)) * (1 - easeInOut(inv(52.0, 52.5, t)));
-    kit.door.rotation.y = -1.6 * open;
+    kit.door.rotation.y = 1.95 * open;
+    kit.coldOnion.visible = open > 0.15;
     mamaSet(t, { chop: t > 53.0 && t < 56.0 ? 1 : 0, cry: 0, smile: 1 });
     kit.shine.material.opacity = Math.max(0, Math.sin(Math.PI * inv(52.9, 53.9, t)));
-    kit.shine.scale.setScalar(1.4);
+    kit.shine.scale.setScalar(0.45);
     affSet(t, { smile: 1, ...(t > 56.0 ? { armL: { reach: [0.35, 0.55, -0.35], pole: [1, -0.6, 0.4] }, armR: { reach: [-0.35, 0.55, -0.35], pole: [-1, -0.6, 0.4] } } : {}), headPitch: t > 58.4 ? 0.2 * Math.abs(Math.sin((t - 58.4) * 8)) : 0 });
     const fr = FRIDGE.clone().add(V(0.2, 1.6, 0.8));
     if (t < 52.4) camMove(t, 48.58, 52.4, [0.2, 2.6, 4.2], [-1.6, 1.8, -2.6], [-1.0, 2.0, 1.2], fr.toArray(), 50);
@@ -359,9 +367,9 @@ const SHOTS = [
     mamaSet(t, { chop: 0, cry: 0, smile: 1 });
     const tk = keys(t, [[67.15, 0], [67.55, 1]]);
     const th2 = POSES.thinkR.armR;
-    affSet(t, { smile: 1, brow: 0.3 + 0.4 * tk, headRoll: -0.12 * tk, lookX: 0.35 * tk, lookY: 0.4 * tk, headPitch: -0.08 * tk, armR: { reach: mix3([-0.55, 0.3, 0.2], th2.reach, tk), pole: th2.pole, point: tk, wx: th2.wx * tk } });
+    affSet(t, { yaw: YAW_CAM, smile: 1, brow: 0.3 + 0.4 * tk, headRoll: -0.12 * tk, lookX: 0.35 * tk, lookY: 0.4 * tk, headPitch: -0.08 * tk, armR: { reach: mix3([-0.55, 0.3, 0.2], th2.reach, tk), pole: th2.pole, point: tk, wx: th2.wx * tk } });
     const ah = affHead();
-    lookCam(ah.clone().add(V(0.9, 0.1, 2.4)), ah.clone().add(V(-0.1, -0.2, 0)), 46);
+    lookCam(affFront(2.4, 0.6), ah.clone().add(V(0, -0.2, 0)), 46);
     const hd = scr(ah.clone().add(V(0, 0.45, 0)));
     qmarks(t, hd, 67.12, OUTRO - 0.05, [[67.2, -260, -100, '#ffcf33', -12], [67.5, 250, -160, '#3fa2ff', 10], [67.8, 300, 60, '#ffcf33', 14]]);
     return kit;

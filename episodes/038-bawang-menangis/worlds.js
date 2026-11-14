@@ -223,10 +223,10 @@ export function buildKitchen() {
   fridge.rotation.y = 0.35;
   scene.add(fridge);
   add(fridge, new RoundedBoxGeometry(1.5, 3.4, 1.2, 3, 0.1), std(0xf4f6fa, 0.35), [0, 1.7, 0]);
-  add(fridge, new THREE.BoxGeometry(1.32, 2.0, 0.05), std(0xbfe0ff, 0.6, { emissive: 0x6080a0, emissiveIntensity: 0.4 }), [0, 1.35, 0.56]);
-  // inside: shelf and a cold onion
-  add(fridge, new THREE.BoxGeometry(1.3, 0.04, 0.9), std(0xe8f4ff, 0.3, { transparent: true, opacity: 0.8 }), [0, 1.2, 0.15]);
-  const coldOnion = add(fridge, new THREE.SphereGeometry(0.2, 24, 16), skin, [0.1, 1.42, 0.25], [0, 0, 0], [1, 1.1, 1]);
+  add(fridge, new THREE.BoxGeometry(1.32, 2.0, 0.05), std(0xbfe0ff, 0.6, { emissive: 0x6080a0, emissiveIntensity: 0.5 }), [0, 1.35, 0.6]);
+  // inside: a shelf and a cold onion (shown only while the door is open)
+  add(fridge, new THREE.BoxGeometry(1.3, 0.04, 0.12), std(0xe8f4ff, 0.3), [0, 1.2, 0.66]);
+  const coldOnion = add(fridge, new THREE.SphereGeometry(0.2, 24, 16), skin, [0.1, 1.42, 0.72], [0, 0, 0], [1, 1.1, 1]);
   add(coldOnion, new THREE.ConeGeometry(0.05, 0.14, 8), std(0x8a5a30, 0.7), [0, 0.24, 0]);
   const door = new THREE.Group();
   door.position.set(-0.75, 0, 0.62);
