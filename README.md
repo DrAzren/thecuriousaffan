@@ -21,6 +21,7 @@ time and can be re-timed to new narration.
 | 035 | Kenapa Semut Jalan Berbaris? | [`episodes/035-semut-berbaris`](episodes/035-semut-berbaris) | `output/TheCuriousAffan_E035_Kenapa_Semut_Jalan_Berbaris.mp4` |
 | 036 | Kenapa Kita Pening Lepas Berpusing? | [`episodes/036-pening-berpusing`](episodes/036-pening-berpusing) | `output/TheCuriousAffan_E036_Kenapa_Kita_Pening_Lepas_Berpusing.mp4` |
 | 037 | Kenapa Pelangi Berwarna-warni dan Melengkung? | [`episodes/037-pelangi`](episodes/037-pelangi) | `output/TheCuriousAffan_E037_Kenapa_Pelangi_Berwarna_Warni_Dan_Melengkung.mp4` |
+| 038 | Kenapa Potong Bawang Buat Kita Menangis? | [`episodes/038-bawang-menangis`](episodes/038-bawang-menangis) | `output/TheCuriousAffan_E038_Kenapa_Potong_Bawang_Buat_Kita_Menangis.mp4` |
 
 ## Build
 
@@ -358,5 +359,43 @@ episode stays consistent.
   - a light-beam hum, a glassy prism chime and one bell note per colour;
   - a drop "bloop", bend/bounce pings and a ring shimmer;
   - whooshes for the airplane view, a hose hiss and jump boings.
+
+  The mix is normalised to −14 LUFS with a peak limiter at −1.5 dB.
+
+## Episode 038 at a glance
+
+- **Science.** An onion is built from many tiny rooms called cells. Inside
+  them, some substances are stored apart. When a knife cuts the onion, the
+  cells burst, the substances mix and make a fine gas
+  (syn-propanethial-S-oxide). The gas floats up to the eyes. On the wet
+  surface of the eye it stings, so the eye quickly makes tears to wash it
+  out. The tears are not because we are sad; the eye is protecting itself.
+  Tips: chill the onion in the fridge first and use a sharp knife (less gas,
+  fewer tears). Knives are for grown-ups only.
+- **Picture.** Three sets:
+  - a new home kitchen. It has an island counter with a cutting board, a
+    halved onion with rings on the cut face, chopped pieces, a knife, a
+    fridge whose door opens to show a cold onion, wall tiles, a window and
+    cabinets. Affan watches from a stool;
+  - **Mama** (new character), built from Affan's rig with a pink tudung
+    that frames her face, a teal baju kurung and kain, and no glasses. She
+    chops with real arm IK to the board, and tears roll down her cheeks;
+  - a new imagination world, "dalam bawang" (inside the onion). A wall of
+    clear cells each holds yellow "bahan A" in a little bubble apart from
+    purple "bahan B". A giant knife slices down the middle, the cells it
+    passes burst, their contents drift together and turn green, and gas
+    puffs rise;
+  - a giant cartoon eye set in a cheek. Gas puffs drift in, the glossy eye
+    turns pink and squints ("PEDIH!"), a tear gland at the outer corner
+    pulses and tear drops run across the eye and down the cheek, washing the
+    gas away.
+- **Audio.** The narration is in Affan's voice, made with ElevenLabs
+  (`eleven_v4`, a single take to save credits). Captions use word timings
+  measured locally with faster-whisper (`audio/narration_words.json`). The
+  soundtrack reuses the Episode 005 instruments and adds:
+  - knife chops timed to Mama's hand, and sniffles;
+  - a giant-knife swish, cell pops, bubbly mixing and a gas fizz;
+  - a stinging zing, tear drips and a washing swoosh;
+  - a fridge door and cool hum, a knife glint, and heart pops.
 
   The mix is normalised to −14 LUFS with a peak limiter at −1.5 dB.
