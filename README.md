@@ -19,6 +19,7 @@ time and can be re-timed to new narration.
 | 033 | Kenapa Bulan Berubah Bentuk? | [`episodes/033-bulan-berubah-bentuk`](episodes/033-bulan-berubah-bentuk) | `output/TheCuriousAffan_E033_Kenapa_Bulan_Berubah_Bentuk.mp4` |
 | 034 | Kenapa Bayang Kita Jadi Panjang dan Pendek? | [`episodes/034-bayang-panjang-pendek`](episodes/034-bayang-panjang-pendek) | `output/TheCuriousAffan_E034_Kenapa_Bayang_Kita_Jadi_Panjang_Dan_Pendek.mp4` |
 | 035 | Kenapa Semut Jalan Berbaris? | [`episodes/035-semut-berbaris`](episodes/035-semut-berbaris) | `output/TheCuriousAffan_E035_Kenapa_Semut_Jalan_Berbaris.mp4` |
+| 036 | Kenapa Kita Pening Lepas Berpusing? | [`episodes/036-pening-berpusing`](episodes/036-pening-berpusing) | `output/TheCuriousAffan_E036_Kenapa_Kita_Pening_Lepas_Berpusing.mp4` |
 
 ## Build
 
@@ -273,5 +274,45 @@ episode stays consistent.
   - a shrinking glide, cartoon sniffs and a scent shimmer;
   - crunchy nibbles, a fading hum and a scurry;
   - a jar pop, a hop and a lid clink.
+
+  The mix is normalised to −14 LUFS with a peak limiter at −1.5 dB.
+
+## Episode 036 at a glance
+
+- **Science.** Deep inside each ear there are three looped tubes (the
+  semicircular canals). They are full of fluid, and tiny hairs in a jelly cap
+  feel the fluid move. When we spin, the fluid swirls too, the hairs lean,
+  and they tell the brain "we're spinning!" When we stop suddenly, the fluid
+  keeps swirling for a few seconds, like tea in a cup after we stop stirring.
+  So the ears say "still spinning!" while the eyes say "we've stopped!" The
+  brain gets mixed messages, and we feel dizzy. After a few seconds the fluid
+  stops, the hairs stand straight and the dizziness goes. If you feel dizzy,
+  sit down until it passes.
+- **Picture.** Four sets:
+  - a new sunny playground. It has a colourful merry-go-round with rails, a
+    bench, toy trees and a slide. Affan rides the merry-go-round, steps off
+    and wobbles with dizzy stars circling his head (the camera sway is kept
+    short and soft). At the end he sits on the bench;
+  - a new imagination world, "dalam telinga" (inside the ear). Three clear
+    looped tubes sit on a soft peach stage, filled with glowing blue water
+    beads, and the bulge on the horizontal tube holds tall pink hairs in a
+    jelly cap. The whole labyrinth spins like a head. The water's motion is
+    a small simulation (the fluid follows the tube's spin with a lag), so the
+    hairs lean one way when the spin starts and the other way when it
+    suddenly stops. Glowing signals rise to the brain;
+  - a cup of tea with tea leaves and a spoon. After the spoon is lifted out,
+    the tea keeps turning;
+  - the Episode 031 mind stage. Teal signals come from the ear ("MASIH
+    BERPUSING!") and yellow ones from the eyes ("DAH BERHENTI!"), and the
+    big brain wobbles in confusion.
+- **Audio.** The narration is in Affan's voice, made with ElevenLabs
+  (`eleven_v4`, a single take to save credits). Captions use word timings
+  measured locally with faster-whisper (`audio/narration_words.json`). The
+  soundtrack reuses the Episode 005 instruments and adds:
+  - a merry-go-round whirr and creak;
+  - dizzy tweets and a wobble tone;
+  - bubbles and sloshes inside the ear, a hair shimmer and signal zaps;
+  - a sudden-stop skid and spoon clinks in the tea cup;
+  - a confused brain warble and a bench thump.
 
   The mix is normalised to −14 LUFS with a peak limiter at −1.5 dB.
