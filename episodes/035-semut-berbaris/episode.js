@@ -44,7 +44,7 @@ function camMove(t, a, b, p0, l0, p1, l1, fov = 50, ease = easeInOut) {
 function pinTag(id, text, p, t, a, b, style, dy = -90) {
   const q = pop(t, a, b);
   if (q.o <= 0 || !p.visible) return;
-  ov.tag(id, text, { x: clamp(p.x, 260, 820), y: clamp(p.y + dy, 300, 1380), o: q.o, s: q.s }, style);
+  ov.tag(id, text, { x: clamp(p.x, 300, 780), y: clamp(p.y + dy, 300, 1380), o: q.o, s: q.s }, style);
 }
 function bubble(id, text, t, a, b, y = 430, size = 120, style = {}, r = -2) {
   const q = pop(t, a, b, { from: 2 });
