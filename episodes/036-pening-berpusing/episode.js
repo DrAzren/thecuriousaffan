@@ -318,7 +318,7 @@ const SHOTS = [
       camMove(t, 24.2, 27.4, [1.4, 4.6, 7.6], [0.2, 2.6, 0], [ap.x + 1.6, ap.y + 0.7, ap.z + 2.4], [ap.x, ap.y - 0.15, ap.z], 46);
     }
     ov.flash(1 - inv(14.6, 14.95, t));
-    bubble('rahsia', 'RAHSIA DALAM TELINGA!', t, 14.88, 17.25, 430, 92, { top: '#d6fff0', bot: '#2fbf8f' });
+    bubble('rahsia', 'RAHSIA DALAM\nTELINGA!', t, 14.88, 17.25, 450, 108, { top: '#d6fff0', bot: '#2fbf8f' });
     topTag('tiga', 'TIGA TIUB GELUNG', t, 19.5, 22.0, BLUE);
     pinTag('air', 'PENUH DENGAN AIR', scr(ear.hor.localToWorld(V(CANAL_R * Math.cos(0.6), 0.5, CANAL_R * Math.sin(0.6)))), t, 22.66, 24.1, { bg: '#2f8fff', pointer: 'down' }, -50);
     pinTag('bulu', 'BULU-BULU HALUS', scr(ampWorld().add(V(0, 0.5, 0))), t, 24.42, 27.35, { bg: PINK, pointer: 'down' }, -60);
