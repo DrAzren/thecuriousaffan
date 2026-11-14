@@ -43,7 +43,7 @@ function camMove(t, a, b, p0, l0, p1, l1, fov = 50, ease = easeInOut) {
 function pinTag(id, text, p, t, a, b, style, dy = -90) {
   const q = pop(t, a, b);
   if (q.o <= 0 || !p.visible) return;
-  ov.tag(id, text, { x: clamp(p.x, 190, 890), y: clamp(p.y + dy, 300, 1380), o: q.o, s: q.s }, style);
+  ov.tag(id, text, { x: clamp(p.x, 260, 820), y: clamp(p.y + dy, 300, 1380), o: q.o, s: q.s }, style);
 }
 function bubble(id, text, t, a, b, y = 430, size = 120, style = {}, r = -2) {
   const q = pop(t, a, b, { from: 2 });
@@ -298,7 +298,9 @@ const SHOTS = [
     horns(easeOut(inv(7.1, 7.6, t)));
     const g = gait(w.x, w.moving);
     streetAff(t, w.x, Math.PI / 2, { ...g, talk: talk(t) * 0.6, headPitch: 0.25 * inv(7.4, 7.9, t), lookY: -0.3 * inv(7.4, 7.9, t) });
-    camMove(t, 5.9, 8.5, [1.2, 4.2, 3.6], [5.0, 0.4, 8.5], [2.4, 5.0, 3.0], [7.6, 0.3, 8.5], 50);
+    const ck = easeInOut(inv(5.9, 8.5, t));
+    const sx = w.x + 0.5 + 0.8 * ck;
+    lookCam(V(sx + 0.3, 5.6, 0.6), V(sx, 0.3, 8.5), 50);
     const tip = streetTip(w.x);
     pinTag('panjang0', 'PANJANG!', scr(tip), t, 6.56, 7.2, { bg: BLUE, pointer: 'down' }, -60);
     bubble('raksasa', 'MACAM RAKSASA!', t, 7.2, 8.45, 430, 112, { top: '#ffd0e0', bot: '#ff4d7a' }, 3);
