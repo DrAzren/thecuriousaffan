@@ -18,6 +18,7 @@ time and can be re-timed to new narration.
 | 032 | Kenapa Jari Jadi Kecut Bila Lama Main Air? | [`episodes/032-jari-kecut`](episodes/032-jari-kecut) | `output/TheCuriousAffan_E032_Kenapa_Jari_Jadi_Kecut_Bila_Lama_Main_Air.mp4` |
 | 033 | Kenapa Bulan Berubah Bentuk? | [`episodes/033-bulan-berubah-bentuk`](episodes/033-bulan-berubah-bentuk) | `output/TheCuriousAffan_E033_Kenapa_Bulan_Berubah_Bentuk.mp4` |
 | 034 | Kenapa Bayang Kita Jadi Panjang dan Pendek? | [`episodes/034-bayang-panjang-pendek`](episodes/034-bayang-panjang-pendek) | `output/TheCuriousAffan_E034_Kenapa_Bayang_Kita_Jadi_Panjang_Dan_Pendek.mp4` |
+| 035 | Kenapa Semut Jalan Berbaris? | [`episodes/035-semut-berbaris`](episodes/035-semut-berbaris) | `output/TheCuriousAffan_E035_Kenapa_Semut_Jalan_Berbaris.mp4` |
 
 ## Build
 
@@ -237,3 +238,40 @@ episode stays consistent.
   shimmer, tiny "tik" hits where light meets Affan, a sun swell, an evening
   glide down, and light-switch and torch clicks. The mix is normalised to
   −14 LUFS with a peak limiter at −1.5 dB.
+
+## Episode 035 at a glance
+
+- **Science.** Ants walk in a line because they follow a scent trail. A
+  scout ant goes out and wanders until it finds food. On the way back to the
+  nest it leaves a trail of scent (trail pheromone) on the floor. We can't
+  smell it, but other ants pick it up with their antennae and follow it to
+  the food. Every ant that walks the trail adds more scent, so the trail gets
+  stronger and they all keep to the same line. When the food is gone the ants
+  stop adding scent. The scent fades away by itself, and the line breaks up.
+  The episode ends with a tip: put food away in a closed container so ants
+  don't come and line up.
+- **Picture.** Two sets:
+  - the Episode 031 living room. A line of small ants marches from a crack in
+    the side wall to a broken biscuit on the rug. Affan squats with a
+    magnifying glass, then shrinks down to ant size. At the end a glowing
+    trail shows under the real ants for a moment, the biscuit hops into a
+    jar, the lid drops and the ants head home;
+  - a new imagination world, the "dunia semut" (ant world). Tiny Affan
+    stands on giant wooden floorboards between the nest (a crack in a giant
+    skirting board) and a giant chocolate-chip biscuit crumb. The ants are
+    friendly and big-eyed, with a tripod walking gait and twitching
+    antennae. The scout lays a purple scent ribbon as it walks home, with
+    scent wisps rising off it. Followers sniff the ribbon and shuttle back
+    and forth, carrying crumbs. A meter shows the scent growing stronger as
+    more ants walk it. Then the crumb shrinks away, the ribbon fades and the
+    ants scatter.
+- **Audio.** The narration is in Affan's voice, made with ElevenLabs
+  (`eleven_v4`, take A of 2). Captions use word timings measured locally with
+  faster-whisper (`audio/narration_words.json`). The soundtrack reuses the
+  Episode 005 instruments and adds:
+  - tiny ant-feet patter that gets busier as more ants come;
+  - a shrinking glide, cartoon sniffs and a scent shimmer;
+  - crunchy nibbles, a fading hum and a scurry;
+  - a jar pop, a hop and a lid clink.
+
+  The mix is normalised to −14 LUFS with a peak limiter at −1.5 dB.
