@@ -230,8 +230,7 @@ const SHOTS = [
   // S2 — "Papa! Tengok langit! Ada jambatan warna-warni! Boleh panjat tak?"
   [2.18, 6.8, (t) => {
     const k = easeInOut(inv(2.18, 6.8, t));
-    const side = SIDE_H.clone().multiplyScalar(1.8);
-    lookCam(A_P.clone().addScaledVector(ANTI_H, -4.2).add(side).add(V(0, 1.7, 0)), A_P.clone().addScaledVector(ANTI_H, 30).add(V(0, lerp(8, 10, k), 0)), 50);
+    lookCam(A_P.clone().addScaledVector(ANTI_H, -4.6).addScaledVector(SIDE_H, 0.9).add(V(0, 1.5, 0)), A_P.clone().addScaledVector(ANTI_H, 20).add(V(0, lerp(5.6, 6.4, k), 0)), 52);
     parkSet(t);
     const pt = easeOut(inv(2.7, 3.1, t));
     const jump = Math.max(0, Math.sin(Math.PI * inv(5.6, 6.3, t)));
@@ -253,7 +252,7 @@ const SHOTS = [
     parkSet(t);
     parkAff(t, A_P, YAW_RB + 0.6, { headPitch: -0.1, brow: -0.4, smile: 0.5, ...POSES.thinkR });
     const hd = scr(A_P.clone().add(V(0, 2.3, 0)));
-    qmarks(t, hd, 6.8, 9.05, [[6.9, -260, -80, '#ffcf33', -12], [7.3, 250, -150, '#3fa2ff', 10], [7.7, 270, 60, '#ffcf33', 14]]);
+    qmarks(t, hd, 6.8, 9.05, [[6.9, -260, 40, '#ffcf33', -12], [7.3, 250, 0, '#3fa2ff', 10], [7.7, 270, 160, '#ffcf33', 14]]);
     bubble('kenapa', 'KENAPA PELANGI?', t, 7.26, 9.05, 430, 112, { top: '#fff6d0', bot: '#ffb21f' });
     return park;
   }],
@@ -371,11 +370,12 @@ const SHOTS = [
     // pivot near Affan: look at the sun (behind), then turn to the rain (ahead)
     const turn = easeInOut(inv(48.6, 49.4, t));
     const toSun = V(SUN_DIR.x, 0, SUN_DIR.z).normalize();
-    const lookDir = toSun.clone().lerp(ANTI_H, turn).normalize();
+    const ang0 = Math.atan2(toSun.x, toSun.z);
+    const ang = ang0 + Math.PI * turn;
+    const lookDir = V(Math.sin(ang), 0, Math.cos(ang));
     const camPos = A_P.clone().addScaledVector(lookDir, -5).add(V(0, 2.2, 0)).addScaledVector(SIDE_H, 1.2);
-    const lookAt = A_P.clone().addScaledVector(lookDir, 30).add(V(0, lerp(10, 9, turn), 0));
-    if (t < 46.8) camMove(t, 45.2, 46.8, behind(5, 2.3)[0], behind(5, 2.3)[1], camPos.toArray(), lookAt.toArray(), 50);
-    else lookCam(camPos, lookAt, 50);
+    const lookAt = A_P.clone().addScaledVector(lookDir, 20).add(V(0, lerp(5.5, 6.0, turn), 0));
+    lookCam(camPos.clone().addScaledVector(lookDir, 0.6 * easeOut(inv(45.2, 48.5, t))), lookAt, 50);
     parkSet(t, { rain: 0.6 * inv(48.9, 49.4, t) });
     parkAff(t, A_P, YAW_RB, { headPitch: -0.3, lookY: 0.3, ...(turn < 0.5 ? { armL: { reach: [0.55, 1.2, -0.6], pole: [1, -0.4, 0], point: 1 } } : { armR: { reach: [-0.4, 1.9, 0.6], pole: [-1, -0.4, -0.3], point: 1 } }) });
     const q1 = pop(t, 47.26, 48.7);
