@@ -17,6 +17,7 @@ time and can be re-timed to new narration.
 | 031 | Kenapa Kita Tak Boleh Geletek Diri Sendiri? | [`episodes/031-geletek-diri-sendiri`](episodes/031-geletek-diri-sendiri) | `output/TheCuriousAffan_E031_Kenapa_Kita_Tak_Boleh_Geletek_Diri_Sendiri.mp4` |
 | 032 | Kenapa Jari Jadi Kecut Bila Lama Main Air? | [`episodes/032-jari-kecut`](episodes/032-jari-kecut) | `output/TheCuriousAffan_E032_Kenapa_Jari_Jadi_Kecut_Bila_Lama_Main_Air.mp4` |
 | 033 | Kenapa Bulan Berubah Bentuk? | [`episodes/033-bulan-berubah-bentuk`](episodes/033-bulan-berubah-bentuk) | `output/TheCuriousAffan_E033_Kenapa_Bulan_Berubah_Bentuk.mp4` |
+| 034 | Kenapa Bayang Kita Jadi Panjang dan Pendek? | [`episodes/034-bayang-panjang-pendek`](episodes/034-bayang-panjang-pendek) | `output/TheCuriousAffan_E034_Kenapa_Bayang_Kita_Jadi_Panjang_Dan_Pendek.mp4` |
 
 ## Build
 
@@ -199,3 +200,40 @@ episode stays consistent.
   clicks, a sun swell and shimmering rays, an orbit whirr, day-counter ticks
   and an eclipse drone. The mix is normalised to −14 LUFS with a peak limiter
   at −1.5 dB.
+
+## Episode 034 at a glance
+
+- **Science.** Light travels in straight lines. A shadow is the place behind
+  us that the light can't reach because our body blocks it. Its length
+  depends on the angle of the light, not on our size. When the lamp is right
+  above our head, the light falls straight down and the shadow is short.
+  When we walk away from the lamp, the light comes in at a slant and the
+  shadow lies long on the ground. The further we walk, the more slanted the
+  light and the longer the shadow. For a lamp at height h and a child of
+  height a standing a distance d away, the shadow length is a·d / (h − a).
+  The Sun works the same way: at noon it is high in the sky (in Malaysia
+  almost straight overhead), so shadows are short; in the evening it is low,
+  so shadows are long.
+- **Picture.** Three sets:
+  - a new night street in a housing estate. One street lamp's point light
+    casts Affan's real shadow on a pale tiled pavement: short under the lamp,
+    long as he walks away. Invisible horns on his head show up only in the
+    shadow for the "raksasa" (monster) gag;
+  - a new imagination world, the "pentas cahaya" (light stage): a cream grid
+    floor with a toy street lamp. Glowing light rays travel in straight
+    lines, and the ones that hit Affan stop at his body. A purple highlight
+    marks the shadow. An orange ray from the bulb over his head to the tip
+    of the shadow shows the slant, with an angle arc and a bracket that
+    measures the length. The lamp then turns into a smiling Sun with a
+    directional light, high at noon and low in an orange evening sky;
+  - the Episode 031 living room with the lights off. Affan squats by a toy
+    robot and shines a torch (spot light) from above for a short shadow,
+    then from the side for a long one.
+- **Audio.** The narration is in Affan's voice, made with ElevenLabs
+  (`eleven_v4`, take B of 2). Captions use word timings measured locally with
+  faster-whisper (`audio/narration_words.json`). The soundtrack reuses the
+  Episode 005 instruments and adds night crickets, footsteps, a stretchy
+  "boiing" as the shadow grows, a cartoon monster "rawr", a light-ray zap and
+  shimmer, tiny "tik" hits where light meets Affan, a sun swell, an evening
+  glide down, and light-switch and torch clicks. The mix is normalised to
+  −14 LUFS with a peak limiter at −1.5 dB.
