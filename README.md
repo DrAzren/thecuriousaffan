@@ -20,6 +20,7 @@ time and can be re-timed to new narration.
 | 034 | Kenapa Bayang Kita Jadi Panjang dan Pendek? | [`episodes/034-bayang-panjang-pendek`](episodes/034-bayang-panjang-pendek) | `output/TheCuriousAffan_E034_Kenapa_Bayang_Kita_Jadi_Panjang_Dan_Pendek.mp4` |
 | 035 | Kenapa Semut Jalan Berbaris? | [`episodes/035-semut-berbaris`](episodes/035-semut-berbaris) | `output/TheCuriousAffan_E035_Kenapa_Semut_Jalan_Berbaris.mp4` |
 | 036 | Kenapa Kita Pening Lepas Berpusing? | [`episodes/036-pening-berpusing`](episodes/036-pening-berpusing) | `output/TheCuriousAffan_E036_Kenapa_Kita_Pening_Lepas_Berpusing.mp4` |
+| 037 | Kenapa Pelangi Berwarna-warni dan Melengkung? | [`episodes/037-pelangi`](episodes/037-pelangi) | `output/TheCuriousAffan_E037_Kenapa_Pelangi_Berwarna_Warni_Dan_Melengkung.mp4` |
 
 ## Build
 
@@ -314,5 +315,48 @@ episode stays consistent.
   - bubbles and sloshes inside the ear, a hair shimmer and signal zaps;
   - a sudden-stop skid and spoon clinks in the tea cup;
   - a confused brain warble and a bench thump.
+
+  The mix is normalised to −14 LUFS with a peak limiter at −1.5 dB.
+
+## Episode 037 at a glance
+
+- **Science.** Sunlight looks white, but it is a mix of colours: red,
+  orange, yellow, green, blue and violet. In a raindrop the light bends
+  (refraction) on the way in, bounces off the back of the drop, and bends
+  again on the way out. Each colour bends by a slightly different amount, so
+  the colours separate. Each colour reaches our eye at the same angle (about
+  42°) all the way around the point opposite the Sun, in the direction of
+  our shadow's head. So a rainbow is really a ring, and the ground hides its
+  lower half. You only see one when the Sun is behind you and the rain is in
+  front of you. You can make a small one at home by spraying water from a
+  hose in the morning or late afternoon, with your back to the Sun.
+- **Picture.** Three sets:
+  - the Episode 036 playground just after rain. A low afternoon sun sits
+    behind the camera, with soft grey clouds, puddles and the last
+    raindrops. The rainbow is a real 42° ring around the anti-solar point,
+    placed relative to the camera every frame, so the ground hides its lower
+    half the way it does in real life. In the "try at home" beat there is a
+    hose with spray mist and a small rainbow inside the mist (the big
+    rainbow is hidden there, because both would sit at the same angle);
+  - a new imagination world, the "makmal cahaya" (light lab). A smiling Sun
+    shines a white beam onto a white screen. A glass prism drops in and fans
+    the beam into six colours, one lighting up per word. Then comes a giant
+    raindrop whose light paths are computed with real vector refraction and
+    reflection (dispersion exaggerated so the colours separate clearly). A
+    white ray bends, bounces and bends again, then splits into six coloured
+    paths that reach tiny Affan;
+  - a new "padang" (field) diagram. Affan stands with the Sun behind him,
+    and a yellow line runs along his shadow to the anti-solar point. White
+    sight lines form a 42° cone to a full rainbow ring. The ground fades
+    away and the camera rises (an airplane view) to show the whole circle,
+    then the ground returns and hides the bottom half.
+- **Audio.** The narration is in Affan's voice, made with ElevenLabs
+  (`eleven_v4`, a single take to save credits). Captions use word timings
+  measured locally with faster-whisper (`audio/narration_words.json`). The
+  soundtrack reuses the Episode 005 instruments and adds:
+  - drips and birdsong after the rain;
+  - a light-beam hum, a glassy prism chime and one bell note per colour;
+  - a drop "bloop", bend/bounce pings and a ring shimmer;
+  - whooshes for the airplane view, a hose hiss and jump boings.
 
   The mix is normalised to −14 LUFS with a peak limiter at −1.5 dB.
