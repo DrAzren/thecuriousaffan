@@ -23,6 +23,9 @@ time and can be re-timed to new narration.
 | 037 | Kenapa Pelangi Berwarna-warni dan Melengkung? | [`episodes/037-pelangi`](episodes/037-pelangi) | `output/TheCuriousAffan_E037_Kenapa_Pelangi_Berwarna_Warni_Dan_Melengkung.mp4` |
 | 038 | Kenapa Potong Bawang Buat Kita Menangis? | [`episodes/038-bawang-menangis`](episodes/038-bawang-menangis) | `output/TheCuriousAffan_E038_Kenapa_Potong_Bawang_Buat_Kita_Menangis.mp4` |
 | 039 | Macam Mana Kuku Kita Boleh Panjang? | [`episodes/039-kuku-panjang`](episodes/039-kuku-panjang) | `output/TheCuriousAffan_E039_Macam_Mana_Kuku_Kita_Boleh_Panjang.mp4` |
+| 040 | Kenapa Daun Berwarna Hijau? | [`episodes/040-daun-hijau`](episodes/040-daun-hijau) | `output/TheCuriousAffan_E040_Kenapa_Daun_Berwarna_Hijau.mp4` |
+| 041 | Kenapa Kita Bersin? | [`episodes/041-kenapa-bersin`](episodes/041-kenapa-bersin) | `output/TheCuriousAffan_E041_Kenapa_Kita_Bersin.mp4` |
+| 042 | Macam Mana Lebah Buat Madu? | [`episodes/042-lebah-madu`](episodes/042-lebah-madu) | `output/TheCuriousAffan_E042_Macam_Mana_Lebah_Buat_Madu.mp4` |
 
 ## Build
 
@@ -436,5 +439,107 @@ episode stays consistent.
   - a nerve shimmer and clipper snips;
   - giggling germs and a tummy rumble;
   - a nail crack and a scratch.
+
+  The mix is normalised to −14 LUFS with a peak limiter at −1.5 dB.
+
+## Episode 040 at a glance
+
+- **Science.** Sunlight looks white but is a mix of many colours (a prism
+  splits it). Leaves contain a green substance called chlorophyll, which
+  absorbs red and blue light but not green; the green light bounces out to
+  our eyes, so leaves look green. The leaf uses the light's energy, water from
+  the roots and air taken in through tiny pores to make sugar, the plant's
+  food (photosynthesis), and gives out oxygen, the clean air we breathe. When
+  a leaf gets old, its chlorophyll fades, the hidden yellow shows, and the
+  leaf falls.
+- **Picture.** Four sets:
+  - the Episode 036 playground with a big hero tree whose leaves turn blue
+    and pink for "kenapa tak biru... atau merah jambu?", and a leaf in
+    Affan's hand;
+  - the Episode 037 light lab (Sun, white beam, prism, six colours);
+  - "dalam daun" (inside the leaf): a clear top skin and leaf cells full of
+    smiling chloroplasts. Red and blue light balls get eaten ("nom"), green
+    ones bounce away into Affan's eyes;
+  - "kilang daun" (the leaf factory): a sapling in a see-through pot with
+    roots. Sun rays, water drops climbing the stem, air bubbles entering a
+    pore (stoma), sugar cubes, the plant growing, and oxygen bubbles drifting
+    to Affan's nose. The hero leaf yellows patch by patch (a shader) and
+    falls.
+- **Audio.** The narration is in Affan's voice, made with ElevenLabs
+  (`eleven_v4`, a single take to save credits). Captions use word timings
+  measured locally with faster-whisper (`audio/narration_words.json`). The
+  soundtrack reuses the Episode 005 instruments and adds:
+  - colour-swap boings and a prism shimmer;
+  - chloroplast "noms" for red and blue light and bounces for green;
+  - water bloops, air puffs, sugar sparkles, oxygen bubbles and a big breath;
+  - a fading shimmer and a falling-leaf whoosh.
+
+  The mix is normalised to −14 LUFS with a peak limiter at −1.5 dB.
+
+## Episode 041 at a glance
+
+- **Science.** The nose is lined with fine hairs and mucus that catch dust
+  and germs before they reach the lungs. When dust, pepper or cat hair
+  tickles the nose, its nerves send a message to the brain ("an intruder!"),
+  and the brain triggers a sneeze: a deep breath in, the chest squeezes hard,
+  and air shoots out fast to blow the intruders away. Our eyes close by
+  themselves every time we sneeze. Sneeze droplets can fly a few metres, so
+  when we have a cold, germs can reach other people. Sneeze into your elbow
+  or a tissue, and wash your hands.
+- **Picture.** Four sets:
+  - the Episode 038 kitchen: Mama peppers a pot of soup, pepper specks drift
+    to Affan's nose, "ah... ah... ACHOO!" with a spray of droplets; later a
+    slow-motion sneeze with the eyes shut, and the good habits (elbow,
+    tissue, soap bubbles);
+  - "dalam hidung" (inside the nose): a pink tunnel seen through the
+    nostril, with nose hairs, a shiny mucus layer and the lungs glowing far
+    away. Dust, germs, pepper and cat hair drift in and get caught, and a
+    nerve lights up;
+  - the Episode 031 mind stage, with a red alarm and a big red "sneeze
+    button" that the brain presses;
+  - a bright studio with a 0–3 m tape on the floor: the big sneeze step by
+    step (air in, chest squeeze, blast), a droplet cloud drifting along the
+    tape, and germs riding a second sneeze over to Kakak.
+- **Audio.** The narration is in Affan's voice, made with ElevenLabs
+  (`eleven_v4`, a single take to save credits). Captions use word timings
+  measured locally with faster-whisper (`audio/narration_words.json`). The
+  soundtrack reuses the Episode 005 instruments and adds:
+  - pepper rattles, nose-tickle shimmers and "ah... ah..." risers;
+  - sneeze bursts, including a slow-motion one, and sticky catches;
+  - a nerve zap, an alarm, a button clunk, a breath in and a squeeze rumble;
+  - germ giggles and soap bubbles.
+
+  The mix is normalised to −14 LUFS with a peak limiter at −1.5 dB.
+
+## Episode 042 at a glance
+
+- **Science.** Bees fly from flower to flower and suck up nectar, the sweet
+  liquid in flowers, with a long straw-like tongue. They store it in a
+  special honey stomach and fly back to the hive. There other bees take the
+  nectar mouth to mouth, and substances in their bodies (enzymes) change it
+  bit by bit. The nectar is still too runny, so the bees store it in
+  hexagon-shaped wax cells and fan it with their wings until the water dries
+  off and it thickens into honey. Then they cap the cells with wax, to keep
+  the honey as food for later. One bee makes only about 1/12 teaspoon of
+  honey in its whole life, so one teaspoon is the work of twelve bees. Don't
+  disturb a beehive.
+- **Picture.** Four sets:
+  - the Episode 036 playground: Affan on the bench with bread and honey, a
+    flower bed, a bee that buzzes in, and a beehive hanging from a far tree;
+  - giant flowers: a big friendly bee (striped, see-through tummy that fills
+    with golden nectar) sips from a flower with its long tongue;
+  - inside the hive: a wall of hexagon wax cells. Nectar passes mouth to
+    mouth and sparkles as it changes, cells fill with runny nectar, many bees
+    fan their wings while vapour rises, the nectar turns golden, and wax
+    caps close the cells;
+  - a teaspoon stage: one bee with a tiny drop ("1/12 SUDU TEH"), then twelve
+    bees each add a drop until the spoon is full.
+- **Audio.** The narration is in Affan's voice, made with ElevenLabs
+  (`eleven_v4`, a single take to save credits). Captions use word timings
+  measured locally with faster-whisper (`audio/narration_words.json`). The
+  soundtrack reuses the Episode 005 instruments and adds:
+  - bee buzzes, sips up the tongue and a filling gurgle;
+  - mouth-to-mouth plips, enzyme sparkles and a fanning whirr;
+  - wax caps clicking shut and twelve honey drips into the spoon.
 
   The mix is normalised to −14 LUFS with a peak limiter at −1.5 dB.
