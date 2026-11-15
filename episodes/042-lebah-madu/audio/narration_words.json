@@ -1,0 +1,857 @@
+[
+{
+"text": "Affan",
+"start": 0.0,
+"end": 0.5
+},
+{
+"text": "selalu",
+"start": 0.5,
+"end": 1.02
+},
+{
+"text": "tanya",
+"start": 1.02,
+"end": 1.32
+},
+{
+"text": "papa.",
+"start": 1.32,
+"end": 1.74
+},
+{
+"text": "Papa!",
+"start": 2.26,
+"end": 2.58
+},
+{
+"text": "Madu",
+"start": 3.12,
+"end": 3.28
+},
+{
+"text": "ni",
+"start": 3.28,
+"end": 3.48
+},
+{
+"text": "sedap...",
+"start": 3.48,
+"end": 4.28
+},
+{
+"text": "Tapi",
+"start": 4.7,
+"end": 4.92
+},
+{
+"text": "betul",
+"start": 4.92,
+"end": 5.39
+},
+{
+"text": "ke",
+"start": 5.39,
+"end": 5.86
+},
+{
+"text": "madu",
+"start": 5.86,
+"end": 6.22
+},
+{
+"text": "dibuat",
+"start": 6.22,
+"end": 6.48
+},
+{
+"text": "oleh",
+"start": 6.48,
+"end": 6.76
+},
+{
+"text": "lebah?",
+"start": 6.76,
+"end": 7.48
+},
+{
+"text": "Macam",
+"start": 7.68,
+"end": 8.0
+},
+{
+"text": "mana",
+"start": 8.0,
+"end": 8.22
+},
+{
+"text": "lebah",
+"start": 8.22,
+"end": 8.56
+},
+{
+"text": "buat",
+"start": 8.56,
+"end": 8.76
+},
+{
+"text": "madu?",
+"start": 8.76,
+"end": 9.24
+},
+{
+"text": "Jom",
+"start": 9.56,
+"end": 9.86
+},
+{
+"text": "ikut",
+"start": 9.86,
+"end": 10.1
+},
+{
+"text": "Affan",
+"start": 10.1,
+"end": 10.38
+},
+{
+"text": "cari",
+"start": 10.38,
+"end": 10.62
+},
+{
+"text": "jawapan!",
+"start": 10.62,
+"end": 11.14
+},
+{
+"text": "Lebah",
+"start": 11.6,
+"end": 12.16
+},
+{
+"text": "terbang",
+"start": 12.16,
+"end": 12.6
+},
+{
+"text": "dari",
+"start": 12.6,
+"end": 12.96
+},
+{
+"text": "bunga",
+"start": 12.96,
+"end": 13.44
+},
+{
+"text": "ke",
+"start": 13.44,
+"end": 13.58
+},
+{
+"text": "bunga.",
+"start": 13.58,
+"end": 14.16
+},
+{
+"text": "Dengan",
+"start": 14.38,
+"end": 14.56
+},
+{
+"text": "lidah",
+"start": 14.56,
+"end": 14.9
+},
+{
+"text": "panjang",
+"start": 14.9,
+"end": 15.36
+},
+{
+"text": "macam",
+"start": 15.36,
+"end": 15.7
+},
+{
+"text": "straw,",
+"start": 15.7,
+"end": 16.2
+},
+{
+"text": "lebah",
+"start": 16.6,
+"end": 16.9
+},
+{
+"text": "hisap",
+"start": 16.9,
+"end": 17.34
+},
+{
+"text": "air",
+"start": 17.34,
+"end": 17.58
+},
+{
+"text": "manis",
+"start": 17.58,
+"end": 17.98
+},
+{
+"text": "dalam",
+"start": 17.98,
+"end": 18.24
+},
+{
+"text": "bunga,",
+"start": 18.24,
+"end": 18.88
+},
+{
+"text": "dipanggil",
+"start": 19.02,
+"end": 19.54
+},
+{
+"text": "nektar.",
+"start": 19.54,
+"end": 20.4
+},
+{
+"text": "Nektar",
+"start": 20.58,
+"end": 21.1
+},
+{
+"text": "disimpan",
+"start": 21.1,
+"end": 21.64
+},
+{
+"text": "dalam",
+"start": 21.64,
+"end": 21.94
+},
+{
+"text": "perut",
+"start": 21.94,
+"end": 22.22
+},
+{
+"text": "khas,",
+"start": 22.22,
+"end": 22.72
+},
+{
+"text": "perut",
+"start": 22.92,
+"end": 23.24
+},
+{
+"text": "madu!",
+"start": 23.24,
+"end": 24.0
+},
+{
+"text": "Bila",
+"start": 24.2,
+"end": 24.46
+},
+{
+"text": "dah",
+"start": 24.46,
+"end": 24.62
+},
+{
+"text": "penuh,",
+"start": 24.62,
+"end": 25.16
+},
+{
+"text": "lebah",
+"start": 25.34,
+"end": 25.7
+},
+{
+"text": "terbang",
+"start": 25.7,
+"end": 26.2
+},
+{
+"text": "balik",
+"start": 26.2,
+"end": 26.5
+},
+{
+"text": "ke",
+"start": 26.5,
+"end": 26.68
+},
+{
+"text": "sarang.",
+"start": 26.68,
+"end": 27.02
+},
+{
+"text": "Di",
+"start": 27.02,
+"end": 27.6
+},
+{
+"text": "sarang,",
+"start": 27.6,
+"end": 28.2
+},
+{
+"text": "lebah",
+"start": 28.36,
+"end": 28.62
+},
+{
+"text": "lain",
+"start": 28.62,
+"end": 28.92
+},
+{
+"text": "sambut",
+"start": 28.92,
+"end": 29.48
+},
+{
+"text": "nektar",
+"start": 29.48,
+"end": 29.86
+},
+{
+"text": "tu,",
+"start": 29.86,
+"end": 30.22
+},
+{
+"text": "dari",
+"start": 30.22,
+"end": 30.66
+},
+{
+"text": "mulut",
+"start": 30.66,
+"end": 31.22
+},
+{
+"text": "ke",
+"start": 31.22,
+"end": 31.38
+},
+{
+"text": "mulut.",
+"start": 31.38,
+"end": 32.04
+},
+{
+"text": "Bahan",
+"start": 32.26,
+"end": 32.58
+},
+{
+"text": "khas",
+"start": 32.58,
+"end": 32.88
+},
+{
+"text": "dalam",
+"start": 32.88,
+"end": 33.16
+},
+{
+"text": "badan",
+"start": 33.16,
+"end": 33.46
+},
+{
+"text": "lebah",
+"start": 33.46,
+"end": 33.96
+},
+{
+"text": "ubah",
+"start": 33.96,
+"end": 34.42
+},
+{
+"text": "nektar",
+"start": 34.42,
+"end": 34.88
+},
+{
+"text": "sikit",
+"start": 34.88,
+"end": 35.42
+},
+{
+"text": "demi",
+"start": 35.42,
+"end": 35.64
+},
+{
+"text": "sikit.",
+"start": 35.64,
+"end": 36.22
+},
+{
+"text": "Tapi",
+"start": 36.62,
+"end": 36.66
+},
+{
+"text": "nektar",
+"start": 36.66,
+"end": 37.1
+},
+{
+"text": "masih",
+"start": 37.1,
+"end": 37.46
+},
+{
+"text": "terlalu",
+"start": 37.46,
+"end": 37.86
+},
+{
+"text": "cair!",
+"start": 37.86,
+"end": 38.54
+},
+{
+"text": "Jadi",
+"start": 39.02,
+"end": 39.26
+},
+{
+"text": "lebah",
+"start": 39.44,
+"end": 39.68
+},
+{
+"text": "simpan",
+"start": 39.68,
+"end": 40.2
+},
+{
+"text": "dalam",
+"start": 40.2,
+"end": 40.48
+},
+{
+"text": "bilik",
+"start": 40.48,
+"end": 40.76
+},
+{
+"text": "kecil",
+"start": 40.76,
+"end": 41.14
+},
+{
+"text": "berbentuk",
+"start": 41.14,
+"end": 41.62
+},
+{
+"text": "heksagon...",
+"start": 41.62,
+"end": 42.26
+},
+{
+"text": "dan",
+"start": 42.26,
+"end": 42.8
+},
+{
+"text": "kipas",
+"start": 42.8,
+"end": 43.34
+},
+{
+"text": "dengan",
+"start": 43.34,
+"end": 43.66
+},
+{
+"text": "sayap",
+"start": 43.66,
+"end": 44.08
+},
+{
+"text": "beramai-ramai",
+"start": 44.08,
+"end": 45.22
+},
+{
+"text": "sampai",
+"start": 45.22,
+"end": 45.8
+},
+{
+"text": "airnya",
+"start": 45.8,
+"end": 46.32
+},
+{
+"text": "kering.",
+"start": 46.32,
+"end": 46.7
+},
+{
+"text": "Nektar",
+"start": 47.1,
+"end": 47.5
+},
+{
+"text": "jadi",
+"start": 47.5,
+"end": 47.78
+},
+{
+"text": "pekat...",
+"start": 47.78,
+"end": 48.3
+},
+{
+"text": "jadilah",
+"start": 48.76,
+"end": 49.1
+},
+{
+"text": "madu!",
+"start": 49.1,
+"end": 49.72
+},
+{
+"text": "Bila",
+"start": 49.94,
+"end": 50.3
+},
+{
+"text": "madu",
+"start": 50.3,
+"end": 50.66
+},
+{
+"text": "dah",
+"start": 50.66,
+"end": 50.9
+},
+{
+"text": "siap,",
+"start": 50.9,
+"end": 51.48
+},
+{
+"text": "lebah",
+"start": 51.7,
+"end": 52.12
+},
+{
+"text": "tutup",
+"start": 52.12,
+"end": 52.58
+},
+{
+"text": "bilik",
+"start": 52.58,
+"end": 53.0
+},
+{
+"text": "tu",
+"start": 53.0,
+"end": 53.18
+},
+{
+"text": "dengan",
+"start": 53.18,
+"end": 53.44
+},
+{
+"text": "lilin,",
+"start": 53.44,
+"end": 53.96
+},
+{
+"text": "untuk",
+"start": 53.96,
+"end": 54.36
+},
+{
+"text": "makanan",
+"start": 54.36,
+"end": 54.9
+},
+{
+"text": "nanti.",
+"start": 54.9,
+"end": 55.62
+},
+{
+"text": "Tahu",
+"start": 55.7,
+"end": 56.04
+},
+{
+"text": "tak?",
+"start": 56.04,
+"end": 56.32
+},
+{
+"text": "Seekor",
+"start": 56.32,
+"end": 57.1
+},
+{
+"text": "lebah",
+"start": 57.1,
+"end": 57.42
+},
+{
+"text": "cuma",
+"start": 57.42,
+"end": 57.76
+},
+{
+"text": "buat",
+"start": 57.76,
+"end": 58.06
+},
+{
+"text": "sikit",
+"start": 58.06,
+"end": 58.62
+},
+{
+"text": "sangat",
+"start": 58.62,
+"end": 58.96
+},
+{
+"text": "madu",
+"start": 58.96,
+"end": 59.26
+},
+{
+"text": "seumur",
+"start": 59.26,
+"end": 59.64
+},
+{
+"text": "hidupnya...",
+"start": 59.64,
+"end": 60.2
+},
+{
+"text": "lebih",
+"start": 60.5,
+"end": 60.8
+},
+{
+"text": "kurang",
+"start": 60.8,
+"end": 61.22
+},
+{
+"text": "satu",
+"start": 61.22,
+"end": 61.74
+},
+{
+"text": "per",
+"start": 61.74,
+"end": 61.96
+},
+{
+"text": "dua",
+"start": 61.96,
+"end": 62.26
+},
+{
+"text": "belas",
+"start": 62.26,
+"end": 62.42
+},
+{
+"text": "sudu",
+"start": 62.42,
+"end": 62.94
+},
+{
+"text": "teh!",
+"start": 62.94,
+"end": 63.16
+},
+{
+"text": "Satu",
+"start": 63.66,
+"end": 64.08
+},
+{
+"text": "sudu",
+"start": 64.08,
+"end": 64.48
+},
+{
+"text": "teh",
+"start": 64.48,
+"end": 64.6
+},
+{
+"text": "madu,",
+"start": 64.6,
+"end": 65.26
+},
+{
+"text": "hasil",
+"start": 65.26,
+"end": 65.72
+},
+{
+"text": "kerja",
+"start": 65.72,
+"end": 66.08
+},
+{
+"text": "dua",
+"start": 66.08,
+"end": 66.52
+},
+{
+"text": "belas",
+"start": 66.52,
+"end": 66.68
+},
+{
+"text": "ekor",
+"start": 66.68,
+"end": 66.92
+},
+{
+"text": "lebah!",
+"start": 66.92,
+"end": 67.64
+},
+{
+"text": "Waaah,",
+"start": 68.14,
+"end": 68.66
+},
+{
+"text": "rupanya",
+"start": 69.0,
+"end": 69.56
+},
+{
+"text": "madu",
+"start": 69.56,
+"end": 70.06
+},
+{
+"text": "tu",
+"start": 70.06,
+"end": 70.22
+},
+{
+"text": "nektar",
+"start": 70.22,
+"end": 70.66
+},
+{
+"text": "bunga",
+"start": 70.66,
+"end": 71.08
+},
+{
+"text": "yang",
+"start": 71.08,
+"end": 71.2
+},
+{
+"text": "lebah",
+"start": 71.2,
+"end": 71.5
+},
+{
+"text": "ubah!",
+"start": 71.5,
+"end": 72.22
+},
+{
+"text": "Tapi",
+"start": 72.62,
+"end": 72.88
+},
+{
+"text": "ingat,",
+"start": 72.88,
+"end": 73.5
+},
+{
+"text": "jangan",
+"start": 73.74,
+"end": 73.86
+},
+{
+"text": "kacau",
+"start": 73.86,
+"end": 74.26
+},
+{
+"text": "sarang",
+"start": 74.26,
+"end": 74.52
+},
+{
+"text": "lebah,",
+"start": 74.52,
+"end": 75.0
+},
+{
+"text": "ya.",
+"start": 75.0,
+"end": 75.18
+},
+{
+"text": "Apa",
+"start": 75.62,
+"end": 75.84
+},
+{
+"text": "lagi",
+"start": 75.84,
+"end": 76.14
+},
+{
+"text": "kita",
+"start": 76.14,
+"end": 76.38
+},
+{
+"text": "nak",
+"start": 76.38,
+"end": 76.54
+},
+{
+"text": "belajar",
+"start": 76.54,
+"end": 76.84
+},
+{
+"text": "lepas",
+"start": 76.84,
+"end": 77.18
+},
+{
+"text": "ni?",
+"start": 77.18,
+"end": 77.38
+}
+]
