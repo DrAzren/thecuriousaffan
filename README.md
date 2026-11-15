@@ -22,6 +22,7 @@ time and can be re-timed to new narration.
 | 036 | Kenapa Kita Pening Lepas Berpusing? | [`episodes/036-pening-berpusing`](episodes/036-pening-berpusing) | `output/TheCuriousAffan_E036_Kenapa_Kita_Pening_Lepas_Berpusing.mp4` |
 | 037 | Kenapa Pelangi Berwarna-warni dan Melengkung? | [`episodes/037-pelangi`](episodes/037-pelangi) | `output/TheCuriousAffan_E037_Kenapa_Pelangi_Berwarna_Warni_Dan_Melengkung.mp4` |
 | 038 | Kenapa Potong Bawang Buat Kita Menangis? | [`episodes/038-bawang-menangis`](episodes/038-bawang-menangis) | `output/TheCuriousAffan_E038_Kenapa_Potong_Bawang_Buat_Kita_Menangis.mp4` |
+| 039 | Macam Mana Kuku Kita Boleh Panjang? | [`episodes/039-kuku-panjang`](episodes/039-kuku-panjang) | `output/TheCuriousAffan_E039_Macam_Mana_Kuku_Kita_Boleh_Panjang.mp4` |
 
 ## Build
 
@@ -397,5 +398,43 @@ episode stays consistent.
   - a giant-knife swish, cell pops, bubbly mixing and a gas fizz;
   - a stinging zing, tear drips and a washing swoosh;
   - a fridge door and cool hum, a knife glint, and heart pops.
+
+  The mix is normalised to −14 LUFS with a peak limiter at −1.5 dB.
+
+## Episode 039 at a glance
+
+- **Science.** Nails are made of keratin, the same hard protein as hair.
+  They grow from the nail root (the matrix), hidden under the skin at the
+  base of the nail. New cells are made there every day and push the old ones
+  forward. The old cells harden and flatten into stacked layers, so the nail
+  gets longer. The long part (the free edge) has no nerves, which is why
+  cutting it doesn't hurt. Fingernails grow about 3 mm a month, and toenails
+  grow more slowly. So cut fingernails about once a week and toenails about
+  every two weeks. If nails aren't cut, dirt and germs hide under them and can
+  get into our tummy when we eat with our hands, causing a tummy ache. Long
+  nails also break easily and can scratch the skin. Ask Mama or Papa to help
+  cut them with a nail clipper.
+- **Picture.** Three sets:
+  - the Episode 031 living room with a coffee table and a plate of kuih.
+    **Mama** (from Episode 038) sits beside Affan on the sofa and trims his
+    nails with a nail clipper;
+  - a giant hand, back to the camera. Its fingernails grow (with a ruler for
+    "3 mm a month"), then show dirt and giggling cartoon germs under the long
+    free edges, a crack that breaks off, and a red scratch;
+  - a new imagination world, "dalam hujung jari" (inside the fingertip). An
+    upright fingertip is cut in half to show the skin, bone, pink nail bed,
+    a glowing purple nail root under the cuticle fold, yellow nerves that stop
+    before the free edge, and a nail plate built from stacked flat tiles. New
+    round cells leave the root and press flat as the plate grows, then a
+    clipper snips the free edge ("TAK SAKIT!").
+  - Overlay calendars show fingernails cut every 7 days and toenails every 14.
+- **Audio.** The narration is in Affan's voice, made with ElevenLabs
+  (`eleven_v4`, a single take to save credits). Captions use word timings
+  measured locally with faster-whisper (`audio/narration_words.json`). The
+  soundtrack reuses the Episode 005 instruments and adds:
+  - cell bloops at the nail root, stacking clicks and a growing stretch;
+  - a nerve shimmer and clipper snips;
+  - giggling germs and a tummy rumble;
+  - a nail crack and a scratch.
 
   The mix is normalised to −14 LUFS with a peak limiter at −1.5 dB.

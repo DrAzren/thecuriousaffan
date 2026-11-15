@@ -1,4 +1,4 @@
-# Episod 039: Kenapa Daun Berwarna Hijau?
+# Episod 040: Kenapa Daun Berwarna Hijau?
 
 **Status:** draf idea (belum ada skrip akhir, narasi atau render)
 **Tempoh sasaran:** ~65 s · 9:16 · 1080×1920
