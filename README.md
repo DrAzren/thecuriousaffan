@@ -29,6 +29,9 @@ time and can be re-timed to new narration.
 | 043 | Kenapa Kita Mimpi Bila Tidur? | [`episodes/043-kenapa-mimpi`](episodes/043-kenapa-mimpi) | `output/TheCuriousAffan_E043_Kenapa_Kita_Mimpi_Bila_Tidur.mp4` |
 | 044 | Apa Jadi Kalau Malaysia Ada Salji? | [`episodes/044-salji-malaysia`](episodes/044-salji-malaysia) | `output/TheCuriousAffan_E044_Apa_Jadi_Kalau_Malaysia_Ada_Salji.mp4` |
 | 045 | Macam Mana Petrol Kereta Dihasilkan? | [`episodes/045-petrol-kereta`](episodes/045-petrol-kereta) | `output/TheCuriousAffan_E045_Macam_Mana_Petrol_Kereta_Dihasilkan.mp4` |
+| 046 | Kenapa Jantung Kita Berdegup? | [`episodes/046-jantung-berdegup`](episodes/046-jantung-berdegup) | `output/TheCuriousAffan_E046_Kenapa_Jantung_Kita_Berdegup.mp4` |
+| 047 | Macam Mana Ikan Bernafas Dalam Air? | [`episodes/047-ikan-bernafas`](episodes/047-ikan-bernafas) | `output/TheCuriousAffan_E047_Macam_Mana_Ikan_Bernafas_Dalam_Air.mp4` |
+| 048 | Macam Mana Kapal Terbang Boleh Terbang? | [`episodes/048-kapal-terbang`](episodes/048-kapal-terbang) | `output/TheCuriousAffan_E048_Macam_Mana_Kapal_Terbang_Boleh_Terbang.mp4` |
 
 ## Build
 
@@ -643,5 +646,100 @@ episode stays consistent.
   - a station ding, a dinosaur rawr and a poof;
   - underwater bubbles and hum, heavy layer thumps, a pressure groan;
   - a drill whirr, oil glugs, a furnace roar and a tanker engine.
+
+  The mix is normalised to −14 LUFS with a peak limiter at −1.5 dB.
+
+## Episode 046 at a glance
+
+- **Science.** The heart is a strong muscle about the size of your fist, and
+  it works day and night without stopping. Each beat pumps blood around the
+  body, carrying oxygen and food to the brain, the muscles and down to the
+  toes. The "dup-dap" sound comes from small doors inside the heart, called
+  valves, snapping shut. When we run, our muscles need more oxygen, so the
+  heart beats faster. You can feel it as your pulse on your wrist. Exercise
+  and healthy food keep the heart strong.
+- **Picture.** Three sets:
+  - the Episode 044 playground: Affan runs, pants and holds his chest, and a
+    tiny heart floats next to his fist (same size). A beat counter goes from
+    80 to 140 a minute; later a pulse check with an ECG line, and star jumps
+    with an apple, a banana and a carrot;
+  - a body stage: a big smiling heart that beats, with blood vessels to the
+    brain, an arm muscle and the leg, and red blood cells carrying oxygen and
+    food;
+  - a cut-away heart tube with two pairs of flap valves that open to let
+    blood through and slam shut for "DUP!" and "DAP!".
+- **Audio.** The narration is in Affan's voice, made with ElevenLabs
+  (`eleven_v4`, a single take to save credits). Captions use word timings
+  measured locally with faster-whisper (`audio/narration_words.json`). The
+  soundtrack reuses the Episode 005 instruments and adds:
+  - footsteps and panting, a soft lub-dub heartbeat that speeds up;
+  - flowing blood whooshes, valve slams, a pulse beep and jumping boings.
+
+  The mix is normalised to −14 LUFS with a peak limiter at −1.5 dB.
+
+## Episode 047 at a glance
+
+- **Science.** Water has oxygen in it too, but only a little, hidden in the
+  water. Fish breathe with gills: water goes in through the mouth, over the
+  gills and out of the slits at the side of the head. Gills are thin red
+  plates full of tiny blood vessels, and as water flows past, oxygen passes
+  into the fish's blood. Out of water the gills stick together and stop
+  working, and our lungs can't take oxygen out of water. Keli, puyu and
+  haruan have an extra breathing organ, so they can rise to the surface and
+  gulp air. Change the aquarium water so the fish get enough oxygen.
+- **Picture.** Four sets:
+  - the Episode 031 living room with an aquarium (gravel, plants, an air
+    stone and three small fish); a close-up of a fish mouth opening and
+    closing, and Affan pouring a jug of fresh water in at the end;
+  - underwater: a big orange fish side-on, glowing oxygen dots hidden in the
+    water, and water dots that flow in at the mouth and out of the gill slit,
+    with a mini Affan swimming by;
+  - a gill close-up: a gill arch with a comb of red filaments; water flows
+    through and oxygen soaks in. Out of water the background dries, the
+    filaments clump and fade, and then a pair of lungs gets a cross;
+  - a muddy padi-field pond where a keli, a puyu and a haruan rise to the
+    surface and gulp air, with rings on the water.
+- **Audio.** The narration is in Affan's voice, made with ElevenLabs
+  (`eleven_v4`, a single take to save credits). Captions use word timings
+  measured locally with faster-whisper (`audio/narration_words.json`). The
+  soundtrack reuses the Episode 005 instruments and adds:
+  - aquarium bubbling and "blup" pops for the fish mouth;
+  - an underwater ambience, water swooshes through the gills, a dry crackle;
+  - splashy gulps at the pond surface and water pouring from a jug.
+
+  The mix is normalised to −14 LUFS with a peak limiter at −1.5 dB.
+
+## Episode 048 at a glance
+
+- **Science.** A big plane can weigh about as much as a hundred elephants.
+  Four forces act on it: weight pulls it down, the air holds it back, and the
+  strong engines push it forward. As the plane moves fast, air flows over and
+  under the wings. The wings have a special shape and a slight tilt, so they
+  push air down, and the air pushes the wings up. This is called lift. The
+  faster the plane goes, the stronger the lift, so the plane runs fast down
+  the runway until lift is stronger than its weight, and then it flies. Try
+  it at home: hold a strip of paper under your lip and blow over it; the
+  paper rises. Wear your seatbelt on a plane.
+- **Picture.** Five sets:
+  - an airport with a runway, a terminal, a control tower and a viewing deck.
+    A big passenger plane taxis past, a hundred elephants (one instanced
+    mesh) appear row by row, and later the plane races down the runway with
+    a speed meter and weight-versus-lift bars, then takes off;
+  - the open sky: the plane among clouds with the force arrows for weight
+    (red), drag (orange) and thrust (blue), and a green "?" for the fourth;
+  - a wind tunnel: a wing section with streamlines and moving air dots. The
+    wing glows, tilts, and arrows show air pushed down and the wing pushed
+    up ("DAYA ANGKAT!");
+  - the Episode 031 living room: Affan blows over a paper strip, which goes
+    from drooping to level;
+  - a plane cabin with clouds drifting past the windows: Affan in a window
+    seat fastens his seatbelt ("KLIK!").
+- **Audio.** The narration is in Affan's voice, made with ElevenLabs
+  (`eleven_v4`, a single take to save credits). Captions use word timings
+  measured locally with faster-whisper (`audio/narration_words.json`). The
+  soundtrack reuses the Episode 005 instruments and adds:
+  - a jet engine rumble with a rising whine for the take-off roll;
+  - wind in the sky and in the wind tunnel, and an elephant trumpet;
+  - a soft blow over the paper and a seatbelt click.
 
   The mix is normalised to −14 LUFS with a peak limiter at −1.5 dB.

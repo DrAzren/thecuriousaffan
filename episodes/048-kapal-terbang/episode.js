@@ -525,7 +525,7 @@ function thumbnail() {
   ov.tag('thBadge', 'EPISOD 48', { x: W / 2, y: 300 }, { bg: '#2f7bff', small: true });
   ov.bubble('thTitle', 'SEBERAT 100 GAJAH', { x: W / 2, y: 445, r: -3 }, { size: 92 });
   ov.bubble('thTitle2', 'BOLEH TERBANG?!', { x: W / 2, y: 590, r: 2 }, { size: 118, top: '#e0f0ff', bot: '#2f7bff' });
-  ov.html('thQ', ICONS.qmark('#ffcf33'), { x: 930, y: 800, r: 14, s: 0.9 });
+  ov.html('thQ', ICONS.qmark('#ffcf33'), { x: 920, y: 1150, r: 14, s: 0.9 });
   drawLogo(ov, { y: 1425, scale: 0.58 });
   ov.end();
 }
