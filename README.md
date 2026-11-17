@@ -26,6 +26,9 @@ time and can be re-timed to new narration.
 | 040 | Kenapa Daun Berwarna Hijau? | [`episodes/040-daun-hijau`](episodes/040-daun-hijau) | `output/TheCuriousAffan_E040_Kenapa_Daun_Berwarna_Hijau.mp4` |
 | 041 | Kenapa Kita Bersin? | [`episodes/041-kenapa-bersin`](episodes/041-kenapa-bersin) | `output/TheCuriousAffan_E041_Kenapa_Kita_Bersin.mp4` |
 | 042 | Macam Mana Lebah Buat Madu? | [`episodes/042-lebah-madu`](episodes/042-lebah-madu) | `output/TheCuriousAffan_E042_Macam_Mana_Lebah_Buat_Madu.mp4` |
+| 043 | Kenapa Kita Mimpi Bila Tidur? | [`episodes/043-kenapa-mimpi`](episodes/043-kenapa-mimpi) | `output/TheCuriousAffan_E043_Kenapa_Kita_Mimpi_Bila_Tidur.mp4` |
+| 044 | Apa Jadi Kalau Malaysia Ada Salji? | [`episodes/044-salji-malaysia`](episodes/044-salji-malaysia) | `output/TheCuriousAffan_E044_Apa_Jadi_Kalau_Malaysia_Ada_Salji.mp4` |
+| 045 | Macam Mana Petrol Kereta Dihasilkan? | [`episodes/045-petrol-kereta`](episodes/045-petrol-kereta) | `output/TheCuriousAffan_E045_Macam_Mana_Petrol_Kereta_Dihasilkan.mp4` |
 
 ## Build
 
@@ -541,5 +544,104 @@ episode stays consistent.
   - bee buzzes, sips up the tongue and a filling gurgle;
   - mouth-to-mouth plips, enzyme sparkles and a fanning whirr;
   - wax caps clicking shut and twelve honey drips into the spoon.
+
+  The mix is normalised to −14 LUFS with a peak limiter at −1.5 dB.
+
+## Episode 043 at a glance
+
+- **Science.** When we sleep, the body rests but the brain keeps working.
+  Sleep comes in cycles of about 90 minutes. In one part of each cycle the
+  eyes move quickly under the eyelids: that is REM sleep, when we usually
+  dream. Scientists think the brain sorts the day's memories while we sleep,
+  like tidying a wardrobe, and mixed-up memories become strange dreams. We
+  dream several times a night but forget most dreams when we wake up.
+  Scientists are still studying why we dream. Sleep early and long enough
+  (9–12 hours for children).
+- **Picture.** Three sets:
+  - Affan's bedroom, by morning and by night: a bed with a starry blanket, a
+    night lamp, a window with the Moon. Affan sits up or lies asleep, with a
+    small glowing "busy brain" with turning gears above his head, and a dream
+    bubble with a mini dragon. Overlays add a sleep-cycle chart (REM in
+    pink, "90 MINIT") and fast eye-movement marks over his closed eyes;
+  - the dream sky: Affan rides a friendly green dragon among clouds, stars
+    and a big Moon;
+  - the Episode 031 mind stage with a wardrobe of shelves. Coloured memory
+    boxes (ball, cake, toy car, book, dragon, star) orbit the brain, are put
+    away on the shelves, then jump out and mix inside a dream bubble.
+- **Audio.** The narration is in Affan's voice, made with ElevenLabs
+  (`eleven_v4`, a single take to save credits). Captions use word timings
+  measured locally with faster-whisper (`audio/narration_words.json`). The
+  soundtrack reuses the Episode 005 instruments and adds:
+  - a dreamy night pad, dragon wing whooshes and a happy roar;
+  - ticking brain gears, sleep-cycle blips and quick eye flicks;
+  - memory boxes landing on the shelf and dream-bubble shimmers.
+
+  The mix is normalised to −14 LUFS with a peak limiter at −1.5 dB.
+
+## Episode 044 at a glance
+
+- **Science.** Snow forms when clouds are colder than 0°C and water turns
+  into six-armed ice crystals. Malaysia is near the equator, where the Sun is
+  almost straight overhead all year, so it stays about 30°C. The higher you
+  go, the colder it gets (Episode 016). The top of Gunung Kinabalu sometimes
+  has thin ice, but it is still not cold enough for thick snow. If snow fell
+  on Malaysia, rainforest trees and padi would wilt, orang utans have no thick
+  fur like polar bears, roads would be slippery and we would need thick
+  clothes every day. Our warm weather suits plants, animals and us.
+- **Picture.** Five sets:
+  - the Episode 036 playground on a hot day. In Affan's imagination it turns
+    snowy, with frosted leaves, falling snow, a beanie and scarf for Affan,
+    and a snowman wearing a songkok;
+  - inside a cold cloud: a thermometer drops below 0°C, droplets freeze into
+    crystals, and a big snowflake shows its six numbered arms;
+  - the globe: Earth with a red equator, polar ice caps, a Malaysia pin, and
+    sunbeams that hit the equator straight and the poles at a slant;
+  - Gunung Kinabalu: a jagged mountain with forest below, grey rock above and
+    thin sparkling ice at the top, and a thermometer that falls as the
+    camera climbs;
+  - snowy Malaysia: a padi field, rainforest and a kampung house under snow
+    that brown and wilt, a shivering orang utan beside a comfy polar bear, a
+    car skidding on a slippery road, and Affan with frosty breath.
+- **Audio.** The narration is in Affan's voice, made with ElevenLabs
+  (`eleven_v4`, a single take to save credits). Captions use word timings
+  measured locally with faster-whisper (`audio/narration_words.json`). The
+  soundtrack reuses the Episode 005 instruments and adds:
+  - summer cicadas, then a soft wind and sleigh-bell sparkle for the snow;
+  - icy crystal tinkles and a whistling mountain wind;
+  - a wilting slide, shivering chatter, a tyre skid and frosty breaths.
+
+  The mix is normalised to −14 LUFS with a peak limiter at −1.5 dB.
+
+## Episode 045 at a glance
+
+- **Science.** Most oil does not come from dinosaurs. It comes from tiny sea
+  creatures called plankton. Millions of years ago plankton died, sank to the
+  seabed and were buried under mud and rock, and strong pressure and heat
+  turned them into thick black crude oil. Today oil rigs at sea drill deep and
+  pump the crude up; Malaysia has rigs off Terengganu, Sabah and Sarawak. At
+  the refinery the crude is heated in a tall tower: light parts rise, heavy
+  parts stay low, and it separates into gas, petrol, diesel, jet fuel and tar
+  for roads. Tanker lorries take petrol to petrol stations and into our cars.
+  Petrol catches fire easily, so never play near a petrol pump.
+- **Picture.** Five sets:
+  - a petrol station with a canopy, pumps, a car, a tanker lorry that drives
+    in, and the nozzle going into the car. An imagined dinosaur (the Episode
+    043 dragon without wings) appears and gets crossed out;
+  - the ancient sea with light shafts and glowing plankton, some of them big
+    and smiling;
+  - a glass tank of earth layers: plankton settle into a dark layer, mud,
+    sand and rock pile on, pressure arrows and heat glow, and the layer turns
+    to glossy black crude oil;
+  - an oil rig with a cut-away seabed: a drill pipe reaches an oil pocket and
+    crude flows up, with other rigs in the distance;
+  - a refinery: a furnace, a see-through tower with trays, rising vapour, and
+    five outlet pipes to coloured tanks (gas, petrol, jet fuel, diesel, tar).
+- **Audio.** The narration is in Affan's voice, made with ElevenLabs
+  (`eleven_v4`, a single take to save credits). Captions use word timings
+  measured locally with faster-whisper (`audio/narration_words.json`). The
+  soundtrack reuses the Episode 005 instruments and adds:
+  - a station ding, a dinosaur rawr and a poof;
+  - underwater bubbles and hum, heavy layer thumps, a pressure groan;
+  - a drill whirr, oil glugs, a furnace roar and a tanker engine.
 
   The mix is normalised to −14 LUFS with a peak limiter at −1.5 dB.
