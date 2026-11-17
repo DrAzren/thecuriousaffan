@@ -98,9 +98,9 @@ function makeSnowman() {
 function dressWinter(aff) {
   const beanie = new THREE.Group();
   aff.parts.head.add(beanie);
-  add(beanie, new THREE.SphereGeometry(1.0, 32, 16, 0, Math.PI * 2, 0, Math.PI / 2), std(0xd83a5a, 0.8), [0, 0.3, -0.03], [1, 0.95, 0.97]);
-  add(beanie, new THREE.TorusGeometry(0.97, 0.12, 10, 40), std(0xffffff, 0.8), [0, 0.32, -0.03], [Math.PI / 2, 0, 0], [1, 0.97, 1]);
-  add(beanie, new THREE.SphereGeometry(0.2, 16, 12), std(0xffffff, 0.9), [0, 1.28, -0.03]);
+  add(beanie, new THREE.SphereGeometry(0.98, 32, 16, 0, Math.PI * 2, 0, Math.PI / 2), std(0xd83a5a, 0.8), [0, 0.5, -0.06], [1, 0.8, 0.97]);
+  add(beanie, new THREE.TorusGeometry(0.92, 0.11, 10, 40), std(0xffffff, 0.8), [0, 0.52, -0.06], [Math.PI / 2 - 0.12, 0, 0], [1, 0.97, 1]);
+  add(beanie, new THREE.SphereGeometry(0.2, 16, 12), std(0xffffff, 0.9), [0, 1.3, -0.06]);
   const scarf = add(aff.parts.torso, new THREE.TorusGeometry(0.34, 0.11, 10, 28), std(0x3a8cff, 0.8), [0, 1.18, 0.02], [Math.PI / 2, 0, 0]);
   const tail = add(aff.parts.torso, new RoundedBoxGeometry(0.16, 0.5, 0.06, 2, 0.03), std(0x3a8cff, 0.8), [0.15, 0.95, 0.36], [0.1, 0, 0.1]);
   const set = (on) => (beanie.visible = scarf.visible = tail.visible = on);
