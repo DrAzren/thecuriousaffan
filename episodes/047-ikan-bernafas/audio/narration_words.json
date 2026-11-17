@@ -1,0 +1,742 @@
+[
+{
+"text": "Affan",
+"start": 0.0,
+"end": 0.52
+},
+{
+"text": "selalu",
+"start": 0.52,
+"end": 1.1
+},
+{
+"text": "tanya",
+"start": 1.1,
+"end": 1.38
+},
+{
+"text": "papa.",
+"start": 1.38,
+"end": 1.96
+},
+{
+"text": "Papa!",
+"start": 2.84,
+"end": 2.84
+},
+{
+"text": "Mulut",
+"start": 3.12,
+"end": 3.38
+},
+{
+"text": "ikan",
+"start": 3.38,
+"end": 3.66
+},
+{
+"text": "ni",
+"start": 3.66,
+"end": 3.88
+},
+{
+"text": "buka",
+"start": 3.88,
+"end": 4.38
+},
+{
+"text": "tutup,",
+"start": 4.38,
+"end": 4.94
+},
+{
+"text": "buka",
+"start": 4.98,
+"end": 5.44
+},
+{
+"text": "tutup...",
+"start": 5.44,
+"end": 6.18
+},
+{
+"text": "ikan",
+"start": 6.3,
+"end": 6.54
+},
+{
+"text": "minum",
+"start": 6.54,
+"end": 6.82
+},
+{
+"text": "air",
+"start": 6.82,
+"end": 7.16
+},
+{
+"text": "ke?",
+"start": 7.16,
+"end": 7.46
+},
+{
+"text": "Kita",
+"start": 7.88,
+"end": 8.24
+},
+{
+"text": "tak",
+"start": 8.24,
+"end": 8.46
+},
+{
+"text": "boleh",
+"start": 8.46,
+"end": 8.68
+},
+{
+"text": "bernafas",
+"start": 8.68,
+"end": 9.12
+},
+{
+"text": "dalam",
+"start": 9.12,
+"end": 9.42
+},
+{
+"text": "air...",
+"start": 9.42,
+"end": 9.9
+},
+{
+"text": "macam",
+"start": 10.34,
+"end": 10.62
+},
+{
+"text": "mana",
+"start": 10.62,
+"end": 10.76
+},
+{
+"text": "ikan",
+"start": 10.76,
+"end": 11.1
+},
+{
+"text": "boleh?",
+"start": 11.1,
+"end": 11.52
+},
+{
+"text": "Jom",
+"start": 11.84,
+"end": 12.16
+},
+{
+"text": "ikut",
+"start": 12.16,
+"end": 12.42
+},
+{
+"text": "Affan",
+"start": 12.42,
+"end": 12.7
+},
+{
+"text": "cari",
+"start": 12.7,
+"end": 12.94
+},
+{
+"text": "jawapan!",
+"start": 12.94,
+"end": 13.58
+},
+{
+"text": "Sebenarnya,",
+"start": 14.3,
+"end": 15.02
+},
+{
+"text": "dalam",
+"start": 15.3,
+"end": 15.46
+},
+{
+"text": "air",
+"start": 15.46,
+"end": 15.82
+},
+{
+"text": "ada",
+"start": 15.82,
+"end": 16.12
+},
+{
+"text": "oksigen",
+"start": 16.12,
+"end": 16.6
+},
+{
+"text": "juga,",
+"start": 16.6,
+"end": 17.12
+},
+{
+"text": "tapi",
+"start": 17.46,
+"end": 17.92
+},
+{
+"text": "sedikit",
+"start": 17.92,
+"end": 18.54
+},
+{
+"text": "sangat,",
+"start": 18.54,
+"end": 18.98
+},
+{
+"text": "tersorok",
+"start": 18.98,
+"end": 19.66
+},
+{
+"text": "dalam",
+"start": 19.66,
+"end": 19.98
+},
+{
+"text": "air.",
+"start": 19.98,
+"end": 20.4
+},
+{
+"text": "Ikan",
+"start": 20.6,
+"end": 20.98
+},
+{
+"text": "bernafas",
+"start": 20.98,
+"end": 21.58
+},
+{
+"text": "guna",
+"start": 21.58,
+"end": 21.88
+},
+{
+"text": "insang!",
+"start": 21.88,
+"end": 22.52
+},
+{
+"text": "Air",
+"start": 22.9,
+"end": 23.18
+},
+{
+"text": "masuk",
+"start": 23.18,
+"end": 23.6
+},
+{
+"text": "melalui",
+"start": 23.6,
+"end": 24.06
+},
+{
+"text": "mulut...",
+"start": 24.06,
+"end": 24.8
+},
+{
+"text": "lalu",
+"start": 25.04,
+"end": 25.2
+},
+{
+"text": "di",
+"start": 25.2,
+"end": 25.59
+},
+{
+"text": "insang...",
+"start": 25.59,
+"end": 25.98
+},
+{
+"text": "dan",
+"start": 25.98,
+"end": 26.38
+},
+{
+"text": "keluar",
+"start": 26.38,
+"end": 26.86
+},
+{
+"text": "melalui",
+"start": 26.86,
+"end": 27.4
+},
+{
+"text": "celah",
+"start": 27.4,
+"end": 27.78
+},
+{
+"text": "di",
+"start": 27.78,
+"end": 27.96
+},
+{
+"text": "tepi",
+"start": 27.96,
+"end": 28.2
+},
+{
+"text": "kepala.",
+"start": 28.2,
+"end": 28.62
+},
+{
+"text": "Insang",
+"start": 28.62,
+"end": 29.46
+},
+{
+"text": "ada",
+"start": 29.46,
+"end": 29.74
+},
+{
+"text": "kepingan",
+"start": 29.74,
+"end": 30.22
+},
+{
+"text": "halus",
+"start": 30.22,
+"end": 30.66
+},
+{
+"text": "berwarna",
+"start": 30.66,
+"end": 31.12
+},
+{
+"text": "merah,",
+"start": 31.12,
+"end": 31.72
+},
+{
+"text": "penuh",
+"start": 31.9,
+"end": 32.26
+},
+{
+"text": "dengan",
+"start": 32.26,
+"end": 32.56
+},
+{
+"text": "saluran",
+"start": 32.56,
+"end": 32.96
+},
+{
+"text": "darah",
+"start": 32.96,
+"end": 33.3
+},
+{
+"text": "yang",
+"start": 33.3,
+"end": 33.52
+},
+{
+"text": "kecil.",
+"start": 33.52,
+"end": 34.14
+},
+{
+"text": "Bila",
+"start": 34.34,
+"end": 34.6
+},
+{
+"text": "air",
+"start": 34.6,
+"end": 34.84
+},
+{
+"text": "lalu,",
+"start": 34.84,
+"end": 35.44
+},
+{
+"text": "oksigen",
+"start": 35.7,
+"end": 36.06
+},
+{
+"text": "masuk",
+"start": 36.06,
+"end": 36.58
+},
+{
+"text": "ke",
+"start": 36.58,
+"end": 36.76
+},
+{
+"text": "dalam",
+"start": 36.76,
+"end": 36.98
+},
+{
+"text": "darah",
+"start": 36.98,
+"end": 37.26
+},
+{
+"text": "ikan!",
+"start": 37.26,
+"end": 37.82
+},
+{
+"text": "Tapi",
+"start": 38.22,
+"end": 38.4
+},
+{
+"text": "kalau",
+"start": 38.4,
+"end": 38.8
+},
+{
+"text": "ikan",
+"start": 38.8,
+"end": 39.14
+},
+{
+"text": "keluar",
+"start": 39.14,
+"end": 39.56
+},
+{
+"text": "dari",
+"start": 39.56,
+"end": 39.82
+},
+{
+"text": "air,",
+"start": 39.82,
+"end": 40.16
+},
+{
+"text": "insangnya",
+"start": 40.54,
+"end": 41.14
+},
+{
+"text": "melekat-lekat",
+"start": 41.14,
+"end": 41.92
+},
+{
+"text": "dan",
+"start": 41.92,
+"end": 42.14
+},
+{
+"text": "tak",
+"start": 42.14,
+"end": 42.34
+},
+{
+"text": "boleh",
+"start": 42.34,
+"end": 42.58
+},
+{
+"text": "berfungsi.",
+"start": 42.58,
+"end": 43.52
+},
+{
+"text": "Paru-paru",
+"start": 43.74,
+"end": 44.2
+},
+{
+"text": "kita",
+"start": 44.2,
+"end": 44.52
+},
+{
+"text": "pula",
+"start": 44.52,
+"end": 44.86
+},
+{
+"text": "tak",
+"start": 44.86,
+"end": 45.12
+},
+{
+"text": "boleh",
+"start": 45.12,
+"end": 45.34
+},
+{
+"text": "ambil",
+"start": 45.34,
+"end": 45.58
+},
+{
+"text": "oksigen",
+"start": 45.58,
+"end": 46.1
+},
+{
+"text": "dari",
+"start": 46.1,
+"end": 46.36
+},
+{
+"text": "air!",
+"start": 46.36,
+"end": 46.8
+},
+{
+"text": "Tahu",
+"start": 47.12,
+"end": 47.42
+},
+{
+"text": "tak?",
+"start": 47.42,
+"end": 47.82
+},
+{
+"text": "Ikan",
+"start": 48.14,
+"end": 48.46
+},
+{
+"text": "keli,",
+"start": 48.46,
+"end": 48.98
+},
+{
+"text": "puyu",
+"start": 49.34,
+"end": 49.7
+},
+{
+"text": "dan",
+"start": 49.7,
+"end": 50.0
+},
+{
+"text": "haruan",
+"start": 50.0,
+"end": 50.52
+},
+{
+"text": "ada",
+"start": 50.52,
+"end": 51.16
+},
+{
+"text": "organ",
+"start": 51.16,
+"end": 51.52
+},
+{
+"text": "nafas",
+"start": 51.52,
+"end": 51.9
+},
+{
+"text": "tambahan.",
+"start": 51.9,
+"end": 52.58
+},
+{
+"text": "Ia",
+"start": 52.96,
+"end": 53.2
+},
+{
+"text": "boleh",
+"start": 53.2,
+"end": 53.48
+},
+{
+"text": "naik",
+"start": 53.48,
+"end": 53.86
+},
+{
+"text": "ke",
+"start": 53.86,
+"end": 54.06
+},
+{
+"text": "permukaan",
+"start": 54.06,
+"end": 54.82
+},
+{
+"text": "dan",
+"start": 54.82,
+"end": 55.14
+},
+{
+"text": "hirup",
+"start": 55.14,
+"end": 55.52
+},
+{
+"text": "udara!",
+"start": 55.52,
+"end": 56.1
+},
+{
+"text": "Waaah,",
+"start": 56.1,
+"end": 57.02
+},
+{
+"text": "rupanya",
+"start": 57.42,
+"end": 57.96
+},
+{
+"text": "insang",
+"start": 57.96,
+"end": 58.46
+},
+{
+"text": "tu",
+"start": 58.46,
+"end": 58.7
+},
+{
+"text": "macam",
+"start": 58.7,
+"end": 59.0
+},
+{
+"text": "penapis",
+"start": 59.0,
+"end": 59.48
+},
+{
+"text": "oksigen!",
+"start": 59.48,
+"end": 60.38
+},
+{
+"text": "Jangan",
+"start": 60.7,
+"end": 60.9
+},
+{
+"text": "lupa",
+"start": 60.9,
+"end": 61.26
+},
+{
+"text": "tukar",
+"start": 61.26,
+"end": 61.64
+},
+{
+"text": "air",
+"start": 61.64,
+"end": 61.78
+},
+{
+"text": "akuarium,",
+"start": 61.78,
+"end": 62.64
+},
+{
+"text": "supaya",
+"start": 62.64,
+"end": 63.2
+},
+{
+"text": "ikan",
+"start": 63.2,
+"end": 63.58
+},
+{
+"text": "dapat",
+"start": 63.58,
+"end": 63.86
+},
+{
+"text": "oksigen",
+"start": 63.86,
+"end": 64.4
+},
+{
+"text": "yang",
+"start": 64.4,
+"end": 64.62
+},
+{
+"text": "cukup,",
+"start": 64.62,
+"end": 65.04
+},
+{
+"text": "ya.",
+"start": 65.04,
+"end": 65.3
+},
+{
+"text": "Apa",
+"start": 65.68,
+"end": 65.84
+},
+{
+"text": "lagi",
+"start": 65.84,
+"end": 66.14
+},
+{
+"text": "kita",
+"start": 66.14,
+"end": 66.36
+},
+{
+"text": "nak",
+"start": 66.36,
+"end": 66.54
+},
+{
+"text": "belajar",
+"start": 66.54,
+"end": 66.84
+},
+{
+"text": "lepas",
+"start": 66.84,
+"end": 67.2
+},
+{
+"text": "ni?",
+"start": 67.2,
+"end": 67.4
+}
+]
