@@ -1,0 +1,792 @@
+[
+{
+"text": "Affan",
+"start": 0.0,
+"end": 0.56
+},
+{
+"text": "selalu",
+"start": 0.56,
+"end": 1.2
+},
+{
+"text": "tanya",
+"start": 1.2,
+"end": 1.48
+},
+{
+"text": "papa.",
+"start": 1.48,
+"end": 1.98
+},
+{
+"text": "Sedapnya",
+"start": 2.6,
+"end": 3.28
+},
+{
+"text": "coklat",
+"start": 3.28,
+"end": 3.72
+},
+{
+"text": "ni!",
+"start": 3.72,
+"end": 4.2
+},
+{
+"text": "Papa,",
+"start": 4.66,
+"end": 4.98
+},
+{
+"text": "coklat",
+"start": 5.3,
+"end": 5.66
+},
+{
+"text": "ni",
+"start": 5.66,
+"end": 5.84
+},
+{
+"text": "datang",
+"start": 5.84,
+"end": 6.12
+},
+{
+"text": "dari",
+"start": 6.12,
+"end": 6.32
+},
+{
+"text": "mana?",
+"start": 6.32,
+"end": 6.72
+},
+{
+"text": "Macam",
+"start": 7.02,
+"end": 7.34
+},
+{
+"text": "mana",
+"start": 7.34,
+"end": 7.5
+},
+{
+"text": "ia",
+"start": 7.5,
+"end": 7.72
+},
+{
+"text": "dihasilkan?",
+"start": 7.72,
+"end": 8.44
+},
+{
+"text": "Jom",
+"start": 8.7,
+"end": 8.98
+},
+{
+"text": "ikut",
+"start": 8.98,
+"end": 9.22
+},
+{
+"text": "Affan",
+"start": 9.22,
+"end": 9.5
+},
+{
+"text": "cari",
+"start": 9.5,
+"end": 9.74
+},
+{
+"text": "jawapan!",
+"start": 9.74,
+"end": 10.26
+},
+{
+"text": "Coklat",
+"start": 10.6,
+"end": 11.14
+},
+{
+"text": "datang",
+"start": 11.14,
+"end": 11.52
+},
+{
+"text": "dari",
+"start": 11.52,
+"end": 11.74
+},
+{
+"text": "pokok",
+"start": 11.74,
+"end": 12.1
+},
+{
+"text": "koko!",
+"start": 12.1,
+"end": 12.62
+},
+{
+"text": "Buahnya",
+"start": 13.0,
+"end": 13.44
+},
+{
+"text": "besar,",
+"start": 13.44,
+"end": 14.14
+},
+{
+"text": "dan",
+"start": 14.14,
+"end": 14.58
+},
+{
+"text": "tumbuh",
+"start": 14.58,
+"end": 14.98
+},
+{
+"text": "terus",
+"start": 14.98,
+"end": 15.42
+},
+{
+"text": "pada",
+"start": 15.42,
+"end": 15.68
+},
+{
+"text": "batang",
+"start": 15.68,
+"end": 16.0
+},
+{
+"text": "pokok.",
+"start": 16.0,
+"end": 16.56
+},
+{
+"text": "Di",
+"start": 16.66,
+"end": 16.82
+},
+{
+"text": "Malaysia",
+"start": 16.82,
+"end": 17.22
+},
+{
+"text": "pun",
+"start": 17.22,
+"end": 17.58
+},
+{
+"text": "ada",
+"start": 17.58,
+"end": 17.86
+},
+{
+"text": "ladang",
+"start": 17.86,
+"end": 18.12
+},
+{
+"text": "koko,",
+"start": 18.12,
+"end": 18.6
+},
+{
+"text": "di",
+"start": 18.86,
+"end": 19.19
+},
+{
+"text": "Sabah",
+"start": 19.19,
+"end": 19.52
+},
+{
+"text": "dan",
+"start": 19.52,
+"end": 19.76
+},
+{
+"text": "Pahang.",
+"start": 19.76,
+"end": 20.32
+},
+{
+"text": "Bila",
+"start": 20.48,
+"end": 20.78
+},
+{
+"text": "buahnya",
+"start": 20.78,
+"end": 21.26
+},
+{
+"text": "dibelah,",
+"start": 21.26,
+"end": 21.88
+},
+{
+"text": "ada",
+"start": 22.06,
+"end": 22.28
+},
+{
+"text": "biji-biji",
+"start": 22.28,
+"end": 22.88
+},
+{
+"text": "berselaput",
+"start": 22.88,
+"end": 23.46
+},
+{
+"text": "putih",
+"start": 23.46,
+"end": 23.94
+},
+{
+"text": "di",
+"start": 23.94,
+"end": 24.14
+},
+{
+"text": "dalam.",
+"start": 24.14,
+"end": 24.42
+},
+{
+"text": "Tapi",
+"start": 24.76,
+"end": 25.3
+},
+{
+"text": "rasa",
+"start": 25.3,
+"end": 25.66
+},
+{
+"text": "biji",
+"start": 25.66,
+"end": 25.98
+},
+{
+"text": "koko",
+"start": 25.98,
+"end": 26.3
+},
+{
+"text": "mentah...",
+"start": 26.3,
+"end": 27.16
+},
+{
+"text": "pahit!",
+"start": 27.3,
+"end": 28.04
+},
+{
+"text": "Biji",
+"start": 28.04,
+"end": 28.58
+},
+{
+"text": "koko",
+"start": 28.58,
+"end": 28.88
+},
+{
+"text": "diperam",
+"start": 28.88,
+"end": 29.34
+},
+{
+"text": "beberapa",
+"start": 29.34,
+"end": 29.94
+},
+{
+"text": "hari",
+"start": 29.94,
+"end": 30.38
+},
+{
+"text": "sampai",
+"start": 30.38,
+"end": 30.98
+},
+{
+"text": "warnanya",
+"start": 30.98,
+"end": 31.52
+},
+{
+"text": "jadi",
+"start": 31.52,
+"end": 31.82
+},
+{
+"text": "perang.",
+"start": 31.82,
+"end": 32.36
+},
+{
+"text": "Lepas",
+"start": 32.42,
+"end": 32.82
+},
+{
+"text": "tu",
+"start": 32.82,
+"end": 33.04
+},
+{
+"text": "dijemur",
+"start": 33.04,
+"end": 33.64
+},
+{
+"text": "di",
+"start": 33.64,
+"end": 33.82
+},
+{
+"text": "bawah",
+"start": 33.82,
+"end": 34.02
+},
+{
+"text": "matahari,",
+"start": 34.02,
+"end": 34.78
+},
+{
+"text": "kemudian",
+"start": 35.0,
+"end": 35.38
+},
+{
+"text": "dipanggang...",
+"start": 35.38,
+"end": 36.32
+},
+{
+"text": "baunya",
+"start": 36.6,
+"end": 36.94
+},
+{
+"text": "mula",
+"start": 36.94,
+"end": 37.36
+},
+{
+"text": "wangi",
+"start": 37.36,
+"end": 37.98
+},
+{
+"text": "macam",
+"start": 37.98,
+"end": 38.32
+},
+{
+"text": "coklat!",
+"start": 38.32,
+"end": 39.08
+},
+{
+"text": "Kulit",
+"start": 39.24,
+"end": 39.62
+},
+{
+"text": "biji",
+"start": 39.62,
+"end": 40.02
+},
+{
+"text": "dibuang,",
+"start": 40.02,
+"end": 40.68
+},
+{
+"text": "dan",
+"start": 40.68,
+"end": 40.96
+},
+{
+"text": "isinya",
+"start": 40.96,
+"end": 41.44
+},
+{
+"text": "dikisar",
+"start": 41.44,
+"end": 42.22
+},
+{
+"text": "sampai",
+"start": 42.22,
+"end": 42.64
+},
+{
+"text": "jadi",
+"start": 42.64,
+"end": 42.94
+},
+{
+"text": "pes",
+"start": 42.94,
+"end": 43.18
+},
+{
+"text": "coklat",
+"start": 43.18,
+"end": 43.56
+},
+{
+"text": "yang",
+"start": 43.56,
+"end": 43.88
+},
+{
+"text": "cair.",
+"start": 43.88,
+"end": 44.1
+},
+{
+"text": "Kemudian",
+"start": 44.36,
+"end": 44.96
+},
+{
+"text": "dicampur",
+"start": 44.96,
+"end": 45.42
+},
+{
+"text": "gula,",
+"start": 45.42,
+"end": 46.06
+},
+{
+"text": "susu",
+"start": 46.32,
+"end": 46.8
+},
+{
+"text": "dan",
+"start": 46.8,
+"end": 47.08
+},
+{
+"text": "lemak",
+"start": 47.08,
+"end": 47.38
+},
+{
+"text": "koko,",
+"start": 47.38,
+"end": 47.78
+},
+{
+"text": "dan",
+"start": 47.78,
+"end": 48.18
+},
+{
+"text": "dikacau",
+"start": 48.18,
+"end": 48.88
+},
+{
+"text": "lama-lama",
+"start": 48.88,
+"end": 49.52
+},
+{
+"text": "sampai",
+"start": 49.52,
+"end": 50.1
+},
+{
+"text": "licin.",
+"start": 50.1,
+"end": 50.78
+},
+{
+"text": "Akhirnya",
+"start": 51.02,
+"end": 51.56
+},
+{
+"text": "coklat",
+"start": 51.56,
+"end": 52.02
+},
+{
+"text": "cair",
+"start": 52.02,
+"end": 52.36
+},
+{
+"text": "dituang",
+"start": 52.36,
+"end": 52.92
+},
+{
+"text": "ke",
+"start": 52.92,
+"end": 53.12
+},
+{
+"text": "dalam",
+"start": 53.12,
+"end": 53.34
+},
+{
+"text": "acuan,",
+"start": 53.34,
+"end": 53.86
+},
+{
+"text": "dan",
+"start": 53.86,
+"end": 54.28
+},
+{
+"text": "disejukkan",
+"start": 54.28,
+"end": 55.12
+},
+{
+"text": "jadi",
+"start": 55.12,
+"end": 55.36
+},
+{
+"text": "kepingan",
+"start": 55.36,
+"end": 55.86
+},
+{
+"text": "coklat.",
+"start": 55.86,
+"end": 56.46
+},
+{
+"text": "Tahu",
+"start": 56.46,
+"end": 56.86
+},
+{
+"text": "tak?",
+"start": 56.86,
+"end": 57.16
+},
+{
+"text": "Lemak",
+"start": 57.36,
+"end": 57.62
+},
+{
+"text": "koko",
+"start": 57.62,
+"end": 57.96
+},
+{
+"text": "cair",
+"start": 57.96,
+"end": 58.32
+},
+{
+"text": "pada",
+"start": 58.32,
+"end": 58.62
+},
+{
+"text": "suhu",
+"start": 58.62,
+"end": 58.92
+},
+{
+"text": "badan",
+"start": 58.92,
+"end": 59.26
+},
+{
+"text": "kita.",
+"start": 59.26,
+"end": 59.68
+},
+{
+"text": "Sebab",
+"start": 59.92,
+"end": 60.32
+},
+{
+"text": "tu",
+"start": 60.32,
+"end": 60.48
+},
+{
+"text": "coklat",
+"start": 60.48,
+"end": 60.82
+},
+{
+"text": "cair",
+"start": 60.82,
+"end": 61.06
+},
+{
+"text": "dalam",
+"start": 61.06,
+"end": 61.34
+},
+{
+"text": "mulut!",
+"start": 61.34,
+"end": 61.9
+},
+{
+"text": "Waaah,",
+"start": 62.24,
+"end": 62.72
+},
+{
+"text": "rupanya",
+"start": 63.0,
+"end": 63.48
+},
+{
+"text": "sekeping",
+"start": 63.48,
+"end": 63.92
+},
+{
+"text": "coklat",
+"start": 63.92,
+"end": 64.4
+},
+{
+"text": "datang",
+"start": 64.4,
+"end": 64.76
+},
+{
+"text": "dari",
+"start": 64.76,
+"end": 65.04
+},
+{
+"text": "perjalanan",
+"start": 65.04,
+"end": 65.72
+},
+{
+"text": "yang",
+"start": 65.72,
+"end": 66.02
+},
+{
+"text": "panjang!",
+"start": 66.02,
+"end": 66.96
+},
+{
+"text": "Tapi",
+"start": 67.28,
+"end": 67.7
+},
+{
+"text": "jangan",
+"start": 67.7,
+"end": 68.06
+},
+{
+"text": "makan",
+"start": 68.06,
+"end": 68.32
+},
+{
+"text": "banyak",
+"start": 68.32,
+"end": 68.7
+},
+{
+"text": "sangat,",
+"start": 68.7,
+"end": 69.14
+},
+{
+"text": "dan",
+"start": 69.14,
+"end": 69.5
+},
+{
+"text": "gosok",
+"start": 69.5,
+"end": 69.82
+},
+{
+"text": "gigi,",
+"start": 69.82,
+"end": 70.22
+},
+{
+"text": "ya.",
+"start": 70.22,
+"end": 70.4
+},
+{
+"text": "Apa",
+"start": 70.68,
+"end": 70.88
+},
+{
+"text": "lagi",
+"start": 70.88,
+"end": 71.16
+},
+{
+"text": "kita",
+"start": 71.16,
+"end": 71.42
+},
+{
+"text": "nak",
+"start": 71.42,
+"end": 71.58
+},
+{
+"text": "belajar",
+"start": 71.58,
+"end": 71.88
+},
+{
+"text": "lepas",
+"start": 71.88,
+"end": 72.24
+},
+{
+"text": "ni?",
+"start": 72.24,
+"end": 72.42
+}
+]

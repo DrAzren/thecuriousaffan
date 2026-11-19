@@ -1,0 +1,762 @@
+[
+{
+"text": "Affan",
+"start": 0.0,
+"end": 0.54
+},
+{
+"text": "selalu",
+"start": 0.54,
+"end": 1.02
+},
+{
+"text": "tanya",
+"start": 1.02,
+"end": 1.32
+},
+{
+"text": "papa.",
+"start": 1.32,
+"end": 1.86
+},
+{
+"text": "Papa!",
+"start": 2.28,
+"end": 2.6
+},
+{
+"text": "Bila",
+"start": 3.12,
+"end": 3.36
+},
+{
+"text": "Affan",
+"start": 3.36,
+"end": 3.64
+},
+{
+"text": "tekan",
+"start": 3.64,
+"end": 4.0
+},
+{
+"text": "lengan,",
+"start": 4.0,
+"end": 4.54
+},
+{
+"text": "rasa",
+"start": 4.82,
+"end": 4.96
+},
+{
+"text": "keras.",
+"start": 4.96,
+"end": 5.58
+},
+{
+"text": "Ini",
+"start": 6.06,
+"end": 6.2
+},
+{
+"text": "tulang",
+"start": 6.2,
+"end": 6.66
+},
+{
+"text": "ke?",
+"start": 6.66,
+"end": 6.92
+},
+{
+"text": "Berapa",
+"start": 7.4,
+"end": 7.7
+},
+{
+"text": "banyak",
+"start": 7.7,
+"end": 8.08
+},
+{
+"text": "tulang",
+"start": 8.08,
+"end": 8.4
+},
+{
+"text": "dalam",
+"start": 8.4,
+"end": 8.68
+},
+{
+"text": "badan",
+"start": 8.68,
+"end": 8.96
+},
+{
+"text": "kita?",
+"start": 8.96,
+"end": 9.34
+},
+{
+"text": "Jom",
+"start": 9.68,
+"end": 9.92
+},
+{
+"text": "ikut",
+"start": 9.92,
+"end": 10.18
+},
+{
+"text": "Affan",
+"start": 10.18,
+"end": 10.44
+},
+{
+"text": "cari",
+"start": 10.44,
+"end": 10.72
+},
+{
+"text": "jawapan!",
+"start": 10.72,
+"end": 11.22
+},
+{
+"text": "Orang",
+"start": 11.62,
+"end": 11.92
+},
+{
+"text": "dewasa",
+"start": 11.92,
+"end": 12.58
+},
+{
+"text": "ada",
+"start": 12.58,
+"end": 12.86
+},
+{
+"text": "dua",
+"start": 12.86,
+"end": 13.18
+},
+{
+"text": "ratus",
+"start": 13.18,
+"end": 13.5
+},
+{
+"text": "enam",
+"start": 13.5,
+"end": 13.82
+},
+{
+"text": "tulang!",
+"start": 13.82,
+"end": 14.58
+},
+{
+"text": "Tapi",
+"start": 14.74,
+"end": 15.24
+},
+{
+"text": "bayi",
+"start": 15.24,
+"end": 15.72
+},
+{
+"text": "lahir",
+"start": 15.72,
+"end": 16.06
+},
+{
+"text": "dengan",
+"start": 16.06,
+"end": 16.38
+},
+{
+"text": "hampir",
+"start": 16.38,
+"end": 16.76
+},
+{
+"text": "tiga",
+"start": 16.76,
+"end": 17.09
+},
+{
+"text": "ratus",
+"start": 17.09,
+"end": 17.42
+},
+{
+"text": "tulang.",
+"start": 17.42,
+"end": 18.18
+},
+{
+"text": "Bila",
+"start": 18.6,
+"end": 18.82
+},
+{
+"text": "membesar,",
+"start": 18.82,
+"end": 19.7
+},
+{
+"text": "sebahagian",
+"start": 19.88,
+"end": 20.28
+},
+{
+"text": "tulang",
+"start": 20.28,
+"end": 20.62
+},
+{
+"text": "bercantum",
+"start": 20.62,
+"end": 21.3
+},
+{
+"text": "jadi",
+"start": 21.3,
+"end": 21.54
+},
+{
+"text": "satu.",
+"start": 21.54,
+"end": 21.94
+},
+{
+"text": "Tahu",
+"start": 22.3,
+"end": 22.58
+},
+{
+"text": "tak,",
+"start": 22.58,
+"end": 22.86
+},
+{
+"text": "lebih",
+"start": 23.2,
+"end": 23.44
+},
+{
+"text": "separuh",
+"start": 23.44,
+"end": 24.0
+},
+{
+"text": "tulang",
+"start": 24.0,
+"end": 24.34
+},
+{
+"text": "kita",
+"start": 24.34,
+"end": 24.72
+},
+{
+"text": "ada",
+"start": 24.72,
+"end": 25.06
+},
+{
+"text": "di",
+"start": 25.06,
+"end": 25.26
+},
+{
+"text": "tangan",
+"start": 25.26,
+"end": 25.62
+},
+{
+"text": "dan",
+"start": 25.62,
+"end": 25.84
+},
+{
+"text": "kaki!",
+"start": 25.84,
+"end": 26.54
+},
+{
+"text": "Sebab",
+"start": 26.72,
+"end": 27.08
+},
+{
+"text": "tu",
+"start": 27.08,
+"end": 27.34
+},
+{
+"text": "jari",
+"start": 27.34,
+"end": 27.64
+},
+{
+"text": "kita",
+"start": 27.64,
+"end": 27.88
+},
+{
+"text": "boleh",
+"start": 27.88,
+"end": 28.14
+},
+{
+"text": "bergerak",
+"start": 28.14,
+"end": 28.68
+},
+{
+"text": "dengan",
+"start": 28.68,
+"end": 28.94
+},
+{
+"text": "cekap.",
+"start": 28.94,
+"end": 29.26
+},
+{
+"text": "Tulang",
+"start": 29.26,
+"end": 29.96
+},
+{
+"text": "paling",
+"start": 29.96,
+"end": 30.12
+},
+{
+"text": "panjang",
+"start": 30.12,
+"end": 30.8
+},
+{
+"text": "ialah",
+"start": 30.8,
+"end": 31.18
+},
+{
+"text": "tulang",
+"start": 31.18,
+"end": 31.56
+},
+{
+"text": "paha.",
+"start": 31.56,
+"end": 32.22
+},
+{
+"text": "Yang",
+"start": 32.56,
+"end": 32.56
+},
+{
+"text": "paling",
+"start": 32.56,
+"end": 32.86
+},
+{
+"text": "kecil,",
+"start": 32.86,
+"end": 33.44
+},
+{
+"text": "tulang",
+"start": 33.66,
+"end": 33.92
+},
+{
+"text": "sanggurdi",
+"start": 33.92,
+"end": 34.6
+},
+{
+"text": "dalam",
+"start": 34.6,
+"end": 34.86
+},
+{
+"text": "telinga,",
+"start": 34.86,
+"end": 35.54
+},
+{
+"text": "lebih",
+"start": 35.74,
+"end": 36.02
+},
+{
+"text": "kecil",
+"start": 36.02,
+"end": 36.44
+},
+{
+"text": "dari",
+"start": 36.44,
+"end": 36.7
+},
+{
+"text": "sebutir",
+"start": 36.7,
+"end": 37.1
+},
+{
+"text": "beras!",
+"start": 37.1,
+"end": 37.64
+},
+{
+"text": "Tulang",
+"start": 37.86,
+"end": 38.18
+},
+{
+"text": "juga",
+"start": 38.18,
+"end": 38.62
+},
+{
+"text": "melindungi",
+"start": 38.62,
+"end": 39.28
+},
+{
+"text": "badan.",
+"start": 39.28,
+"end": 39.96
+},
+{
+"text": "Tengkorak",
+"start": 40.1,
+"end": 40.7
+},
+{
+"text": "jaga",
+"start": 40.7,
+"end": 41.0
+},
+{
+"text": "otak,",
+"start": 41.0,
+"end": 41.62
+},
+{
+"text": "tulang",
+"start": 41.68,
+"end": 42.0
+},
+{
+"text": "rusuk",
+"start": 42.0,
+"end": 42.46
+},
+{
+"text": "jaga",
+"start": 42.46,
+"end": 42.78
+},
+{
+"text": "jantung",
+"start": 42.78,
+"end": 43.26
+},
+{
+"text": "dan",
+"start": 43.26,
+"end": 43.54
+},
+{
+"text": "paru-paru.",
+"start": 43.54,
+"end": 44.34
+},
+{
+"text": "Dan",
+"start": 44.56,
+"end": 44.76
+},
+{
+"text": "di",
+"start": 44.76,
+"end": 44.92
+},
+{
+"text": "dalam",
+"start": 44.92,
+"end": 45.14
+},
+{
+"text": "tulang",
+"start": 45.14,
+"end": 45.58
+},
+{
+"text": "ada",
+"start": 45.58,
+"end": 45.84
+},
+{
+"text": "sumsum,",
+"start": 45.84,
+"end": 46.48
+},
+{
+"text": "yang",
+"start": 46.48,
+"end": 46.82
+},
+{
+"text": "buat",
+"start": 46.82,
+"end": 47.06
+},
+{
+"text": "sel",
+"start": 47.06,
+"end": 47.28
+},
+{
+"text": "darah!",
+"start": 47.28,
+"end": 47.96
+},
+{
+"text": "Tulang",
+"start": 48.16,
+"end": 48.44
+},
+{
+"text": "kita",
+"start": 48.44,
+"end": 48.78
+},
+{
+"text": "hidup",
+"start": 48.78,
+"end": 49.36
+},
+{
+"text": "dan",
+"start": 49.36,
+"end": 49.66
+},
+{
+"text": "terus",
+"start": 49.66,
+"end": 50.04
+},
+{
+"text": "membesar.",
+"start": 50.04,
+"end": 50.96
+},
+{
+"text": "Ia",
+"start": 51.06,
+"end": 51.38
+},
+{
+"text": "perlukan",
+"start": 51.38,
+"end": 51.84
+},
+{
+"text": "kalsium",
+"start": 51.84,
+"end": 52.38
+},
+{
+"text": "dari",
+"start": 52.38,
+"end": 52.66
+},
+{
+"text": "susu,",
+"start": 52.66,
+"end": 53.32
+},
+{
+"text": "ikan",
+"start": 53.56,
+"end": 53.8
+},
+{
+"text": "bilis",
+"start": 53.8,
+"end": 54.3
+},
+{
+"text": "dan",
+"start": 54.3,
+"end": 54.56
+},
+{
+"text": "sayur",
+"start": 54.56,
+"end": 54.86
+},
+{
+"text": "hijau,",
+"start": 54.86,
+"end": 55.44
+},
+{
+"text": "dan",
+"start": 55.64,
+"end": 55.88
+},
+{
+"text": "cahaya",
+"start": 55.88,
+"end": 56.24
+},
+{
+"text": "matahari",
+"start": 56.24,
+"end": 56.7
+},
+{
+"text": "pagi.",
+"start": 56.7,
+"end": 57.36
+},
+{
+"text": "Waaah,",
+"start": 57.36,
+"end": 57.96
+},
+{
+"text": "rupanya",
+"start": 58.58,
+"end": 59.18
+},
+{
+"text": "badan",
+"start": 59.18,
+"end": 59.62
+},
+{
+"text": "kita",
+"start": 59.62,
+"end": 59.86
+},
+{
+"text": "ada",
+"start": 59.86,
+"end": 60.18
+},
+{
+"text": "rangka",
+"start": 60.18,
+"end": 60.56
+},
+{
+"text": "yang",
+"start": 60.56,
+"end": 60.84
+},
+{
+"text": "hebat!",
+"start": 60.84,
+"end": 61.62
+},
+{
+"text": "Jom",
+"start": 61.82,
+"end": 62.08
+},
+{
+"text": "minum",
+"start": 62.08,
+"end": 62.38
+},
+{
+"text": "susu",
+"start": 62.38,
+"end": 62.94
+},
+{
+"text": "dan",
+"start": 62.94,
+"end": 63.2
+},
+{
+"text": "banyak",
+"start": 63.2,
+"end": 63.64
+},
+{
+"text": "bergerak,",
+"start": 63.64,
+"end": 64.38
+},
+{
+"text": "supaya",
+"start": 64.38,
+"end": 64.86
+},
+{
+"text": "tulang",
+"start": 64.86,
+"end": 65.18
+},
+{
+"text": "kuat,",
+"start": 65.18,
+"end": 65.48
+},
+{
+"text": "ya.",
+"start": 65.48,
+"end": 65.74
+},
+{
+"text": "Apa",
+"start": 66.18,
+"end": 66.32
+},
+{
+"text": "lagi",
+"start": 66.32,
+"end": 66.62
+},
+{
+"text": "kita",
+"start": 66.62,
+"end": 66.86
+},
+{
+"text": "nak",
+"start": 66.86,
+"end": 67.02
+},
+{
+"text": "belajar",
+"start": 67.02,
+"end": 67.32
+},
+{
+"text": "lepas",
+"start": 67.32,
+"end": 67.68
+},
+{
+"text": "ni?",
+"start": 67.68,
+"end": 67.88
+}
+]
