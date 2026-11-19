@@ -32,6 +32,9 @@ time and can be re-timed to new narration.
 | 046 | Kenapa Jantung Kita Berdegup? | [`episodes/046-jantung-berdegup`](episodes/046-jantung-berdegup) | `output/TheCuriousAffan_E046_Kenapa_Jantung_Kita_Berdegup.mp4` |
 | 047 | Macam Mana Ikan Bernafas Dalam Air? | [`episodes/047-ikan-bernafas`](episodes/047-ikan-bernafas) | `output/TheCuriousAffan_E047_Macam_Mana_Ikan_Bernafas_Dalam_Air.mp4` |
 | 048 | Macam Mana Kapal Terbang Boleh Terbang? | [`episodes/048-kapal-terbang`](episodes/048-kapal-terbang) | `output/TheCuriousAffan_E048_Macam_Mana_Kapal_Terbang_Boleh_Terbang.mp4` |
+| 049 | Berapa Tinggi Gunung Kinabalu? | [`episodes/049-gunung-kinabalu`](episodes/049-gunung-kinabalu) | `output/TheCuriousAffan_E049_Berapa_Tinggi_Gunung_Kinabalu.mp4` |
+| 050 | Macam Mana Coklat Dihasilkan? | [`episodes/050-coklat`](episodes/050-coklat) | `output/TheCuriousAffan_E050_Macam_Mana_Coklat_Dihasilkan.mp4` |
+| 051 | Berapa Jumlah Tulang Dalam Badan Kita? | [`episodes/051-tulang-badan`](episodes/051-tulang-badan) | `output/TheCuriousAffan_E051_Berapa_Jumlah_Tulang_Dalam_Badan_Kita.mp4` |
 
 ## Build
 
@@ -741,5 +744,102 @@ episode stays consistent.
   - a jet engine rumble with a rising whine for the take-off roll;
   - wind in the sky and in the wind tunnel, and an elephant trumpet;
   - a soft blow over the paper and a seatbelt click.
+
+  The mix is normalised to −14 LUFS with a peak limiter at −1.5 dB.
+
+## Episode 049 at a glance
+
+- **Science.** Gunung Kinabalu in Sabah is 4,095 metres high, the tallest
+  mountain in Malaysia, about as tall as nine Petronas Twin Towers stacked up.
+  The higher you climb, the colder it gets: warm rainforest gives way to
+  mossy cloud forest, then low shrubs, and finally wide granite rock. At the
+  top it can drop to almost 0 °C and the air is thin, so we breathe faster.
+  Climbers sleep at Laban Rata and start at 2 a.m. to reach Low's Peak at
+  sunrise. The mountain has the world's biggest pitcher plant and hundreds of
+  kinds of orchids. Bring warm clothes and look after nature.
+- **Picture.** Six sets:
+  - Kundasang, with cabbage rows, a fence, and Kinabalu far away inside a
+    ring of cloud;
+  - a measuring stage: a model mountain, a ruler counting up to 4,095 m and
+    nine twin towers popping up one on top of another;
+  - a cut-away slope with the four plant zones, a hiking Affan with a
+    backpack, and a thermometer that drops from 30 °C to 4 °C;
+  - the granite summit: Affan in a beanie and scarf shivering, breath puffs,
+    sparse oxygen dots, and later a sunrise over a sea of clouds at the
+    Low's Peak sign;
+  - Laban Rata at night: the dark mountain, a lit rest house and a line of
+    headlamps climbing a zigzag trail at "2:00 PAGI";
+  - a mossy forest floor with a giant pitcher plant and orchids popping up.
+- **Audio.** The narration is in Affan's voice, made with ElevenLabs
+  (`eleven_v4`, a single take to save credits). Captions use word timings
+  measured locally with faster-whisper (`audio/narration_words.json`). The
+  soundtrack reuses the Episode 005 instruments and adds:
+  - birdsong and a breeze in Kundasang, crunchy hiking footsteps;
+  - cold wind and breaths at the summit, night crickets, a sunrise swell;
+  - forest drips around the pitcher plant.
+
+  The mix is normalised to −14 LUFS with a peak limiter at −1.5 dB.
+
+## Episode 050 at a glance
+
+- **Science.** Chocolate comes from the cocoa tree. Its big pods grow
+  straight out of the trunk, and Malaysia has cocoa farms in Sabah and
+  Pahang. Inside a pod are beans covered in white pulp, and raw beans taste
+  bitter. The beans are fermented for a few days until they turn brown,
+  dried in the sun and roasted, which makes them smell like chocolate. The
+  shells come off, and the beans are ground into a runny chocolate paste,
+  then mixed with sugar, milk and cocoa butter and stirred for a long time
+  until smooth. The chocolate is poured into moulds and cooled into bars.
+  Cocoa butter melts at body temperature, which is why chocolate melts in
+  your mouth. Don't eat too much, and brush your teeth.
+- **Picture.** Three sets:
+  - the Episode 038 kitchen with Mama: Affan on his stool bites a chocolate
+    bar, and brushes his teeth at the end;
+  - a cocoa farm with colourful ribbed pods on the trunks and a table where a
+    pod splits open to show the white beans; Affan tastes one ("PAHIT!");
+  - a factory line with seven stations: a fermenting crate under banana
+    leaves (white beans turning brown, "HARI 1 → 6"), a drying mat in the
+    sun, a roasting drum with a pink aroma, a sheller, a roller grinder
+    pouring into a tank, a mixer with sugar, milk and cocoa butter and a
+    turning paddle, and a moulding tray with cold air and finished bars.
+- **Audio.** The narration is in Affan's voice, made with ElevenLabs
+  (`eleven_v4`, a single take to save credits). Captions use word timings
+  measured locally with faster-whisper (`audio/narration_words.json`). The
+  soundtrack reuses the Episode 005 instruments and adds:
+  - a crunchy bite, farm birdsong, a pod cracking, a bitter "nope";
+  - roaster rumble and crackles, a sheller rattle, grinder and mixer hums;
+  - pouring chocolate, a cold hiss and a toothbrush scrub.
+
+  The mix is normalised to −14 LUFS with a peak limiter at −1.5 dB.
+
+## Episode 051 at a glance
+
+- **Science.** Grown-ups have 206 bones. Babies are born with almost 300,
+  and some of them join together as we grow. More than half our bones are in
+  our hands and feet, which is why our fingers move so skilfully. The longest
+  bone is the thigh bone; the smallest, the stirrup bone in the ear, is
+  smaller than a grain of rice. Bones protect the body: the skull guards the
+  brain and the ribs guard the heart and lungs, and marrow inside the bones
+  makes blood cells. Bones are alive and keep growing; they need calcium from
+  milk, ikan bilis and green vegetables, and morning sunshine. Drink milk and
+  move a lot to keep them strong.
+- **Picture.** Two sets:
+  - the Episode 031 living room: Affan presses his forearm ("KERAS!"), a
+    low table fills with milk, ikan bilis and greens, and he drinks milk and
+    does star jumps;
+  - an x-ray stage: a cartoon skeleton built to Affan's proportions inside a
+    glowing see-through Affan, with a scan line and a 0 → 206 counter. A baby
+    skeleton gets ±300, skull plates close up and join, hands and feet light
+    up (54 + 52 = 106), the thigh bone glows, and a stirrup bone sits next to
+    a grain of rice. The skull turns see-through over the brain, the ribs
+    show a beating heart and lungs, and a cut-away thigh bone shows red
+    marrow sending out blood cells.
+- **Audio.** The narration is in Affan's voice, made with ElevenLabs
+  (`eleven_v4`, a single take to save credits). Captions use word timings
+  measured locally with faster-whisper (`audio/narration_words.json`). The
+  soundtrack reuses the Episode 005 instruments and adds:
+  - an x-ray hum and sweep, a ticking bone counter with xylophone clacks;
+  - a click as the skull plates join, a heartbeat, bubbly blood cells;
+  - a milk gulp and star-jump thumps.
 
   The mix is normalised to −14 LUFS with a peak limiter at −1.5 dB.
