@@ -1,0 +1,707 @@
+[
+{
+"text": "Affan",
+"start": 0.0,
+"end": 0.44
+},
+{
+"text": "selalu",
+"start": 0.44,
+"end": 1.02
+},
+{
+"text": "tanya",
+"start": 1.02,
+"end": 1.32
+},
+{
+"text": "papa.",
+"start": 1.32,
+"end": 1.78
+},
+{
+"text": "Papa!",
+"start": 1.8,
+"end": 3.02
+},
+{
+"text": "Air",
+"start": 3.04,
+"end": 3.18
+},
+{
+"text": "paip",
+"start": 3.18,
+"end": 3.38
+},
+{
+"text": "ni",
+"start": 3.38,
+"end": 3.6
+},
+{
+"text": "nampak",
+"start": 3.6,
+"end": 3.9
+},
+{
+"text": "kekuningan,",
+"start": 3.9,
+"end": 4.86
+},
+{
+"text": "tapi",
+"start": 5.16,
+"end": 5.32
+},
+{
+"text": "bila",
+"start": 5.32,
+"end": 5.6
+},
+{
+"text": "keluar",
+"start": 5.6,
+"end": 5.92
+},
+{
+"text": "dari",
+"start": 5.92,
+"end": 6.16
+},
+{
+"text": "penapis,",
+"start": 6.16,
+"end": 6.78
+},
+{
+"text": "terus",
+"start": 7.06,
+"end": 7.34
+},
+{
+"text": "jernih!",
+"start": 7.34,
+"end": 8.04
+},
+{
+"text": "Macam",
+"start": 8.28,
+"end": 8.5
+},
+{
+"text": "mana",
+"start": 8.5,
+"end": 8.7
+},
+{
+"text": "penapis",
+"start": 8.7,
+"end": 9.26
+},
+{
+"text": "air",
+"start": 9.26,
+"end": 9.48
+},
+{
+"text": "buat",
+"start": 9.48,
+"end": 9.7
+},
+{
+"text": "air",
+"start": 9.7,
+"end": 9.94
+},
+{
+"text": "jadi",
+"start": 9.94,
+"end": 10.18
+},
+{
+"text": "bersih?",
+"start": 10.18,
+"end": 10.66
+},
+{
+"text": "Jom",
+"start": 11.0,
+"end": 11.26
+},
+{
+"text": "ikut",
+"start": 11.26,
+"end": 11.46
+},
+{
+"text": "Affan",
+"start": 11.46,
+"end": 11.76
+},
+{
+"text": "cari",
+"start": 11.76,
+"end": 11.98
+},
+{
+"text": "jawapan!",
+"start": 11.98,
+"end": 12.58
+},
+{
+"text": "Dalam",
+"start": 12.92,
+"end": 13.3
+},
+{
+"text": "penapis",
+"start": 13.3,
+"end": 13.96
+},
+{
+"text": "ada",
+"start": 14.16,
+"end": 14.26
+},
+{
+"text": "beberapa",
+"start": 14.26,
+"end": 14.76
+},
+{
+"text": "lapisan.",
+"start": 14.76,
+"end": 15.32
+},
+{
+"text": "Lapisan",
+"start": 15.76,
+"end": 16.16
+},
+{
+"text": "pertama",
+"start": 16.16,
+"end": 16.68
+},
+{
+"text": "macam",
+"start": 16.68,
+"end": 17.1
+},
+{
+"text": "penapis",
+"start": 17.1,
+"end": 17.56
+},
+{
+"text": "halus,",
+"start": 17.56,
+"end": 18.12
+},
+{
+"text": "ia",
+"start": 18.46,
+"end": 18.56
+},
+{
+"text": "tangkap",
+"start": 18.56,
+"end": 18.92
+},
+{
+"text": "pasir,",
+"start": 18.92,
+"end": 19.62
+},
+{
+"text": "karat",
+"start": 19.78,
+"end": 20.2
+},
+{
+"text": "dan",
+"start": 20.2,
+"end": 20.46
+},
+{
+"text": "kotoran",
+"start": 20.46,
+"end": 20.88
+},
+{
+"text": "besar.",
+"start": 20.88,
+"end": 21.26
+},
+{
+"text": "Lapisan",
+"start": 21.66,
+"end": 22.06
+},
+{
+"text": "kedua",
+"start": 22.06,
+"end": 22.56
+},
+{
+"text": "ialah",
+"start": 22.56,
+"end": 22.94
+},
+{
+"text": "karbon",
+"start": 22.94,
+"end": 23.4
+},
+{
+"text": "teraktif.",
+"start": 23.4,
+"end": 24.34
+},
+{
+"text": "Ia",
+"start": 24.46,
+"end": 24.7
+},
+{
+"text": "penuh",
+"start": 24.7,
+"end": 25.16
+},
+{
+"text": "dengan",
+"start": 25.16,
+"end": 25.42
+},
+{
+"text": "lubang-lubang",
+"start": 25.42,
+"end": 26.06
+},
+{
+"text": "yang",
+"start": 26.06,
+"end": 26.38
+},
+{
+"text": "sangat",
+"start": 26.38,
+"end": 26.8
+},
+{
+"text": "kecil,",
+"start": 26.8,
+"end": 27.28
+},
+{
+"text": "macam",
+"start": 27.56,
+"end": 27.72
+},
+{
+"text": "span!",
+"start": 27.72,
+"end": 28.14
+},
+{
+"text": "Bau,",
+"start": 28.14,
+"end": 29.14
+},
+{
+"text": "rasa",
+"start": 29.46,
+"end": 29.68
+},
+{
+"text": "pelik",
+"start": 29.68,
+"end": 30.18
+},
+{
+"text": "dan",
+"start": 30.18,
+"end": 30.44
+},
+{
+"text": "bahan",
+"start": 30.44,
+"end": 30.72
+},
+{
+"text": "kimia",
+"start": 30.72,
+"end": 31.08
+},
+{
+"text": "melekat",
+"start": 31.08,
+"end": 31.62
+},
+{
+"text": "di",
+"start": 31.62,
+"end": 31.84
+},
+{
+"text": "situ.",
+"start": 31.84,
+"end": 32.22
+},
+{
+"text": "Sesetengah",
+"start": 32.58,
+"end": 33.12
+},
+{
+"text": "penapis",
+"start": 33.12,
+"end": 33.72
+},
+{
+"text": "ada",
+"start": 33.72,
+"end": 33.96
+},
+{
+"text": "membran,",
+"start": 33.96,
+"end": 34.66
+},
+{
+"text": "dengan",
+"start": 34.66,
+"end": 35.02
+},
+{
+"text": "lubang",
+"start": 35.02,
+"end": 35.36
+},
+{
+"text": "lebih",
+"start": 35.36,
+"end": 35.64
+},
+{
+"text": "kecil",
+"start": 35.64,
+"end": 36.08
+},
+{
+"text": "dari",
+"start": 36.08,
+"end": 36.34
+},
+{
+"text": "kuman!",
+"start": 36.34,
+"end": 36.68
+},
+{
+"text": "Kuman",
+"start": 37.12,
+"end": 37.46
+},
+{
+"text": "tak",
+"start": 37.46,
+"end": 37.66
+},
+{
+"text": "boleh",
+"start": 37.66,
+"end": 37.86
+},
+{
+"text": "lalu,",
+"start": 37.86,
+"end": 38.3
+},
+{
+"text": "air",
+"start": 38.72,
+"end": 38.84
+},
+{
+"text": "saja",
+"start": 38.84,
+"end": 39.18
+},
+{
+"text": "yang",
+"start": 39.18,
+"end": 39.38
+},
+{
+"text": "boleh.",
+"start": 39.38,
+"end": 39.7
+},
+{
+"text": "Ada",
+"start": 40.14,
+"end": 40.34
+},
+{
+"text": "juga",
+"start": 40.34,
+"end": 40.64
+},
+{
+"text": "penapis",
+"start": 40.64,
+"end": 41.26
+},
+{
+"text": "yang",
+"start": 41.26,
+"end": 41.44
+},
+{
+"text": "guna",
+"start": 41.44,
+"end": 41.66
+},
+{
+"text": "lampu",
+"start": 41.66,
+"end": 42.08
+},
+{
+"text": "ultraungu,",
+"start": 42.08,
+"end": 43.04
+},
+{
+"text": "untuk",
+"start": 43.04,
+"end": 43.4
+},
+{
+"text": "matikan",
+"start": 43.4,
+"end": 43.98
+},
+{
+"text": "kuman",
+"start": 43.98,
+"end": 44.38
+},
+{
+"text": "yang",
+"start": 44.38,
+"end": 44.56
+},
+{
+"text": "masih",
+"start": 44.56,
+"end": 44.84
+},
+{
+"text": "tinggal.",
+"start": 44.84,
+"end": 45.52
+},
+{
+"text": "Tahu",
+"start": 45.8,
+"end": 46.02
+},
+{
+"text": "tak?",
+"start": 46.02,
+"end": 46.42
+},
+{
+"text": "Sebelum",
+"start": 46.78,
+"end": 47.12
+},
+{
+"text": "sampai",
+"start": 47.12,
+"end": 47.44
+},
+{
+"text": "ke",
+"start": 47.44,
+"end": 47.68
+},
+{
+"text": "rumah,",
+"start": 47.68,
+"end": 48.16
+},
+{
+"text": "air",
+"start": 48.36,
+"end": 48.54
+},
+{
+"text": "sungai",
+"start": 48.54,
+"end": 48.94
+},
+{
+"text": "pun",
+"start": 48.94,
+"end": 49.26
+},
+{
+"text": "dah",
+"start": 49.26,
+"end": 49.42
+},
+{
+"text": "dibersihkan",
+"start": 49.42,
+"end": 50.04
+},
+{
+"text": "di",
+"start": 50.04,
+"end": 50.22
+},
+{
+"text": "loji",
+"start": 50.22,
+"end": 50.48
+},
+{
+"text": "rawatan",
+"start": 50.48,
+"end": 50.92
+},
+{
+"text": "air!",
+"start": 50.92,
+"end": 51.32
+},
+{
+"text": "Waaah,",
+"start": 51.64,
+"end": 52.08
+},
+{
+"text": "rupanya",
+"start": 52.72,
+"end": 53.16
+},
+{
+"text": "penapis",
+"start": 53.16,
+"end": 53.7
+},
+{
+"text": "air",
+"start": 53.7,
+"end": 53.9
+},
+{
+"text": "macam",
+"start": 53.9,
+"end": 54.22
+},
+{
+"text": "pengawal",
+"start": 54.22,
+"end": 54.82
+},
+{
+"text": "yang",
+"start": 54.82,
+"end": 55.08
+},
+{
+"text": "tapis",
+"start": 55.08,
+"end": 55.46
+},
+{
+"text": "semua",
+"start": 55.46,
+"end": 55.76
+},
+{
+"text": "kotoran!",
+"start": 55.76,
+"end": 56.42
+},
+{
+"text": "Tapi",
+"start": 56.42,
+"end": 57.02
+},
+{
+"text": "jangan",
+"start": 57.02,
+"end": 57.38
+},
+{
+"text": "lupa",
+"start": 57.38,
+"end": 57.68
+},
+{
+"text": "tukar",
+"start": 57.68,
+"end": 58.0
+},
+{
+"text": "penapis",
+"start": 58.0,
+"end": 58.46
+},
+{
+"text": "ikut",
+"start": 58.46,
+"end": 58.74
+},
+{
+"text": "masa,",
+"start": 58.74,
+"end": 59.08
+},
+{
+"text": "ya.",
+"start": 59.08,
+"end": 59.54
+},
+{
+"text": "Apa",
+"start": 59.78,
+"end": 59.92
+},
+{
+"text": "lagi",
+"start": 59.92,
+"end": 60.2
+},
+{
+"text": "kita",
+"start": 60.2,
+"end": 60.44
+},
+{
+"text": "nak",
+"start": 60.44,
+"end": 60.62
+},
+{
+"text": "belajar",
+"start": 60.62,
+"end": 60.94
+},
+{
+"text": "lepas",
+"start": 60.94,
+"end": 61.26
+},
+{
+"text": "ni?",
+"start": 61.26,
+"end": 61.44
+}
+]
