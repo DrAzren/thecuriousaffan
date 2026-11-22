@@ -35,6 +35,9 @@ time and can be re-timed to new narration.
 | 049 | Berapa Tinggi Gunung Kinabalu? | [`episodes/049-gunung-kinabalu`](episodes/049-gunung-kinabalu) | `output/TheCuriousAffan_E049_Berapa_Tinggi_Gunung_Kinabalu.mp4` |
 | 050 | Macam Mana Coklat Dihasilkan? | [`episodes/050-coklat`](episodes/050-coklat) | `output/TheCuriousAffan_E050_Macam_Mana_Coklat_Dihasilkan.mp4` |
 | 051 | Berapa Jumlah Tulang Dalam Badan Kita? | [`episodes/051-tulang-badan`](episodes/051-tulang-badan) | `output/TheCuriousAffan_E051_Berapa_Jumlah_Tulang_Dalam_Badan_Kita.mp4` |
+| 052 | Macam Mana Ulat Jadi Rama-rama? | [`episodes/052-ulat-rama-rama`](episodes/052-ulat-rama-rama) | `output/TheCuriousAffan_E052_Macam_Mana_Ulat_Jadi_Rama-Rama.mp4` |
+| 053 | Kenapa Ada Siang dan Malam? | [`episodes/053-siang-malam`](episodes/053-siang-malam) | `output/TheCuriousAffan_E053_Kenapa_Ada_Siang_Dan_Malam.mp4` |
+| 054 | Kenapa Gunung Berapi Meletus? | [`episodes/054-gunung-berapi`](episodes/054-gunung-berapi) | `output/TheCuriousAffan_E054_Kenapa_Gunung_Berapi_Meletus.mp4` |
 
 ## Build
 
@@ -841,5 +844,89 @@ episode stays consistent.
   - an x-ray hum and sweep, a ticking bone counter with xylophone clacks;
   - a click as the skull plates join, a heartbeat, bubbly blood cells;
   - a milk gulp and star-jump thumps.
+
+  The mix is normalised to −14 LUFS with a peak limiter at −1.5 dB.
+
+## Episode 052 at a glance
+
+- **Science.** A butterfly lays tiny eggs under a leaf. A hungry caterpillar
+  hatches and eats lots of leaves until it grows; its skin gets tight, so it
+  sheds it several times. When it is big enough it hangs up and wraps itself
+  into a chrysalis, where its body changes completely. After about two weeks
+  the chrysalis opens and a butterfly comes out with wet, crumpled wings and
+  waits for them to dry. Butterflies sip nectar through a long proboscis like
+  a straw, and Malaysia's national butterfly is the Rajah Brooke.
+- **Picture.** Two sets:
+  - the Episode 044 park with a hibiscus bush, a nibbled leaf where a
+    caterpillar "used to be", and a butterfly flitting about;
+  - a macro garden: eggs under a huge leaf, a striped caterpillar that eats
+    the leaf away bite by bite and leaves old skins behind, a twig where it
+    hangs and becomes a jade chrysalis with a glowing swirl inside, a butterfly
+    whose crumpled wings spread, a giant hibiscus where a butterfly uncoils its
+    proboscis, and a Rajah Brooke flying in a jungle clearing.
+- **Audio.** The narration is in Affan's voice, made with ElevenLabs
+  (`eleven_v4`, a single take to save credits). Captions use word timings
+  measured locally with faster-whisper (`audio/narration_words.json`). The
+  soundtrack reuses the Episode 005 instruments and adds:
+  - birdsong, butterfly flutters, egg pops and a hatching crack;
+  - munching, skin-shedding stretches, a shimmer inside the chrysalis;
+  - a cracking shell, wings unfolding and jungle insects.
+
+  The mix is normalised to −14 LUFS with a peak limiter at −1.5 dB.
+
+## Episode 053 at a glance
+
+- **Science.** The Sun doesn't go anywhere: the Earth spins like a top, once
+  every 24 hours. The side facing the Sun has day and the side facing away
+  has night, so when it is day in Malaysia, it is night in America. Because
+  the Earth spins towards the east, the Sun seems to rise in the east and set
+  in the west. The Earth spins at more than 1,600 km/h, but we don't feel it
+  because we and the air spin along with it. At night, it's time to sleep.
+- **Picture.** Three sets:
+  - the Episode 044 park fading from day to dusk to night (sky colours, stars,
+    glowing lamp posts), Affan with a ball;
+  - space: a glowing Sun, a spinning Earth with a simple map, tilted axis and
+    a little Affan standing on Malaysia, pins for Malaysia (day) and America
+    (night, with a sleeper), a spinning top and a 24-hour clock, a toy planet
+    showing sunrise in the east and sunset in the west, and a speed counter
+    with air particles turning with the Earth;
+  - the Episode 043 bedroom at night.
+- **Audio.** The narration is in Affan's voice, made with ElevenLabs
+  (`eleven_v4`, a single take to save credits). Captions use word timings
+  measured locally with faster-whisper (`audio/narration_words.json`). The
+  soundtrack reuses the Episode 005 instruments and adds:
+  - evening birds fading into crickets, a bouncing ball, a space hum;
+  - a spinning-top whirr, a ticking clock, sunrise and sunset swells;
+  - a rushing whoosh and a sleepy twinkle.
+
+  The mix is normalised to −14 LUFS with a peak limiter at −1.5 dB.
+
+## Episode 054 at a glance
+
+- **Science.** Deep inside the Earth it is so hot that rock melts: this is
+  magma. Magma is lighter, so it rises slowly and gathers in a chamber under
+  the mountain, and it holds lots of gas. As the gas builds up, the pressure
+  grows, just like a shaken soda bottle, until the volcano erupts. Magma that
+  comes out is called lava and is over 1,000 °C; ash and smoke fly high into
+  the sky. Malaysia has no active volcano, but Indonesia has many. When lava
+  cools it becomes new rock and the soil becomes fertile. If there is a
+  warning, listen to grown-ups and stay away.
+- **Picture.** Four sets:
+  - the Episode 044 park: Affan shakes and opens a soda bottle (a foam
+    fountain), and later points at a volcano warning sign;
+  - the Earth cut open: crust, mantle and glowing cores, a rising thermometer
+    and a rock melting into magma;
+  - a volcano: a cross-section with magma rising into a chamber full of gas
+    bubbles, a pressure gauge and the vent filling; then the eruption from
+    outside with a lava fountain, ash plume and lava rivers that cool into
+    black rock while new plants sprout;
+  - a map of Malaysia and Indonesia with volcano markers.
+- **Audio.** The narration is in Affan's voice, made with ElevenLabs
+  (`eleven_v4`, a single take to save credits). Captions use word timings
+  measured locally with faster-whisper (`audio/narration_words.json`). The
+  soundtrack reuses the Episode 005 instruments and adds:
+  - a shaken bottle, a cap pop and fizzing foam, a deep earth rumble;
+  - bubbling magma, a rising pressure whine, a huge boom and crackles;
+  - sizzling lava and a cool-down hiss.
 
   The mix is normalised to −14 LUFS with a peak limiter at −1.5 dB.
