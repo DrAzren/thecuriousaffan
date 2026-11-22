@@ -205,8 +205,8 @@ const SHOTS = [
       placeOnLeaf(s, 1.5, lerp(-2.6, 0.4, eaten) - 0.9 + i * 0.35, Math.PI / 2);
       s.scale.setScalar(0.9 + 0.15 * i);
     });
-    const P = leafPt(1.2, -0.6, 0);
-    camMove(t, 19.44, 28.24, [P.x - 0.4, P.y + 2.8, P.z + 4.4], P.toArray(), [P.x + 0.8, P.y + 2.2, P.z + 3.6], leafPt(1.3, 0.2, 0).toArray(), 48);
+    const C = mac.cat.root.position.clone();
+    lookCam(C.clone().add(V(-1.2, 2.8, 4.8)), C.clone().add(V(-0.4, 0.2, 0)), 48);
     topTag('makan', 'MAKAN DAUN BANYAK SANGAT!', t, 19.5, 22.6, GREEN);
     bubble('besar', 'MEMBESAR!', t, 22.64, 23.82, 430, 130, { top: '#e8ffd8', bot: '#5ab83a' });
     topTag('sempit', 'KULIT JADI SEMPIT', t, 23.86, 25.5, RED);
