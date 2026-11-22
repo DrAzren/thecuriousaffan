@@ -389,7 +389,7 @@ function thumbnail() {
   kitSet(0, { fill: 1 });
   mamaSet(0);
   affSet(0, { yaw: YAW_CAM, wow: 0.8, smile: 1, brow: 0.6, talk: 0 });
-  lookCam(V(0.95, 1.85, 1.55), V(0.75, 1.5, -0.8), 46);
+  lookCam(V(0.5, 1.95, 1.85), V(0.5, 1.4, -0.85), 46);
   renderer.setViewport(0, 0, W, H);
   renderer.render(kit.scene, cam);
   ov.vignette(0.3);
