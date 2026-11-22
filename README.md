@@ -38,6 +38,9 @@ time and can be re-timed to new narration.
 | 052 | Macam Mana Ulat Jadi Rama-rama? | [`episodes/052-ulat-rama-rama`](episodes/052-ulat-rama-rama) | `output/TheCuriousAffan_E052_Macam_Mana_Ulat_Jadi_Rama-Rama.mp4` |
 | 053 | Kenapa Ada Siang dan Malam? | [`episodes/053-siang-malam`](episodes/053-siang-malam) | `output/TheCuriousAffan_E053_Kenapa_Ada_Siang_Dan_Malam.mp4` |
 | 054 | Kenapa Gunung Berapi Meletus? | [`episodes/054-gunung-berapi`](episodes/054-gunung-berapi) | `output/TheCuriousAffan_E054_Kenapa_Gunung_Berapi_Meletus.mp4` |
+| 055 | Macam Mana Labah-labah Buat Sarang? | [`episodes/055-labah-labah`](episodes/055-labah-labah) | `output/TheCuriousAffan_E055_Macam_Mana_Labah-Labah_Buat_Sarang.mp4` |
+| 056 | Macam Mana Penapis Air Buat Air Jadi Bersih? | [`episodes/056-penapis-air`](episodes/056-penapis-air) | `output/TheCuriousAffan_E056_Macam_Mana_Penapis_Air_Buat_Air_Jadi_Bersih.mp4` |
+| 057 | Apa Jadi Kalau Gigi Tercabut? | [`episodes/057-gigi-tercabut`](episodes/057-gigi-tercabut) | `output/TheCuriousAffan_E057_Apa_Jadi_Kalau_Gigi_Tercabut.mp4` |
 
 ## Build
 
@@ -928,5 +931,95 @@ episode stays consistent.
   - a shaken bottle, a cap pop and fizzing foam, a deep earth rumble;
   - bubbling magma, a rising pressure whine, a huge boom and crackles;
   - sizzling lava and a cool-down hiss.
+
+  The mix is normalised to −14 LUFS with a peak limiter at −1.5 dB.
+
+## Episode 055 at a glance
+
+- **Science.** A spider has a silk factory in its belly. The silk comes out
+  of the tip of its abdomen as a liquid and hardens when it is pulled. First
+  it lets out one thread; the wind carries it across until it sticks to the
+  branch on the other side: the first bridge. Then it builds a frame and
+  straight threads from the centre, like the spokes of a bicycle wheel.
+  Last, it lays a sticky spiral, round and round to the centre, and insects
+  that fly into it get stuck. Spider silk is stronger than steel of the same
+  size, and the spider doesn't get stuck because it walks on the threads that
+  aren't sticky. If you see a web, just look and don't break it.
+- **Picture.** Two sets:
+  - the Episode 044 park on a misty morning, with a dewy web between two posts
+    and a little spider in the middle;
+  - a macro stage: a big see-through spider with glowing silk glands and
+    spinnerets; two branches with a wind-blown bridge thread; the web drawn
+    step by step (frame, spokes with a bicycle wheel beside it, the sticky
+    spiral with glue drops) and a mosquito caught in it; a strength test of
+    silk against a steel wire of the same size; and a colour code of blue
+    (dry) spokes and pink (sticky) spiral.
+- **Audio.** The narration is in Affan's voice, made with ElevenLabs
+  (`eleven_v4`, a single take to save credits). Captions use word timings
+  measured locally with faster-whisper (`audio/narration_words.json`). The
+  soundtrack reuses the Episode 005 instruments and adds:
+  - morning birds and dew drips, a silk "factory" hum and a stretching twang;
+  - a breezy whoosh for the bridge thread, harp-like plucks for the spokes, a
+    spinning whirr for the spiral;
+  - a buzzing mosquito, a sticky splat and the steel wire snapping.
+
+  The mix is normalised to −14 LUFS with a peak limiter at −1.5 dB.
+
+## Episode 056 at a glance
+
+- **Science.** A water filter has several layers. The first is a fine filter
+  that catches sand, rust and large dirt. The second is activated carbon,
+  full of very tiny holes like a sponge, where smells, odd tastes and
+  chemicals stick. Some filters have a membrane with holes smaller than
+  germs, so only water gets through. Some use an ultraviolet lamp to kill the
+  germs that are left. Before it reaches our homes, river water is already
+  cleaned at a water treatment plant. Remember to change the filter on time.
+- **Picture.** Three sets:
+  - the Episode 038 kitchen with Mama: a countertop filter, a glass of
+    yellowish tap water and a glass filling with clear water from the spout,
+    and later old (brown) and new (white) cartridges in Affan's hands;
+  - inside the filter: a see-through cartridge with four labelled layers
+    (pleated sediment filter, carbon granules, membrane fibres, UV lamp);
+    sand, rust and dirt caught on the pleats; a close-up carbon granule whose
+    pores grab smell and chemical molecules; a membrane sheet where cute germs
+    bounce while water passes; germs turning grey under the purple UV light;
+  - a water treatment plant: river, settling tank, sand filter, chlorine
+    tank, water tower and a pipe to a house.
+- **Audio.** The narration is in Affan's voice, made with ElevenLabs
+  (`eleven_v4`, a single take to save credits). Captions use word timings
+  measured locally with faster-whisper (`audio/narration_words.json`). The
+  soundtrack reuses the Episode 005 instruments and adds:
+  - running water filling a glass and a bubbly bed inside the filter;
+  - gritty taps of sand and rust, soft sticks of molecules in the carbon;
+  - rubbery germ bounces, a humming UV lamp with a fizzle, and a river.
+
+  The mix is normalised to −14 LUFS with a peak limiter at −1.5 dB.
+
+## Episode 057 at a glance
+
+- **Science.** Our first teeth are called milk teeth, and children have 20 of
+  them. Under the gum, bigger permanent teeth are waiting. When the time
+  comes, a permanent tooth pushes up and the milk tooth's root gets shorter;
+  the milk tooth wobbles and falls out, and the permanent tooth slowly grows
+  into the gap. Adults have up to 32 permanent teeth, and they don't grow
+  back. If a permanent tooth is knocked out, hold it by the top, keep it in
+  milk and see a dentist quickly. Losing milk teeth is a sign we are growing;
+  brush twice a day.
+- **Picture.** Two sets:
+  - the Episode 031 living room: Affan bites an apple and finds his tooth
+    stuck in it, and later brushes his teeth;
+  - an "x-ray" stage: a child's open mouth with 20 milk teeth lighting up as
+    they are counted; a see-through gum-and-bone cross-section where the
+    permanent tooth rises, the milk root shrinks, the milk tooth wobbles out
+    and the new tooth grows in; an adult's mouth with 32 teeth; and a
+    first-aid demo (tick on the crown, cross on the root, the tooth dropped
+    into a glass of milk, a hurrying clock).
+- **Audio.** The narration is in Affan's voice, made with ElevenLabs
+  (`eleven_v4`, a single take to save credits). Captions use word timings
+  measured locally with faster-whisper (`audio/narration_words.json`). The
+  soundtrack reuses the Episode 005 instruments and adds:
+  - an apple crunch and a tiny tink as the tooth comes out;
+  - counting tinks, a creaking push, a rattling wobble and a pop;
+  - a milk plop, a ticking clock and toothbrush scrubs.
 
   The mix is normalised to −14 LUFS with a peak limiter at −1.5 dB.
