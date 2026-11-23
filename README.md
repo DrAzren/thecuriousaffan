@@ -41,6 +41,9 @@ time and can be re-timed to new narration.
 | 055 | Macam Mana Labah-labah Buat Sarang? | [`episodes/055-labah-labah`](episodes/055-labah-labah) | `output/TheCuriousAffan_E055_Macam_Mana_Labah-Labah_Buat_Sarang.mp4` |
 | 056 | Macam Mana Penapis Air Buat Air Jadi Bersih? | [`episodes/056-penapis-air`](episodes/056-penapis-air) | `output/TheCuriousAffan_E056_Macam_Mana_Penapis_Air_Buat_Air_Jadi_Bersih.mp4` |
 | 057 | Apa Jadi Kalau Gigi Tercabut? | [`episodes/057-gigi-tercabut`](episodes/057-gigi-tercabut) | `output/TheCuriousAffan_E057_Apa_Jadi_Kalau_Gigi_Tercabut.mp4` |
+| 058 | Kenapa Kita Tersedu? | [`episodes/058-tersedu`](episodes/058-tersedu) | `output/TheCuriousAffan_E058_Kenapa_Kita_Tersedu.mp4` |
+| 059 | Kenapa Kucing Selalu Jatuh Atas Kakinya? | [`episodes/059-kucing-jatuh`](episodes/059-kucing-jatuh) | `output/TheCuriousAffan_E059_Kenapa_Kucing_Selalu_Jatuh_Atas_Kakinya.mp4` |
+| 060 | Kenapa Magnet Boleh Tarik Besi? | [`episodes/060-magnet`](episodes/060-magnet) | `output/TheCuriousAffan_E060_Kenapa_Magnet_Boleh_Tarik_Besi.mp4` |
 
 ## Build
 
@@ -1021,5 +1024,83 @@ episode stays consistent.
   - an apple crunch and a tiny tink as the tooth comes out;
   - counting tinks, a creaking push, a rattling wobble and a pop;
   - a milk plop, a ticking clock and toothbrush scrubs.
+
+  The mix is normalised to −14 LUFS with a peak limiter at −1.5 dB.
+
+## Episode 058 at a glance
+
+- **Science.** Under our lungs is a dome-shaped muscle called the diaphragm
+  that helps us breathe in and out. When we eat too fast, drink fizzy drinks
+  or get too excited, the diaphragm gets a fright and jerks by itself. Air
+  rushes in suddenly and a little door in the throat snaps shut: "hik!" Babies
+  hiccup inside their mothers too, and hiccups usually stop by themselves
+  after a few minutes. Eat slowly and sip water.
+- **Picture.** Two sets:
+  - the Episode 038 kitchen with Mama: Affan gobbles a plate of nasi lemak and
+    jolts with every "HIK!", then eats slowly and sips water;
+  - an "inside the body" stage: a see-through body with a windpipe, two lungs
+    and a red dome-shaped diaphragm with a cute face that breathes, gets a
+    fright and jerks; trigger props (a spinning plate, a fizzy can, an excited
+    star); air rushing in and the throat door snapping shut; a baby hiccuping
+    in the womb and a clock.
+- **Audio.** The narration is in Affan's voice, made with ElevenLabs
+  (`eleven_v4`, a single take to save credits). Captions use word timings
+  measured locally with faster-whisper (`audio/narration_words.json`). The
+  soundtrack reuses the Episode 005 instruments and adds:
+  - spoon clinks and a boingy "hik" for every hiccup;
+  - breathing whooshes, a fizzing can, a startled squeak and a thud;
+  - a snapping throat door, a muffled womb heartbeat and a ticking clock.
+
+  The mix is normalised to −14 LUFS with a peak limiter at −1.5 dB.
+
+## Episode 059 at a glance
+
+- **Science.** A balance sensor inside a cat's ear knows which way is up, even
+  when the cat is upside down. When it falls, it turns its head first, then
+  its front body, then its back body, thanks to a very bendy spine. It spreads
+  out like a parachute and bends its legs like springs to soak up the landing.
+  A cat's collarbones are small and not joined to other bones, so its body
+  twists easily. Never drop a cat: high places are still dangerous.
+- **Picture.** Two sets:
+  - the Episode 031 living room with a tall wooden cupboard: a ginger kampung
+    cat (the shared cat rig from Episode 024) jumps down and lands on its feet;
+  - a slow-motion stage: a big cat with a glowing inner ear and a spirit level,
+    flipped upside down, then righting itself head first, front body, back
+    body (numbered highlights), a drawn spine, legs spread like a parachute,
+    a springy landing on a cushion, and two small floating collarbones.
+- **Audio.** The narration is in Affan's voice, made with ElevenLabs
+  (`eleven_v4`, a single take to save credits). Captions use word timings
+  measured locally with faster-whisper (`audio/narration_words.json`). The
+  soundtrack reuses the Episode 005 instruments and adds:
+  - a jump whoosh, a soft landing thump and meows;
+  - a balance shimmer, a slow-motion wind, rising plucks for each turn;
+  - a parachute "fwump" and springy boings on the landing.
+
+  The mix is normalised to −14 LUFS with a peak limiter at −1.5 dB.
+
+## Episode 060 at a glance
+
+- **Science.** Inside a magnet are millions of tiny magnets all pointing the
+  same way. Every magnet has a north and a south pole (U and S in Malay):
+  opposite poles pull, the same poles push. Iron has tiny magnets too, but
+  they point every which way; when a magnet comes near they turn and line up,
+  so the iron is pulled. Plastic and wood don't have them. The Earth itself is
+  a giant magnet, which is why a compass always points north. Never put small
+  magnets in your mouth.
+- **Picture.** Two sets:
+  - the Episode 038 kitchen with Mama: Affan's red horseshoe magnet makes
+    paper clips jump off the counter, with colourful magnets on the fridge;
+  - a magnet lab: a see-through bar magnet full of aligned arrows; two bar
+    magnets that snap together (U + S) or push apart (U + U); an iron block
+    whose jumbled arrows line up as a magnet comes near, a plastic and a
+    wooden block that stay put; and the Earth with magnetic field loops and a
+    big compass.
+- **Audio.** The narration is in Affan's voice, made with ElevenLabs
+  (`eleven_v4`, a single take to save credits). Captions use word timings
+  measured locally with faster-whisper (`audio/narration_words.json`). The
+  soundtrack reuses the Episode 005 instruments and adds:
+  - zip-and-clink snaps for the paper clips and a magnetic hum;
+  - a clack for poles snapping together and a boing for poles pushing apart;
+  - aligning shimmers, a sliding scrape, a planetary drone and a compass rattle.
 
   The mix is normalised to −14 LUFS with a peak limiter at −1.5 dB.
