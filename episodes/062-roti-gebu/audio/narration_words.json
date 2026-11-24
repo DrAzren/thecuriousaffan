@@ -1,0 +1,557 @@
+[
+{
+"text": "Affan",
+"start": 0.0,
+"end": 0.56
+},
+{
+"text": "selalu",
+"start": 0.56,
+"end": 1.2
+},
+{
+"text": "tanya",
+"start": 1.2,
+"end": 1.5
+},
+{
+"text": "papa.",
+"start": 1.5,
+"end": 2.1700000000000004
+},
+{
+"text": "Papa!",
+"start": 2.22,
+"end": 2.76
+},
+{
+"text": "Bila",
+"start": 3.28,
+"end": 3.48
+},
+{
+"text": "Affan",
+"start": 3.48,
+"end": 3.74
+},
+{
+"text": "tekan",
+"start": 3.74,
+"end": 4.02
+},
+{
+"text": "roti",
+"start": 4.02,
+"end": 4.44
+},
+{
+"text": "ni,",
+"start": 4.44,
+"end": 4.74
+},
+{
+"text": "ia",
+"start": 4.98,
+"end": 5.08
+},
+{
+"text": "kembang",
+"start": 5.08,
+"end": 5.48
+},
+{
+"text": "semula",
+"start": 5.48,
+"end": 5.82
+},
+{
+"text": "macam",
+"start": 5.82,
+"end": 6.12
+},
+{
+"text": "span!",
+"start": 6.12,
+"end": 6.64
+},
+{
+"text": "Macam",
+"start": 7.22,
+"end": 7.4
+},
+{
+"text": "mana",
+"start": 7.4,
+"end": 7.74
+},
+{
+"text": "roti",
+"start": 7.74,
+"end": 8.1
+},
+{
+"text": "jadi",
+"start": 8.1,
+"end": 8.3
+},
+{
+"text": "gebu?",
+"start": 8.3,
+"end": 8.72
+},
+{
+"text": "Jom",
+"start": 9.12,
+"end": 9.4
+},
+{
+"text": "ikut",
+"start": 9.4,
+"end": 9.6
+},
+{
+"text": "Affan",
+"start": 9.6,
+"end": 9.88
+},
+{
+"text": "cari",
+"start": 9.88,
+"end": 10.12
+},
+{
+"text": "jawapan!",
+"start": 10.12,
+"end": 10.62
+},
+{
+"text": "Roti",
+"start": 11.04,
+"end": 11.56
+},
+{
+"text": "dibuat",
+"start": 11.56,
+"end": 11.96
+},
+{
+"text": "daripada",
+"start": 11.96,
+"end": 12.48
+},
+{
+"text": "tepung,",
+"start": 12.48,
+"end": 13.22
+},
+{
+"text": "air,",
+"start": 13.44,
+"end": 13.74
+},
+{
+"text": "gula",
+"start": 14.06,
+"end": 14.48
+},
+{
+"text": "dan",
+"start": 14.48,
+"end": 14.82
+},
+{
+"text": "yis.",
+"start": 14.82,
+"end": 15.3
+},
+{
+"text": "Yis",
+"start": 15.56,
+"end": 15.9
+},
+{
+"text": "ni",
+"start": 15.9,
+"end": 16.14
+},
+{
+"text": "makhluk",
+"start": 16.14,
+"end": 16.46
+},
+{
+"text": "hidup",
+"start": 16.46,
+"end": 16.78
+},
+{
+"text": "yang",
+"start": 16.78,
+"end": 17.04
+},
+{
+"text": "sangat",
+"start": 17.04,
+"end": 17.52
+},
+{
+"text": "kecil!",
+"start": 17.52,
+"end": 18.0
+},
+{
+"text": "Yis",
+"start": 18.38,
+"end": 18.64
+},
+{
+"text": "makan",
+"start": 18.64,
+"end": 18.94
+},
+{
+"text": "gula,",
+"start": 18.94,
+"end": 19.5
+},
+{
+"text": "kemudian",
+"start": 19.72,
+"end": 20.16
+},
+{
+"text": "hembus",
+"start": 20.16,
+"end": 20.6
+},
+{
+"text": "gas",
+"start": 20.6,
+"end": 20.86
+},
+{
+"text": "karbon",
+"start": 20.86,
+"end": 21.18
+},
+{
+"text": "dioksida.",
+"start": 21.18,
+"end": 21.66
+},
+{
+"text": "Gelembung",
+"start": 22.06,
+"end": 22.58
+},
+{
+"text": "gas",
+"start": 22.58,
+"end": 22.8
+},
+{
+"text": "pun",
+"start": 22.8,
+"end": 23.04
+},
+{
+"text": "terhasil",
+"start": 23.04,
+"end": 23.6
+},
+{
+"text": "dalam",
+"start": 23.6,
+"end": 23.9
+},
+{
+"text": "doh!",
+"start": 23.9,
+"end": 24.18
+},
+{
+"text": "Tepung",
+"start": 24.52,
+"end": 25.0
+},
+{
+"text": "ada",
+"start": 25.0,
+"end": 25.22
+},
+{
+"text": "gluten,",
+"start": 25.22,
+"end": 25.78
+},
+{
+"text": "yang",
+"start": 26.1,
+"end": 26.22
+},
+{
+"text": "jadi",
+"start": 26.22,
+"end": 26.5
+},
+{
+"text": "macam",
+"start": 26.5,
+"end": 26.8
+},
+{
+"text": "belon",
+"start": 26.8,
+"end": 27.04
+},
+{
+"text": "getah.",
+"start": 27.04,
+"end": 27.56
+},
+{
+"text": "Ia",
+"start": 27.56,
+"end": 28.14
+},
+{
+"text": "perangkap",
+"start": 28.14,
+"end": 28.54
+},
+{
+"text": "gelembung",
+"start": 28.54,
+"end": 29.04
+},
+{
+"text": "gas,",
+"start": 29.04,
+"end": 29.4
+},
+{
+"text": "jadi",
+"start": 29.4,
+"end": 30.04
+},
+{
+"text": "doh",
+"start": 30.04,
+"end": 30.28
+},
+{
+"text": "naik",
+"start": 30.28,
+"end": 30.64
+},
+{
+"text": "dua",
+"start": 30.64,
+"end": 31.06
+},
+{
+"text": "kali",
+"start": 31.06,
+"end": 31.26
+},
+{
+"text": "ganda!",
+"start": 31.26,
+"end": 31.84
+},
+{
+"text": "Tahu",
+"start": 32.08,
+"end": 32.34
+},
+{
+"text": "tak?",
+"start": 32.34,
+"end": 32.66
+},
+{
+"text": "Bila",
+"start": 32.92,
+"end": 33.18
+},
+{
+"text": "roti",
+"start": 33.18,
+"end": 33.52
+},
+{
+"text": "dibakar,",
+"start": 33.52,
+"end": 34.28
+},
+{
+"text": "gelembung",
+"start": 34.44,
+"end": 34.9
+},
+{
+"text": "tu",
+"start": 34.9,
+"end": 35.06
+},
+{
+"text": "jadi",
+"start": 35.06,
+"end": 35.34
+},
+{
+"text": "keras.",
+"start": 35.34,
+"end": 36.04
+},
+{
+"text": "Sebab",
+"start": 36.34,
+"end": 36.6
+},
+{
+"text": "tu",
+"start": 36.6,
+"end": 36.76
+},
+{
+"text": "roti",
+"start": 36.76,
+"end": 37.08
+},
+{
+"text": "penuh",
+"start": 37.08,
+"end": 37.34
+},
+{
+"text": "lubang-lubang",
+"start": 37.34,
+"end": 37.82
+},
+{
+"text": "kecil!",
+"start": 37.82,
+"end": 38.4
+},
+{
+"text": "Waaah,",
+"start": 38.84,
+"end": 39.44
+},
+{
+"text": "rupanya",
+"start": 39.76,
+"end": 40.3
+},
+{
+"text": "roti",
+"start": 40.3,
+"end": 40.7
+},
+{
+"text": "gebu",
+"start": 40.7,
+"end": 41.12
+},
+{
+"text": "sebab",
+"start": 41.12,
+"end": 41.46
+},
+{
+"text": "berjuta-juta",
+"start": 41.46,
+"end": 42.52
+},
+{
+"text": "gelembung",
+"start": 42.52,
+"end": 42.94
+},
+{
+"text": "kecil!",
+"start": 42.94,
+"end": 43.46
+},
+{
+"text": "Kalau",
+"start": 43.86,
+"end": 44.04
+},
+{
+"text": "nak",
+"start": 44.04,
+"end": 44.24
+},
+{
+"text": "buat",
+"start": 44.24,
+"end": 44.4
+},
+{
+"text": "roti,",
+"start": 44.4,
+"end": 45.22
+},
+{
+"text": "minta",
+"start": 45.38,
+"end": 45.54
+},
+{
+"text": "tolong",
+"start": 45.54,
+"end": 45.88
+},
+{
+"text": "orang",
+"start": 45.88,
+"end": 46.08
+},
+{
+"text": "dewasa,",
+"start": 46.08,
+"end": 46.66
+},
+{
+"text": "ya.",
+"start": 46.66,
+"end": 46.86
+},
+{
+"text": "Apa",
+"start": 47.28,
+"end": 47.44
+},
+{
+"text": "lagi",
+"start": 47.44,
+"end": 47.72
+},
+{
+"text": "kita",
+"start": 47.72,
+"end": 47.96
+},
+{
+"text": "nak",
+"start": 47.96,
+"end": 48.12
+},
+{
+"text": "belajar",
+"start": 48.12,
+"end": 48.42
+},
+{
+"text": "lepas",
+"start": 48.42,
+"end": 48.78
+},
+{
+"text": "ni?",
+"start": 48.78,
+"end": 48.98
+}
+]
