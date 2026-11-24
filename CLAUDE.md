@@ -45,8 +45,16 @@
 - `pose()` takes the v1 parameters. Arms: `reach` targets in the v1 torso frame
   (shoulders at y 0.86; targets above the shoulders are pulled in because the
   GLB head is smaller) or `{ x, z, el }`. Legs `{ x, knee }`. Face: `talk`,
-  `wow` (mouth decals) and `blink` (lid decals); `smile`, `brow`, `look`,
-  `point` and `thumb` have no effect (painted face, no finger bones).
+  `wow` (the open mouth is drawn exactly over the painted smile, so it never
+  shows two mouths) and `blink` (lid decals); the decals are skinned to the
+  same bones as the face. `smile`, `brow`, `look`, `point` and `thumb` have no
+  effect (painted face, no finger bones).
+- `glbcast.js` fixes two things in the GLBs as they load; keep them: the
+  auto-rig's arm weights on the chest and Mama's head weights down the whole
+  tudung and baju are moved to the chest bone (`fixWeights`, check with
+  `tools/glb-weights`), otherwise raising an arm or turning the head drags the
+  clothes sideways; and the models' full-strength emissive map is turned down
+  (`GLOW`) so they are shaded by the set's lights instead of looking flat.
 - Heights: Affan 3.8 units, Mama 3.3 (sets scale them as before). To seat a
   character on a surface at height h: `root.position.y = h - parts.seatY * scale`
   and pose `POSES.seated`.

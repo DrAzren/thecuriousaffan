@@ -48,6 +48,8 @@ function frame(t) {
   mama.root.position.set(0, 0, 0);
   aff.pose({});
   mama.pose({});
+  aff.parts.face.mouth.uAlpha.value = 1;
+  mama.parts.face.mouth.uAlpha.value = 1;
   if (s === 0) look([0, 2.0, 15], [0, 1.9, 0]);
   if (s === 1) {
     aff.pose({ yaw: 0.5, talk: 0.5, armR: { reach: [-0.75, 1.55, 0.3], pole: [-1, -0.3, -0.5] } });
@@ -74,6 +76,19 @@ function frame(t) {
   if (s === 9) { mama.root.visible = true; aff.root.visible = false; mama.pose({ blink: 1 }); faceCam(mama, -0.1); }
   if (s === 10) { aff.pose({ blink: 0.5, talk: 0.3 }); faceCam(aff); }
   if (s === 11) { mama.root.visible = true; aff.root.visible = false; mama.pose({ talk: 0.7, blink: 0.3, headYaw: 0.35 }); faceCam(mama, 0.9); }
+  if (s === 13) { mama.root.visible = true; aff.root.visible = false; mama.pose({ talk: 0.25 }); faceCam(mama, -0.1); }
+  if (s === 14) { mama.root.visible = true; aff.root.visible = false; mama.pose({ wow: 1 }); faceCam(mama, -0.1); }
+  if (s === 15) { aff.pose({ talk: 0.3 }); faceCam(aff); }
+  if (s === 16 || s === 17) {
+    const c = s === 16 ? aff : mama;
+    aff.root.visible = c === aff; mama.root.visible = c === mama;
+    // the mouth at its smallest, half transparent over the painted mouth
+    c.pose({ talk: 0.07 });
+    c.parts.face.mouth.uAlpha.value = 0.45;
+    const h = c.parts.head.getWorldPosition(new THREE.Vector3());
+    const dy = c === aff ? 0.086 : 0.237;
+    look([h.x, h.y + dy, h.z + 1.2], [h.x, h.y + dy, h.z], 40);
+  }
   if (s === 12) { aff.pose({ wow: 1, headYaw: -0.3 }); faceCam(aff, -0.9); }
   if (s === 8) {
     aff.pose({ wow: 1, lean: -0.15, armL: { x: -0.6, z: 0.9, el: -1.3 }, armR: { x: -0.6, z: -0.9, el: -1.3 }, legL: { x: -0.4, knee: 0.6 } });
@@ -82,4 +97,4 @@ function frame(t) {
   renderer.setViewport(0, 0, W, H);
   renderer.render(scene, cam);
 }
-window.EP = { fps: 30, duration: 13, frame, thumbnail: () => frame(0), ready: Promise.resolve(true).then(() => (frame(0), true)) };
+window.EP = { fps: 30, duration: 18, frame, thumbnail: () => frame(0), ready: Promise.resolve(true).then(() => (frame(0), true)) };
