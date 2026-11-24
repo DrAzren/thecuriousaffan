@@ -35,8 +35,10 @@ let loading = null;
 export function useGlbCast() {
   setCastStyle('glb');
   loading ||= Promise.all([load('affan_v2.glb'), load('mama_v2.glb')]).then(([a, m]) => {
-    fixWeights(a, 'affan');
-    fixWeights(m, 'mama');
+    for (const [g, who] of [[a, 'affan'], [m, 'mama']]) {
+      fixWeights(g, who);
+      smoothMesh(g, who);
+    }
     GLTF.affan = a;
     GLTF.mama = m;
   });
@@ -68,30 +70,34 @@ export function fixWeights(gltf, who) {
   const line = new THREE.Line3(), cp = V();
   const armDist = (q) => Math.min(...segs.map(([a, b]) => { line.set(a, b); return line.closestPointToPoint(q, true, cp).distanceTo(q); }));
   const R = SPEC[who].sleeve;
+  // legs: the shirt / jacket hem and the hips are not part of the thighs (seated poses
+  // would pull the hem down between the legs)
+  const hipY = (wp('LeftUpLeg').y + wp('RightUpLeg').y) / 2;
+  const legSegs = ['Left', 'Right'].map((sd) => [wp(sd + 'UpLeg'), wp(sd + 'Leg')]);
+  const legDist = (q) => Math.min(...legSegs.map(([a, b]) => { line.set(a, b); return line.closestPointToPoint(q, true, cp).distanceTo(q); }));
+  const legs = new Set(['LeftUpLeg', 'RightUpLeg'].map(bi));
+  const RL = SPEC[who].leg;
   const g = sk.geometry, SI = g.attributes.skinIndex, SW = g.attributes.skinWeight;
   const p = V(), idx = [0, 0, 0, 0], w = [0, 0, 0, 0];
-  for (let i = 0; i < SI.count; i++) {
-    sk.getVertexPosition(i, p).applyMatrix4(sk.matrixWorld);
-    const fArm = Math.max(1 - sm(0.7 * halfW, halfW, Math.abs(p.x - cx)), sm(R, 1.6 * R, armDist(p)));
-    const fHead = sm(chinY, chinY - 0.85 * (chinY - shY), p.y);
-    if (fArm <= 0 && fHead <= 0) continue;
+  // move the share f(bone) of each vertex's weights to the bone `to`
+  const transfer = (i, fOf, to) => {
     let moved = 0;
     for (let k = 0; k < 4; k++) {
       idx[k] = SI.getComponent(i, k);
       w[k] = SW.getComponent(i, k);
-      const f = arms.has(idx[k]) ? fArm : heads.has(idx[k]) ? fHead : 0;
+      const f = fOf(idx[k]);
       if (f > 0 && w[k] > 0) {
         moved += w[k] * f;
         w[k] *= 1 - f;
       }
     }
-    if (moved <= 1e-4) continue;
-    let slot = idx.findIndex((b, k) => b === chest && w[k] > 0);
-    if (slot < 0) slot = w.indexOf(Math.min(...w)); // weakest slot (often empty) becomes the chest
-    if (idx[slot] !== chest) {
+    if (moved <= 1e-4) return;
+    let slot = idx.findIndex((b2, k) => b2 === to && w[k] > 0);
+    if (slot < 0) slot = w.indexOf(Math.min(...w)); // weakest slot (often empty) becomes `to`
+    if (idx[slot] !== to) {
       moved += w[slot];
       w[slot] = 0;
-      idx[slot] = chest;
+      idx[slot] = to;
     }
     w[slot] += moved;
     const sum = w[0] + w[1] + w[2] + w[3];
@@ -99,21 +105,146 @@ export function fixWeights(gltf, who) {
       SI.setComponent(i, k, idx[k]);
       SW.setComponent(i, k, w[k] / sum);
     }
+  };
+  const hips = bi('Hips');
+  for (let i = 0; i < SI.count; i++) {
+    sk.getVertexPosition(i, p).applyMatrix4(sk.matrixWorld);
+    const fArm = Math.max(1 - sm(0.7 * halfW, halfW, Math.abs(p.x - cx)), sm(R, 1.6 * R, armDist(p)));
+    const fHead = sm(chinY, chinY - 0.85 * (chinY - shY), p.y);
+    if (fArm > 0 || fHead > 0) transfer(i, (b2) => (arms.has(b2) ? fArm : heads.has(b2) ? fHead : 0), chest);
+    if (RL) {
+      const fLeg = Math.max(sm(hipY - 0.01, hipY + 0.04, p.y), sm(RL, 1.5 * RL, legDist(p)));
+      if (fLeg > 0) transfer(i, (b2) => (legs.has(b2) ? fLeg : 0), hips);
+    }
+  }
+  SI.needsUpdate = true;
+  SW.needsUpdate = true;
+}
+
+// The generated meshes are lumpy (the face and cloth catch the light in small bumps) and
+// the auto-rig weights change abruptly around the shoulders, which tears the loose baju
+// sleeves when the arms come down from the A-pose. On load: weld the vertices by position,
+// smooth the shading normals, and smooth the bone weights (lightly everywhere, strongly
+// around the shoulders and armpits) so the cloth stretches evenly instead of tearing.
+export function smoothMesh(gltf, who) {
+  let sk = null;
+  gltf.scene.traverse((o) => { if (o.isSkinnedMesh) sk = o; });
+  const g = sk.geometry, P = g.attributes.position, I = g.index, n = P.count;
+  // weld
+  const key = new Map(), grp = new Int32Array(n);
+  let G = 0;
+  for (let i = 0; i < n; i++) {
+    const k = Math.round(P.getX(i) * 2e4) + ',' + Math.round(P.getY(i) * 2e4) + ',' + Math.round(P.getZ(i) * 2e4);
+    let id = key.get(k);
+    if (id === undefined) key.set(k, (id = G++));
+    grp[i] = id;
+  }
+  const gp = new Float32Array(G * 3);
+  for (let i = 0; i < n; i++) gp.set([P.getX(i), P.getY(i), P.getZ(i)], grp[i] * 3);
+  // adjacency (CSR)
+  const deg = new Int32Array(G + 1), edges = [];
+  for (let t = 0; t < I.count; t += 3) {
+    const a = grp[I.getX(t)], b = grp[I.getX(t + 1)], c = grp[I.getX(t + 2)];
+    edges.push(a, b, b, c, c, a, b, a, c, b, a, c);
+  }
+  for (let e = 0; e < edges.length; e += 2) deg[edges[e] + 1]++;
+  for (let i = 0; i < G; i++) deg[i + 1] += deg[i];
+  const nb = new Int32Array(deg[G]), fill = deg.slice(0, G);
+  for (let e = 0; e < edges.length; e += 2) nb[fill[edges[e]]++] = edges[e + 1];
+  // area-weighted face normals per welded vertex, then a few rounds of neighbour averaging
+  let N = new Float32Array(G * 3);
+  const va = V(), vb = V(), vc = V(), fn = V();
+  for (let t = 0; t < I.count; t += 3) {
+    const a = grp[I.getX(t)], b = grp[I.getX(t + 1)], c = grp[I.getX(t + 2)];
+    va.fromArray(gp, a * 3); vb.fromArray(gp, b * 3); vc.fromArray(gp, c * 3);
+    fn.subVectors(vb, va).cross(vc.sub(va));
+    for (const x of [a, b, c]) { N[x * 3] += fn.x; N[x * 3 + 1] += fn.y; N[x * 3 + 2] += fn.z; }
+  }
+  const norm = (A) => { for (let i = 0; i < G; i++) { const l = Math.hypot(A[i * 3], A[i * 3 + 1], A[i * 3 + 2]) || 1; A[i * 3] /= l; A[i * 3 + 1] /= l; A[i * 3 + 2] /= l; } };
+  norm(N);
+  for (let it = 0; it < SPEC[who].smoothN; it++) {
+    const M = new Float32Array(G * 3);
+    for (let i = 0; i < G; i++) {
+      let x = N[i * 3], y = N[i * 3 + 1], z = N[i * 3 + 2];
+      for (let k = deg[i]; k < deg[i + 1]; k++) { const j = nb[k]; x += N[j * 3]; y += N[j * 3 + 1]; z += N[j * 3 + 2]; }
+      M[i * 3] = x; M[i * 3 + 1] = y; M[i * 3 + 2] = z;
+    }
+    norm(M);
+    N = M;
+  }
+  const NA = g.attributes.normal;
+  for (let i = 0; i < n; i++) NA.setXYZ(i, N[grp[i] * 3], N[grp[i] * 3 + 1], N[grp[i] * 3 + 2]);
+  NA.needsUpdate = true;
+  // bone weights as dense rows per welded vertex
+  const nB = sk.skeleton.bones.length, SI = g.attributes.skinIndex, SW = g.attributes.skinWeight;
+  let Wt = new Float32Array(G * nB);
+  const cnt = new Float32Array(G);
+  for (let i = 0; i < n; i++) {
+    const r = grp[i] * nB;
+    cnt[grp[i]]++;
+    for (let k = 0; k < 4; k++) Wt[r + SI.getComponent(i, k)] += SW.getComponent(i, k);
+  }
+  for (let i = 0; i < G; i++) if (cnt[i] > 1) for (let b = 0; b < nB; b++) Wt[i * nB + b] /= cnt[i];
+  // how much smoothing each vertex gets: everywhere a little, near the shoulders a lot
+  sk.parent.updateMatrixWorld(true);
+  const inv = sk.matrixWorld.clone().invert();
+  const jn = SPEC[who].leg ? ['LeftArm', 'RightArm', 'LeftUpLeg', 'RightUpLeg'] : ['LeftArm', 'RightArm'];
+  const joints = jn.map((nm) => gltf.scene.getObjectByName(nm).getWorldPosition(V()).applyMatrix4(inv));
+  const zone = SPEC[who].shoulderZone;
+  const strong = new Uint8Array(G);
+  for (let i = 0; i < G; i++) {
+    va.fromArray(gp, i * 3);
+    strong[i] = joints.some((j) => j.distanceTo(va) < zone) ? 1 : 0;
+  }
+  const rounds = SPEC[who].smoothW;
+  for (let it = 0; it < rounds; it++) {
+    const W2 = Wt.slice();
+    for (let i = 0; i < G; i++) {
+      if (!strong[i] && it >= 3) continue;
+      const d = deg[i + 1] - deg[i];
+      if (!d) continue;
+      const r = i * nB;
+      for (let b = 0; b < nB; b++) {
+        let acc = 0;
+        for (let k = deg[i]; k < deg[i + 1]; k++) acc += Wt[nb[k] * nB + b];
+        W2[r + b] = 0.5 * Wt[r + b] + 0.5 * (acc / d);
+      }
+    }
+    Wt = W2;
+  }
+  // back to the 4 strongest bones per vertex
+  const top = [], grpTop = new Array(G);
+  for (let i = 0; i < G; i++) {
+    const r = i * nB;
+    top.length = 0;
+    for (let b = 0; b < nB; b++) if (Wt[r + b] > 1e-4) top.push(b);
+    top.sort((p, q) => Wt[r + q] - Wt[r + p]);
+    top.length = Math.min(4, top.length);
+    const sum = top.reduce((a2, b) => a2 + Wt[r + b], 0) || 1;
+    grpTop[i] = top.map((b) => [b, Wt[r + b] / sum]);
+  }
+  for (let i = 0; i < n; i++) {
+    const t = grpTop[grp[i]];
+    for (let k = 0; k < 4; k++) {
+      SI.setComponent(i, k, t[k] ? t[k][0] : 0);
+      SW.setComponent(i, k, t[k] ? t[k][1] : 0);
+    }
   }
   SI.needsUpdate = true;
   SW.needsUpdate = true;
 }
 
 const GLOW = 0.3;
+const CLAV = 0.25; // share of the upper-arm turn given to the collarbone
 const SPEC = {
   // height in units; face feature offsets (metres, model space) from the 'headfront' joint:
   // mouth anchor (on the painted mouth line), eye centres (x, y); M = mouth decal (metres)
   affan: {
     height: 3.8, glow: GLOW, mouth: [-0.0012, 0.026], eyeX: 0.043, eyeY: 0.075,
-    M: { R: 0.045, K: 2.4, top: 0.0014, a: 0.0345, bMin: 0.0045, bMax: 0.014, teeth: 0.0014, oA: 0.009, oB: 0.012, oY: -0.002, wowO: true }, lidR: 0.02, lidRy: 1.3, lidRing: 1.7, headK: 0.38, chin: -0.012, sleeve: 0.045 },
+    M: { R: 0.045, K: 2.4, top: 0.0014, a: 0.0345, bMin: 0.0045, bMax: 0.014, teeth: 0.0014, oA: 0.009, oB: 0.012, oY: -0.002, wowO: true }, lidR: 0.02, lidRy: 1.3, lidRing: 1.7, headK: 0.38, chin: -0.012, sleeve: 0.045, smoothN: 4, smoothW: 16, shoulderZone: 0.11, leg: 0.062 },
   mama: {
     height: 3.3, glow: GLOW, mouth: [-0.003, 0.115], eyeX: 0.047, eyeY: 0.186,
-    M: { R: 0.05, K: 2.6, K4: 1400, top: 0.0016, a: 0.0355, bMin: 0.0065, bMax: 0.017, teeth: 0.0018, oA: 0.01, oB: 0.013, oY: -0.001 }, lidR: 0.021, lidRy: 1.5, lidRing: 1.55, headK: 0.5, chin: 0.075, sleeve: 0.06 },
+    M: { R: 0.05, K: 2.6, K4: 1400, top: 0.0016, a: 0.0355, bMin: 0.0065, bMax: 0.017, teeth: 0.0018, oA: 0.01, oB: 0.013, oY: -0.001 }, lidR: 0.021, lidRy: 1.5, lidRing: 1.55, headK: 0.5, chin: 0.075, sleeve: 0.06, smoothN: 4, smoothW: 24, shoulderZone: 0.16, leg: 0 },
 };
 
 const V = () => new THREE.Vector3();
@@ -333,6 +464,8 @@ export function makeGlbCast(who = 'affan') {
         // the models come with their colour map as a full-strength emissive map, which flattens
         // them (no shading, Mama washed out); keep only a little of it so the sets light them
         o.material.emissiveIntensity = S.glow;
+        // Affan's normal map only adds grain (the shape is in the mesh); smooth shading reads cleaner
+        o.material.normalMap = null;
       }
     }
   });
@@ -442,7 +575,7 @@ export function makeGlbCast(who = 'affan') {
   const DEF = {
     yaw: 0, lean: 0, tilt: 0, bob: 0, headYaw: 0, headPitch: 0, headRoll: 0, lookX: 0, lookY: 0, blink: 0,
     talk: 0, smile: 0.6, wow: 0, brow: 0,
-    armL: { x: 0, z: 0.1, el: -0.15 }, armR: { x: 0, z: -0.1, el: -0.15 },
+    armL: { x: 0, z: 0.22, el: -0.15 }, armR: { x: 0, z: -0.22, el: -0.15 },
     legL: { x: 0, knee: 0 }, legR: { x: 0, knee: 0 },
   };
   const ax = { x: V(), y: V(), z: V() };
@@ -451,9 +584,8 @@ export function makeGlbCast(who = 'affan') {
   const rotX = (v, a) => v.applyAxisAngle(V().set(1, 0, 0), a);
   const rotZ = (v, a) => v.applyAxisAngle(V().set(0, 0, 1), a);
 
-  function setArm(k, p, side) {
-    const b = bones[k];
-    const S0 = b.arm.getWorldPosition(V());
+  // two-bone solution for the elbow E and wrist T from the shoulder joint S0
+  function solveArm(S0, p, side) {
     let E, T;
     if (p.reach) {
       // the v1 head is about twice as big: pull targets above the shoulders down towards them
@@ -474,6 +606,25 @@ export function makeGlbCast(who = 'affan') {
       const d2 = rotX(d1.clone(), p.el ?? 0);
       E = S0.clone().addScaledVector(d1.applyQuaternion(tq), L1);
       T = E.clone().addScaledVector(d2.applyQuaternion(tq), L2);
+    }
+    return { E, T };
+  }
+  function setArm(k, p, side) {
+    const b = bones[k];
+    let S0 = b.arm.getWorldPosition(V());
+    let { E, T } = solveArm(S0, p, side);
+    // let the collarbone take a share of the turn, so the cloth over the shoulder
+    // stretches evenly instead of all of it bunching at the armpit
+    if (b.sh && CLAV) {
+      const cur = b.fore.getWorldPosition(V()).sub(S0).normalize();
+      const want = E.clone().sub(S0).normalize();
+      const part = Q().slerp(Q().setFromUnitVectors(cur, want), CLAV);
+      const wq = b.sh.getWorldQuaternion(Q());
+      const pq = b.sh.parent.getWorldQuaternion(Q());
+      b.sh.quaternion.copy(pq.invert().multiply(part.multiply(wq)));
+      b.sh.updateMatrixWorld(true);
+      S0 = b.arm.getWorldPosition(V());
+      ({ E, T } = solveArm(S0, p, side));
     }
     aimBone(b.arm, b.fore, E.clone().sub(S0));
     aimBone(b.fore, b.hand, T.clone().sub(b.fore.getWorldPosition(V())));

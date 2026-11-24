@@ -89,6 +89,19 @@ function frame(t) {
     const dy = c === aff ? 0.086 : 0.237;
     look([h.x, h.y + dy, h.z + 1.2], [h.x, h.y + dy, h.z], 40);
   }
+  // cloth checks: 18 Mama chest front (arms forward, as in the kitchen), 19 Mama 3/4 side,
+  // 20 Affan chest (waving), 21 Mama rest pose front
+  if (s >= 18 && s <= 21) {
+    const c = s === 20 ? aff : mama;
+    aff.root.visible = c === aff; mama.root.visible = c === mama;
+    if (s === 20) c.pose({ armR: { reach: [-0.75, 1.5, 0.35], pole: [-1, -0.3, -0.5] } });
+    else if (s === 21) c.pose({});
+    else c.pose({ lean: 0.15, armR: { reach: [-0.3, 0.2, 0.9], pole: [-1, -0.6, -0.4] }, armL: { reach: [0.25, 0.15, 0.85], pole: [1, -0.6, -0.4] } });
+    c.root.updateMatrixWorld(true);
+    const ch = c.parts.torso.localToWorld(new THREE.Vector3(0, 0.55, 0));
+    const side = s === 19 ? 1 : 0;
+    look([ch.x + side * 3.2, ch.y + 0.3, ch.z + (side ? 2.4 : 4.2)], [ch.x, ch.y - 0.1, ch.z], 30);
+  }
   if (s === 12) { aff.pose({ wow: 1, headYaw: -0.3 }); faceCam(aff, -0.9); }
   if (s === 8) {
     aff.pose({ wow: 1, lean: -0.15, armL: { x: -0.6, z: 0.9, el: -1.3 }, armR: { x: -0.6, z: -0.9, el: -1.3 }, legL: { x: -0.4, knee: 0.6 } });
@@ -97,4 +110,4 @@ function frame(t) {
   renderer.setViewport(0, 0, W, H);
   renderer.render(scene, cam);
 }
-window.EP = { fps: 30, duration: 18, frame, thumbnail: () => frame(0), ready: Promise.resolve(true).then(() => (frame(0), true)) };
+window.EP = { fps: 30, duration: 22, frame, thumbnail: () => frame(0), ready: Promise.resolve(true).then(() => (frame(0), true)) };
