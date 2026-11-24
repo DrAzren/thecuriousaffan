@@ -1,7 +1,8 @@
-// Which version of the recurring cast to build. Episodes up to 063 use the
-// original rig (v1); Episode 064 onwards call setCastStyle('v2') before
-// building any set, so makeAffan() and makeMama() return the version 2
-// characters from cast2.js (matching assets/characters/*_v2_*).
+// Which version of the recurring cast to build.
+//   'v1'  the original procedural rig (Episodes up to 063)
+//   'glb' the owner's real Higgsfield 3D avatars (Episode 064 onwards), set by
+//         `await useGlbCast()` from glbcast.js at the top of episode.js
+//   'v2'  a procedural lookalike of the avatars (cast2.js); superseded by 'glb'
 let STYLE = 'v1';
 export const setCastStyle = (s) => {
   STYLE = s;

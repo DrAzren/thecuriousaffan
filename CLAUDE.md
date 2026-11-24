@@ -30,15 +30,26 @@
 
 ## Cast (Episode 064 onward)
 
-- Use the **version 2 cast**: call `setCastStyle('v2')` (from `shared/style.js`)
-  at the top of the episode's `episode.js`, before any set is built. Then
-  `makeAffan()` and `makeMama()` return the v2 rigs from `shared/cast2.js`.
-  Episodes up to 063 keep the original rig (v1).
-- References: `assets/characters/affan_v2_*` (the owner's Higgsfield avatar)
-  and `assets/characters/mama_v2_*` (generated to match). Check new work
-  against them; `tools/cast-preview` renders a turnaround
-  (`node tools/render.js tools/cast-preview --stills 0,2,3,4,5,6,7,8 --out <dir>`).
-- v2 bodies are taller in the legs (Affan's hips at y 1.5, Mama's at 1.95) but
-  keep the v1 torso-local frame, so `POSES` and reach targets still work. When
-  seating a v2 character, lower the root by the extra hip height.
-
+- Use the **real 3D avatars**: the owner's Higgsfield Affan
+  (`assets/characters/affan_v2_*`) and the Mama made to match
+  (`mama_v2_*`), turned into rigged, textured models by Higgsfield
+  "Multi-Image to 3D": `assets/characters/affan_v2.glb` and `mama_v2.glb`.
+  Do not replace them with procedural lookalikes (the owner asked for the
+  actual avatar).
+- At the top of the episode's `episode.js`, before any set is built (so import
+  `worlds.js` after it, with a dynamic `await import(...)`):
+  `import { useGlbCast } from '../../shared/glbcast.js'; await useGlbCast();`.
+  Then `makeAffan()` and `makeMama()` return the GLB rigs (`shared/glbcast.js`)
+  with the usual `{ root, parts, pose, toTorso }`. Episodes up to 063 keep the
+  original rig (v1). `shared/cast2.js` (procedural v2) is superseded.
+- `pose()` takes the v1 parameters. Arms: `reach` targets in the v1 torso frame
+  (shoulders at y 0.86; targets above the shoulders are pulled in because the
+  GLB head is smaller) or `{ x, z, el }`. Legs `{ x, knee }`. Face: `talk`,
+  `wow` (mouth decals) and `blink` (lid decals); `smile`, `brow`, `look`,
+  `point` and `thumb` have no effect (painted face, no finger bones).
+- Heights: Affan 3.8 units, Mama 3.3 (sets scale them as before). To seat a
+  character on a surface at height h: `root.position.y = h - parts.seatY * scale`
+  and pose `POSES.seated`.
+- Checks: `tools/glb-cast-test` (poses and face close-ups) and
+  `tools/glb-cast-demo` (the Episode 038 kitchen, animated);
+  `node tools/render.js tools/glb-cast-test --stills 0,1,2,3,4,5,6,7 --out <dir>`.

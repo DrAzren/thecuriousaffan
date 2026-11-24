@@ -12,6 +12,7 @@ import * as THREE from 'three';
 import { clamp, lerp } from './core.js';
 import { castStyle } from './style.js';
 import { makeCast2 } from './cast2.js';
+import { makeGlbCast } from './glbcast.js';
 
 export const AFFAN = {
   skin: 0xe8a57c,
@@ -72,6 +73,7 @@ function glassesFrameGeo() {
 }
 
 export function makeAffan() {
+  if (castStyle() === 'glb') return makeGlbCast('affan');
   if (castStyle() === 'v2') return makeCast2('affan');
   const C = AFFAN;
   const M = {
