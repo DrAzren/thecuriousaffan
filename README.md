@@ -44,6 +44,9 @@ time and can be re-timed to new narration.
 | 058 | Kenapa Kita Tersedu? | [`episodes/058-tersedu`](episodes/058-tersedu) | `output/TheCuriousAffan_E058_Kenapa_Kita_Tersedu.mp4` |
 | 059 | Kenapa Kucing Selalu Jatuh Atas Kakinya? | [`episodes/059-kucing-jatuh`](episodes/059-kucing-jatuh) | `output/TheCuriousAffan_E059_Kenapa_Kucing_Selalu_Jatuh_Atas_Kakinya.mp4` |
 | 060 | Kenapa Magnet Boleh Tarik Besi? | [`episodes/060-magnet`](episodes/060-magnet) | `output/TheCuriousAffan_E060_Kenapa_Magnet_Boleh_Tarik_Besi.mp4` |
+| 061 | Macam Mana Penyu Cari Pantai Tempat Lahir? | [`episodes/061-penyu`](episodes/061-penyu) | `output/TheCuriousAffan_E061_Macam_Mana_Penyu_Cari_Pantai_Tempat_Lahir.mp4` |
+| 062 | Macam Mana Roti Jadi Gebu? | [`episodes/062-roti-gebu`](episodes/062-roti-gebu) | `output/TheCuriousAffan_E062_Macam_Mana_Roti_Jadi_Gebu.mp4` |
+| 063 | Kenapa Bintang Berkelip? | [`episodes/063-bintang-berkelip`](episodes/063-bintang-berkelip) | `output/TheCuriousAffan_E063_Kenapa_Bintang_Berkelip.mp4` |
 
 ## Build
 
@@ -1102,5 +1105,81 @@ episode stays consistent.
   - zip-and-clink snaps for the paper clips and a magnetic hum;
   - a clack for poles snapping together and a boing for poles pushing apart;
   - aligning shimmers, a sliding scrape, a planetary drone and a compass rattle.
+
+  The mix is normalised to −14 LUFS with a peak limiter at −1.5 dB.
+
+## Episode 061 at a glance
+
+- **Science.** When baby turtles hatch, they crawl straight to the sea,
+  following the light on the horizon. They swim thousands of kilometres for
+  years across the ocean. Their secret: turtles can feel the Earth's
+  magnetism, and every beach has its own magnetic signature, like a home
+  address; grown-up turtles follow it back to nest. Warm sand makes female
+  hatchlings and cool sand makes males. Don't disturb turtles or litter on the
+  beach.
+- **Picture.** Three sets:
+  - a moonlit beach: animated waves, stars, palm trees, a mother turtle laying
+    eggs, hatchlings digging out and scurrying to the sea, and a plastic
+    bottle that Affan picks up;
+  - an ocean globe with a growing turtle route, km and year counters,
+    magnetic field loops, coloured "address" pins and the turtle swimming home;
+  - two nests with thermometers: warm sand (girls with bows) and cool sand.
+- **Audio.** The narration is in Affan's voice, made with ElevenLabs
+  (`eleven_v4`, a single take to save credits). Captions use word timings
+  measured locally with faster-whisper (`audio/narration_words.json`). The
+  soundtrack reuses the Episode 005 instruments and adds:
+  - night waves and crickets, egg plops and sandy scurrying;
+  - an underwater swell, a magnetic hum and chimes for the address pins;
+  - warm and cool tones for the sand thermometers.
+
+  The mix is normalised to −14 LUFS with a peak limiter at −1.5 dB.
+
+## Episode 062 at a glance
+
+- **Science.** Bread is made from flour, water, sugar and yeast, a tiny
+  living thing. Yeast eats sugar and breathes out carbon dioxide, making gas
+  bubbles in the dough. Flour has gluten, which acts like balloon rubber and
+  traps the bubbles, so the dough doubles in size. When the bread is baked,
+  the bubbles set hard, which is why bread is full of little holes. Ask a
+  grown-up to help with the oven.
+- **Picture.** Two sets:
+  - the Episode 038 kitchen: Mama kneads dough while Affan presses a loaf that
+    squashes and springs back;
+  - an "inside the dough" stage: the four ingredients, a giant cute yeast cell
+    eating sugar cubes and puffing CO2 bubbles, gluten nets inflating like
+    balloons, a bowl of dough doubling with a timer, a glowing oven and a
+    bread slice full of holes.
+- **Audio.** The narration is in Affan's voice, made with ElevenLabs
+  (`eleven_v4`, a single take to save credits). Captions use word timings
+  measured locally with faster-whisper (`audio/narration_words.json`). The
+  soundtrack reuses the Episode 005 instruments and adds:
+  - kneading thumps, a squishy press and yeast munching;
+  - bubbly CO2 blips and rubbery gluten stretches;
+  - a rising whistle, an oven hum and ding, and a crusty crunch.
+
+  The mix is normalised to −14 LUFS with a peak limiter at −1.5 dB.
+
+## Episode 063 at a glance
+
+- **Science.** Stars don't really twinkle. They are so far away that their
+  light arrives as a single tiny point, and on the way it passes through the
+  Earth's air, which is always moving, warm and cool, like rippling water. The
+  starlight bends this way and that, so the star seems to twinkle. The Moon
+  and planets are closer and look bigger, so they hardly twinkle, and
+  astronauts in space see stars that don't twinkle at all.
+- **Picture.** Two sets:
+  - the Episode 053 park at night with a twinkling hero star and a steady
+    moon in a sky group that follows the camera;
+  - a sky lab: a far star whose light travels to the Earth as a point; warm
+    and cool air layers that bend a ray of light above a little Affan; a
+    moon / ringed planet / star comparison with bundles of rays; and Affan
+    floating in a bubble helmet above the Earth.
+- **Audio.** The narration is in Affan's voice, made with ElevenLabs
+  (`eleven_v4`, a single take to save credits). Captions use word timings
+  measured locally with faster-whisper (`audio/narration_words.json`). The
+  soundtrack reuses the Episode 005 instruments and adds:
+  - park crickets and glassy star pings;
+  - a deep space drone and a "zing" for travelling starlight;
+  - rushing air, wobbly glissandos for bending light and a calm space pad.
 
   The mix is normalised to −14 LUFS with a peak limiter at −1.5 dB.
