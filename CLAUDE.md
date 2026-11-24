@@ -27,3 +27,18 @@
   delivery changes.
 - Transcribe the chosen take (Scribe) and save it as `audio/words.json`; the
   captions are timed from it.
+
+## Cast (Episode 064 onward)
+
+- Use the **version 2 cast**: call `setCastStyle('v2')` (from `shared/style.js`)
+  at the top of the episode's `episode.js`, before any set is built. Then
+  `makeAffan()` and `makeMama()` return the v2 rigs from `shared/cast2.js`.
+  Episodes up to 063 keep the original rig (v1).
+- References: `assets/characters/affan_v2_*` (the owner's Higgsfield avatar)
+  and `assets/characters/mama_v2_*` (generated to match). Check new work
+  against them; `tools/cast-preview` renders a turnaround
+  (`node tools/render.js tools/cast-preview --stills 0,2,3,4,5,6,7,8 --out <dir>`).
+- v2 bodies are taller in the legs (Affan's hips at y 1.5, Mama's at 1.95) but
+  keep the v1 torso-local frame, so `POSES` and reach targets still work. When
+  seating a v2 character, lower the root by the extra hip height.
+

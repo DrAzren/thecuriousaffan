@@ -13,6 +13,8 @@
 import * as THREE from 'three';
 import { rng } from '../../shared/core.js';
 import { makeAffan, AFFAN } from '../../shared/affan.js';
+import { castStyle } from '../../shared/style.js';
+import { makeCast2 } from '../../shared/cast2.js';
 import { add, glow, glowTex } from '../../shared/props.js';
 import { buildOutro, RoundedBoxGeometry } from '../005-bulan-ikut-kereta/worlds.js';
 
@@ -54,6 +56,7 @@ function gradientSky(top, bot) {
 // --------------------------------------------------------------------- Mama
 export const MAMA = { baju: 0x2fa39a, inner: 0xfff0f4, stripe: 0xf7c948, kain: 0x22706a, tudung: 0xf2a8c8 };
 export function makeMama() {
+  if (castStyle() === 'v2') return makeCast2('mama');
   const k = makeAffan();
   const swap = new Map([
     [AFFAN.navy, MAMA.baju],

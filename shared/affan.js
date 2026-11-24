@@ -10,6 +10,8 @@
 // Units: feet at y = 0, ~3.8 units tall, faces +z. Use group.scale for size.
 import * as THREE from 'three';
 import { clamp, lerp } from './core.js';
+import { castStyle } from './style.js';
+import { makeCast2 } from './cast2.js';
 
 export const AFFAN = {
   skin: 0xe8a57c,
@@ -70,6 +72,7 @@ function glassesFrameGeo() {
 }
 
 export function makeAffan() {
+  if (castStyle() === 'v2') return makeCast2('affan');
   const C = AFFAN;
   const M = {
     skin: std(C.skin, 0.55, { emissive: 0x3a1608, emissiveIntensity: 0.18 }),
