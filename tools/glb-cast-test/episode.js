@@ -102,6 +102,19 @@ function frame(t) {
     const side = s === 19 ? 1 : 0;
     look([ch.x + side * 3.2, ch.y + 0.3, ch.z + (side ? 2.4 : 4.2)], [ch.x, ch.y - 0.1, ch.z], 30);
   }
+  // 22-27: Mama cloth at high zoom: rest front, rest back, rest left side, kitchen reach front,
+  // kitchen reach from the camera's usual 3/4, arms raised a little (talking gesture)
+  if (s >= 22 && s <= 27) {
+    aff.root.visible = false; mama.root.visible = true;
+    const reach = { lean: 0.15, armR: { reach: [-0.3, 0.2, 0.9], pole: [-1, -0.6, -0.4] }, armL: { reach: [0.25, 0.15, 0.85], pole: [1, -0.6, -0.4] } };
+    if (s <= 24) mama.pose({ yaw: s === 23 ? Math.PI : s === 24 ? Math.PI / 2 : 0 });
+    else if (s <= 26) mama.pose(reach);
+    else mama.pose({ armR: { reach: [-0.6, 0.55, 0.6] }, armL: { reach: [0.6, 0.55, 0.6] } });
+    mama.root.updateMatrixWorld(true);
+    const ch = mama.parts.torso.localToWorld(new THREE.Vector3(0, 0.3, 0));
+    if (s === 26) look([ch.x + 1.6, ch.y + 0.9, ch.z + 3.2], [ch.x, ch.y, ch.z], 30);
+    else look([ch.x, ch.y + 0.2, ch.z + 3.6], [ch.x, ch.y, ch.z], 30);
+  }
   if (s === 12) { aff.pose({ wow: 1, headYaw: -0.3 }); faceCam(aff, -0.9); }
   if (s === 8) {
     aff.pose({ wow: 1, lean: -0.15, armL: { x: -0.6, z: 0.9, el: -1.3 }, armR: { x: -0.6, z: -0.9, el: -1.3 }, legL: { x: -0.4, knee: 0.6 } });
@@ -110,4 +123,4 @@ function frame(t) {
   renderer.setViewport(0, 0, W, H);
   renderer.render(scene, cam);
 }
-window.EP = { fps: 30, duration: 22, frame, thumbnail: () => frame(0), ready: Promise.resolve(true).then(() => (frame(0), true)) };
+window.EP = { fps: 30, duration: 28, frame, thumbnail: () => frame(0), ready: Promise.resolve(true).then(() => (frame(0), true)) };

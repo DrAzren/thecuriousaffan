@@ -55,6 +55,11 @@
   `tools/glb-weights`), otherwise raising an arm or turning the head drags the
   clothes sideways; and the models' full-strength emissive map is turned down
   (`GLOW`) so they are shaded by the set's lights instead of looking flat.
+  Also on load: `smoothMesh` (smooth shading normals and bone weights; the
+  generated meshes are lumpy and tore the sleeves) and `cleanBaju`: Mama's
+  generated baju texture is smeared on the sleeves and sides (it looked torn),
+  so the baju is re-printed in the shader (reference teal, white flowers,
+  plain kain below the hem). Keep these.
 - Heights: Affan 3.8 units, Mama 3.3 (sets scale them as before). To seat a
   character on a surface at height h: `root.position.y = h - parts.seatY * scale`
   and pose `POSES.seated`.

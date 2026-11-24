@@ -22,7 +22,7 @@
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import * as SkeletonUtils from 'three/addons/utils/SkeletonUtils.js';
-import { clamp, lerp } from './core.js';
+import { clamp, lerp, rng } from './core.js';
 import { setCastStyle } from './style.js';
 
 const BASE = new URL('../assets/characters/', import.meta.url).href;
@@ -39,6 +39,7 @@ export function useGlbCast() {
       fixWeights(g, who);
       smoothMesh(g, who);
     }
+    cleanBaju(m);
     GLTF.affan = a;
     GLTF.mama = m;
   });
@@ -234,7 +235,157 @@ export function smoothMesh(gltf, who) {
   SW.needsUpdate = true;
 }
 
+// Mama's baju texture was generated from a front and a side picture only: on the sleeves,
+// under the arms and down the sides it is smeared (pale green blotches, broken flowers),
+// which reads as torn cloth. So the baju is re-printed: a mask marks the baju texels of the
+// colour map (teal, plus the pale flowers and smears inside teal areas; not the cuffs), and
+// there the shader paints a clean white-flower-on-teal print, projected in the model's own
+// (bind pose) space so it runs evenly across the texture seams and moves with the cloth.
+export function cleanBaju(gltf) {
+  let sk = null;
+  gltf.scene.traverse((o) => { if (o.isSkinnedMesh) sk = o; });
+  const map = sk.material.map, img = map.image, w = img.width, h = img.height;
+  const cv = new OffscreenCanvas(w, h);
+  const cx = cv.getContext('2d', { willReadFrequently: true });
+  cx.drawImage(img, 0, 0);
+  const id = cx.getImageData(0, 0, w, h), d = id.data, n = w * h;
+  const teal = new Float32Array(n);
+  const tealCols = [];
+  for (let i = 0; i < n; i++) {
+    const r = d[i * 4], g = d[i * 4 + 1], b = d[i * 4 + 2];
+    if (g > r + 25 && b > r + 5 && g > 105) {
+      teal[i] = 1;
+      if (i % 97 === 0 && g < 200) tealCols.push([r, g, b]);
+    }
+  }
+  // fraction of teal around each texel (box blur, radius 9)
+  const blur = (src, R) => {
+    const tmp = new Float32Array(n), out = new Float32Array(n);
+    for (let y = 0; y < h; y++) {
+      let acc = 0;
+      for (let x = -R; x <= R; x++) acc += src[y * w + Math.min(w - 1, Math.max(0, x))];
+      for (let x = 0; x < w; x++) {
+        tmp[y * w + x] = acc / (2 * R + 1);
+        acc += src[y * w + Math.min(w - 1, x + R + 1)] - src[y * w + Math.max(0, x - R)];
+      }
+    }
+    for (let x = 0; x < w; x++) {
+      let acc = 0;
+      for (let y = -R; y <= R; y++) acc += tmp[Math.min(h - 1, Math.max(0, y)) * w + x];
+      for (let y = 0; y < h; y++) {
+        out[y * w + x] = acc / (2 * R + 1);
+        acc += tmp[Math.min(h - 1, y + R + 1) * w + x] - tmp[Math.max(0, y - R) * w + x];
+      }
+    }
+    return out;
+  };
+  const near = blur(teal, 9);
+  const mask = new Float32Array(n);
+  for (let i = 0; i < n; i++) {
+    const r = d[i * 4], g = d[i * 4 + 1], b = d[i * 4 + 2];
+    const light = r + g + b > 420 && r < g + 15 && b > r - 25; // white / pale green, not pink or skin
+    mask[i] = teal[i] || (light && near[i] > 0.35) ? 1 : 0;
+  }
+  const soft = blur(mask, 1);
+  const md = new ImageData(w, h);
+  for (let i = 0; i < n; i++) {
+    const v = Math.round(soft[i] * 255);
+    md.data[i * 4] = md.data[i * 4 + 1] = md.data[i * 4 + 2] = v;
+    md.data[i * 4 + 3] = 255;
+  }
+  const mc = new OffscreenCanvas(w, h);
+  mc.getContext('2d').putImageData(md, 0, 0);
+  const maskTex = new THREE.CanvasTexture(mc);
+  maskTex.flipY = map.flipY;
+  maskTex.colorSpace = THREE.NoColorSpace;
+  maskTex.needsUpdate = true;
+  // the print: the baju's own teal (median), white five-petal flowers with little sprigs
+  tealCols.sort((p, q) => p[0] + p[1] + p[2] - (q[0] + q[1] + q[2]));
+  const base = BAJU_TEAL; // the teal of the Mama reference picture (mama_v2_front.png)
+  const S2 = 512, pc = new OffscreenCanvas(S2, S2), px = pc.getContext('2d');
+  px.fillStyle = `rgb(${base[0]},${base[1]},${base[2]})`;
+  px.fillRect(0, 0, S2, S2);
+  const R2 = rng(64);
+  const flower = (x, y, s, rot) => {
+    px.save();
+    px.translate(x, y);
+    px.rotate(rot);
+    px.fillStyle = 'rgba(244,250,247,0.95)';
+    for (let k = 0; k < 5; k++) {
+      px.rotate((Math.PI * 2) / 5);
+      px.beginPath();
+      px.ellipse(0, -s * 0.55, s * 0.32, s * 0.5, 0, 0, Math.PI * 2);
+      px.fill();
+    }
+    px.fillStyle = 'rgba(205,225,215,1)';
+    px.beginPath();
+    px.arc(0, 0, s * 0.18, 0, Math.PI * 2);
+    px.fill();
+    // a sprig: stem and two leaves
+    px.strokeStyle = 'rgba(232,244,238,0.9)';
+    px.lineWidth = s * 0.09;
+    px.beginPath();
+    px.moveTo(0, s * 0.9);
+    px.quadraticCurveTo(s * 0.25, s * 1.5, s * 0.1, s * 2.0);
+    px.stroke();
+    px.fillStyle = 'rgba(232,244,238,0.9)';
+    for (const sd of [-1, 1]) {
+      px.beginPath();
+      px.ellipse(s * 0.15 + sd * s * 0.28, s * 1.45, s * 0.1, s * 0.26, sd * 0.9, 0, Math.PI * 2);
+      px.fill();
+    }
+    px.restore();
+  };
+  const cells = 3;
+  for (let gy = 0; gy < cells; gy++) {
+    for (let gx = 0; gx < cells; gx++) {
+      const x = ((gx + 0.5 + (gy % 2) * 0.5) / cells) * S2 + (R2() - 0.5) * 30;
+      const y = ((gy + 0.3) / cells) * S2 + (R2() - 0.5) * 30;
+      const sz = 24 + R2() * 6, rot = R2() * Math.PI;
+      // draw wrapped copies so the tile repeats seamlessly
+      for (const ox of [-S2, 0, S2]) for (const oy of [-S2, 0, S2]) flower(x + ox, y + oy, sz, rot);
+    }
+  }
+  const patTex = new THREE.CanvasTexture(pc);
+  patTex.wrapS = patTex.wrapT = THREE.RepeatWrapping;
+  patTex.colorSpace = THREE.SRGBColorSpace;
+  patTex.anisotropy = 8;
+  patTex.needsUpdate = true;
+  // the kain (skirt) below the baju's hem is plain, as in the reference
+  sk.geometry.computeBoundingBox();
+  const bb = sk.geometry.boundingBox;
+  const hemY = bb.min.y + 0.27 * (bb.max.y - bb.min.y);
+  const plain = new THREE.Color().setRGB(base[0] / 255, base[1] / 255, base[2] / 255, THREE.SRGBColorSpace);
+  gltf.userData.baju = { mask: maskTex, pat: patTex, scale: 0.24, hemY, plain };
+}
+function installBaju(mat, B) {
+  mat.onBeforeCompile = (sh) => {
+    sh.uniforms.uBajuMask = { value: B.mask };
+    sh.uniforms.uBajuPat = { value: B.pat };
+    sh.uniforms.uPatScale = { value: B.scale };
+    sh.uniforms.uHemY = { value: B.hemY };
+    sh.uniforms.uPlain = { value: B.plain };
+    sh.vertexShader = 'varying vec3 vObjP;\nvarying vec3 vObjN;\n' + sh.vertexShader.replace('#include <begin_vertex>', '#include <begin_vertex>\nvObjP = position;\nvObjN = normal;');
+    sh.fragmentShader = 'uniform sampler2D uBajuMask, uBajuPat;\nuniform float uPatScale, uHemY;\nuniform vec3 uPlain;\nvarying vec3 vObjP;\nvarying vec3 vObjN;\n' + sh.fragmentShader
+      .replace('#include <map_fragment>', `#include <map_fragment>
+        float bm = texture2D(uBajuMask, vMapUv).r;
+        vec3 bpat = vec3(0.0);
+        if (bm > 0.003) {
+          vec3 an = pow(abs(normalize(vObjN)), vec3(8.0));
+          an /= an.x + an.y + an.z;
+          vec3 P = vObjP / uPatScale;
+          bpat = texture2D(uBajuPat, P.zy).rgb * an.x + texture2D(uBajuPat, P.xz).rgb * an.y + texture2D(uBajuPat, vec2(P.x, -P.y)).rgb * an.z;
+          bpat = mix(uPlain, bpat, smoothstep(uHemY - 0.006, uHemY + 0.006, vObjP.y));
+          diffuseColor.rgb = mix(diffuseColor.rgb, bpat, bm);
+        }`)
+      .replace('#include <emissivemap_fragment>', `#include <emissivemap_fragment>
+        if (bm > 0.003) totalEmissiveRadiance = mix(totalEmissiveRadiance, bpat * emissive, bm);`);
+  };
+  mat.customProgramCacheKey = () => 'baju';
+}
+
 const GLOW = 0.3;
+const BAJU_TEAL = [64, 132, 130];
 const CLAV = 0.25; // share of the upper-arm turn given to the collarbone
 const SPEC = {
   // height in units; face feature offsets (metres, model space) from the 'headfront' joint:
@@ -466,6 +617,7 @@ export function makeGlbCast(who = 'affan') {
         o.material.emissiveIntensity = S.glow;
         // Affan's normal map only adds grain (the shape is in the mesh); smooth shading reads cleaner
         o.material.normalMap = null;
+        if (GLTF[who].userData.baju) installBaju(o.material, GLTF[who].userData.baju);
       }
     }
   });
