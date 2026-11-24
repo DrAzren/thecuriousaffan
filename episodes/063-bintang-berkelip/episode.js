@@ -235,7 +235,7 @@ const SHOTS = [
     camMove(t, 40.32, 44.72, ASTRO_AT.clone().add(V(0.6, 1.6, 7.6)).toArray(), ASTRO_AT.clone().add(V(0, 1.4, 0)).toArray(), ASTRO_AT.clone().add(V(0.3, 1.4, 6.6)).toArray(), ASTRO_AT.clone().add(V(0, 1.5, 0)).toArray(), 50);
     ov.flash(1 - inv(40.32, 40.65, t));
     topTag('angkasa', 'DI ANGKASA (TIADA UDARA)', t, 40.32, 44.7, PURPLE);
-    bubble('langsung', 'BINTANG LANGSUNG\nTAK BERKELIP!', t, 42.96, 44.7, 1150, 96, { top: '#fffbe6', bot: '#e8c84a' });
+    bubble('langsung', 'LANGSUNG\nTAK BERKELIP!', t, 42.96, 44.7, 1150, 104, { top: '#fffbe6', bot: '#e8c84a' });
     return lab;
   }],
   // S10 — "Waaah, rupanya udara yang buat bintang menari! Malam ni, cuba tengok bintang dengan keluarga."
