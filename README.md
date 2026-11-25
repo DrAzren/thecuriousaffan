@@ -47,6 +47,7 @@ time and can be re-timed to new narration.
 | 061 | Macam Mana Penyu Cari Pantai Tempat Lahir? | [`episodes/061-penyu`](episodes/061-penyu) | `output/TheCuriousAffan_E061_Macam_Mana_Penyu_Cari_Pantai_Tempat_Lahir.mp4` |
 | 062 | Macam Mana Roti Jadi Gebu? | [`episodes/062-roti-gebu`](episodes/062-roti-gebu) | `output/TheCuriousAffan_E062_Macam_Mana_Roti_Jadi_Gebu.mp4` |
 | 063 | Kenapa Bintang Berkelip? | [`episodes/063-bintang-berkelip`](episodes/063-bintang-berkelip) | `output/TheCuriousAffan_E063_Kenapa_Bintang_Berkelip.mp4` |
+| 064 | Kenapa Bertih Jagung Meletup? | [`episodes/064-bertih-jagung`](episodes/064-bertih-jagung) | `output/TheCuriousAffan_E064_Kenapa_Bertih_Jagung_Meletup.mp4` |
 
 ## Build
 
@@ -1181,5 +1182,31 @@ episode stays consistent.
   - park crickets and glassy star pings;
   - a deep space drone and a "zing" for travelling starlight;
   - rushing air, wobbly glissandos for bending light and a calm space pad.
+
+  The mix is normalised to −14 LUFS with a peak limiter at −1.5 dB.
+
+## Episode 064 at a glance
+
+- **Cast.** The first episode with the real 3D Affan and Mama: the owner's
+  Higgsfield avatars as rigged GLB models (`shared/glbcast.js`), posed by bone,
+  with talking-mouth and blink decals.
+- **Science.** Every popcorn kernel holds a little water and soft starch
+  inside a very hard hull. Heated, the water turns to steam, which needs much
+  more room, but the hull won't let it out. The pressure builds until the hull
+  bursts: POP! The starch puffs out into white fluffy foam. Ordinary corn can't
+  pop because its hull isn't strong enough to hold the steam in.
+- **Picture.** Two sets:
+  - the Episode 038 kitchen: Mama shaking a pot on a little gas burner while
+    popcorn jumps out, Affan on his stool with a bowl of popcorn;
+  - a kernel lab: a giant cut-away kernel with starch and water droplets,
+    flames, steam puffs and pressure arrows, a pressure gauge, the burst into
+    a big popcorn, and a popcorn kernel beside an ordinary, leaky one.
+- **Audio.** The narration is in Affan's voice, made with ElevenLabs
+  (`eleven_v4`, a single take to save credits). Captions use word timings
+  measured locally with faster-whisper (`audio/narration_words.json`). The
+  soundtrack reuses the Episode 005 instruments and adds:
+  - a gas burner, popping corn and a rattling lid;
+  - fire crackle, hissing steam, a rising pressure whine and a ticking gauge;
+  - a big boomy POP, and steam leaking from the ordinary kernel.
 
   The mix is normalised to −14 LUFS with a peak limiter at −1.5 dB.
