@@ -48,6 +48,8 @@ time and can be re-timed to new narration.
 | 062 | Macam Mana Roti Jadi Gebu? | [`episodes/062-roti-gebu`](episodes/062-roti-gebu) | `output/TheCuriousAffan_E062_Macam_Mana_Roti_Jadi_Gebu.mp4` |
 | 063 | Kenapa Bintang Berkelip? | [`episodes/063-bintang-berkelip`](episodes/063-bintang-berkelip) | `output/TheCuriousAffan_E063_Kenapa_Bintang_Berkelip.mp4` |
 | 064 | Kenapa Bertih Jagung Meletup? | [`episodes/064-bertih-jagung`](episodes/064-bertih-jagung) | `output/TheCuriousAffan_E064_Kenapa_Bertih_Jagung_Meletup.mp4` |
+| 065 | Kenapa Ais Terapung? | [`episodes/065-ais-terapung`](episodes/065-ais-terapung) | `output/TheCuriousAffan_E065_Kenapa_Ais_Terapung.mp4` |
+| 066 | Kenapa Kita Berpeluh? | [`episodes/066-kenapa-berpeluh`](episodes/066-kenapa-berpeluh) | `output/TheCuriousAffan_E066_Kenapa_Kita_Berpeluh.mp4` |
 
 ## Build
 
@@ -1207,5 +1209,48 @@ episode stays consistent.
   - a gas burner, popping corn and a rattling lid;
   - fire crackle, hissing steam, a rising pressure whine and a ticking gauge;
   - a big boomy POP, and steam leaking from the ordinary kernel.
+
+  The mix is normalised to −14 LUFS with a peak limiter at −1.5 dB.
+
+## Episode 065 at a glance
+
+- **Science.** Water is made of tiny particles that, in liquid water, move
+  about and squeeze close together. When water freezes they hold hands in a
+  honeycomb with empty space in the middle of each ring, so ice is lighter
+  than the same size of water and floats. That is why a lake freezes only on
+  top and fish can still swim underneath.
+- **Picture.** Two sets:
+  - the Episode 038 kitchen: a glass of pink air sirap, a bowl of ice that
+    Affan drops into it, and Mama with a jug;
+  - an ice lab: jiggling water molecules that freeze into a honeycomb with
+    glowing empty spaces, a balance with a water block and an ice block of the
+    same size, a tank with a floating ice cube, and a frozen lake with fish.
+- **Audio.** The narration is in Affan's voice, made with ElevenLabs
+  (`eleven_v4`, a single take to save credits). Captions use word timings
+  measured locally with faster-whisper (`audio/narration_words.json`). The
+  soundtrack reuses the Episode 005 instruments and adds clinking ice, a
+  splash, ticking molecules, a freezing shimmer, a creaking balance, a cold
+  wind and underwater bubbles.
+
+  The mix is normalised to −14 LUFS with a peak limiter at −1.5 dB.
+
+## Episode 066 at a glance
+
+- **Science.** Our body likes a steady temperature of about 37 °C. Running or
+  hot weather make it too hot, so sweat glands in the skin push water out onto
+  the skin. When the sweat dries it carries heat away and the body cools down.
+  Dogs hardly sweat, so they pant with their tongues out to cool down.
+- **Picture.** Two sets:
+  - the Episode 053 park on a hot day: sweaty Affan running in place, a
+    panting dog, and a water bottle at the end;
+  - a body lab: a big Affan beside a giant thermometer with a hot sun, red and
+    blue glows; and a slice of skin with coiled sweat glands, sweat rising to
+    the surface and drying into vapour that carries wavy red heat away.
+- **Audio.** The narration is in Affan's voice, made with ElevenLabs
+  (`eleven_v4`, a single take to save credits). Captions use word timings
+  measured locally with faster-whisper (`audio/narration_words.json`). The
+  soundtrack reuses the Episode 005 instruments and adds birdsong, puffing
+  breaths and footsteps, a rising whistle for the thermometer, gurgling
+  glands, a drying hiss, a panting, barking dog and a glug of water.
 
   The mix is normalised to −14 LUFS with a peak limiter at −1.5 dB.

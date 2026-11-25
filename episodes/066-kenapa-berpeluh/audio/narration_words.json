@@ -1,0 +1,507 @@
+[
+{
+"text": "Affan",
+"start": 0.0,
+"end": 0.56
+},
+{
+"text": "selalu",
+"start": 0.56,
+"end": 1.08
+},
+{
+"text": "tanya",
+"start": 1.08,
+"end": 1.36
+},
+{
+"text": "papa.",
+"start": 1.36,
+"end": 1.88
+},
+{
+"text": "Papa!",
+"start": 2.14,
+"end": 2.64
+},
+{
+"text": "Lepas",
+"start": 3.1,
+"end": 3.38
+},
+{
+"text": "main",
+"start": 3.38,
+"end": 3.62
+},
+{
+"text": "kejar-kejar,",
+"start": 3.62,
+"end": 4.44
+},
+{
+"text": "baju",
+"start": 4.72,
+"end": 4.9
+},
+{
+"text": "Affan",
+"start": 4.9,
+"end": 5.2
+},
+{
+"text": "basah",
+"start": 5.2,
+"end": 5.76
+},
+{
+"text": "dengan",
+"start": 5.76,
+"end": 6.02
+},
+{
+"text": "peluh!",
+"start": 6.02,
+"end": 6.4
+},
+{
+"text": "Kenapa",
+"start": 6.78,
+"end": 7.2
+},
+{
+"text": "kita",
+"start": 7.2,
+"end": 7.46
+},
+{
+"text": "berpeluh?",
+"start": 7.46,
+"end": 8.08
+},
+{
+"text": "Jom",
+"start": 8.34,
+"end": 8.56
+},
+{
+"text": "ikut",
+"start": 8.56,
+"end": 8.8
+},
+{
+"text": "Affan",
+"start": 8.8,
+"end": 9.08
+},
+{
+"text": "cari",
+"start": 9.08,
+"end": 9.3
+},
+{
+"text": "jawapan!",
+"start": 9.3,
+"end": 9.86
+},
+{
+"text": "Badan",
+"start": 10.2,
+"end": 10.5
+},
+{
+"text": "kita",
+"start": 10.5,
+"end": 11.0
+},
+{
+"text": "suka",
+"start": 11.0,
+"end": 11.34
+},
+{
+"text": "suhu",
+"start": 11.34,
+"end": 11.7
+},
+{
+"text": "yang",
+"start": 11.7,
+"end": 11.94
+},
+{
+"text": "tetap,",
+"start": 11.94,
+"end": 12.54
+},
+{
+"text": "lebih",
+"start": 12.62,
+"end": 12.9
+},
+{
+"text": "kurang",
+"start": 12.9,
+"end": 13.38
+},
+{
+"text": "tiga",
+"start": 13.38,
+"end": 13.63
+},
+{
+"text": "puluh",
+"start": 13.63,
+"end": 13.89
+},
+{
+"text": "tujuh",
+"start": 13.89,
+"end": 14.14
+},
+{
+"text": "darjah.",
+"start": 14.14,
+"end": 14.86
+},
+{
+"text": "Bila",
+"start": 15.04,
+"end": 15.28
+},
+{
+"text": "kita",
+"start": 15.28,
+"end": 15.56
+},
+{
+"text": "berlari",
+"start": 15.56,
+"end": 16.18
+},
+{
+"text": "atau",
+"start": 16.18,
+"end": 16.46
+},
+{
+"text": "cuaca",
+"start": 16.46,
+"end": 16.76
+},
+{
+"text": "panas,",
+"start": 16.76,
+"end": 17.44
+},
+{
+"text": "badan",
+"start": 17.8,
+"end": 18.02
+},
+{
+"text": "jadi",
+"start": 18.02,
+"end": 18.32
+},
+{
+"text": "terlalu",
+"start": 18.32,
+"end": 19.1
+},
+{
+"text": "panas.",
+"start": 19.1,
+"end": 19.66
+},
+{
+"text": "Kelenjar",
+"start": 19.9,
+"end": 20.24
+},
+{
+"text": "peluh",
+"start": 20.24,
+"end": 20.54
+},
+{
+"text": "dalam",
+"start": 20.54,
+"end": 20.84
+},
+{
+"text": "kulit",
+"start": 20.84,
+"end": 21.2
+},
+{
+"text": "pun",
+"start": 21.2,
+"end": 21.46
+},
+{
+"text": "keluarkan",
+"start": 21.46,
+"end": 21.94
+},
+{
+"text": "air",
+"start": 21.94,
+"end": 22.3
+},
+{
+"text": "ke",
+"start": 22.3,
+"end": 22.5
+},
+{
+"text": "atas",
+"start": 22.5,
+"end": 22.74
+},
+{
+"text": "kulit!",
+"start": 22.74,
+"end": 23.38
+},
+{
+"text": "Bila",
+"start": 23.52,
+"end": 23.84
+},
+{
+"text": "peluh",
+"start": 23.84,
+"end": 24.12
+},
+{
+"text": "kering,",
+"start": 24.12,
+"end": 24.58
+},
+{
+"text": "ia",
+"start": 24.84,
+"end": 25.04
+},
+{
+"text": "bawa",
+"start": 25.04,
+"end": 25.38
+},
+{
+"text": "haba",
+"start": 25.38,
+"end": 25.78
+},
+{
+"text": "keluar",
+"start": 25.78,
+"end": 26.28
+},
+{
+"text": "dari",
+"start": 26.28,
+"end": 26.54
+},
+{
+"text": "badan.",
+"start": 26.54,
+"end": 27.22
+},
+{
+"text": "Badan",
+"start": 27.38,
+"end": 27.88
+},
+{
+"text": "pun",
+"start": 27.88,
+"end": 28.14
+},
+{
+"text": "jadi",
+"start": 28.14,
+"end": 28.42
+},
+{
+"text": "sejuk",
+"start": 28.42,
+"end": 28.72
+},
+{
+"text": "semula!",
+"start": 28.72,
+"end": 29.34
+},
+{
+"text": "Tahu",
+"start": 29.34,
+"end": 29.88
+},
+{
+"text": "tak?",
+"start": 29.88,
+"end": 30.34
+},
+{
+"text": "Anjing",
+"start": 30.64,
+"end": 30.98
+},
+{
+"text": "tak",
+"start": 30.98,
+"end": 31.22
+},
+{
+"text": "banyak",
+"start": 31.22,
+"end": 31.56
+},
+{
+"text": "berpeluh.",
+"start": 31.56,
+"end": 32.32
+},
+{
+"text": "Sebab",
+"start": 32.62,
+"end": 32.96
+},
+{
+"text": "tu",
+"start": 32.96,
+"end": 33.22
+},
+{
+"text": "anjing",
+"start": 33.22,
+"end": 33.7
+},
+{
+"text": "menjelirkan",
+"start": 33.7,
+"end": 34.38
+},
+{
+"text": "lidah",
+"start": 34.38,
+"end": 34.8
+},
+{
+"text": "untuk",
+"start": 34.8,
+"end": 35.1
+},
+{
+"text": "sejukkan",
+"start": 35.1,
+"end": 35.58
+},
+{
+"text": "badan!",
+"start": 35.58,
+"end": 36.24
+},
+{
+"text": "Waaah,",
+"start": 36.6,
+"end": 37.12
+},
+{
+"text": "rupanya",
+"start": 37.5,
+"end": 38.08
+},
+{
+"text": "peluh",
+"start": 38.08,
+"end": 38.52
+},
+{
+"text": "tu",
+"start": 38.52,
+"end": 38.78
+},
+{
+"text": "penyejuk",
+"start": 38.78,
+"end": 39.3
+},
+{
+"text": "badan",
+"start": 39.3,
+"end": 39.7
+},
+{
+"text": "kita!",
+"start": 39.7,
+"end": 40.16
+},
+{
+"text": "Jangan",
+"start": 40.52,
+"end": 40.8
+},
+{
+"text": "lupa",
+"start": 40.8,
+"end": 41.18
+},
+{
+"text": "minum",
+"start": 41.18,
+"end": 41.48
+},
+{
+"text": "banyak",
+"start": 41.48,
+"end": 41.72
+},
+{
+"text": "air,",
+"start": 41.72,
+"end": 42.16
+},
+{
+"text": "ya.",
+"start": 42.16,
+"end": 42.38
+},
+{
+"text": "Apa",
+"start": 42.82,
+"end": 42.98
+},
+{
+"text": "lagi",
+"start": 42.98,
+"end": 43.24
+},
+{
+"text": "kita",
+"start": 43.24,
+"end": 43.5
+},
+{
+"text": "nak",
+"start": 43.5,
+"end": 43.66
+},
+{
+"text": "belajar",
+"start": 43.66,
+"end": 43.96
+},
+{
+"text": "lepas",
+"start": 43.96,
+"end": 44.32
+},
+{
+"text": "ni?",
+"start": 44.32,
+"end": 44.48
+}
+]
