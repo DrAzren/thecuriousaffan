@@ -90,11 +90,31 @@ export function makeMama() {
   k.parts.glasses.visible = false;
   const head = k.parts.head;
   const tud = std(MAMA.tudung, 0.85, { emissive: 0x3a1020, emissiveIntensity: 0.15, side: THREE.DoubleSide });
-  // shell over the head, open at the face (front = +z, phi = PI/2)
-  const open = 1.15;
-  add(head, new THREE.SphereGeometry(0.97, 48, 32, Math.PI / 2 + open, Math.PI * 2 - open * 2, 0, Math.PI * 0.74), tud, [0, 0.02, -0.02], [0, 0, 0], [1, 1.02, 0.98]);
-  // band framing the face
-  add(head, new THREE.TorusGeometry(0.74, 0.07, 10, 40, Math.PI * 1.35), tud, [0, 0.02, 0.58], [0, 0, -Math.PI * 0.175 + Math.PI], [1.02, 1.12, 1]);
+  // tudung: a shell all round the head with a neat oval opening for the face (forehead
+  // covered to above the brows, cheeks framed, wrapped under the chin), edged by a soft
+  // white inner band (anak tudung)
+  const SC = [0, 0.02, -0.02], SR = 0.97, SS = [1, 1.02, 0.98];
+  const OX = 0.6, OY = 0.64, OC = -0.1; // the opening on the unit sphere: (x/OX)^2 + ((y-OC)/OY)^2 < 1, z > 0
+  const inOval = (x, y, z) => z > 0 && (x / OX) ** 2 + ((y - OC) / OY) ** 2 < 1;
+  const sg = new THREE.SphereGeometry(1, 64, 48).toNonIndexed();
+  const sp = sg.attributes.position, keep = [];
+  for (let i = 0; i < sp.count; i += 3) {
+    const cx = (sp.getX(i) + sp.getX(i + 1) + sp.getX(i + 2)) / 3, cy = (sp.getY(i) + sp.getY(i + 1) + sp.getY(i + 2)) / 3, cz = (sp.getZ(i) + sp.getZ(i + 1) + sp.getZ(i + 2)) / 3;
+    if (inOval(cx, cy, cz)) continue;
+    for (let k = 0; k < 3; k++) keep.push(sp.getX(i + k), sp.getY(i + k), sp.getZ(i + k));
+  }
+  const shellGeo = new THREE.BufferGeometry();
+  shellGeo.setAttribute('position', new THREE.Float32BufferAttribute(keep, 3));
+  shellGeo.computeVertexNormals();
+  add(head, shellGeo, tud, SC, [0, 0, 0], SS.map((v) => v * SR));
+  const rim = [];
+  for (let i = 0; i < 64; i++) {
+    const a = (i / 64) * Math.PI * 2;
+    const x = OX * Math.cos(a), y = OC + OY * Math.sin(a);
+    const z = Math.sqrt(Math.max(0, 1 - x * x - y * y));
+    rim.push(new THREE.Vector3(SC[0] + x * SR * SS[0], SC[1] + y * SR * SS[1], SC[2] + z * SR * SS[2]));
+  }
+  add(head, new THREE.TubeGeometry(new THREE.CatmullRomCurve3(rim, true), 128, 0.05, 10, true), std(MAMA.inner, 0.8, { emissive: 0x30202a, emissiveIntensity: 0.12 }), [0, 0, 0]);
   // drape over the neck and shoulders
   add(head, new THREE.CylinderGeometry(0.7, 1.25, 1.1, 40, 1, true), tud, [0, -0.95, -0.05], [0.08, 0, 0], [1, 1, 0.85]);
   add(head, new THREE.SphereGeometry(0.62, 24, 16, 0, Math.PI * 2, Math.PI / 2, Math.PI / 2), tud, [0, -0.62, 0.22], [0, 0, 0], [1.05, 0.55, 0.8]);

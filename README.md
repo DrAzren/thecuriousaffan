@@ -1187,9 +1187,8 @@ episode stays consistent.
 
 ## Episode 064 at a glance
 
-- **Cast.** The first episode with the real 3D Affan and Mama: the owner's
-  Higgsfield avatars as rigged GLB models (`shared/glbcast.js`), posed by bone,
-  with talking-mouth and blink decals.
+- **Cast.** The original Affan and Mama; Mama's tudung now has a neat oval
+  face opening with a white inner band.
 - **Science.** Every popcorn kernel holds a little water and soft starch
   inside a very hard hull. Heated, the water turns to steam, which needs much
   more room, but the hull won't let it out. The pressure builds until the hull

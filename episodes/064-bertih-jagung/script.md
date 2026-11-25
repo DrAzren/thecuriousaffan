@@ -1,6 +1,6 @@
 # Episode 064: Kenapa Bertih Jagung Meletup?
 
-Episod pertama dengan **watak 3D sebenar** (avatar Higgsfield Affan dan Mama, `shared/glbcast.js`).
+Watak asal (Affan dan Mama, v1); tudung Mama dikemaskan (bukaan muka bujur dengan anak tudung putih).
 
 Suara: **Affan Clone** (ElevenLabs, model `eleven_v4`), 1 take (jimat kredit).
 Narasi: `audio/narration.mp3` (52.3 s)
@@ -35,7 +35,7 @@ cukup kuat (wap terlepas) → penutup (wap air buat jagung meletup; minta tolong
 > mama bila nak guna dapur, ya. [curious] Apa lagi kita nak belajar lepas ni?
 
 ## Visual
-- Dapur E038 dengan Affan dan Mama 3D: Mama menggoncang periuk di atas dapur gas kecil, tudung
+- Dapur E038 dengan Affan dan Mama: Mama menggoncang periuk di atas dapur gas kecil, tudung
   periuk bergegar, bertih melompat keluar; Affan berdiri di atas bangku dengan semangkuk bertih.
 - Biji jagung gergasi dengan tingkap terbuka: kanji (gumpalan krim) dan titisan air (biru) di
   dalam kulit oren yang keras.

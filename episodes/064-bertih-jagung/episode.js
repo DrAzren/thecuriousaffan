@@ -1,15 +1,12 @@
 // THE CURIOUS AFFAN — Episode 064: "Kenapa Bertih Jagung Meletup?"
-// The first episode with the real 3D cast (the owner's Higgsfield avatars).
 // Every shot is a pure function of time t (seconds), synced to audio/narration.mp3.
 import * as THREE from 'three';
 import { makeRenderer, loadEnvelope, toScreen, clamp, lerp, inv, easeOut, easeIn, easeInOut, backOut, keys, W, H } from '../../shared/core.js';
-import { useGlbCast } from '../../shared/glbcast.js';
 import { POSES, blinkAt } from '../../shared/affan.js';
 import { Overlay, pop, ICONS, drawLogo } from '../../shared/overlay.js';
 import { CAPTIONS, KEYWORDS } from './captions.js';
 
-await useGlbCast(); // makeAffan() / makeMama() now build the GLB cast
-const { buildKitchen64, buildKernelLab, buildOutro, ISLAND_TOP, AFF_POS, MAMA_POS, BURNER_AT, BOWL_AT, KERN_AT, COMP_AT } = await import('./worlds.js');
+import { buildKitchen64, buildKernelLab, buildOutro, AFF_POS, MAMA_POS, BURNER_AT, KERN_AT, COMP_AT } from './worlds.js';
 
 const FPS = 30;
 const DURATION = 55.65;
@@ -81,7 +78,7 @@ function mamaSet(t, { shake = 1, popping = 0, p = {} } = {}) {
   lift += popping * 0.008 * Math.abs(Math.sin(t * 31));
   kit.lid.position.y = 0.3 + lift;
   kit.lid.rotation.z = lift * 1.2;
-  const base = { yaw: 0, lean: 0.12, blink: blinkAt(t, 5), ...p };
+  const base = { yaw: 0, lean: 0.12, blink: blinkAt(t, 5), smile: 0.9, ...p };
   m.pose(base);
   m.root.updateMatrixWorld(true);
   kit.pot.updateMatrixWorld(true);
@@ -122,7 +119,7 @@ function mamaSet(t, { shake = 1, popping = 0, p = {} } = {}) {
 function affSet(t, p = {}) {
   const a = kit.aff;
   a.root.position.copy(AFF_POS);
-  a.pose({ yaw: AFF_YAW, blink: blinkAt(t, 1), talk: talk(t), ...p });
+  a.pose({ yaw: AFF_YAW, blink: blinkAt(t, 1), talk: talk(t), smile: 0.9, ...p });
   a.root.updateMatrixWorld(true);
 }
 const affHead = () => kit.aff.parts.head.getWorldPosition(V());
@@ -133,7 +130,7 @@ const affFace = (yaw, d) => affHead().add(V(Math.sin(yaw) * d, 0.12, Math.cos(ya
 function eat(t, e, yaw) {
   const a = kit.aff;
   const bowl = kit.bowl.localToWorld(V(-0.05, 0.25, 0.08));
-  const mouth = affFace(yaw, 0.2).add(V(0, -0.02, 0));
+  const mouth = affFace(yaw, 0.6).add(V(0, -0.3, 0));
   const hand = bowl.clone().lerp(mouth, e);
   return { armR: { reach: a.toTorso(hand), pole: [-1, -0.6, -0.3] } };
 }
@@ -248,10 +245,10 @@ const SHOTS = [
     mamaSet(t, { shake: 1, popping: 0, p: { headYaw: 0.25 * sm(3.3, 3.8, t) - 0.25 * sm(4.6, 5.0, t) } });
     affSet(t, { yaw: YAW_CAM, armL: { reach: kit.aff.toTorso(BURNER_AT.clone().add(V(0.2, 0.7, 0.2))), pole: [1, -0.5, -0.3] } });
     const mh = mamaHead();
-    camMove(t, 2.04, 5.12, mh.clone().add(V(1.3, -0.35, 2.9)).toArray(), mh.clone().add(V(0.1, -0.6, 0)).toArray(), mh.clone().add(V(1.1, -0.4, 2.5)).toArray(), mh.clone().add(V(0.1, -0.65, 0)).toArray(), 46);
+    camMove(t, 2.04, 5.12, mh.clone().add(V(1.2, -0.2, 3.6)).toArray(), mh.clone().add(V(0.05, -0.55, 0)).toArray(), mh.clone().add(V(1.0, -0.25, 3.2)).toArray(), mh.clone().add(V(0.05, -0.6, 0)).toArray(), 46);
     const pp = pop(t, 2.06, 3.0, { from: 2 });
     ov.bubble('papa', 'PAPA!', { x: 800, y: 470, o: pp.o, s: pp.s * 0.8, r: 6 }, { size: 110 });
-    pinTag('mama', 'MAMA', scr(mh.clone().add(V(0, 0.35, 0))), t, 3.0, 5.1, { bg: PINK, pointer: 'down' }, -40);
+    pinTag('mama', 'MAMA', scr(mh.clone().add(V(0, 0.6, 0))), t, 3.0, 5.1, { bg: PINK, pointer: 'down' }, -40);
     pinTag('periuk', 'PERIUK JAGUNG', scr(kit.pot.localToWorld(V(0, 0.4, 0))), t, 3.72, 5.1, { bg: CORN, pointer: 'down' }, -50);
     return kit;
   }],
@@ -277,7 +274,7 @@ const SHOTS = [
     affSet(t, { yaw: YAW_CAM * 0.6, wow: 0, ...eat(t, e, YAW_CAM * 0.6) });
     snackFollow(e);
     const ah = affHead();
-    lookCam(ah.clone().add(V(0.25, -0.15, 1.9)), ah.clone().add(V(-0.05, -0.32, 0)), 46);
+    lookCam(ah.clone().add(V(0.35, 0.0, 2.9)), ah.clone().add(V(-0.05, -0.4, 0)), 46);
     bubble('bertih', 'JADI BERTIH!', t, 7.18, 8.42, 430, 120, CREAM);
     return kit;
   }],
@@ -287,8 +284,8 @@ const SHOTS = [
     mamaSet(t, { shake: 0.3, popping: 1 });
     affSet(t, { yaw: YAW_CAM, ...POSES.thinkR, headRoll: 0.1, headPitch: -0.05 });
     const ah = affHead();
-    lookCam(ah.clone().add(V(0.55, -0.05, 2.3)), ah.clone().add(V(0, -0.25, 0)), 46);
-    const hd = scr(ah.clone().add(V(0, 0.3, 0)));
+    lookCam(ah.clone().add(V(0.6, 0.05, 3.0)), ah.clone().add(V(0, -0.4, 0)), 46);
+    const hd = scr(ah.clone().add(V(0, 0.5, 0)));
     qmarks(t, hd, 8.46, 10.14, [[8.5, -260, 80, '#ffcf33', -12], [8.8, 250, 40, '#3fa2ff', 10], [9.1, 280, 220, '#ffcf33', 14]]);
     bubble('kenapa', 'KENAPA JAGUNG\nMELETUP?', t, 8.5, 10.14, 430, 110, CREAM);
     return kit;
@@ -302,7 +299,7 @@ const SHOTS = [
     const ah = affHead();
     const k = easeIn(inv(11.0, 12.12, t));
     const top = kit.pot.localToWorld(V(0, 0.32, 0));
-    lookCam(ah.clone().add(V(0.55, -0.05, 2.3)).lerp(top.clone().add(V(0, 0.25, 0.25)), k), ah.clone().add(V(0, -0.25, 0)).lerp(top, k), 46);
+    lookCam(ah.clone().add(V(0.6, 0.05, 3.0)).lerp(top.clone().add(V(0, 0.25, 0.25)), k), ah.clone().add(V(0, -0.4, 0)).lerp(top, k), 46);
     ov.swirl(t, W / 2, 820, inv(10.3, 12.0, t));
     ov.flash(inv(11.7, 12.12, t) ** 2, '255,246,220');
     return kit;
@@ -368,7 +365,7 @@ const SHOTS = [
     const pc = scr(lab.plain.position.clone().add(V(0, 0.8, 0.6)));
     if (xq.o > 0) ov.html('x', ICONS.cross(), { x: pc.x, y: pc.y, o: xq.o * (t < 39.3 ? 1 : 0.0), s: xq.s * 0.7, r: 0 });
     bubble('takboleh', 'TAK BOLEH\nJADI BERTIH!', t, 37.42, 39.3, 1180, 104, { top: '#f2e6ff', bot: '#a070ff' });
-    pinTag('retak', 'KULIT TAK CUKUP KUAT', scr(lab.plain.localToWorld(lab.cracks[1].position.clone())), t, 39.36, 42.42, { bg: RED, pointer: 'left' }, 0);
+    topTag('retak', 'KULIT TAK CUKUP KUAT', t, 39.36, 42.42, RED);
     bubble('lepas', 'WAP TERLEPAS!', t, 40.86, 42.42, 1180, 104, { top: '#eaf6ff', bot: '#4aa8ff' });
     return lab;
   }],
@@ -382,18 +379,18 @@ const SHOTS = [
     affSet(t, { yaw, wow: keys(t, [[42.44, 0], [42.6, 1], [43.0, 1], [43.2, 0]]), talk: e > 0.85 ? 0 : talk(t), ...(t < 46.4 ? eat(t, e, yaw) : POSES.thumbsUpR) });
     snackFollow(t < 46.4 ? e : 0);
     const ah = affHead(), mh = mamaHead();
-    if (t < 46.36) lookCam(ah.clone().add(V(0.6, -0.05, 2.3)), ah.clone().add(V(0, -0.25, 0)), 46);
+    if (t < 46.36) lookCam(ah.clone().add(V(0.6, 0.05, 3.0)), ah.clone().add(V(0, -0.4, 0)), 46);
     else {
       const mid = ah.clone().lerp(mh, 0.5);
       camMove(t, 46.36, 50.2, mid.clone().add(V(0.6, -0.1, 6.4)).toArray(), mid.clone().add(V(0, -0.45, 0)).toArray(), mid.clone().add(V(0.5, -0.1, 5.8)).toArray(), mid.clone().add(V(0, -0.45, 0)).toArray(), 50);
     }
-    const hd = scr(ah.clone().add(V(0, 0.35, 0)));
+    const hd = scr(ah.clone().add(V(0, 0.5, 0)));
     const b = pop(t, 42.5, 46.3);
     ov.html('bulb', ICONS.bulb(), { x: clamp(hd.x + 230, 150, 900), y: clamp(hd.y - 150, 300, 900) + Math.sin(t * 5) * 8, o: b.o, s: b.s * 0.6, r: 10 });
     ov.sparkles(t, { n: 30, seed: 12, y: 250, h: 900, a: inv(42.5, 42.8, t) * (1 - inv(45.8, 46.3, t)) });
     bubble('wapAir', 'WAP AIR BUAT\nJAGUNG MELETUP!', t, 43.46, 46.3, 430, 104, CREAM);
     bubble('mamaTolong', 'MINTA TOLONG MAMA\nBILA GUNA DAPUR', t, 46.36, 50.18, 430, 92, { top: '#fff0f6', bot: '#ff7ab0' });
-    pinTag('mamaT', 'MAMA', scr(mh.clone().add(V(0, 0.35, 0))), t, 47.5, 50.18, { bg: PINK, pointer: 'down' }, -40);
+    pinTag('mamaT', 'MAMA', scr(mh.clone().add(V(0, 0.6, 0))), t, 47.5, 50.18, { bg: PINK, pointer: 'down' }, -40);
     return kit;
   }],
   // S12 — "Apa lagi kita nak belajar lepas ni?"
@@ -404,8 +401,8 @@ const SHOTS = [
     const th2 = POSES.thinkR.armR;
     affSet(t, { yaw: YAW_CAM, headRoll: -0.1 * tk, headPitch: -0.06 * tk, armR: { reach: mix3([-0.55, 0.3, 0.2], th2.reach, tk), pole: th2.pole, wx: th2.wx * tk } });
     const ah = affHead();
-    lookCam(ah.clone().add(V(0.55, -0.05, 2.4)), ah.clone().add(V(0, -0.25, 0)), 46);
-    const hd = scr(ah.clone().add(V(0, 0.3, 0)));
+    lookCam(ah.clone().add(V(0.6, 0.05, 3.0)), ah.clone().add(V(0, -0.4, 0)), 46);
+    const hd = scr(ah.clone().add(V(0, 0.5, 0)));
     qmarks(t, hd, 50.2, OUTRO - 0.05, [[50.25, -260, -100, '#ffcf33', -12], [50.55, 250, -160, '#3fa2ff', 10], [50.85, 300, 60, '#ffcf33', 14]]);
     return kit;
   }],
@@ -413,11 +410,9 @@ const SHOTS = [
   [OUTRO, DURATION, (t) => {
     const k = easeOut(inv(OUTRO, OUTRO + 0.7, t));
     outro.aff.root.position.set(0, 0, 0);
-    outro.aff.pose({ blink: blinkAt(t, 9), headRoll: -0.06 + 0.05 * Math.sin(t * 2), armR: { reach: [-0.78 + 0.12 * Math.sin(t * 7), 1.55, 0.3], pole: [-1, -0.3, -0.5] } });
-    outro.aff.root.updateMatrixWorld(true);
-    const oh = outro.aff.parts.head.getWorldPosition(V());
-    lookCam(V(0, oh.y + 0.1, lerp(7.5, 5.4, k)), V(0, oh.y - 0.2, 0), 40);
-    const hc = scr(oh.clone().add(V(0, 0.3, 0)));
+    outro.aff.pose({ ...POSES.thinkR, smile: 1, blink: blinkAt(t, 9), headRoll: -0.08, lookX: 0.25, lookY: 0.15, headYaw: 0.08 });
+    lookCam(V(0, 2.6, lerp(7.5, 5.4, k)), V(0, 2.3, 0), 40);
+    const hc = scr(V(0, 2.95, 0));
     ov.flash(1 - inv(OUTRO, OUTRO + 0.35, t));
     const g = ov.g;
     const ra = inv(OUTRO + 0.1, OUTRO + 0.7, t);
