@@ -50,6 +50,9 @@ time and can be re-timed to new narration.
 | 064 | Kenapa Bertih Jagung Meletup? | [`episodes/064-bertih-jagung`](episodes/064-bertih-jagung) | `output/TheCuriousAffan_E064_Kenapa_Bertih_Jagung_Meletup.mp4` |
 | 065 | Kenapa Ais Terapung? | [`episodes/065-ais-terapung`](episodes/065-ais-terapung) | `output/TheCuriousAffan_E065_Kenapa_Ais_Terapung.mp4` |
 | 066 | Kenapa Kita Berpeluh? | [`episodes/066-kenapa-berpeluh`](episodes/066-kenapa-berpeluh) | `output/TheCuriousAffan_E066_Kenapa_Kita_Berpeluh.mp4` |
+| 067 | Kenapa Pokok Semalu Kuncup? | [`episodes/067-pokok-semalu`](episodes/067-pokok-semalu) | `output/TheCuriousAffan_E067_Kenapa_Pokok_Semalu_Kuncup.mp4` |
+| 068 | Kenapa Epal Jadi Perang? | [`episodes/068-epal-perang`](episodes/068-epal-perang) | `output/TheCuriousAffan_E068_Kenapa_Epal_Jadi_Perang.mp4` |
+| 069 | Kenapa Laut Ada Ombak? | [`episodes/069-ombak-laut`](episodes/069-ombak-laut) | `output/TheCuriousAffan_E069_Kenapa_Laut_Ada_Ombak.mp4` |
 
 ## Build
 
@@ -1252,5 +1255,58 @@ episode stays consistent.
   soundtrack reuses the Episode 005 instruments and adds birdsong, puffing
   breaths and footsteps, a rising whistle for the thermometer, gurgling
   glands, a drying hiss, a panting, barking dog and a glug of water.
+
+  The mix is normalised to −14 LUFS with a peak limiter at −1.5 dB.
+
+## Episode 067 at a glance
+
+- **Science.** At the base of every semalu (touch-me-not) leaf is a little
+  pillow full of water. A touch sends a fast signal, like a tiny lightning
+  bolt; the water flows out, the pillow goes soft and the leaf folds up, which
+  scares off insects that want to eat it. After a few minutes the water flows
+  back and the leaf opens; at night the plant folds its leaves to sleep.
+- **Picture.** The Episode 053 park with a garden bed of semalu, and a leaf
+  lab: a giant leaf with a see-through water pillow, a finger tap, a zipping
+  signal, folding leaflets, a startled caterpillar and a night sky.
+- **Audio.** The narration is in Affan's voice, made with ElevenLabs
+  (`eleven_v4`, a single take to save credits). Captions use word timings
+  measured locally with faster-whisper (`audio/narration_words.json`). The
+  soundtrack reuses the Episode 005 instruments and adds birdsong, a leafy rustle, an electric zap for the signal, gurgling water, a
+  caterpillar's boing, a ticking clock and night crickets.
+
+  The mix is normalised to −14 LUFS with a peak limiter at −1.5 dB.
+
+## Episode 068 at a glance
+
+- **Science.** An apple is made of tiny cells, each with a little helper
+  called an enzyme. Cutting breaks the cells, the enzyme meets the oxygen in
+  the air and together they make a brown colour. The apple isn't rotten and is
+  still good to eat; lime juice slows the browning down.
+- **Picture.** The Episode 038 kitchen with Mama cutting an apple and slices
+  turning brown, a cell lab (enzyme helpers, a big knife, oxygen pairs, brown
+  spots) and Mama squeezing lime over two slices on the board.
+- **Audio.** The narration is in Affan's voice, made with ElevenLabs
+  (`eleven_v4`, a single take to save credits). Captions use word timings
+  measured locally with faster-whisper (`audio/narration_words.json`). The
+  soundtrack reuses the Episode 005 instruments and adds a crunchy knife chop, a browning glide, enzyme ticks, a cell crack, airy
+  oxygen whooshes, lime drips and a crunchy bite.
+
+  The mix is normalised to −14 LUFS with a peak limiter at −1.5 dB.
+
+## Episode 069 at a glance
+
+- **Science.** Wind blowing over the sea pushes on the water and makes little
+  ripples; as it keeps blowing they grow into waves that travel far across the
+  sea. The water itself only bobs up and down in the same place, like a rubber
+  duck. At a shallow beach the bottom of the wave drags, the top topples over
+  and the wave breaks into foam.
+- **Picture.** A sunny beach with Affan and Mama, a sea lab with wind streaks,
+  ripples, travelling waves and a bobbing rubber duck, and a shore
+  cross-section where a wave leans over and breaks into white foam.
+- **Audio.** The narration is in Affan's voice, made with ElevenLabs
+  (`eleven_v4`, a single take to save credits). Captions use word timings
+  measured locally with faster-whisper (`audio/narration_words.json`). The
+  soundtrack reuses the Episode 005 instruments and adds rolling surf and seagulls, wind over the sea, lapping ripples, a squeaky
+  rubber duck, a deep drag and a foamy crash.
 
   The mix is normalised to −14 LUFS with a peak limiter at −1.5 dB.
