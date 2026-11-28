@@ -53,6 +53,9 @@ time and can be re-timed to new narration.
 | 067 | Kenapa Pokok Semalu Kuncup? | [`episodes/067-pokok-semalu`](episodes/067-pokok-semalu) | `output/TheCuriousAffan_E067_Kenapa_Pokok_Semalu_Kuncup.mp4` |
 | 068 | Kenapa Epal Jadi Perang? | [`episodes/068-epal-perang`](episodes/068-epal-perang) | `output/TheCuriousAffan_E068_Kenapa_Epal_Jadi_Perang.mp4` |
 | 069 | Kenapa Laut Ada Ombak? | [`episodes/069-ombak-laut`](episodes/069-ombak-laut) | `output/TheCuriousAffan_E069_Kenapa_Laut_Ada_Ombak.mp4` |
+| 070 | Kenapa Remote Boleh On TV dari Jauh? | [`episodes/070-remote-tv`](episodes/070-remote-tv) | `output/TheCuriousAffan_E070_Kenapa_Remote_Boleh_On_TV.mp4` |
+| 071 | Berapa Ramai Bayi Lahir di Malaysia? | [`episodes/071-kelahiran-bayi`](episodes/071-kelahiran-bayi) | `output/TheCuriousAffan_E071_Berapa_Ramai_Bayi_Lahir.mp4` |
+| 072 | Haiwan Paling Besar dan Paling Kecil di Dunia? | [`episodes/072-haiwan-terbesar-terkecil`](episodes/072-haiwan-terbesar-terkecil) | `output/TheCuriousAffan_E072_Haiwan_Paling_Besar_dan_Kecil.mp4` |
 
 ## Build
 
@@ -1308,5 +1311,67 @@ episode stays consistent.
   measured locally with faster-whisper (`audio/narration_words.json`). The
   soundtrack reuses the Episode 005 instruments and adds rolling surf and seagulls, wind over the sea, lapping ripples, a squeaky
   rubber duck, a deep drag and a foamy crash.
+
+  The mix is normalised to −14 LUFS with a peak limiter at −1.5 dB.
+
+## Episode 070 at a glance
+
+- **Science.** The little lamp at the tip of a TV remote is an infrared LED:
+  it sends light our eyes cannot see. Each button sends a different pattern
+  of short and long blinks, like a secret code, and the TV's receiver (its
+  "little eye") reads the code: on, louder, change channel. A phone camera can
+  see the LED blinking.
+- **Picture.** The living room with Affan and Mama on the sofa and a TV across
+  the room; a light stage where a giant remote sends purple-drawn blinks to a
+  giant TV whose receiver gets a cartoon eye; code strips for BUKA, KUAT and
+  SALURAN; a phone whose camera screen shows the blinking LED.
+- **Audio.** The narration is in Affan's voice, made with ElevenLabs
+  (`eleven_v4`, a single take to save credits). Captions use word timings
+  measured locally with faster-whisper (`audio/narration_words.json`). The
+  soundtrack reuses the Episode 005 instruments and adds remote clicks, a TV switching on and
+  off, channel changes, volume beeps, soft tones for the short and long blinks
+  and a cartoon jingle from the TV.
+
+  The mix is normalised to −14 LUFS with a peak limiter at −1.5 dB.
+
+## Episode 071 at a glance
+
+- **Science.** In 2024, 414,918 babies were born in Malaysia (DOSM), more than
+  1,100 a day, 9% fewer than in 2023; the average is now 1.6 children per
+  woman. Babies grow into tomorrow's doctors, teachers and firefighters, the
+  government counts births to plan schools and hospitals, and too few babies
+  means many grandparents but fewer young people to care for them.
+- **Picture.** A nursery with Affan's sleeping baby cousin, Mama and a star
+  mobile; a counting stage where babies pop up in a grid, two bars (2023 vs
+  2024), a mum with 1.6 children, babies growing into a doctor, a teacher and a
+  firefighter, and a toy town with a school and a hospital; a seesaw with many
+  atuk and nenek and one young person; a small Jalur Gemilang.
+- **Audio.** The narration is in Affan's voice, made with ElevenLabs
+  (`eleven_v4`, a single take to save credits). Captions use word timings
+  measured locally with faster-whisper (`audio/narration_words.json`). The
+  soundtrack reuses the Episode 005 instruments and adds a cot-mobile lullaby, baby coos,
+  popping babies, a ticking counter, a sad slide, grow-up shimmers and a creaky
+  seesaw.
+
+  The mix is normalised to −14 LUFS with a peak limiter at −1.5 dB.
+
+## Episode 072 at a glance
+
+- **Science.** The blue whale is the largest animal ever known: about 30 m
+  long (nearly three school buses) and nearly 200 tonnes; its tongue alone
+  weighs about as much as an elephant, and it outweighs the biggest dinosaurs.
+  The smallest mammal by weight is the Etruscan shrew, about 2 g, lighter than
+  a coin, and a frog about 7 mm long can sit on a fingernail.
+- **Picture.** Affan with an animal book; the ocean with a 30 m whale beside
+  three stacked school buses and above a long-necked dinosaur; a big balance
+  with the whale's tongue and an elephant; a wooden table with a shrew, a coin
+  and a little balance; the Episode 039 giant hand with a tiny frog on a nail;
+  a kampung cat at the end.
+- **Audio.** The narration is in Affan's voice, made with ElevenLabs
+  (`eleven_v4`, a single take to save credits). Captions use word timings
+  measured locally with faster-whisper (`audio/narration_words.json`). The
+  soundtrack reuses the Episode 005 instruments and adds page turns, an underwater ambience
+  with bubbles and whale song, bus horns, a heavy balance and an elephant
+  trumpet, shrew squeaks, a coin clink, frog ribbits and a meow.
 
   The mix is normalised to −14 LUFS with a peak limiter at −1.5 dB.
