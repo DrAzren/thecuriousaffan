@@ -460,15 +460,16 @@ function thumbnail() {
   nurSet(t, { smile: 1 });
   nurAff(t, { smile: 1, brow: 0.6, wow: 0.4, talk: 0, yaw: -0.7, armR: { reach: [-0.45, 1.0, 0.6], pole: [-1, -0.6, -0.3], point: 1 } });
   const bh = babyHead();
-  lookCam(bh.clone().add(V(1.4, 1.9, 4.2)), bh.clone().add(V(0.8, 0.5, 0)), 50);
+  const mid = bh.clone().lerp(affHead(), 0.5);
+  lookCam(mid.clone().add(V(-0.3, 2.4, 7.4)), mid.clone().add(V(0.25, 1.0, 0)), 50);
   renderer.setViewport(0, 0, W, H);
   renderer.render(nur.scene, cam);
   ov.vignette(0.3);
   ov.tag('thBadge', 'EPISOD 71', { x: W / 2, y: 300 }, { bg: '#2f7bff', small: true });
   ov.bubble('thTitle', 'BERAPA RAMAI', { x: W / 2, y: 445, r: -3 }, { size: 110 });
   ov.bubble('thTitle2', 'BAYI LAHIR?', { x: W / 2, y: 590, r: 2 }, { size: 140, ...BABY });
-  ov.html('thQ', ICONS.qmark('#ffcf33'), { x: 930, y: 760, r: 14, s: 0.9 });
-  hearts(1.0, W / 2, 1200, 0, 99, 6, 3);
+  ov.html('thQ', ICONS.qmark('#ffcf33'), { x: 150, y: 760, r: -14, s: 0.9 });
+  hearts(1.0, 260, 1330, 0, 99, 5, 3);
   drawLogo(ov, { y: 1425, scale: 0.58 });
   ov.end();
 }
